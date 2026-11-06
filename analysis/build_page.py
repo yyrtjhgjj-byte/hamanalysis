@@ -5,6 +5,7 @@
 """
 from __future__ import annotations
 
+import html as htmllib
 import json
 import re
 import sys
@@ -111,10 +112,25 @@ def main(out_path: Path):
         "chars_by_rating": S["chars_by_rating"],
     }
     tpl = (HERE / "report_template.html").read_text(encoding="utf-8")
+    check_essay_quotes(tpl, by_label)
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     html = tpl.replace("/*__DATA__*/null", payload)
     out_path.write_text(html, encoding="utf-8")
     print(f"wrote {out_path} ({len(html)/1024:.0f} KB)", "watch:", data["watch"], "late_star:", data["late_star"])
+
+
+def check_essay_quotes(tpl: str, by_label: dict):
+    """「読んだ感想」の引用が原文と一字一句一致するかを確かめる。"""
+    raw = "\n".join(p.read_text(encoding="utf-8") for p in sorted(DOCS.glob("*.txt")))
+    sec = tpl[tpl.index('<section id="essay">'):tpl.index("<footer>")]
+    quotes = re.findall(r'<(?:q|span class="eq")>(.*?)</(?:q|span)>', sec)
+    bad = [q for q in quotes if htmllib.unescape(q) not in raw]
+    assert not bad, f"引用が原文に見つからない: {bad}"
+    # 話数つきの引用は、その話のメモにあるかまで確かめる
+    for q, src in re.findall(r'<span class="eq">(.*?)</span><small>(\d+話|劇場版\d)', sec):
+        label = src.removesuffix("話")
+        assert htmllib.unescape(q) in by_label[label]["memo"], f"{src} のメモに見つからない: {q}"
+    print(f"essay quotes ok: {len(quotes)}")
 
 
 if __name__ == "__main__":
