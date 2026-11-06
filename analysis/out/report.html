@@ -1,0 +1,1042 @@
+<title>ハム太郎296話 採点白書</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 一冊の大学ノート。罫線と赤い余白線の表紙のあと、メモ原文の見出し書式「・〇〇［評価］」で分析ページを一列に綴じる */
+:root {
+  --paper: #f6f7f9;
+  --sheet: #ffffff;
+  --ink: #1f2430;
+  --ink-2: #4a5160;
+  --ink-3: #697080;
+  --rule: #e6eaf1;
+  --rule-2: #cfd6e2;
+  --margin: #e59a9a;
+  --sun: #f2b31a;
+  --sun-ink: #7d5200;
+  --sun-wash: #fdf1cc;
+  /* 評価スケール：4＝中立。1〜3は青、5と★はオレンジ（両腕とも単色・明度単調で検証済み） */
+  --r1: #184f95; --r2: #3482e0; --r3: #7eaeea; --r4: #c9c5bb; --r5: #ef9658; --rs: #c94a12; --rna: #e3e7ee;
+  --on1: #ffffff; --on2: #ffffff; --on3: #14181f; --on4: #14181f; --on5: #14181f; --ons: #ffffff;
+  --seq0: #eef6f2; --seq1: #0d5039; --on-seq: #ffffff;
+  --good: #0b8a0b; --bad: #c33232; --meh: #697080;
+  --f-display: "Dela Gothic One", "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
+  --f-hand: "Klee One", "Zen Kaku Gothic New", "Hiragino Mincho ProN", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #15171c; --sheet: #1d2027; --ink: #eceef2; --ink-2: #b6bcc8; --ink-3: #8f96a5;
+    --rule: #272b34; --rule-2: #3a404c; --margin: #8a4646; --sun: #e9a913; --sun-ink: #f5c654; --sun-wash: #3a2f12;
+    --r1: #94bff3; --r2: #3f8be6; --r3: #1f5fae; --r4: #4a4b50; --r5: #a5501f; --rs: #f39255; --rna: #2a2e37;
+    --on1: #14181f; --on2: #ffffff; --on3: #ffffff; --on4: #ffffff; --on5: #ffffff; --ons: #14181f;
+    --seq0: #1f2a27; --seq1: #7fd6b2; --on-seq: #0d1512;
+    --good: #45c445; --bad: #ef6b6b; --meh: #8f96a5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #15171c; --sheet: #1d2027; --ink: #eceef2; --ink-2: #b6bcc8; --ink-3: #8f96a5;
+  --rule: #272b34; --rule-2: #3a404c; --margin: #8a4646; --sun: #e9a913; --sun-ink: #f5c654; --sun-wash: #3a2f12;
+  --r1: #94bff3; --r2: #3f8be6; --r3: #1f5fae; --r4: #4a4b50; --r5: #a5501f; --rs: #f39255; --rna: #2a2e37;
+  --on1: #14181f; --on2: #ffffff; --on3: #ffffff; --on4: #ffffff; --on5: #ffffff; --ons: #14181f;
+  --seq0: #1f2a27; --seq1: #7fd6b2; --on-seq: #0d1512;
+  --good: #45c445; --bad: #ef6b6b; --meh: #8f96a5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; max-width: 65ch; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- 表紙 ---------- */
+.cover {
+  background:
+    linear-gradient(to right, transparent calc(2.6rem - 1px), var(--margin) calc(2.6rem - 1px), var(--margin) 2.6rem, transparent 2.6rem),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem),
+    var(--sheet);
+  border-bottom: 1px solid var(--rule-2);
+}
+.cover .wrap { padding-block: 2.5rem 2.25rem; }
+.cover-inner { padding-left: 2.2rem; display: grid; gap: 1.25rem; }
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ink-3); font-weight: 700; }
+h1 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+h1 .mark { background: linear-gradient(transparent 62%, var(--sun-wash) 62%); padding: 0 0.1em; }
+.lede { font-size: 1.02rem; color: var(--ink-2); }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
+.tile { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 6px; padding: 0.7rem 0.85rem; min-width: 0; }
+.tile .k { font-size: 0.78rem; color: var(--ink-3); font-weight: 500; }
+.tile .v { font-size: 1.9rem; font-weight: 700; line-height: 1.15; }
+.tile .v small { font-size: 0.9rem; font-weight: 500; color: var(--ink-2); margin-left: 0.15em; }
+.tile .s { font-size: 0.78rem; color: var(--ink-2); }
+
+/* ---------- 共通セクション ---------- */
+section { padding-block: 2.6rem 0.5rem; }
+section > .wrap { display: grid; gap: 1.1rem; }
+h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 3.4vw, 1.75rem);
+  line-height: 1.35;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.15em;
+}
+h2 .dot { color: var(--ink-3); }
+h2 .br { font-family: var(--f-body); font-weight: 700; font-size: 0.72em; color: var(--ink-2); }
+h3 { font-size: 1rem; font-weight: 700; }
+.note { font-size: 0.82rem; color: var(--ink-3); }
+.sheet { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 8px; padding: 1rem; min-width: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.chart-title { font-size: 0.92rem; font-weight: 700; }
+.chart-sub { font-size: 0.8rem; color: var(--ink-3); }
+details { font-size: 0.86rem; }
+details summary { cursor: pointer; color: var(--ink-2); font-weight: 500; }
+.tbl-wrap { overflow-x: auto; margin-top: 0.5rem; }
+table { border-collapse: collapse; font-size: 0.82rem; font-variant-numeric: tabular-nums; min-width: 100%; }
+th, td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--ink-3); font-weight: 500; }
+
+/* ひとことで言うと */
+.digest { display: grid; gap: 0.6rem; counter-reset: d; padding: 0; margin: 0; list-style: none; }
+.digest li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.5rem; align-items: start; }
+.digest li::before {
+  counter-increment: d; content: counter(d);
+  font-family: var(--f-display); font-size: 1.05rem; color: var(--sun-ink);
+  background: var(--sun-wash); border-radius: 50%; width: 1.8rem; height: 1.8rem;
+  display: grid; place-items: center; line-height: 1;
+}
+.digest b { font-weight: 700; }
+
+/* 評価スケールの色 */
+.c-s { background: var(--rs); color: var(--ons); }
+.c-5 { background: var(--r5); color: var(--on5); }
+.c-4 { background: var(--r4); color: var(--on4); }
+.c-3 { background: var(--r3); color: var(--on3); }
+.c-2 { background: var(--r2); color: var(--on2); }
+.c-1 { background: var(--r1); color: var(--on1); }
+.c-na { background: var(--rna); color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.8rem; color: var(--ink-2); align-items: center; }
+.legend .sw { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 3px; vertical-align: -0.1em; margin-right: 0.3rem; }
+.legend .sw.ring { background: var(--sheet); box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+/* 分布バー */
+.segbar { display: flex; gap: 2px; height: 28px; width: 100%; }
+.seg { height: 100%; border-radius: 4px; font-size: 0.74rem; font-weight: 700; display: flex; align-items: center; padding-left: 6px; white-space: nowrap; overflow: visible; min-width: 0; font-variant-numeric: tabular-nums; }
+.seg span[hidden] { display: none; }
+
+/* ---------- マス目 ---------- */
+.explorer { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.controls { display: grid; gap: 0.6rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip {
+  font: inherit; font-size: 0.8rem; font-weight: 500;
+  border: 1px solid var(--rule-2); background: var(--sheet); color: var(--ink-2);
+  border-radius: 999px; padding: 0.2rem 0.75rem; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.search { display: flex; gap: 0.5rem; align-items: center; }
+.search input {
+  font: inherit; font-size: 0.9rem; width: 100%; min-width: 0;
+  border: 1px solid var(--rule-2); border-radius: 6px; padding: 0.4rem 0.65rem;
+  background: var(--sheet); color: var(--ink);
+}
+.hitline { font-size: 0.84rem; color: var(--ink-2); min-height: 1.5em; }
+.hitline b { color: var(--ink); }
+.grid {
+  display: grid;
+  grid-template-columns: 3.1rem repeat(20, minmax(0, 1fr));
+  gap: 2px;
+  align-items: center;
+}
+.rowlab { font-size: 0.66rem; color: var(--ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 4px; text-align: right; }
+.cell {
+  aspect-ratio: 1; width: 100%; max-width: 100%; border: 0; padding: 0; border-radius: 3px; cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.cell.empty { background: transparent; cursor: default; }
+.cell.sstart { box-shadow: inset 3px 0 0 var(--ink); }
+.cell.sel { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+.grid.filtering .cell:not(.hit):not(.empty), .specials.filtering .sp:not(.hit) { opacity: 0.16; }
+.specials { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 0.5rem; align-items: center; }
+.specials .lab { font-size: 0.72rem; color: var(--ink-3); margin-right: 0.25rem; }
+.sp { font: inherit; font-size: 0.72rem; font-weight: 700; border: 0; border-radius: 4px; padding: 0.15rem 0.45rem; cursor: pointer; transition: opacity 0.15s; }
+.sp.sel { outline: 2px solid var(--ink); outline-offset: 1px; }
+.detail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: grid; gap: 0.6rem; }
+.detail-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.detail-head .ttl { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.2; }
+.rchip { font-weight: 700; font-size: 0.86rem; padding: 0.05rem 0.5rem; border-radius: 4px; font-variant-numeric: tabular-nums; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.tag { font-size: 0.72rem; border: 1px solid var(--rule-2); color: var(--ink-2); border-radius: 4px; padding: 0 0.4rem; }
+.memo {
+  font-family: var(--f-hand); font-weight: 600; font-size: 0.98rem; line-height: 2rem;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem);
+  max-height: 26rem; overflow-y: auto; padding-right: 0.25rem; margin: 0;
+}
+.nav { display: flex; gap: 0.5rem; }
+.btn { font: inherit; font-size: 0.82rem; border: 1px solid var(--rule-2); background: var(--sheet); color: var(--ink); border-radius: 6px; padding: 0.25rem 0.7rem; cursor: pointer; }
+
+/* ---------- 汎用チャート ---------- */
+.chart { width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.axis-text { font-size: 10.5px; fill: var(--ink-3); font-family: var(--f-body); font-variant-numeric: tabular-nums; }
+.lbl-text { font-size: 11px; fill: var(--ink); font-family: var(--f-body); font-weight: 700; font-variant-numeric: tabular-nums; }
+.lbl-sub { font-size: 10.5px; fill: var(--ink-2); font-family: var(--f-body); }
+
+/* シリーズ内訳 */
+.comp { display: grid; gap: 0.85rem; }
+.comp-row { display: grid; grid-template-columns: 8.2rem minmax(0, 1fr) 11rem; gap: 0.75rem; align-items: center; }
+.comp-row .nm { font-weight: 700; font-size: 0.9rem; line-height: 1.3; }
+.comp-row .nm small { display: block; font-weight: 400; color: var(--ink-3); font-size: 0.74rem; }
+.comp-row .sm { font-size: 0.78rem; color: var(--ink-2); line-height: 1.45; font-variant-numeric: tabular-nums; }
+.comp-row .sm b { color: var(--ink); }
+
+/* 答え合わせ */
+.formulas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.formula h3 { margin-bottom: 0.4rem; }
+.formula dl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 1rem; margin: 0; font-size: 0.9rem; }
+.formula dt { color: var(--ink-2); }
+.formula dd { margin: 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.formula.hand dl { font-family: var(--f-hand); font-weight: 600; font-size: 0.98rem; }
+.formula .base { border-bottom: 1px solid var(--rule-2); padding-bottom: 0.15rem; margin-bottom: 0.15rem; }
+.coef { display: grid; gap: 0.2rem; }
+.coef-row { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 9.5rem; gap: 0.75rem; align-items: center; min-height: 40px; border-bottom: 1px solid var(--rule); }
+.coef-row:last-child { border-bottom: 0; }
+.coef-row .nm { font-size: 0.86rem; font-weight: 700; line-height: 1.3; }
+.coef-row .nm small { display: block; font-weight: 400; color: var(--ink-3); font-size: 0.74rem; }
+.coef-axis { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 9.5rem; gap: 0.75rem; }
+.verdict { font-size: 0.76rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; line-height: 1.3; }
+.verdict i { font-style: normal; display: inline-grid; place-items: center; width: 1.15rem; height: 1.15rem; border-radius: 50%; font-size: 0.7rem; flex: none; color: var(--sheet); }
+.v-hit i { background: var(--good); }
+.v-miss i { background: var(--bad); }
+.v-meh i { background: var(--meh); }
+.v-hidden i { background: var(--sun); color: #2a1d00; }
+.v-hit { color: var(--ink); } .v-miss { color: var(--ink); } .v-meh { color: var(--ink-2); } .v-hidden { color: var(--ink); }
+
+/* キャラ */
+.heat td.h { text-align: center; font-weight: 700; min-width: 3.4rem; border-bottom: 2px solid var(--sheet); }
+.heat td:first-child { font-weight: 500; }
+.watch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.watch .tile .v { font-size: 1.6rem; }
+
+/* 文体 */
+.style td .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--ink-3); vertical-align: middle; margin-left: 0.4rem; }
+.style tr.hl td { background: var(--sun-wash); }
+
+/* 名言 */
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.quote { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 8px; padding: 0.8rem 0.9rem; display: grid; gap: 0.5rem; align-content: space-between; min-width: 0; }
+.quote q { font-family: var(--f-hand); font-weight: 600; font-size: 1rem; line-height: 1.7; quotes: "「" "」"; overflow-wrap: anywhere; }
+.quote .src { font-size: 0.76rem; color: var(--ink-3); display: flex; gap: 0.4rem; align-items: center; }
+.quote button.src { font: inherit; font-size: 0.76rem; border: 0; background: none; padding: 0; cursor: pointer; color: var(--ink-3); text-decoration: underline; text-underline-offset: 2px; }
+.records { display: grid; gap: 0.4rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
+.records li { display: grid; grid-template-columns: 11rem 1fr; gap: 0.75rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.35rem; }
+.records li span:first-child { color: var(--ink-3); font-size: 0.82rem; }
+.words { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.word { font-size: 0.82rem; border-radius: 4px; padding: 0.05rem 0.5rem; border: 1px solid var(--rule-2); }
+.method { font-size: 0.86rem; color: var(--ink-2); display: grid; gap: 0.5rem; }
+.method ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.25rem; }
+footer { padding-block: 2.5rem 3rem; }
+
+/* tooltip */
+#tip {
+  position: fixed; z-index: 50; pointer-events: none; max-width: min(320px, 80vw);
+  background: var(--ink); color: var(--sheet); font-size: 0.78rem; line-height: 1.5;
+  padding: 0.45rem 0.6rem; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+#tip b { font-weight: 700; }
+
+@media (max-width: 860px) {
+  .explorer { grid-template-columns: minmax(0, 1fr); }
+  .detail { position: static; }
+  .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  body { font-size: 14.5px; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .two, .formulas { grid-template-columns: minmax(0, 1fr); }
+  .cover-inner { padding-left: 1.6rem; }
+  .cover { background:
+    linear-gradient(to right, transparent calc(1.15rem - 1px), var(--margin) calc(1.15rem - 1px), var(--margin) 1.15rem, transparent 1.15rem),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem),
+    var(--sheet); }
+  .comp-row { grid-template-columns: minmax(0, 1fr); gap: 0.35rem; }
+  .comp-row .sm { display: flex; flex-wrap: wrap; gap: 0 0.8rem; }
+  .coef-row, .coef-axis { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; padding-block: 0.4rem; }
+  .coef-axis .pad { display: none; }
+  .quotes, .watch { grid-template-columns: minmax(0, 1fr); }
+  .records li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .grid { grid-template-columns: 2.4rem repeat(20, minmax(0, 1fr)); gap: 1.5px; }
+  .rowlab { font-size: 0.58rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="cover-inner">
+      <div class="eyebrow">感想メモ・全9冊を集計</div>
+      <h1>ハム太郎<span class="mark">296話</span><br>採点白書</h1>
+      <p class="lede" id="lede"></p>
+      <div class="tiles" id="tiles"></div>
+      <div style="display:grid; gap:0.45rem">
+        <div class="segbar" id="distbar" role="img"></div>
+        <div class="legend" id="distlegend"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>ひとことで言うと<span class="br">［5］</span></h2>
+    <ol class="digest" id="digest"></ol>
+  </div>
+</section>
+
+<section id="grid-sec">
+  <div class="wrap">
+    <h2><span class="dot">・</span>296マスの採点表<span class="br">［全話］</span></h2>
+    <p>1マスが1話です。マスを押すと、その回のメモ全文が右側（スマホでは下）に出ます。絞り込みボタンかメモ検索で、該当する回だけを光らせて平均点と★率をその場で出せます。</p>
+    <div class="explorer">
+      <div class="sheet controls">
+        <div class="chips" id="chips" role="group" aria-label="絞り込み"></div>
+        <div class="search">
+          <input id="q" type="search" placeholder="メモを検索（例：パンダ、作画、草）" aria-label="メモを検索">
+        </div>
+        <div class="hitline" id="hitline" aria-live="polite"></div>
+        <div class="grid" id="grid"></div>
+        <div class="specials" id="specials"><span class="lab">劇場版・OVA</span></div>
+        <div class="legend" id="gridlegend"></div>
+      </div>
+      <div class="sheet detail" id="detail" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>熱量の推移<span class="br">［★率とメモの長さ］</span></h2>
+    <p>視聴順に前後15回の移動平均をとりました。★率は1期前半の「最初の方は思い出して書いてる」区間がいちばん高く、ハムハーの木編で底をつきます。メモの長さは1期後半〜すいぱら編で1話あたり230〜240字まで膨らみ、最後は90字台に縮みます。</p>
+    <div class="sheet" style="display:grid; gap:1.2rem">
+      <div>
+        <div class="chart-title">★率（前後15回の移動平均）</div>
+        <div class="chart" id="ch-star"></div>
+      </div>
+      <div>
+        <div class="chart-title">メモの文字数（前後15回の移動平均）</div>
+        <div class="chart" id="ch-chars"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>シリーズ別<span class="br">［内訳］</span></h2>
+    <div class="sheet" style="display:grid; gap:0.9rem">
+      <div class="legend" id="complegend"></div>
+      <div class="comp" id="comp"></div>
+      <details>
+        <summary>表で見る</summary>
+        <div class="tbl-wrap"><table id="comptbl"></table></div>
+      </details>
+    </div>
+    <p class="note">平均は★を5点として計算しています。劇場版は4本中2本が3点で、本人も「劇場版基本的に全部アレ」と書いています。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>答え合わせ<span class="br">［自己申告 vs 実測］</span></h2>
+    <p>メモ・6の201話のあとに「今まで付けてた点数の基本の算出方法が分かった」という書き込みがあります。メモ・1の冒頭には「ハムちゃんず全員が出てると評価が甘くなりがち」とも書かれています。この自己申告を、全289件の採点に重回帰をかけて答え合わせしました。</p>
+    <div class="formulas">
+      <div class="sheet formula hand">
+        <h3>自己申告の採点式（メモ・6より）</h3>
+        <dl>
+          <dt class="base">基礎点</dt><dd class="base">3</dd>
+          <dt>かわいいキャラがメイン</dt><dd>＋1</dd>
+          <dt>かわいくないキャラがメイン</dt><dd>±0〜−1</dd>
+          <dt>目新しい展開</dt><dd>＋1〜2</dd>
+          <dt>夢回、劇中劇</dt><dd>−1</dd>
+          <dt>作画が良い</dt><dd>＋0.5</dd>
+        </dl>
+      </div>
+      <div class="sheet formula">
+        <h3 id="ols-title">実測の採点式（重回帰）</h3>
+        <dl id="ols-dl"></dl>
+      </div>
+    </div>
+    <div class="sheet" style="display:grid; gap:0.6rem">
+      <div class="legend">
+        <span><span class="sw" style="background:var(--sun); box-shadow: inset 0 0 0 1.5px var(--ink)"></span>自己申告の値・幅</span>
+        <span><span class="sw" style="background:var(--ink); border-radius:50%"></span>実測（線は95%区間）</span>
+      </div>
+      <div class="coef" id="coef"></div>
+      <div class="coef-axis"><div class="pad"></div><div class="chart" id="coef-axis"></div><div class="pad"></div></div>
+      <details>
+        <summary>表で見る（単純な平均差と並べ替え検定）</summary>
+        <div class="tbl-wrap"><table id="testtbl"></table></div>
+      </details>
+    </div>
+    <p class="note" id="ceiling"></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>ジンクス検証<span class="br">［作画と落差］</span></h2>
+    <div class="two">
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">「面白い時に限って作画がゴミ」</div>
+          <div class="chart-sub">168話・220話・255話で繰り返し出てくる嘆き。122話以降の★率で比べました。</div>
+        </div>
+        <div class="chart" id="ch-sakuga"></div>
+        <div id="v-sakuga"></div>
+      </div>
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">「夢回に限って作画がいい」</div>
+          <div class="chart-sub">219話・233話・257話の嘆き。122話以降で、作画◎◯と書かれた割合を比べました。</div>
+        </div>
+        <div class="chart" id="ch-dreamsak"></div>
+        <div id="v-dreamsak"></div>
+      </div>
+      <div class="sheet" style="display:grid; gap:0.6rem; grid-column: 1 / -1">
+        <div>
+          <div class="chart-title">「つまらない回が続いた後の面白い回は面白く感じる」</div>
+          <div class="chart-sub">メモ・3の「落差について」より。直前3回の評価ごとに、次の回が★になった割合を比べました。</div>
+        </div>
+        <div class="chart" id="ch-contrast"></div>
+        <div id="v-contrast"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>キャラ<span class="br">［★率と出番］</span></h2>
+    <div class="sheet" style="display:grid; gap:0.6rem">
+      <div>
+        <div class="chart-title">メモに名前が出た回の★率</div>
+        <div class="chart-sub">9回以上言及されたキャラ。縦線は全体の★率です。</div>
+      </div>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--rs); border-radius:50%"></span>全体より★が多い</span>
+        <span><span class="sw" style="background:var(--r2); border-radius:50%"></span>全体より★が少ない</span>
+      </div>
+      <div class="chart" id="ch-chars-star"></div>
+    </div>
+    <div class="two">
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">シリーズごとの言及率</div>
+          <div class="chart-sub">各シリーズで、メモに名前が出た回の割合。1期前半はメモ自体が短いぶん低めに出ます。</div>
+        </div>
+        <div class="tbl-wrap" style="margin:0"><table class="heat" id="heat"></table></div>
+      </div>
+      <div style="display:grid; gap:0.75rem; align-content:start">
+        <div class="sheet" style="display:grid; gap:0.6rem">
+          <div>
+            <div class="chart-title">出番監視ログ</div>
+            <div class="chart-sub">125話で本人が「いつも出ない組(トラハム、パンダ、かぶる)」と命名。「いない」「喋らない」「出番が多い」とチェックした回の数です。</div>
+          </div>
+          <div class="watch" id="watch"></div>
+        </div>
+        <p class="note">じゃじゃハムちゃんに触れた9回は平均3.89点で、キャラ別の最下位です。179話には「正直にいうと、じゃじゃハムの苦手意識が明らかにまだ抜けてない、フラットに見れてない」と自己分析があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>文体<span class="br">［疲れの指標］</span></h2>
+    <p>1000字あたりの出現回数です。ハムハーの木編で「マジ・ガチ」が1期前半の約4.7倍に増え、笑い（w・草）とツッコミも増えます。逆に「？」は減っていきます。疑問を持つより先にツッコむようになった、と読めます。</p>
+    <div class="sheet"><div class="tbl-wrap" style="margin:0"><table class="style" id="style"></table></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>名言と記録<span class="br">［抜粋］</span></h2>
+    <div class="quotes" id="quotes"></div>
+    <div class="two">
+      <div class="sheet"><h3 style="margin-bottom:0.5rem">記録</h3><ul class="records" id="records"></ul></div>
+      <div class="sheet" style="display:grid; gap:0.75rem; align-content:start">
+        <h3>★の回と4点以下の回で差が出た言葉</h3>
+        <div><div class="chart-sub" style="margin-bottom:0.3rem">★の回に多い</div><div class="words" id="w-star"></div></div>
+        <div><div class="chart-sub" style="margin-bottom:0.3rem">4点以下の回に多い</div><div class="words" id="w-low"></div></div>
+        <p class="note">janomeで形態素解析し、1話に1回でも出たかで数え、事前分布つき対数オッズ比で並べました。4点以下の側に「映画」「劇場」「導入」「正直」「見た目」が並びます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap method">
+    <h2 style="margin-bottom:0.25rem"><span class="dot">・</span>方法<span class="br">［と注意］</span></h2>
+    <ul>
+      <li>docs/1.txt〜9.txt から「・話数［評価］★」の見出しを抜き出し、次の見出しまでをメモ本文としました。見出しでない「・」行（雑談・メタ考察）は本文から外しています。1〜14話は1件にまとまっているので14マスとも同じ評価です。EX.txt（2周目）は集計に入れていません。</li>
+      <li>夢回・死にかける回・作画の良し悪しは、正規表現で候補を出したあと該当行を1件ずつ読んで手で確定しました（「夢回じゃないのに3点」や「マラカス振ってないと死ぬの？」を除くため）。キャラ言及・「かわいい」などは正規表現のままです。</li>
+      <li>差の検定は並べ替え検定（20,000回）。回帰は素点（1〜5、★は5）に対する最小二乗法です。</li>
+      <li>採点の71%が5点（★含む）なので天井効果が強く、加点要素は平均点に出にくくなります。★率もあわせて見てください。</li>
+      <li>集計コードと中間データはリポジトリの analysis/ にあります（parse.py → analyze.py → deep.py → build_page.py）。</li>
+    </ul>
+  </div>
+</footer>
+<div id="tip" hidden></div>
+
+<script>
+const D = {"entries":[{"o":0,"v":"1","l":"1〜14","k":"tv","ep":1,"ee":14,"s":0,"r":5,"st":true,"c":121,"m":"1話で4人登場\n2話でマフラー関係4人とねてる\n3話でのっぽ、パンダ、トラハムちゃん、かぶる\n(10でトンガリ、11で長老)\n14でトラハムくん。レギュラーが揃う\n(10話の放送日(2000/9/8)に『とっとこハム太郎 ともだち大作戦でちゅ』発売日)","f":[]},{"o":1,"v":"1","l":"15","k":"tv","ep":15,"ee":15,"s":0,"r":5,"st":true,"c":32,"m":"かぶるくんのせい、お前普段そんなに視界悪い状態で行動してたのかよ","f":[]},{"o":2,"v":"1","l":"16","k":"tv","ep":16,"ee":16,"s":0,"r":4,"st":false,"c":27,"m":"ハム太郎だけがタイショーくんをちゃんと心配してくれてる","f":[]},{"o":3,"v":"1","l":"17","k":"tv","ep":17,"ee":17,"s":0,"r":4,"st":false,"c":99,"m":"トラハムくんヘイト買いすぎ。オチがなぁ...、-1点\n(74話ぐらいまで見た後に追記：この頃はちび丸ちゃんあんまり好きじゃなかったから減点してる？ありがちなオチだけどこんなキレるほどじゃない気がする)","f":[]},{"o":4,"v":"1","l":"18","k":"tv","ep":18,"ee":18,"s":0,"r":5,"st":false,"c":16,"m":"眼帯してるニワトリってなんやねん","f":[]},{"o":5,"v":"1","l":"19","k":"tv","ep":19,"ee":19,"s":0,"r":5,"st":true,"c":66,"m":"地下ハウス自体に愛着あるタイショーくんはともかくトラハムくんとまいどくんがヘイト役になる意味あったか？パンダくんの技術力おかしいやろ","f":[]},{"o":6,"v":"1","l":"20","k":"tv","ep":20,"ee":20,"s":0,"r":5,"st":true,"c":45,"m":"一切ねてるくんの掘り下げにはなってないけど面白い。オアシスくん一言目だけ態度でかいのなに？","f":[]},{"o":7,"v":"1","l":"21","k":"tv","ep":21,"ee":21,"s":0,"r":5,"st":true,"c":29,"m":"かぶるくんが大騒ぎしてて面白い、ファンが多いのもわかるかも","f":[]},{"o":8,"v":"1","l":"22","k":"tv","ep":22,"ee":22,"s":0,"r":5,"st":true,"c":74,"m":"ハム太郎はいい奴だけど相談となるとだいぶ役立たないな...。リボンちゃんの切り捨てかわいい。最後のマフラーちゃん流石にまいどとめがねがちょっと可哀想","f":[]},{"o":9,"v":"1","l":"23","k":"tv","ep":23,"ee":23,"s":0,"r":5,"st":true,"c":46,"m":"やっぱり死にかける回は面白い。のっぽくんってブレイン枠なのに運動もそつなくこなすから万能やな","f":["danger"]},{"o":10,"v":"1","l":"24","k":"tv","ep":24,"ee":24,"s":0,"r":5,"st":true,"c":58,"m":"トン吉、サブさん初登場\nトンガリくん心強い、この回で好きになった。2週間失踪ってだいぶやべえだろ、ロコちゃん病んじゃう","f":[]},{"o":11,"v":"1","l":"25","k":"tv","ep":25,"ee":25,"s":0,"r":5,"st":true,"c":55,"m":"メリーとっとこクリスマス！歌ちゃんと入ってるやん！街中でわちゃわちゃして結局解決しないって展開もたまにはいいな","f":[]},{"o":12,"v":"1","l":"26","k":"tv","ep":26,"ee":26,"s":0,"r":1,"st":false,"c":11,"m":"夢の中の話。これいる？","f":["dream"]},{"o":13,"v":"1","l":"27","k":"tv","ep":27,"ee":27,"s":0,"r":5,"st":true,"c":28,"m":"なんでわざわざ地下ハウス来て寝るんだよw、家で暖まれよw","f":[]},{"o":14,"v":"1","l":"28","k":"tv","ep":28,"ee":28,"s":0,"r":5,"st":false,"c":40,"m":"野沢雅子初登場回\nタイショーくんがイケメン。ハムちゃんずの移動距離やばくないかこれ","f":[]},{"o":15,"v":"1","l":"29","k":"tv","ep":29,"ee":29,"s":0,"r":5,"st":true,"c":26,"m":"他はともかくめがねくんはなんで度で気がつかないんだよ","f":[]},{"o":16,"v":"1","l":"30","k":"tv","ep":30,"ee":30,"s":0,"r":5,"st":false,"c":66,"m":"当たり前のようにロコちゃんの移動に他のハムが潜入するのなんなん。ガチの大会荒らし。兎は察し良すぎるしこの世界の動物みんな知能高いのか","f":[]},{"o":17,"v":"1","l":"31","k":"tv","ep":31,"ee":31,"s":0,"r":5,"st":true,"c":34,"m":"タイショーくんは相変わらず株の上げ下げが激しい、今回は上げ回が来た。","f":[]},{"o":18,"v":"1","l":"32","k":"tv","ep":32,"ee":32,"s":0,"r":5,"st":false,"c":53,"m":"女の子ハムたちのセンスどうなってんねん。ロコちゃんがチョコ渡さないで終わるとは思わなかった、普通にびっくり","f":[]},{"o":19,"v":"1","l":"33","k":"tv","ep":33,"ee":33,"s":0,"r":5,"st":true,"c":38,"m":"ハムたちはまあわかるけども、人間であるロコちゃんたちの虹に対する執着がすごい","f":[]},{"o":20,"v":"1","l":"34","k":"tv","ep":34,"ee":34,"s":0,"r":5,"st":true,"c":17,"m":"めがね単体なら普通にお世話できそう","f":[]},{"o":21,"v":"1","l":"35","k":"tv","ep":35,"ee":35,"s":0,"r":5,"st":true,"c":32,"m":"相変わらずハムたちの技術力ぶっ飛んでんな、パンダくん結構好きかも","f":[]},{"o":22,"v":"1","l":"36","k":"tv","ep":36,"ee":36,"s":0,"r":5,"st":true,"c":35,"m":"マリアちゃんといつ知り合いになるんだよ！この内容でも会わねえのかよ！！","f":[]},{"o":23,"v":"1","l":"37","k":"tv","ep":37,"ee":37,"s":0,"r":3,"st":false,"c":31,"m":"じゃじゃハムちゃん初登場。\n新キャラ登場回だけどなんか内容が薄い","f":["jaja"]},{"o":24,"v":"1","l":"38","k":"tv","ep":38,"ee":38,"s":0,"r":5,"st":true,"c":20,"m":"トンガリくんとタイショーくんのペアいいな","f":[]},{"o":25,"v":"1","l":"39","k":"tv","ep":39,"ee":39,"s":0,"r":5,"st":true,"c":65,"m":"デザインのテーマが「空飛ぶハムスター」なのはイカれすぎだろ。ハムちゃんずは最後どうやって降りたの。パンダくんがいっぱい出てて嬉しい","f":[]},{"o":26,"v":"1","l":"40","k":"tv","ep":40,"ee":40,"s":0,"r":4,"st":false,"c":16,"m":"内容スカスカで草、謎パワーで開花","f":[]},{"o":27,"v":"1","l":"41","k":"tv","ep":41,"ee":41,"s":0,"r":5,"st":true,"c":52,"m":"顔芸多すぎやろ、何も悪いことしてないタイショーくんが報われてよかった。のっぽくんが終始楽しそうでかわいい","f":[]},{"o":28,"v":"1","l":"42","k":"tv","ep":42,"ee":42,"s":0,"r":2,"st":false,"c":67,"m":"じゃじゃハムちゃん髪型が可愛くなさすぎ。また2話しかないけどこいつが出てくる回中身無さすぎやろ、最終回がこいつなの今から嫌になってきた","f":["jaja"]},{"o":29,"v":"1","l":"43","k":"tv","ep":43,"ee":43,"s":0,"r":3,"st":false,"c":55,"m":"久々にこうしくんを燃やしたくなる回。先生は結局動物を持ち寄らせて何をしたかったのかが気になる。ただの見せ合い？","f":[]},{"o":30,"v":"1","l":"44","k":"tv","ep":44,"ee":44,"s":0,"r":4,"st":false,"c":123,"m":"こういうアニメに出てくる祖父母って母方なのか父方なのかはっきりしない、ワンペアしか出てこないことが多い気がする。言動的には父方のほうかな？デフォルメされてるから軽傷だけどハムスターならあの落下で普通に死ぬ可能性あるよな、ロコちゃんがキレるのも妥当","f":["danger"]},{"o":31,"v":"1","l":"45","k":"tv","ep":45,"ee":45,"s":0,"r":4,"st":false,"c":47,"m":"この回のリボンちゃんヤバすぎだろ、ガチで誰の話も聞かねえし勝手に移動しまくるしでやりたい放題w","f":[]},{"o":32,"v":"1","l":"46","k":"tv","ep":46,"ee":46,"s":0,"r":5,"st":true,"c":64,"m":"展開が花見回と既視感ありすぎる&人間メイン回、なので期待してなかったけど話の内容は好き。あと久々にハムちゃんず全員出てて嬉しい。","f":[]},{"o":33,"v":"1","l":"47","k":"tv","ep":47,"ee":47,"s":0,"r":5,"st":false,"c":74,"m":"ピヨちゃんず初登場。リボンちゃんってもしかしてだいぶ抜けてるのか？結構お花畑だ。やたらハムちゃんず全員が映る絵面が多くてたくさんスクショしちゃった。","f":[]},{"o":34,"v":"1","l":"48","k":"tv","ep":48,"ee":48,"s":0,"r":5,"st":true,"c":157,"m":"純粋に見てて面白かった回。パンダくんの出番かなり多くて良かった。こうしくん以外が覚悟決まりすぎだろ、のっぽくんなんて辞世の句詠んでるし割と余裕そうだな？すべり台とかがある地下ハウスにグレーチングのついたガチの排水溝が設置されたのシュールで面白い。この回テーマが面白いしトラハム兄妹とかぶるくんも出演してほしかったな","f":["danger","watch"]},{"o":35,"v":"1","l":"49","k":"tv","ep":49,"ee":49,"s":0,"r":5,"st":true,"c":159,"m":"トンガリくんはほんとに唐突に出てくる。フロッピー落とした回と起承転結がほぼ同じやんけ。夜中にハムちゃんずが行動するのかなり珍しい、普通に全員抜け出してきてるんですけど。春奈家の掘り下げも多いし、ハムちゃんずの動きも多いしでかなり満足度の高い回。今回で気がついたけどトンガリくんの足音は汎用のキュピキュピじゃないっぽい？","f":[]},{"o":36,"v":"1","l":"50","k":"tv","ep":50,"ee":50,"s":0,"r":4,"st":false,"c":109,"m":"4人+のっぽくんだったけどのっぽくんの出番あんまりなかったな\nその出番もやっぱりいつも通りな感じ、ハムちゃんずが分からない事に遭遇する→真偽はともかくとしてのっぽくんが何か説明する　の流れがテンプレ、なので出番が割と多い","f":[]},{"o":37,"v":"1","l":"51","k":"tv","ep":51,"ee":51,"s":0,"r":5,"st":true,"c":148,"m":"叩きつけてマラカスぶっ壊すってパワーすげえなw、泣くんじゃなくてやり返すっていうのがトラハムちゃんらしい。\n食材の調達まるまるカットされてるけど規模がおかしいだろw。かぶるくん仕事してなくない？見間違いかと思って見直しても仕事してるシーンが...\nこのタイトルならもう少し2人に尺割いてくれーーー！！","f":[]},{"o":38,"v":"1","l":"52","k":"tv","ep":52,"ee":52,"s":0,"r":3,"st":false,"c":124,"m":"次回予告でああ夢回かぁって思ってたのに夢に入る前に初っ端から地下ハウスで刀振り回してて草。夢オチ回だから26話並に見る意味は無いんだけど着衣ハムたちがかわいいのと冒頭の唐突な組太刀が面白いから少し許せる。ロコちゃん寝てただけだし日記に書く事ねえだろ","f":["dream"]},{"o":39,"v":"1","l":"53","k":"tv","ep":53,"ee":53,"s":0,"r":5,"st":true,"c":98,"m":"オープニングが2番になった\nかぶるくんの扱いが面白すぎる\nじゃじゃハムメイン回でも、今回みたいにハムちゃんずがちゃんと出てればええんよ、こうしとじゃじゃハムペア単体でずっとやられるのが面白くないだけで","f":["jaja"]},{"o":40,"v":"1","l":"54","k":"tv","ep":54,"ee":54,"s":0,"r":5,"st":true,"c":143,"m":"くるりんちゃん初登場\nラブラブアタックってこれが初出なんだ、元々こいつらの物なのに曲奪ってて草\nこの回のハムちゃんずのテンションどうしたの？まいどくんのギャグもウケてるし。くるりんちゃん初登場なのに一生ドン引きしてるだけなんだけど\nくるみちゃんはともかくくるりんちゃんはただの被害者だろこれw","f":[]},{"o":41,"v":"1","l":"55","k":"tv","ep":55,"ee":55,"s":0,"r":5,"st":false,"c":77,"m":"ロコちゃん基本今までいい子だったからこんな子供らしくするの珍しい\n55話にして！！やっと！！マリアちゃんと！！知り合いになった！！！年齢差けっこうありそう？","f":[]},{"o":42,"v":"1","l":"56","k":"tv","ep":56,"ee":56,"s":0,"r":5,"st":true,"c":48,"m":"クーラーボックス勝手に開けて涼むのはやめて\n当たり前のように自分の体高の数倍はある砂の城作らないで","f":[]},{"o":43,"v":"1","l":"57","k":"tv","ep":57,"ee":57,"s":0,"r":4,"st":false,"c":104,"m":"震えるハム太郎のプリケツおもろい\n地下ハウスで涼んだら？？？？？\nどういう経緯で2人で先生の実家に遊びに行ったんだ\nなんかもう当たり前のように夜でもケージ抜け出してる奴しかいなくて帰らなきゃいけない制約消えてない？","f":[]},{"o":44,"v":"1","l":"OVA1","k":"ova","ep":null,"ee":null,"s":4,"r":5,"st":true,"c":337,"m":"OVA、さすがに作画がいい\nおとどけくんは放映時期的にこれが初出かな？急にこっちを認識してきて怖い\nてちてちまーち！！？？！？！？\n過去キャラと昔の内容の回収、劇中歌が盛り沢山でええな\nオアシスくんやっぱりかわいいよな\nサブさん初回も今回も有能すぎんだろ\nつららちゃんはそっくりだけど別に血縁ってわけでもないのか\nかぶるくんは環境的に誕生日だと家でめちゃくちゃ祝われそうなんだけどな\n劇中歌、盛り沢山どころかキャラソン全部やる勢いなんだけど\nトラハムくんシンセ弾けるんだ\nこれを見たのがちょうど自分の誕生日(2025/11/4)。OVAの発売時期を調べようとちゃんとやってなかったら重ならなかった、すごい偶然。ハム太郎のアニメ消化と自分の誕生日のタイミングが合うのすごいよな、これもう運命だろ。","f":[]},{"o":45,"v":"1","l":"58","k":"tv","ep":58,"ee":58,"s":0,"r":5,"st":false,"c":96,"m":"いっつもスランプみたいなものはひでえなw\nトンガリくんのこの曲って初めてかな？\n他のキャラソンはキャラの声で歌いがちだけどこれはガチで歌ってていいね、キャラにもあってる。劇中歌入るとやっぱりいいな","f":[]},{"o":46,"v":"1","l":"59","k":"tv","ep":59,"ee":59,"s":0,"r":5,"st":true,"c":83,"m":"運動会の回の校庭もそうだったけどこいつらそこらじゅうに穴開けてるな\n猫にボール思い切り蹴りつけてて草\n和解しないで終わった、バレンタイン回といい予想した展開を裏切ってくる","f":[]},{"o":47,"v":"1","l":"60","k":"tv","ep":60,"ee":60,"s":0,"r":5,"st":false,"c":42,"m":"先生関連だとリボンちゃんがウキウキすぎる\nこうしくんの扱いはハムちゃんずでもああなのか","f":[]},{"o":48,"v":"1","l":"61","k":"tv","ep":61,"ee":61,"s":0,"r":4,"st":false,"c":69,"m":"のっぽくんの負担がデカすぎる\nめがねくんはやっぱりブレイン枠をやるつもりはないんだな、眼鏡キャラってだけで\n(追記)オチのせいで4点にしたはず","f":[]},{"o":49,"v":"1","l":"62","k":"tv","ep":62,"ee":62,"s":0,"r":5,"st":true,"c":97,"m":"ちび丸ちゃんの布に何も言及しないで「ハムスターだ〜！」ってなるか？？？\nちび丸ちゃんの手に収まるサイズの花ってすげえサイズだな\nまいどくんのギャグ普通にうまい、割と好き\nのっぽくんの探し方ほんま賢いな","f":[]},{"o":50,"v":"1","l":"63","k":"tv","ep":63,"ee":63,"s":0,"r":5,"st":false,"c":72,"m":"小学校の校長が世界飛び回るって何\n校長が白スーツ\nのっぽくんなんでその修理でいけると思ったの？いつもの知性はどうしたw\nキレかけてるのっぽくんの声すき","f":[]},{"o":51,"v":"1","l":"64","k":"tv","ep":64,"ee":64,"s":0,"r":5,"st":true,"c":58,"m":"この回やたら全員わちゃわちゃしてておもろい\n思ってたより古い付き合いだったw\nトラハムくんはマラカス振ってないと死ぬの？","f":[]},{"o":52,"v":"1","l":"65","k":"tv","ep":65,"ee":65,"s":0,"r":5,"st":true,"c":119,"m":"モモちゃん初登場時も可哀想な仕打ち受けたのにまた...\n遊園地にハムスター連れてくるの\nモモちゃん家大丈夫？\nパンダくんをこれ以上いじめないで〜😭\n1話完結じゃなくてまさかの2話連続。この回はモモちゃんとパンダくんを曇らせるだけで終わった...😢","f":[]},{"o":53,"v":"1","l":"66","k":"tv","ep":66,"ee":66,"s":0,"r":5,"st":true,"c":79,"m":"お前らの馴れ初めはいいから連れて行ってやれよ！！！！！！！！\nモモちゃん家2回もハムちゃんずに助けられてるけど大丈夫なのか\nエンディングがてをつなごうになりました","f":[]},{"o":54,"v":"1","l":"67","k":"tv","ep":67,"ee":67,"s":0,"r":5,"st":false,"c":99,"m":"現代で伝書鳩...地点を指定するんじゃなくて移動する個人に届けるの凄すぎる\n木の上に乗って笛？？？サクラさんとんでもないくらい変人だろ\n久々にハムちゃんずがずっと無力な回、ボヨンボヨン揺れてるのかわいい","f":[]},{"o":55,"v":"1","l":"68","k":"tv","ep":68,"ee":68,"s":0,"r":4,"st":false,"c":55,"m":"なんやねんこのふざけた格好は\n家の中が胡椒まみれに…\nホンマになんやねんこの格好、それがデフォルトなのおかしいだろ","f":[]},{"o":56,"v":"1","l":"69","k":"tv","ep":69,"ee":69,"s":0,"r":5,"st":false,"c":98,"m":"これ冬服なのか？そういえばロコちゃん一生同じ格好してたな\nペットショップって子供単体で買えるの？\n最近マジでトラハムくんのセリフが無くて気になる、映ってもマラカス振ってるだけで相槌とかのセリフすらない","f":["watch"]},{"o":57,"v":"1","l":"70","k":"tv","ep":70,"ee":70,"s":0,"r":4,"st":false,"c":127,"m":"この世界ハムスターの造形はデフォルメ強めだけど有蹄類だけやたらリアルなんだよな\nハム太郎の物語は思ったよりハムちゃんずの誰かがやらかす回が少ない、けどやらかす回はこうしくんがやらかす\nタイトルで勝手に赤ちゃんヤギがやんちゃする話かと思ったら産むまでの話だった","f":[]},{"o":58,"v":"1","l":"71","k":"tv","ep":71,"ee":71,"s":0,"r":5,"st":false,"c":149,"m":"ハムスターの治療費のコピペ思い出しちゃった\nまた変な大人出てきた、69話のおまわりさんだけがまともな大人だった\nこのドブネズミがよぉ、少しはみんなの話聞け\n犬とかは注射義務だけどハムスターって特にそういうのないのかな→ないらしい\n今更だけどEDで右下で踊ってる三匹、やたらぬるぬるしてる、もよんもよんしてる","f":[]},{"o":59,"v":"1","l":"72","k":"tv","ep":72,"ee":72,"s":0,"r":5,"st":false,"c":262,"m":"ジュンちゃんはマフラーを編んであげる前からマフラーちゃんって名付けてたの？どのタイミングで名付けたんだ。ペットショップで購入→即編んであげた？\nハム太郎がものすごく珍しくペットみたいな振る舞いしてる\nこうしくんがマフラーくんになっちゃう\nこうしくんがかぶるくんになっちゃう\n習得初日から指導側に回るパンダくんさすが\nまたバレンタイン回みたいなことになってる\nそんなにマフラーちゃんメイン回ってわけでもなかった。マフラーちゃんってわんぱくの対極にいるせいで、メイン回になっても意外な一面とか行動を率先して起こすとかがない\nこの回けっこう好き","f":[]},{"o":60,"v":"1","l":"73","k":"tv","ep":73,"ee":73,"s":0,"r":5,"st":false,"c":205,"m":"すすきの花冠...穂冠？\n人間から見てもめちゃくちゃ高低差すごくない？どんだけ登ってんだよこいつら\n流石にこの高さはコメディ補正あっても死ぬか\nなんかこの4人単体だと割と全員が有能になるな、サクサク進む...って書こうとしたけどそんなことないわ、まいどとめがねがあやすの失敗してちび丸ちゃん居なくなる回はこの4人めちゃくちゃ手際良かったけど、水族館とかは...\nこのサイズに型抜きできるのニンジンデカすぎだろw\n枚数やば","f":["danger"]},{"o":61,"v":"1","l":"74","k":"tv","ep":74,"ee":74,"s":0,"r":5,"st":true,"c":192,"m":"タイトルのせいで初っ端から失踪してんのかと思った\n鼻歌かわいい\n排水溝に落ちただけでピンチになるのに1人で出歩くの危なすぎる\n珍しくまいどが有能になるかと思ったけどダメだった\nトンガリくんいっつも急に出てくるから別れ感全然ねえな\nこの回はなかなかに面白かった。捜索パートが短く終わって説得がメインなのと、居なくなって飼い主が困る的な展開が一切なかったので、既視感がなく見ていて楽しい展開だった。","f":[]},{"o":62,"v":"1","l":"75","k":"tv","ep":75,"ee":75,"s":0,"r":5,"st":false,"c":95,"m":"スケート場で乗ってる船、ハム太郎3の序盤で出てきたやつに似てる気がする\n会話してねえで早く追いかけろよw\nまた遭難してて草、もう峠行くのやめろ\n割とすぐ戦おうとする\nホンモノ出てくる展開じゃないんだ","f":["danger"]},{"o":63,"v":"2","l":"76","k":"tv","ep":76,"ee":76,"s":0,"r":3,"st":false,"c":118,"m":"夢なのか絶妙にわからない次回予告\n夢回だと寝落ちする流れがいっつも同じだなw\n鬼監督というか真っ当な指導だな\nこれって2人の夢ってことはそれぞれの役割とか振る舞いってこいつらの偏見というか解釈なんだよな\n映画撮る回の後に劇場版観ることになるやん","f":["dream"]},{"o":64,"v":"2","l":"劇場版1","k":"movie","ep":null,"ee":null,"s":4,"r":3,"st":false,"c":604,"m":"OVAは日常で劇場版は異世界なんかな？\n一年中咲いてたら種取れなくない？\n絵本デカすぎやろ\n流石に映画だと作画が良いな\nテンポいいな\nこれ拗ねて帰ろうとしないやつやろ\nなんかこの妖精エビちゅみたいな声だな\nミニモニでてきた\nあーこれほんとにエビちゅだ\nこのDJ、ハムスポにも居たな\n映画もOVAも、普段の2倍くらいの尺だけど半分くらい歌ってるから内容の濃さが結局いつもと同じだw\nねてるくんが背負われてるの初めて\n普通に泳ぎ出してる\nハム語のサービスうれしい\nなんでこいつら首都知ってるの\n全然ハムスターじゃないドラゴンが出てきたんだけど\nBGMもいつものやつがちょっとずつアレンジされてるかんじなのか\nエビちゅはタネが消えた理由を説明しろ\nドラゴンのやつはともかくエビちゅはハムスター形態にすらない謎の生き物\n昭和にすらなさそうなやべー遊具\n失踪ってこれで3回目か？\n内容は、劇場版だなぁ、って感じだった。ノリと勢いで駆け抜けるかんじ。大人が見るとちょっとキツイな...元々子供向けアニメだけど...。作画のクオリティはさすがにアニメとは比べ物にならない\n感想書いてて思ったけど、OVAのキャラソン連打も人によっては歌いっぱいだなぁ、ってなるだけだよな。キャラソンってしっかりめのファンじゃないとわからないだろ、普通の人なら急に出てきた劇中歌にしか思えない\nというかOVAの曲はいいのに劇場版はタイアップしかなくてそこが嫌、ハムちゃんずの声が聞きたいの","f":[]},{"o":65,"v":"2","l":"77","k":"tv","ep":77,"ee":77,"s":0,"r":5,"st":false,"c":367,"m":"クリスマス回は2回目\n丸投げ\n歌無し流れてるけど今年も歌うのかな\nまいどくんのギャグ割と好きなんだけど\nこれ労力やばくない？流石に1匹ずつの家回る訳じゃないよな？\n久々のロベルト\nリボンちゃんって歩く時「ぽてぽて」言うのか(てちてち、だばだば、とかの話)、かわいいね\n家まわんのかよ\n今年もやっぱり歌うのか\nみんな同じ体勢で寝てる、ハムスター飼ったことないから知らんけど眠る姿勢って基本がこれなのかな\nすごく今更だけどハムスターサイズの本って何\n自作のあのサイズのぬいぐるみってすげえな\nリボンちゃんがヒロインらしい回だった(？)\n内容薄めだけどこの回は好き、もう自分の評価基準がわからん。あれかな、最近地味にリボンちゃんブームが来ててすごく可愛く見える\nメリーとっとこクリスマス、キャラソンの中でもお気に入り。メロディが好きなのもあるけど、歌詞が可愛いんだよね","f":[]},{"o":66,"v":"2","l":"78","k":"tv","ep":78,"ee":78,"s":0,"r":2,"st":false,"c":352,"m":"これ夢回だろ、次回予告でわかる\nって思ってたら現実で探偵ごっこしてた\nパンダくんに微妙に見せ場？あって嬉しい、かわいい。ルパンダだって、かわいいねぇ。ほんとにかわいい。でも今回女の子ハムがメインだからこの後あんまり出ないのかな...？\n夢回の導入も寝落ちまでをどうにか工夫しようとしてるんやな\n↑そんなことないかも、すぐ気絶する\n夢回見るたびに思うけど2期は一生このノリだとしんどいな\n夢回はまあ着衣ハムがかわいいのでギリ許せなくも...？←ウソや！ワイは自分にウソつけへん！\n衛兵姿ののっぽくんいいな、似合う\n落石は殺しにきてるやん\n甲冑着たまいどくん結構好き\nねてるくんの夢を共有する特殊能力すごいな\nパンダくんの出番作っといて本題の夢のパート入ると一切出てこないの何？ケンカ売ってる？\n76話で夢回やったのに近すぎだろボケ","f":["dream","watch"]},{"o":67,"v":"2","l":"79","k":"tv","ep":79,"ee":79,"s":0,"r":4,"st":false,"c":628,"m":"予告でいの一番に凧揚げしてるパンダくん映ったけどやっぱりそういうのはパンダくんの出番だよね、楽しみでちゅわ\nハム太郎とタイショーくん和服が似合わねえ\n着物着て門松飾ってずいぶん気合い入った正月だな\nパンダくんのプリケツ\nこいつやっぱ器用すぎだろ、逆に作れないものが知りたいわこんなん\nこんな近くてよく絡まらないな\n凧をこんな自在に動かせるのすごいな\nトラハムくん、タイショーくんに張り合う役としてこうやって動かせるならもっと出番あっていいと思うのに\nこの年頃の子に対して自画像の凧はやべえ\n木村くんのタコのデザイン何？タツノオトシゴ？\nちび丸ちゃん、本人に非があるかないか関わりなしに危険な目にあいがち\n流石にハムスターでも凧糸登るのはキツイやろ\nこんな連結した凧実在するんだ、知らなかった\nのっぽくんの凧、これ本の形か\n節目？だから全員ちゃんと出てていいね、パンダくん多めでGOOD。やっぱり、技術が必要な場面だと出番が確約されてる安心感は大きい\n何だか全員集合回のテンプレみたいな流れだった、みんなで遊んでトラブルがあって万事解決してまたみんなで遊ぶ流れ。夢回やら劇場版やらで心が荒んでたので沁みる\nめちゃくちゃベタ褒めしてるのに『4』。いやまあ、テンプレ展開で安心感があるし沁みるんだけど、既視感、薄味感が否めない。 パンダくんの出番も多いし、ハムちゃんずみんな出てるし、みんなで仲良く協力する微笑ましい回。なんだけど、別に内容自体が面白いかと言われるとうーん、というのが正直な感想","f":["watch"]},{"o":68,"v":"2","l":"80","k":"tv","ep":80,"ee":80,"s":0,"r":5,"st":false,"c":226,"m":"まいどのギャグ、作中だと毎回滑るけど割と好きなんだよな、面白いと思う\n今回の作画、耳の生えてる向きがいつもより若干水平に近い気がする\n天気が読めるの野良っぽくていい\nさくらさん家の中でもそのカウガールみたいな服装してんの？いや、こいつの親が家で兜付けてるようなやつだし普通なのか\n天気予報ちゃんと当たるやん\nそんなバカでけえ花束を忘れかけるなよ\n今回のハム太郎いつにも増して何も考えてねえな、みんなをずっと踊らせ続けるのおもろい\nロコちゃんの出番が少なすぎて日記短い","f":[]},{"o":69,"v":"2","l":"81","k":"tv","ep":81,"ee":81,"s":1,"r":5,"st":true,"c":206,"m":"ぬけないくん初登場回。\n人間の新キャラ出るの？さすがにぬけないくんは飼いハムじゃなよな\nぬけないくんの声かわいい\n女の子ハム＝虹彩が緑　男の子ハム＝虹彩が黒、なんだけどぬけないくんは緑っぽいな\nこいつ普通に走れるのかよ、土管の下に走る時のあの表現出てるから足で走ってる(ちび丸ちゃんを追いかけるシーン)\nぬけないくん意思疎通できてるこれ？\n用事ないやつは残ってやれよ\n申し訳程度の恥ずかしがり屋要素\nこの回内容が濃くてすごくいい","f":[]},{"o":70,"v":"2","l":"82","k":"tv","ep":82,"ee":82,"s":1,"r":5,"st":false,"c":235,"m":"タイショーくん吹き飛ばすってかなりの扉の威力だな、他のハムだったら怪我しそう\nボールが飛んできて当たる展開じゃないんだ\nなんかすごいペットの脱走らしい(？)脱走の仕方だな\nハムちゃんず考案の作戦とか絶対碌なことにならないけどのっぽくん発案なら五分五分くらいか？\n木村くん二宮金次郎スタイルで歩いてる\n荷物なしで本だけ読みながら歩くシチュエーションってなに？\nどっちかというとロコちゃんがロベルトに突っかかってんだろ\nタイショーくんの占い結果はどうなったの？w急接近できましたか...？","f":[]},{"o":71,"v":"2","l":"83","k":"tv","ep":83,"ee":83,"s":1,"r":5,"st":false,"c":275,"m":"(予告みて)パンダくん出るな、よしよし。季節イベントをモモちゃん家でやる頻度結構高い気がする\n腕組んでるパンダくんかわいい\nハム太郎夜行性のくせに夜眠そうなのってやっぱ昼間遊んでるからかな\nゆうじくんって誰だ、モモちゃんの兄弟が何人いたのかも覚えてない\nゆうじくんってこいつか、兄弟じゃなかった。でもこれジュンちゃんのいとこだっけ？キョウコちゃんのいとこだっけ？どっちかもうわからん\n顔出てると豆当たって痛そう\n手渡したら食っちゃうでしょ\n唯一ハムちゃんず全体とグループとして接してるのはモモちゃんだけなんやな、だからモモちゃんの回は結構好き、パンダくんメインだし","f":[]},{"o":72,"v":"2","l":"84","k":"tv","ep":84,"ee":84,"s":1,"r":5,"st":false,"c":284,"m":"バレンタイン回は2回目(1回目は32話)\n急いでたとしても白と赤のケースを間違えるか\nトラハムくん出てきたけどトラハムちゃんのツッコミがこねえ\nのっぽくんがオオタチにしか見えん\nこの学校絵描くの多くない\nサブさんの貢献度高すぎる、登場するたびにものすごい貢献する\n去年もタネに飾り付けしたやつじゃねえか\n今回は空中っていう条件だったけど、大体は長距離移動時にお助け(トンガリくん、サブさん)が出てくるイメージ\nサブさん、どんちゃんをいつでも、どこでも、複数匹呼べるようなもんだからめちゃくちゃ貢献しちゃうんだな、しかも飛べる\nこの回のトラハムくんほんとにかわいい、オチ要因として優秀だし","f":[]},{"o":73,"v":"2","l":"85","k":"tv","ep":85,"ee":85,"s":1,"r":5,"st":false,"c":163,"m":"どんぐりって重量バランスも形もめちゃくちゃ蹴りにくそう\n今回のロコちゃん目の作画小さいな\n商店街でドリブルしてる\nどんちゃんと遊ぶ中で何か起こって〜みたいな流れかと思ったら普通にカットされた\nどんちゃんいつ活躍するの\n試合始まってから和解しようとしてもなぁ、登録とかそういうのあるやろ\n出れるんだ\n前フリが長すぎて和解自体はあっさり終わった","f":[]},{"o":74,"v":"2","l":"86","k":"tv","ep":86,"ee":86,"s":1,"r":5,"st":true,"c":260,"m":"メカじろう初登場回。\nメカキャラかと思ったら発明品か、流石にメカハムスターはぶっ飛びすぎて浮く？でもぬけないくんがかなり変だしなぁ\nテーブルちっっっっっっっちゃ！？普段こんなぎゅうぎゅうじゃなかったよな？？え？？？どうした？？？？\n単車輪で移動する機構なのになのにジャンプできるのすげえな\nみんな、まいどくんのギャグに対して白けるというよりもめちゃくちゃドン引きするやん、そんなにドン引きしないでやれよw\nメカじろうの腕が変形して銃乱射するか自爆して猫ごと爆ぜるのかと思ったら違かった\n猫3匹は過去で見てもなかなかの危機じゃないか？","f":["danger"]},{"o":75,"v":"2","l":"87","k":"tv","ep":87,"ee":87,"s":1,"r":5,"st":false,"c":236,"m":"ひなまつり2回目(1回目は35話)、ハムハムひなまつり流れるかな\nひなまつりってケーキくうの？\nこの家の内装がわかるのは初めてか\n全員集合してると多すぎるんだよな、10数匹のハムスターたちに気が付かない人間たち目ついてるの？\n犬飼ってるんだ\nどんだけ引っ張ったら全部落ちるんだよw\n犬がこの部屋にいれば犬がやったと勘違いしてくれるやろ\n雛人形の配置ちゃんと覚えてるのすげえなって思ったけど一回こいつら自作のひな祭りやったから覚えてんのかな\nタイショーくんのスタミナはやっぱりすげえな\n流れた","f":[]},{"o":76,"v":"2","l":"88","k":"tv","ep":88,"ee":88,"s":1,"r":5,"st":true,"c":792,"m":"ニンハムくん初登場回。\n(次回予告を数秒チラ見して)なんか夢回みたいな服着てるけど新キャラ登場回だし現実かこれ。タイトルで主張してなかったら夢回を警戒してたと思う。ぬけない、メカ、ニンハムと80話代で新キャラがこんなに続く。\n問題飛ばしたら回答って上にズレるものじゃないの？下にズレるってどういう状況？「一つ飛ばした」の解釈が違うのかな、「わからなかったわけじゃない」って言ってるからわからなくて飛ばしてズレるパターンじゃなくほんとにうっかり一問飛ばしたってこと？いや、うっかり一問飛ばすってなんやねん←数十秒のシーンでネチネチ言いまくるの我ながらキモいw\n自認忍者\nこいつも虹彩緑か\nハムスターの忍者の里があるの？w\n長老の着てる迷彩の方が忍者っぽいよな、黒装束よりも本当の忍者の理にかなってる\nニンハムかわいいな\nまいどのギャグ割と好き\nニンハムくんは赤鉛筆で突き刺そうとしてるしタイショーくんはラリアット決めるし\n落ちこぼれとはいえ本職忍者に追いつけるのはタイショーくんやっぱつええな\nええ家族やん\n忍者のハムスターがたくさんいるのにこの落ちこぼれがニンハムの名を冠してるのか\nここ最近新キャララッシュだけどどの回もお気に入り。自分の傾向的に新キャラは嫌いそうなのに結構受け入れてる、毒にも薬にもならないキャラじゃなくて個性かなり強い奴らが続いてるから高評価なのかな？\n(追記:ニンハムくんの移動距離\n三重県伊賀市(イガイガの里)から神奈川県横浜市港南区(ハム太郎の街)までの直線距離は300kmくらい。凧で飛んで登場したので、伊賀から港南だと偏西風に乗ってきた？どっちにしろ300km近く移動した事実は変わらないのでニンハムくん結構すごい。三月上旬(ハム太郎は放映時期と作中季節がリンクしている。この回は3/8に放映)に300km。しかも、手紙のタイムラグを考えると多分出発はもっと寒い時期に脱走してる。)","f":[]},{"o":77,"v":"2","l":"89","k":"tv","ep":89,"ee":89,"s":1,"r":5,"st":false,"c":100,"m":"春眠暁を覚えず？いや微妙に違うか、まだ寒いのね\n待ちきれないから探しに行く、は好きなセリフだな\nこの前も故障したけど何の回か覚えてないな\n風吹いてると耳がパタパタ揺れるのかわいいな\nロコちゃん短パン寒そうだな","f":[]},{"o":78,"v":"2","l":"90","k":"tv","ep":90,"ee":90,"s":1,"r":5,"st":false,"c":159,"m":"このタイトルで現実だったらどうしよう\nトンガリくんのいつものアレが宇宙バージョンになってる\n宇宙フェアでそんなに宇宙人メインなことある？w\nこのずっとついてる寝癖なに？\n風船ハイスペックすぎる\n入眠描写のない夢回はじめてだな〜って思ってみてたのに全然現実だったわ、勘繰りすぎてたら無駄に騙された(？)、全部あのトンデモ風船のせい","f":[]},{"o":79,"v":"2","l":"91","k":"tv","ep":91,"ee":91,"s":1,"r":5,"st":true,"c":174,"m":"ハム太郎、素直というか多分なにも考えてないよ\n基本的にサブさんとハムちゃんずは面識なかったか、OVAで出てきた時もハムこうしタイショーだけだったしな\nみんなで昼寝してるのかわいい\nこの流れからどうやってタイショーくん放浪するんだ\nいやお前ら人間は旅行やん、深刻じゃねえだろw\nすげえどんぐりの量だな\nハムちゃんずあったけえ...😢\nねてるくん同じ部屋で寝てるんだ","f":[]},{"o":80,"v":"2","l":"92","k":"tv","ep":92,"ee":92,"s":1,"r":4,"st":false,"c":311,"m":"お花見回は2回目(1回目は40話)、ここ最近季節イベントの二週目多いな\nリュック背負ってるハムちゃんずかわいいから好き\n二足歩行で走るフォーム見るたびに笑いそうになる\n長老とおハムだけ首と体の段差なさすぎだろ、こいつらフォルムが真四角なんだが\nハム太郎立案はするけどタイショーくんにリーダーは任せるんだな\n若い頃もこの見た目かよ\nねてるくん靴下越しとはいえ床だと硬そう\n長老って昔からずっと\"長老\"なの...？\nテープ流しながら外で合唱\nなんか、前回も今回も花見回もあんまり合わなかった。今回に関しては、おハムと長老の話はもういいよ、みたいな感じになってしまった。昔は仲良かったんじゃ→ハムちゃんずでなんとかするのだ！って前やらなかったっけ","f":[]},{"o":81,"v":"2","l":"93","k":"tv","ep":93,"ee":93,"s":1,"r":4,"st":false,"c":515,"m":"はなちゃん初登場回。\nこの新キャラの声やばくね😅\nヘタクソすぎて話が入ってこないw\nなんか、名付け方がこいつだけ人間っぽくない？見た目に直接花が付いてるならわかるけど\n調べたけど人間がモデルらしい\n山田花子ってこいつか、写真見たら思い出した\nバレたらかなり取り返しのつかないウソだよなこれ\nハムちゃんずランドの動力こんな感じだったんか\nこれオープニングのカルガモ？って思ったけど柄が違うか？\n卵から出たての割に毛がちゃんと生えてる\nジェットコースターに乗りながら会話はうるさくて聞こえねえだろw\n最初は「うおw」ってなって、調べてくうちにあぁ...😢って絶望して、これどうすんだ、捨て回か...？って諦めかけてたけど、話の内容自体は結構面白かった。中身が面白くなかったら新キャラが不快な分2点か3点付けてたと思う。\nめがねくんの顔がやたらかわいい気がする。見直してみると今回は目の位置が低めに描かれがちだったからそれでかわいく見えてたっぽい。\n登場匹数少ない時にトラハムくんが出てるのはかなり珍しい気がする、今回みたいに恋がテーマなら出してやってやれ\n...あれ？新キャラ登場回、今の所、新キャラがかわいい＝5、かわいくない＝4以下になってませんか？大丈夫？","f":[]},{"o":82,"v":"2","l":"94","k":"tv","ep":94,"ee":94,"s":1,"r":5,"st":false,"c":159,"m":"鉄格子で区切られてるハムちゃんず面白い\n言葉通じる動物って健診が楽そうでいいな\nまたこいつら夜中に抜け出してる\nはよ保健所に連絡しろ\nそうか、20年前だと行方不明のペットのことsnsで情報探すとかないのか\n同じ場所に大量にぶちまけないで\nこれ手掛かりになるの？\n掃除シーンだったり、ハムちゃんずみんなで頑張るシーンがかわいい回でした","f":[]},{"o":83,"v":"2","l":"95","k":"tv","ep":95,"ee":95,"s":1,"r":5,"st":false,"c":352,"m":"コックさん初登場回\nハムスターから見てミニトマトサイズってことはすっげえ小さいトマトだなこれ\n毛並みめっちゃ真っ白だな、コックコートも真っ白だから？\nひまわりのタネじゃない方の破片は何？\nオーブンはこれ地下ハウスの備品？流石にオーブン持ち歩いてたらやばい\nこいつも当たり前のように世界回ってるハムか\n虹彩緑やん、ゲストキャラは男の子ハムでも緑が多いな\n火元が映らんから火力源がわからん、でもガスも木も地下の密閉空間なのでナシ、つまりIHの調理器が地下ハウスにある。明らかに電気が通ってるので驚くことでもない。\n夫が料理すると作って満足して片付けやらない、って多いのにちゃんとロコパパは片付けまでしてえらい\nなんか、ハムちゃんずがきちんと(？)お兄さん、お姉さんとして振る舞うのいいね\n全員集合に見せかけてトラハムくんいません","f":[]},{"o":84,"v":"2","l":"96","k":"tv","ep":96,"ee":96,"s":1,"r":5,"st":false,"c":186,"m":"驚かせちゃいけないとか以前に危なすぎだろ\nトンガリくん出てくるのかなり久々か？\n大体外で会うのに地下ハウスに普通に入室してくるの珍しい？\nプロペラ一個でどうやって横方向の制御とかしてるんだこれ\n風船気球回掘り返されたせいであの回が最後どうやって降りたのかがまた気になってしまう\n鳩軍団多すぎんだろ\nトンガリくんとサブさんが両方出てくるのレアだった、トンガリくん今回は何もしなかったけど","f":[]},{"o":85,"v":"2","l":"97","k":"tv","ep":97,"ee":97,"s":1,"r":5,"st":false,"c":617,"m":"久々に全員集合して座ってると密度すげえ\nみんなで作るとかじゃなくてパンダくんひとりでつくったの！？？？！？\nいや、流石パンダくんなのだ、じゃねえよ。なに？1人で列車作ったの？？？どういうこと？？\nちょきゅ〜(10人同時にジャンケンして誰かが一人勝ちする確率は19683分の10≒0.05%)\n流石にペダル式か、蒸気だったらどうしようかと思った。でもその音と先端から出てる蒸気は何？明らかに内燃機関あるよね？\n結局修理できちゃう、さすパン\nトンガリくん2話連続は珍しい\n‼️『ビデオカメラってなんなのだ？→ほら、ぼくたちで映画を作った時のカメラと似たようなものです。』この会話について。筆者の記憶だと、映画を撮影した回は76話であり、それはハム太郎とロコちゃんの夢オチ回。夢回は、ねてるくんの謎能力でハムちゃんず全員が同じ夢を共有する回と、ハム太郎ロコちゃんだけの脳内の回の2種類があるが、76話は後者。つまり、のっぽくんが知ってるのはおかしいし、そもそも夢オチなので映画を作った事実は存在しない。‼️\nハムちゃんずが有能な回だった\nというかポン出しされると思わなかった、乗り物欲しい→パンダくんがアイデア出す→みんなで作ろう、じゃなくて、ぼくが作っておいたんだ、なのかよ。\n列車ポン出しでめちゃくちゃびっくりしたけど、ハムちゃんずランドにあったハムハム機関車を改造した、って言ってるからゼロからじゃないだけまだマシか、1人で改造したっていう事実は残るけど","f":[]},{"o":86,"v":"2","l":"98","k":"tv","ep":98,"ee":98,"s":1,"r":5,"st":false,"c":48,"m":"靴消えるのってハム太郎4にあったけど発売時期的にこっちの話が先か\n探偵服かわいいな\nロベルトの家デカ","f":[]},{"o":87,"v":"2","l":"99","k":"tv","ep":99,"ee":99,"s":1,"r":5,"st":true,"c":213,"m":"99話にして初めて喧嘩回か\nこうしくん手伝っててえらい\nというか良い加減リボンちゃんの外出ルートどうにかしろよ、1番過酷\n水飲んでるシーン初めてみた気がする\n内容も面白かったし、何よりハム太郎こうしだけで動くのが1話を思い出して良い、好きな回。最後の一枚絵最高\nまたトラハムくんだけいない、かぶるくんばっか言われてるけどトラハムくんも大概だな、かぶるくん＝登場頻度はそこそこあるけどスポットが当たらない、トラハムくん＝そもそも出てこない","f":["watch"]},{"o":88,"v":"2","l":"100","k":"tv","ep":100,"ee":100,"s":1,"r":4,"st":false,"c":216,"m":"幼稚園児で親の誕生日プレゼント考えるの偉すぎる\n見た目明らかにオモチャだし音も電子っぽいんだけど会話内容がちゃんと弦なんだよな、これ中身どっちなんだ\nガチの弦だった、調律できるハムスターたちやべえな\n楽器も弾けるし\n空き缶からバスドラムの音がする\nまいどだけそろばんじゃねえか\nパンダくんの出番多いけど別に忖度はしません、普通に4です。内容はすごく平和でほのぼの、つまり波も盛り上がりどころもない。大きなトラブルもなく終わったので内容が残らない","f":["watch"]},{"o":89,"v":"2","l":"101","k":"tv","ep":101,"ee":101,"s":1,"r":4,"st":false,"c":194,"m":"裏でインストバージョンのハムハムウェディング流れてる\n実際トサカと脚はよく見るとキモいよな\n聴診器つけたまま出席すんな\n親に話通してから式場予約しろよw\n終盤に流すのはインストじゃなくて普通にボーカルありが良かったな〜、クリスマス回みたいな感じで\n最後オルゴールのいつもの曲で終わらないの珍しい\nエンディングがハムハムONDOになりました。エンディング変わると右下の踊りも変わるからそれ目当てで見てる","f":[]},{"o":90,"v":"2","l":"102","k":"tv","ep":102,"ee":102,"s":1,"r":5,"st":true,"c":308,"m":"3日泊まり込み、今じゃアウトだ\nハムスターだとエレベータの扉の隙間に落ちそうで怖い\nちょうどいい隙間見つけると走りたくなっちゃうのかわいいな\nすごい久々な、ハムスタースケールで人間の社会で遊ぶ展開、すごく助かる。わちゃわちゃしててかわいい\n完璧な犯罪すぎて主人公が気付けない、そんな悩みが出るの内容面白そう。この変人緑川見直したわ\nこんな思いっきり人間に視認されたの初めてじゃない？\n携帯が古いな、アンテナ伸ばすタイプだw\n久々に人間の施設でわちゃわちゃ、そしてガッツリ人間に視認される展開。最近足りなかった成分＋裏切り、で高評価。\n(ロコパパの立場、おそらく出版社の編集長的立ち位置なんだけど、6月半ばは実際に忙しい可能性がある。","f":[]},{"o":91,"v":"2","l":"103","k":"tv","ep":103,"ee":103,"s":1,"r":5,"st":true,"c":194,"m":"避難訓練の概念って人間社会の知識としてニッチすぎるだろ、のっぽくんよく知ってるな\nタイショーくんはヘルメット被ってるから頭巾なしなの？\nさすパン、壁をぶっ壊すタイプの非常口はどうかと思うが\nパンダくんがやらかすの珍しい\n避難通路の出口がそんなに完璧に偽装されてるならやっぱり満点だわ、さすパン\nトラハムくんすぐ調子乗るからかわいい\n洪水回といい、地下ハウス内で危機が起きる回はマジで面白い。当たり回。","f":["danger"]},{"o":92,"v":"2","l":"104","k":"tv","ep":104,"ee":104,"s":1,"r":3,"st":false,"c":198,"m":"はい、絵本で寝落ちね\n導入雑すぎて笑うわ\nくるりんちゃん、初登場してから夢回に二回も出てきてるけど現実でいい加減再登場してくれ。初回もハムちゃんずのペースに飲まれててくるりんちゃんが主導する内容じゃなかったし\nまいどのギャグ割と好き\n配役のせいでマフラーちゃんがやられ役で散々な目に遭うのおもろい\n夢回は流し見にすごくいいかもしれない、スマホいじりながらたまに画面を見てかわいいハムを視認したり声を聞いたり","f":["dream"]},{"o":93,"v":"3","l":"105","k":"tv","ep":105,"ee":105,"s":1,"r":5,"st":false,"c":268,"m":"七夕2回目(1回目は53話)\nこの世界の住民絵がうますぎなんだよな、ハムスターも人間も\nまいどのギャグ割と好き\n港南ってこんな星綺麗じゃねえだろ\nタイショーくんが女子陣にキレるの珍しい\nロベルト、初登場回以外ずっとロコちゃんに理不尽にキレられてて可哀想\nロベルトええ奴すぎるやろ\nロコカスははよロベルトに謝ってお礼言え\nロコちゃんとロベルトのやり取り見てて思うけど、だいたいこういう関係性って突っかかる→お互い罵り合う、みたいなのがテンプレだと思うんだけど、ロベルトがあんまり言い返してる印象がない。理不尽に突っかかってくるロコちゃんに困惑してる印象。","f":[]},{"o":94,"v":"3","l":"106","k":"tv","ep":106,"ee":106,"s":1,"r":5,"st":false,"c":266,"m":"なんだよこの登場演出、もはや怪奇現象だろ\n何この生き物\nこれうさぎなのか？ハム太郎ってうさぎはちゃんとした体型で描くイメージだけどこの生き物はハムちゃんずみたいな擬人化体型なんだよな、耳はうさぎだけど\nめがねくん「ぬけないくんといえばかなり小さい男の子ですよ」、この発言かなり貴重だ、明らかに大人として書かれてるサブさん、長老とかはわかるけど、ハムちゃんずぐらいの年齢は年齢差がわからん\nうさぎなのか\n抜き足、差し足、ハムハム足\nぬいぐるみだった、じゃあ最初に書いた体型云々の話はある意味合ってたのか\nぬけないくん、登場演出も退場の仕方もおもろい","f":[]},{"o":95,"v":"3","l":"107","k":"tv","ep":107,"ee":107,"s":1,"r":5,"st":true,"c":223,"m":"サクラさんの父親、敷地に生徒入れてくれるの地味に寛大だな\nこいつらは卵なんて食わんし胎生だから馴染みないのか\nこの回みんな顔かわいくない？\nまいどのギャグ割と好き、普通に面白いと思う\n落ちるねてるくんをすぐさまキャッチにしにいくタイショーくん、こういうところほんと好き\nマフラーちゃんが発案するのレアじゃないか\nマフラーちゃんかわヨ\nこの回かなり良かった、内容が普通に面白い。あとハム太郎のセリフ数がかなり少なくて他のキャラが喋るのすごい多い気がする、珍しい。","f":[]},{"o":96,"v":"3","l":"108","k":"tv","ep":108,"ee":108,"s":1,"r":4,"st":false,"c":156,"m":"海って3回目か？\nこの状態で営業しちゃダメだろ\nこいつらよくやるよな？遊びたくないの？せっかく海来たのに客寄せ\nまいどくんナチュラルにパン盗まないで\nひび割れが治るのはなに？佐官いる？\nこの回人間の作画やべえな、キャプ翼頭身やん\nなんか、感想が\"無\"な回だった。タイショーくん、リボンちゃんにベタ褒めされて良かったね、くらい","f":["sb"]},{"o":97,"v":"3","l":"109","k":"tv","ep":109,"ee":109,"s":1,"r":5,"st":false,"c":291,"m":"人間の新キャラ来ると思わなかった\nこのひまわり畑に来たのすごい初期じゃないか？懐かしすぎる\n↑調べたら8話なので100話ぶりだった\nメカじろう、有能\nなんで機械に酸素ゲージがあんだよ\nメカじろうが最後まで有能で意外、絶対何かトラブル起きると思ったのに\nこの回、作画がかなり気合い入ってる。カットも豊富というか画が多すぎ、動きもすごい多くて良い。108話を掘り返して悪く言いたいわけじゃないけど、やっぱりこれと比べるとあの回は動きも少ないしテンポもそんなに良くないしトラブルも起きないし虚無だわ\nそういえばおハムと長老とサブさんが出た意味あった？\nというか人間の新キャラ出たのに人間パート少なすぎて草","f":["sg"]},{"o":98,"v":"3","l":"110","k":"tv","ep":110,"ee":110,"s":1,"r":4,"st":false,"c":337,"m":"ハムハム音頭流れそうな回だけどどうだろ\nまた机めちゃくちゃちっちゃくなってて草、登場人数でサイズが可変すぎる\nいつも通り既に作ってるパンダくん\n夏祭り会場に動物と触れ合えるコーナーってなんやねん\nじゃじゃハムの虹彩めちゃくちゃ青いな\n今回なんかぬるぬる動く謎のカット多くないか\nフラワー牧場の話以外でもこの世界動物が逃げ出しちゃうハプニング多すぎだろ、牧場とサクラさん関連の話でもう4,5回はやってる\n踊ってるハムちゃんずかわE\nのっぽくんやたらかわいいな\n2番まで流れてるやん\nこんなにガッツリ流してエンディングでも流すんかよw\nエンディングのイメージ映像の神輿は別に出てこなかった\n本編でONDO流して、エンディングがてをつなごうに戻って夏シーズン終わりかな、って思ったら全然そんなことなかった","f":["jaja"]},{"o":99,"v":"3","l":"111","k":"tv","ep":111,"ee":111,"s":1,"r":5,"st":false,"c":286,"m":"トラハムくんの出番が多い時ってオチもしっかりトラハムくんが落としてくれるから良い(？)、ちゃんと出てくる意味があるキャラ\n普通の校庭にこんな篝火ぶっ刺しまくってんじゃねえよw\nこのｶﾝｺｰﾝ!って効果音、一昔前のアニメでよく出てくるけどなんなんだろう、そういう素材？\n驚いて順路戻っちゃう生徒が多すぎる\n初めて聴くなこのBGM\nまた知らん曲きた\n教員じゃなくて地域の人かよ、今思ったけどこのアニメ教員キャラ全然出てきてねえな\n初めてじゃないか？ハム太郎とロコちゃんの最後のくだりを対面でやらなかったのって\nトラハムくんが引っ張る回は面白いのが多い気がしてて、トラハムくんの評価が上がってる","f":["watch"]},{"o":100,"v":"3","l":"112","k":"tv","ep":112,"ee":112,"s":1,"r":5,"st":false,"c":222,"m":"サブタイ見ても何もわからん回なので期待、愛のつなわたりってなんやねん\n流石にハムスター十数匹が団体で移動しまくってるのに気が付かないこの世界の盲目人類でもトン吉はバレるんやね\nまいどライオンかわいいな\nこいつら急に薄情になるからおもろい\nこれアレじゃない？渡る時に命綱取れてトン吉が拾う感じやろ\n全然ちゃんと渡り切れた\nオルゴールじゃなくてノリノリで終わった\n改めてハム太郎の役割をしみじみと感じた回だった(？)、こいつがいないとハムちゃんず全然まとまらない","f":[]},{"o":101,"v":"3","l":"113","k":"tv","ep":113,"ee":113,"s":1,"r":5,"st":false,"c":175,"m":"やっと現実世界でくるりんちゃん回来て嬉しい、初登場以降ずっと夢回にしか出ない不遇だったので\nハムスター肩に乗せるアイドルって結構面白いな\nこの人数が一生このテンションで絡んでくるの怖いよな\n普通に乗ったまま商店街に出てんじゃねえよ\nやっぱり初登場回もそうだけどくるりんちゃんは別になんも悪いことしてないよな\nくるみちゃんの方オチなしで終わったんですけど、マジか","f":[]},{"o":102,"v":"3","l":"114","k":"tv","ep":114,"ee":114,"s":1,"r":5,"st":false,"c":211,"m":"オープニングがついに3番になりました\nサブタイのこのコールも変わるのか、マジか\n毎回思うけどこのハムスターサイズの本はなんなんだよ\n地下ハウス、外の様子が完全にわからないの結構危ないな\n久々のキュッキュッ鳴き\nアイキャッチも変わってるやん\nエンディングがてをつなごうに戻った\nこの回作画すごい安定してるし、展開も既視感なくてすごい良かった。ハム太郎のちょっとした掘り下げもあったし、ハム太郎単体だけでこんなに話続いたの初めてじゃないか？","f":["sg"]},{"o":103,"v":"3","l":"115","k":"tv","ep":115,"ee":115,"s":1,"r":5,"st":true,"c":299,"m":"メカじろう4回目くらい？ぬけないとメカじろうと同じくらいの時期だったのにニンハムだけ2回目来ねえな\nメカじろうの言葉が明らかに人間に伝わってるシーンがあるので、ついに視聴者には日本語に聞こえるハム太郎たちの会話が本当に日本語として人間キャラに翻訳されてしまった\nというか前もメカじろう回で人間の新キャラ出てきたな\nメカじろうってこんなに表情柔軟だったっけ\nこんなん個人で飛ばしたら捕まる\nうそだろ、まいどくんのギャグが役に立つなんて\nこの回久々に命の危機な回で面白かったな、置いてけぼりにされるシーン面白すぎる\nダブルへけっ\nやっぱり3番になってから作画というか体型がすごい安定してる気がする、まだ2話しかないけど","f":["danger","sg"]},{"o":104,"v":"3","l":"116","k":"tv","ep":116,"ee":116,"s":1,"r":4,"st":false,"c":225,"m":"次回予告ちらっと見たけどのっぽくんとトラハムちゃんが結構出番ありそうで楽しみ\nニワトリ自体は出てくるけど学校のこいつらはかなり久々か\nそもそもなんでダチョウと一緒に住宅街を歩いてたんだ...？\nトラハムちゃんはともかくのっぽくんもできるんかい\nトラハム喧嘩回の時もそうだけどこいつら野菜どっから取ってるんや\nまたこいつらこのグラウンド穴だらけにしてる\n次また動物脱走回やったらぶち殺すぞ、これ5回目くらいだろ\nトラハムちゃんとのっぽくんの絡みも活躍も対してないしよ","f":["watch"]},{"o":105,"v":"3","l":"117","k":"tv","ep":117,"ee":117,"s":1,"r":5,"st":true,"c":305,"m":"犬猫鳥はともかくハムスターに読み聞かせ\nこれ内容と118話のサブタイ的に2話連続かな？パンダくんの遊園地回(65,66)以来だからかなり貴重だ\n二足歩行だから当たり前のように傘差すのすごい今更だけどおもろい\nアイキャッチにへけっの声が入った\nちゃんと幼児キャラとして大暴走してるの珍しい\nパンダくんが家改造しそう...いや、流石に人間の民家改造するのはヤバすぎるか\nよく考えたら勝手に出歩いて勝手に風邪引いて帰ってくるのペットとして嫌すぎるw\nいや〜、1話完結じゃない回は前編が思いっきりバッドエンドだからやっぱり面白いわ\n(リボンちゃんの回想の城に近いのは色合いと水の配置的にシャンティイ城？湖というか人工の池とか堀だけど)","f":[]},{"o":106,"v":"3","l":"118","k":"tv","ep":118,"ee":118,"s":1,"r":5,"st":false,"c":126,"m":"パンダくんウキウキで草\nへけっの次は ははぁになった\nまいどくんのギャグ普通にうまいと思う\n毎度のことガチ建築すぎるだろなんだよこれ\nなんだかんだ悪役を引き受けてくれるのタイショーくん優しいな\n前回でトン吉とちび丸の絡みないんだ〜って思ってたら最後に雑に出てきた","f":[]},{"o":107,"v":"3","l":"119","k":"tv","ep":119,"ee":119,"s":1,"r":5,"st":false,"c":93,"m":"ハムスターが合羽着て手伝ってくるのを普通に受け入れるのすごい\nやっぱりあの時期からずっと作画が安定しててハムたちがかわいい\n木村くん相変わらず家がデカすぎる\nこいつら帰れるん\n鳥はなんだったんだ","f":["sg"]},{"o":108,"v":"3","l":"120","k":"tv","ep":120,"ee":120,"s":1,"r":5,"st":true,"c":318,"m":"かぶるくん最近セリフ聞いた記憶すらない\nこれ確かかぶるくんメイン回のラストだよね、120話でラスト...\nかぶるくんの喋り方やっぱり面白いな\nもしかしてかぶるくんだからプレゼント被るくんってこと？\n拗ねていなくなるとかじゃなくて地震からの生き埋めで遭難するの過酷すぎる\nこの回題材も面白いけど、ぬけないくんとかぶるくんの会話も良かったな\nハムちゃんず号硬すぎる\nメイン回4回、うち1回は完全にぬけないくんメインなので実質3回...でも3回とも面白いんだよな、それだけがかぶるファンの救いか。回ももらえなくてつまらないよりマシやろ\nというかかぶるくんだけやたら言われるけどパンダくんも大概やないか？数えたくないけどパンダくんメイン回もそこまで多くないやろ","f":["danger","watch"]},{"o":109,"v":"3","l":"121","k":"tv","ep":121,"ee":121,"s":1,"r":5,"st":true,"c":197,"m":"ハム太郎がこんなにキレ気味なの珍しいな\n相変わらず人間がいる道のど真ん中走るやん、すみっこ走れや\nというか二足かよ、なんか最近四足歩行してるの見てない気がする\nこれ学校ってロコちゃんのところじゃないよな？緑すぎる、流石にもう少し都市部だった気がする\nハム太郎力つよ、タイショーくん持ち上げられるん\nハム太郎とタイショーメインの回好きかもしれん、前の99話も良かった\n内容良かったけど作画ちょっとアレだったな","f":["sb"]},{"o":110,"v":"3","l":"122","k":"tv","ep":122,"ee":122,"s":1,"r":5,"st":true,"c":171,"m":"低い声だしてるカナちゃんかぶるくんすぎる\nロコちゃん主役かっさらいすぎやろ\n今回のまいどくんのギャグ歴代の中で1番すきかもしれん、面白い\n学芸会何も起きなくて草\nこの回内容が普通に面白かったな、グループがいくつか分かれてそれぞれの思惑というかやりたいことで行動してるからかな。一致団結わちゃわちゃ回とはまた全然違う良さがある\n作画◎、ハムたちがかわいい","f":["sg"]},{"o":111,"v":"3","l":"123","k":"tv","ep":123,"ee":123,"s":1,"r":5,"st":true,"c":226,"m":"タイショーくんねてるくんのこと好きすぎじゃない？ちゃんといるか確認してんのかよ、しかもすごい慌てるやん\nBGMなしでずっと進行するの面白い\nでもこの辺ってこいつらのせいで穴だらけだし空洞まみれなんだよな、あぶねえ\n今更だけど最近本当にねてるくんの存在が消えてた、すごい久々に登場した気がする\nこの回別に内容自体はしょうもないんだけど、なんか演出が好き、あとねてるくんとタイショーくんの絡みが好きかもしれない\nあとトラハムくんが珍しくセリフ貰えてたな、結構喋ってた","f":["watch"]},{"o":112,"v":"3","l":"124","k":"tv","ep":124,"ee":124,"s":1,"r":5,"st":true,"c":173,"m":"まいどくんは「でちでち」なのか\nおんぶ紐スタイルのっぽくんかわいい\nまいどくんキマっちゃった\nこのトンビ今までで1番ガチで殺しに来てる\nというか柿よく運べたな、ハムには重すぎるだろ\nまいどくんメイン回だった、すごい焦点当たる。登場頻度高い組でもメイン回ってそんなにもらえないというか基本ないよな\nこの回内容も作画も演出も◎。いや、◎の中でもかなり上位だと思う","f":["sg"]},{"o":113,"v":"3","l":"125","k":"tv","ep":125,"ee":125,"s":1,"r":5,"st":true,"c":357,"m":"ニンハムくんの2回目かなり遠かったな、時期近いメカじろうとぬけないはそこそこ出てるのに\n300km風に流されてる\nパンダくん出して離脱させるなら出す意味は？\nニンハムくんまた虹彩緑や\nパンダくんがどうにかする流れ...にすらならなそう\n改めて思うけどこの世界のハムスター知能高すぎて一匹でこんなことになるのやばい\n「今度は壊さないようにね」の言い方すごい優しくて好きすぎる😍、パンダくん自体が久々でなんか沁みる\nニンハムくん、前回と同じことしてるし何も成長してないしガチで無能なのいいね、かわいいと思う\nニンハムくん自体結構好きだし、かなり長く間空いたやっとの2回目の出番だから、★付けちゃう\nまあ流石にもう慣れたけど、いつも出ない組(トラハム、パンダ、かぶる)が出ると大体理由つけて別行動始まって映らなくなるのやっぱりつらい\n作画◎","f":["sg","watch"]},{"o":114,"v":"3","l":"126","k":"tv","ep":126,"ee":126,"s":1,"r":5,"st":true,"c":286,"m":"ナースちゃん楽しみ、先にハム太郎4やったから存在は知ってる\nハムスターも飼育されてる動物なのに動物のお世話するのなんか...\nこのトラハムくんのシルエットのアイキャッチ良いな\nまた先生出てきた←紛らわしいなこれ、担任って山田だっけ\nトラハムくんほんとに碌でもない、だから出番多い回は面白いんだけど\nこのサイズの刺さったら死ぬやろ\nまいどくんのギャグわりと面白い\nナースちゃんはもっと怒っていいよ\nハム太郎4のせいで仕事してるハムとかいうわけわからん存在なのかと思ってたけど流石にハムに看護はやらせてなかった\nいや、見回りしてたか...じゃあ見回りをハムスターに任せてるのか...\n作画、演出◎","f":["danger","sg","watch"]},{"o":115,"v":"3","l":"127","k":"tv","ep":127,"ee":127,"s":1,"r":5,"st":false,"c":363,"m":"スキー場に公認で来ると思わなかった、他のところは百歩譲ってともかくとして、スキー場にハムスター連れてくるのはヤバすぎんだろ\nこの4人なのすごい珍しい、トラハムくんの霊圧が完全に消えてたのに急に2話連続出演\nトラハムくんが出てきてすぐウィンタースポーツやってたのすごい懐かしい\nいや普通にここの運営がアナウンスしろよ\nトラハムくんとタイショーくんが遭難するパターンかと思ったのに逆か、珍しい\nかなり前の冬の回でもよくよく考えたら素足でハム太郎たち雪の上歩いてたよな、寒さ自体で深刻になった回今までない気がする\nダウン着てるトラハムくんかわいい\n洞穴で耐え凌ぐの初期の海回思い出す\n人間たちよりハムスターたちの方が元気\nナチュラルに一夜明かしたけどトラハムくん飼いハムだよな...？\n一通り終わった後に地下ハウスでみんなで話すシーン入るの珍しい\n作画◎","f":["danger","sg","watch"]},{"o":116,"v":"3","l":"128","k":"tv","ep":128,"ee":128,"s":1,"r":5,"st":false,"c":151,"m":"いきなり預けてくんのやばすぎ\n人面亀出てきた\nオアシスくん再登場するんだ、他のゲストキャラと違ってもう登場させる気配すらなかったのに\nこの2匹割と共通点あるな、へけっとなのは互換だし(？)、後ろの同じ位置に模様がワンポイントある\nほんとに出発してしまった\nやってることだいぶやばいのにトラブル起きないで終わったw","f":[]},{"o":117,"v":"3","l":"劇場版2","k":"movie","ep":null,"ee":null,"s":4,"r":5,"st":false,"c":707,"m":"映画の消化めんどくさいな...の気持ちで見始めてしまってる、作画はもちろんいいけど内容がなぁ\n積み木してるパンダくんかわいい\nハム歴8686年、ハム歴ってついてるけどこいつら割と時間の概念が人間と同じような扱い方してるから実時間8686年ってことでいいのかな。ハムスターの種の誕生からハム歴1年が人間換算で何年なのか計算しようと思ったけど、文明の起こりが8686年前ってだけだから変換の計算はできないな。楔形文字でハムスターの起源(砂漠から誕生)が書いてあるってことはやっぱり人類の古代文明と同じくらいの年数重ねてるよなこれ\n今更だけどこいつら勝手に夜中に抜け出して何してんだよ\n光に包まれてワープしてるから一作目の映画と同じでこれ地球の地上にあるわけじゃないのか\nこの赤い生き物なに...？モチーフが何かわからん\nでも一作目も龍になったりするハムスターだったからこいつもハムスターなのかもしれん\nこのハムスターすごい...髪の毛だな？デフォルメケモのアレになってる\nこれ猫なんだ\n思い出したかのように急にハム語ねじ込んでくる\n今思ったけどこの国兵士とかいないの？連れ去られるというかこれ城そのものが乗っ取られてんの\nハムスター以外の動物がはっきり喋ったのなんだかんだこれが初めてだな→この羊中身ハムスターだった、じゃああの赤い猫くらいか喋ってんの\nこの赤い猫かなりやりたい放題できるな、強さランキング上位いける\n地球映ったから地球の地上なのかこれ\nタイショーくん詰められるシーンすき\n「そうかなのだ」って最初何言ってるのかわからないからやめてほしい、創価\nあんまり期待してなかったけど一作目より全然内容良かったわ、ちゃんと話の内容があった(？)","f":[]},{"o":118,"v":"3","l":"129","k":"tv","ep":129,"ee":129,"s":1,"r":4,"st":false,"c":212,"m":"クリスマス回3回目\nモモちゃん回ということは、パンダくん回ということ\nモモちゃんって幼稚園児にしてはかなりきちんと喋れる気がする\nハムスターたちに子供っぽいって言われるってどうなってんねんこいつら\n久々に四足でちゃんと走ってる\nいうほどパンダくん回って訳でもなかった、まあ作画が良い回にセリフがたくさんもらえるだけありがたいが\n話の内容はまあ......大人がトラブルの起点になるのちょっと...普通にちょっと引くからやめてほしい\n作画◎","f":["sg","watch"]},{"o":119,"v":"3","l":"130","k":"tv","ep":130,"ee":130,"s":1,"r":4,"st":false,"c":277,"m":"エンジェルちゃんとデビハムくん出てくんの\nって期待してたのに夢回か、現実では出してこないのね\nでもわけわからんゲストハムもうかなりいるから現実で出しても良くねえか\nゲームだとニートちゃんだったのにちゃんと仕事してる...！？\nタイショーくんとまいどくんは可哀想なくらい毎回敵役やらされてるけどこうしくん珍しいな\n2人でハートに乗ってるのゲームのエンディング思い出して懐かしくなる\nデビハムくんも強さランキングそこそこいけるよな、最上位ではないけど上位ではあると思う\nというかこれロコちゃんの夢よな？木村くんとどんだけ色んなシチュエーションでいちゃついたら満足するんだよ","f":["dream"]},{"o":120,"v":"4","l":"131","k":"tv","ep":131,"ee":131,"s":1,"r":5,"st":false,"c":205,"m":"今回の作画顔デカすぎだろw\nこの世界地盤が緩すぎる、穴あきすぎやろ\n15匹いたら流石にいい勝負になりそうだが\nおせち食った後にケーキと紅茶食い出してる\nかくし芸大会なのに本の朗読しだすのっぽくんなかなかアレやな\nすごい初期のなんかの大会でも女子陣勝たせてたな、ワンパ\nこれからピヨちゃんずどうなるんだろう、いまいち和解したのかしてないのかなんともいえない終わりかただから今までみたく問答無用で襲ってくるのかどうかわからんな","f":[]},{"o":121,"v":"4","l":"132","k":"tv","ep":132,"ee":132,"s":1,"r":5,"st":true,"c":356,"m":"絵本作る　文字だけだと別にいいんだけどハードカバーのガチの本やん\nこれこのパターンならだいたいもう死んでるけどハム太郎だとまだ生きてそうやな←これで思い出したんだけどこの物語ってもう亡くなったキャラとか出てきてないな、OVA1のハム太郎母以外\nこの回顔かわいいな、体型のバランスもいいし\nトンガリくん2話連続珍し\nこいつらマジで往路に対する躊躇とかないよな、帰りの事どころか着くかどうかすら考えてないやろ\nリボンなしのリボンちゃんだ！！めちゃくちゃボサボサに見える\n2匹の筋力で窓開けられるん、やば\nこの回作画もいいし、やっぱりハムのちょっとした過去編入ると面白いよな\nあれ、手紙届かなかった理由ってなんだったんだ？...そもそもマリアちゃんはどこに手紙出してたんだ？前の住所？住所知ってるくらいなら引っ越した時も分からないか？","f":["danger","sg"]},{"o":122,"v":"4","l":"133","k":"tv","ep":133,"ee":133,"s":1,"r":5,"st":false,"c":412,"m":"ポニーテールちゃん初登場回\nポニーテールちゃんってゲームでてたよな、3？カメハムくんの彼女だった気がする\n猛吹雪の中歩いてた回の後にこんなに寒さに弱い描写されても困る\nこいつも幼い子扱いなんだ、ぬけないくんくらいなのかな\nパンダくんの図面ちゃんと左側に寸法入ってる\nまたこいつ窪みに落ちてる、ちび丸ちゃんが迷子になると8割くらい窪みに落ちてる気がする\n崩れてきた雪が出入り口を塞いじゃうの生々しすぎる\n相変わらず特技持ちハムは技量がだいぶぶっ飛んでるな\nマフラーちゃんが2人をまとめてくるんでるシーンで★をつける事を決めた\nパンダくんも楽しそうだったし良回\nただまあ、せっかくの初登場回だし、序盤のリボンちゃんをライバル視する流れとかあったし、でテンプレ遭難回の展開にしなくてもよかったんじゃないかなぁとは思う→(追記：やっぱり★は消しましたw)\n飼い主が言及されてるというか家にいるのに一切登場しなかったの少しびっくり、人間パートマジでなかった","f":["danger"]},{"o":123,"v":"4","l":"134","k":"tv","ep":134,"ee":134,"s":1,"r":5,"st":true,"c":218,"m":"ヒカリさんってトラハムくん初登場回以来じゃない？100話ぶりくらいやん\nトラハムちゃんがケージに入ってるシーン珍しい\nまいどくんの仕掛け大掛かりすぎんやろ\nこの曲、一般に流通してる曲なんだ\n作画◎でかわいかったし、テンポも良くて内容も良かった。久々にスクショがものすごい枚数になった\n一枚絵を横に動かす演出多くて、スクショ結合とかしてたら全部終わった頃には視聴開始から1時間経ってた。感想メモとスクショタイムのせいで1話見るのに1時間かかってて草","f":["sg"]},{"o":124,"v":"4","l":"135","k":"tv","ep":135,"ee":135,"s":1,"r":5,"st":true,"c":344,"m":"久々に何も分からんサブタイきた\nかぜって風邪かよ\n風でもある\n風邪だからずっと頬線入っててかわいいな\nかぶるくんの鳴き声？ほんとおかしいよ、かぶ！ってなんやねん。名前と同じ鳴き方するのポケモンみたい\nこの回びっくりするくらいメモしてないけどかなり内容は面白かった、トンガリくんが適当なこと言ってめちゃくちゃにするのはやっぱ面白い。タイショーくんを連れ回してた回とかも面白かったし\nあとこれアレやな、ロコちゃん側でハム太郎がいない！みたいなくだりがなかったからよかったかも、絶対やってくると思ったのに\n今回ほぼハム太郎とトンガリくんの2キャラしか動いてないな。...あれ、これキャラ数少ない方がもしかして話が面白くなる？みんなでわちゃわちゃしてる回はどうしてもテンプレ展開、既視感ある流れになりがちだから","f":[]},{"o":125,"v":"4","l":"136","k":"tv","ep":136,"ee":136,"s":1,"r":5,"st":true,"c":171,"m":"バレンタイン回\nこいつら過去2回一括で配られてるやん、ドキドキする要素あるか\nロベルトええやつすぎる\nハム側はきちんと進展してるのに人間側3年目でまだこれやるの？みたいな流れだったけど、多少進展してるからまあいいか\nチョコ食べれない設定を遵守してるから3年目もタネで草\nトラハムくんとナースちゃんの続きが普通に楽しみだな、他の恋仲のメンツより全然面白い","f":[]},{"o":126,"v":"4","l":"137","k":"tv","ep":137,"ee":137,"s":1,"r":5,"st":false,"c":160,"m":"独特すぎんかこの絵\nハム太郎、キレた\nどういう展開なのこれw\nこれ夢回じゃないよね？\nまいどくん罪重ねすぎだろ\nくだらな過ぎだろなんだよこれw、やばいな、本当にただ描いた絵なのかよ\nでも作画良かったし、懺悔は面白かったからまあええか\n内容が本当にしょうもなくても、目新しい展開があったり、テンポが良かったりしたら全然許せるな、と思った","f":["sg"]},{"o":127,"v":"4","l":"138","k":"tv","ep":138,"ee":138,"s":1,"r":4,"st":false,"c":163,"m":"そもそもこの牧場ってそういうイベントとか開催する規模なんだ\n↑これ書いて思ったけど牧場のスタッフ出てきたことなくない？\nアヒルのヒナってどんぐり粉砕する体重あるか？\nこうやって普段は仕事してるハムみるとハムちゃんず基本暇人なんだな\nひな祭りらしいことしろよ、走り回ってただけじゃねえかって思ったけどひな祭り回も3回目くらいだしくどいか","f":[]},{"o":128,"v":"4","l":"OVA2","k":"ova","ep":null,"ee":null,"s":4,"r":4,"st":false,"c":1044,"m":"やっとOVA2本目や\n当たり前だけど作画ええな\nこんなすごい長毛なキャラ初めてじゃないか\nなんか違和感あるなって思ってたらこのキャラ目が小せえな\nこのメンツで別行動ってかなりレアじゃない？別行動のパターンの時って1話組でしか見たことない\nこの曲別バージョンあったんだ、まだ歌詞がちゃんと人間の歌っぽい(？)\nOVA恒例のキャラソンタイムきた\n学生に飼われてる奴らはともかく他のメンツは1日越してたらあかんやろ\n陸路でどうやっていくんだよって思ってたら目指してるのは離島に行く前の浜か\nイカダじゃなくてもう鳥でええやん\n到着までこんなに尺とると思ってなかった\n先にMV見てたせいでいつもみたいにロコちゃんにこっそりついていくのかと思ってたけど、誕生日回も人間パートほぼなかったな\n老人たちもビスカスちゃんも一頭身すぎる\nひまわりの成長速度で計算したら86ハムハムが実時間どれぐらいなのかわかるなこれ\nおとどけくんが唐突に出てきてゲストハムみんな来た、誕生日パーティーのアレと同じやんけ\nED、普通に1番で終わりなんだ。誕生日の1番＋ラスサビの構成良かったのに\n内容的にはまあ、って感じだったな。作画良いしキャラに満遍なくセリフあるのは良かったけど。あと満を持して流れるハムハムホリデーと絵日記の演出は良かった\nというかキャラソンタイムあるのかなって思ってたけどひまわり組がフルで流れただけだった、OVAはキャラソン連打タイム来るかと思ってたのに\n(86ハムハムの話。ひまわりはタネから開花までだいたい2ヶ月。ただ長老達が完全に若い頃に植えてから現在で86ハムハムなので、ハムスターの寿命スケールでも流石に2ヶ月の間にこんなには老けないはず。タネを撒いて現実的に育つ季節は限られるので、去年の春に植えて今年の夏に見にきたと考察。つまり、86ハムハム＝1年3ヶ月。1ハムハム＝約5日。1年3ヶ月ってハムスターの寿命的に若者→老人になるのにちょうどいいペースだと思う)\n(島の名前忘れたけどハム太郎達が今回行った島の話。フェリーで横須賀→金谷港。徒歩で房総半島を横断(10kmもあるけどw)。そしてイカダで200m、仁右衛門島へ。)\nなんかしっくりこなかった理由が少し分かったかも、特別感がない。OVAは映画と普段のアニメの間くらいの外し具合にしてほしいのに、今回はかなり流れに既視感があった。良くも悪くもいつもの。\nこれ見たせいで誕生日というシチュ、ハム太郎自身の掘り下げ、キャラソンラッシュのOVA1に対するワイの評価がまた上がってる","f":[]},{"o":129,"v":"4","l":"139","k":"tv","ep":139,"ee":139,"s":1,"r":5,"st":false,"c":174,"m":"本屋はじめてや\nのっぽくんがこの机に乗ってるの新鮮すぎてちょっと面白い\nユメちゃんの年齢感がわからん\nこれ年齢の割に背が高いのか、のっぽくんの飼い主だから\nカラスってこんななんでもないノート拾うもんなの\n人間回だけど内容良かった\nというか飼い主にフォーカスが当たるののっぽくんが最後でしかもこんなに遠いと思わなかったわ、本屋って結構話を広げやすそうなのに\n作画◎","f":["sg"]},{"o":130,"v":"4","l":"140","k":"tv","ep":140,"ee":140,"s":1,"r":5,"st":true,"c":244,"m":"ウキハムくん、たいほくん初登場回\n動物モチーフの動物とか意味わからん\n風船はハムスターサイズじゃねえのか\nハムスターに風船渡すキョウコちゃん何？\nまた変なの出てきた\n真面目に見てたら頭おかしくなるわこの回、なんだこれ\nテンポ良くて面白かった、パトランプのくだり好き\n作画、演出◎\n改めて思うけど、ここまでくるとマンネリ打破してくれる回が面白い。既視感のある安心よりもちゃんと話として続きが気になるものを求めてる。\nレギュラーハムの掘り下げ回、目新しい展開がある回、おかしいゲストハム回がいま一番面白く感じる","f":["sg"]},{"o":131,"v":"4","l":"141","k":"tv","ep":141,"ee":141,"s":1,"r":5,"st":false,"c":198,"m":"こいつら遊びに来て無視してるの何\n人間たちより全然ハムたちのほうが順調に仲良くなっていくな、リボンちゃんと直接戦うわけじゃないのか\nくるりんちゃんは定期的に良心に目覚めるのに飼い主は\nいやほんと、くるりんちゃんはちゃんと勝負してるのにくるみちゃんは姑息なことしようとする\nこいつらほんと裁縫能力やべえな\nこいつらいきなり歌い出した...って思ってそうなくるりんちゃん、視聴してる側だと一番感情移入できるかも","f":[]},{"o":132,"v":"4","l":"142","k":"tv","ep":142,"ee":142,"s":1,"r":5,"st":false,"c":210,"m":"ハムスターを指じゃなくてひらで撫でてる\n伝説って？\nモモちゃん回なのに珍しくパンダくんのモノづくりで解決じゃないんだ\nすごい今更気づいたけど多分花見3回目なのにこいつらずっと5年生だ\n長老ちゃんと大人らしいずるい解決案\nまいどくんのギャグ割と好き\nこれかなり迷惑度高いし心象も悪い\n今回の作画胴体長いな\n3回目にもなるとロコちゃん達も羞恥心が消えてる\nモモちゃんが脱走の概念とか外にいることの異常性に気がついたらダメだな\n作画◯(後半は◎)","f":["sg"]},{"o":133,"v":"4","l":"143","k":"tv","ep":143,"ee":143,"s":1,"r":5,"st":false,"c":161,"m":"ちびちゃんず初登場回\n外からきたハムスターが家の中歩き回ってるのちょっと汚ねえな\nタイショーくん面倒見が本当にいいな\nいつみてもこの遊園地規模おかしいだろ\nこの列車で人のいる往路にいるのヤバすぎる\nこの世界のハムスターなら知能高いというか平気で群れるからどの種も平気なんだろうけど、多頭飼いしてるならこいつらはロボロフスキーとかかな","f":[]},{"o":134,"v":"4","l":"144","k":"tv","ep":144,"ee":144,"s":1,"r":5,"st":false,"c":216,"m":"ハムスターを牧場へのおでかけに連れていく奴多すぎだろ、この世界の人間やっぱりおかしいよな\nどういうメンツなんだよまじでこれ\n作画が良くてじゃじゃハムすらかわいい\n走ってるウマに飛び乗れるロベルトすごすぎだろ\nじゃじゃハム回のジンクスを打ち破って今回はきちんと面白かった、いつもの展開にならなくてよかった\nハムちゃんずを集合させる都合で人間で絡みというか繋がりがないメンツが沢山出てたからそこでも何かしらやってほしかったな、貴重な機会だし\n作画◎","f":["sg","jaja"]},{"o":135,"v":"4","l":"145","k":"tv","ep":145,"ee":145,"s":1,"r":5,"st":true,"c":153,"m":"なんでこんな個室に物置くの\n普通にロコちゃんが家にいる時でも脱走してるのなんなんだよ\nやっぱりタイショーくん大人だよな、他のハムたちより精神年齢高い\n遊ぶ部屋じゃなくてタイショーくんの部屋を新しく作るの？そっち？\n地下ハウスでなんかやる回だとみんな満遍なく出るし当たり率高い\nこうしとタイショーの攻防が良かった\n作画◯","f":["sg"]},{"o":136,"v":"4","l":"146","k":"tv","ep":146,"ee":146,"s":1,"r":5,"st":true,"c":205,"m":"すみれ町って前行かなかったっけ？タイショーくんとトンガリくんが手紙届けようとするやつ\n抜け出しても何も不都合起こってないのって毎回寝てるって思ってるのか...\nこいつ過去編でもこんな剥き出しで運んでんのかよ\n夕方までハム太郎に何も構ってないってことだよな？ヤバすぎるw\nハム太郎のちょっとした過去編+テンポがハム太郎と思えないくらい良くてすごく面白かった\n気になるのは作画。あれやね、中期の顔デカ胴細がそろそろ出てきてる","f":[]},{"o":137,"v":"4","l":"147","k":"tv","ep":147,"ee":147,"s":1,"r":5,"st":false,"c":135,"m":"ナースちゃんまたか\nタイショーくんこのまま続行するんだ\n毎度のことだけど街が見下ろせるくらい山に移動してんのどうなってんねん\nちび丸ちゃん今回普通に有能だな\nこの仕事が普段ハムスターに割り当てられてるって何？\n女の子ハムたちがやらかすの珍しい\nでも檻の構造も悪いか\nナースちゃん...","f":[]},{"o":138,"v":"4","l":"148","k":"tv","ep":148,"ee":148,"s":1,"r":4,"st":false,"c":87,"m":"148話だとちょうど半分か\nというか子持ちってコックさんしか出てないな\nこいつらの争いマラソン回以来ですごく懐かしい\n焼き直しですか？みたいな内容でした\nなんか、感想が無い回って感じ","f":[]},{"o":139,"v":"4","l":"149","k":"tv","ep":149,"ee":149,"s":1,"r":5,"st":false,"c":116,"m":"もうマネージャーになれば？\nこの改装すごいな\n今回のくるりんちゃん強いな、ハムちゃんずに呑まれない\nタイショーくんええやつすぎる\nパンダくんが久々に喋った\nハムスターサイズの運動器具はどこから\nテンポすごいよかったな、崩落から救出まで一瞬\n作画◎","f":["sg","watch"]},{"o":140,"v":"4","l":"150","k":"tv","ep":150,"ee":150,"s":1,"r":5,"st":true,"c":377,"m":"ロボハムって概念が一般的なのかよこの世界\n普通に暴力なんだが\n大会もほんとに暴力なのこれ\nハムの基準がわからん\n一斗缶凹ませられる威力危なすぎんだろ\nメカじろうかわいいな\nハムの基準がわからん\nメタグロスみたいなハム出てきた\nエジソンくんすごい久々だ\n作画◎だし、演出が凝ってるというかすごいよく動く回\n何気にこれかなりレベル高い大会だよな、自律して完全に自己判断できるメカ同士の戦いってすごすぎる\n(↑一応現実でもロボット相撲大会っていうのがあるらしい、自律部門とラジコン部門がある。\"強力な磁石で土俵に張り付き，強力なモータでタイヤを駆動して移動することで相手と戦う\"\n動画見たらシュールだったw、除雪車みたいなフォルム)\nメカじろうの強さがまた際立った回だった、ハム10匹と押し合って拮抗する膂力、木の板を普通に殴り壊せる破壊力\n蜘蛛型ロボハムが1番酷かったな、二足ですらない","f":["sg"]},{"o":141,"v":"4","l":"151","k":"tv","ep":151,"ee":151,"s":1,"r":5,"st":false,"c":318,"m":"オアシスくんって3回目かな？初回とくるりんちゃんと今回\nカメゾウくん人面すぎてかわいくない\nというかかなりデカくね？デカいタイプのリクガメだ\nカメのくせに鳴く\nハムですらおかしいけど流石にカメをスルーは無理があるだろ\n9本の風船でこのカメ浮いてる\nこの学校絵の課題多いな\nハムちゃんず号いっつも空の荷台つけてたけどやっと外すこと覚えたんか\n住宅街から外れすぎだろ、どこまで飛んでんねん\nこのアニメいっつも川に流れ始めると滝に落ちそうになってんな\nねてるくんが直立してんの珍しい\n(カメの鳴き声の話。声帯や鳴管(鳥類の発生器官)は保有してないが、呼吸で空気を押し出す音で鳴くことはあるらしい)\n名前的にゾウガメなのかな、って思ったけど流石にゾウガメほど大きくない","f":[]},{"o":142,"v":"4","l":"152","k":"tv","ep":152,"ee":152,"s":1,"r":5,"st":false,"c":156,"m":"もうこんな雨でも普通に外でやがるこいつ\nかぶるくんいるの珍しすぎる\nレインコート着て能動的に外出てんの珍しいというか初めてじゃないか\n雨に弱いんですよとか言われても説得力が\nただでさえ布被ってるのにレインコートってすごい蒸れそう\n最近ほんまに2足走りしかしないな\nほんまにハム共の外なめ度(外をなめてる度)がすごい、雨で出る","f":[]},{"o":143,"v":"4","l":"153","k":"tv","ep":153,"ee":153,"s":1,"r":5,"st":false,"c":213,"m":"全員でトン吉に乗ってるの初めてじゃない？過多すぎる\nピヨちゃんずものすごい久々だ、正月回以来？そんなわけないか\nピヨちゃんずそんなにがっつり視認してんのに前を走るハムを認識しないの\n虫のキャラ初めて？\nというかよく見たらトラハムsだけいない、トラハムちゃんがいないの珍しい\nパンダくんかわよ\n1話の中でこんなに日数経過してるの初めてや\nまぁ、気持ち的には4.5点くらい\n作画バフとパンダくんが出てるかでどうしても気持ちが\n作画◯\n検索用：ミドリン","f":["sg","watch"]},{"o":144,"v":"4","l":"154","k":"tv","ep":154,"ee":154,"s":1,"r":5,"st":true,"c":156,"m":"家出回って一回あったっけ\nこいつら両手にむき出しで乗せて歩くのがデフォなのかよ\nトンガリくん2話連続で出てきた\nサブさん出てきた、こいつチートだよな\nまた雨なのに外\nまたフランソワーズ\n夕方に帰って来れてる\nフランソワーズとトン吉でゴリ押すの強すぎる\nハム太郎とこうしのペアやっぱり結構好きやわ、ハム太郎の最初の友達だしな\n作画◯","f":["sg"]},{"o":145,"v":"4","l":"155","k":"tv","ep":155,"ee":155,"s":1,"r":4,"st":false,"c":84,"m":"夢回だろ、タイトルでわかる\nこうしくんが悪い奴役なのいいな、普段こんなに生き生きとしてない(？)\n夢回が結構久々、悪役こうしくんがすごく良かったので夢回なのに...4点！！","f":["dream"]},{"o":146,"v":"4","l":"156","k":"tv","ep":156,"ee":156,"s":1,"r":5,"st":true,"c":312,"m":"作画やばいな今回w\n今回のっぽとトラハムちゃんか\nトラハムくんいたの？今回これだけだったらどうしようw\nこれ七夕回だったんだ\n後半になってちょっと作画良くなってきたな\nラストの演出力入りすぎだろ、ええな\nいやー、これ作画がいい時に見たかったな...最近安定してたのによりによって今回がこんなに乱れてんの悲しい😢\nトラハムちゃんが惚れたのが13話で結ばれた？のが156、遠かった\n本放送だとOPはまだ変わってなくて、EDが変わった\nDVD版だとOPもいはたじゅりのに変わってて、さらにアイキャッチも新しいのに変わってる\nEDの話。絶対にハムちゃんず歌唱じゃないと嫌だ、というわけではないがちゃんと踊らせてほしいわ。今までかなり力入ってたのに...","f":["sb"]},{"o":147,"v":"4","l":"157","k":"tv","ep":157,"ee":157,"s":1,"r":5,"st":false,"c":243,"m":"にわとりトリオって嫌だな、ニワトリオにしろよ\nロベルトって隣のクラスだったんだ、特に何も考えてなかった\n今日作画まともやん、なんで前回だけほんとにあんなんなんだよ！！！！！！！！！！！、なんで？あの内容勿体なすぎる...なんで最近滅多に来ない谷がちょうどあの回に当たるの？？？？\nケツ振るまいどくんかわいい\n4足で走るの久々すぎる\nこれ人間視点ガチで何も分からなすぎて怖くないか？\n鶏回で先生が出てくるの今まで多すぎてくどくて期待してなかったけど一切出てこなかったから面白かった、作画も良いし\n作画◎","f":["sg"]},{"o":148,"v":"4","l":"158","k":"tv","ep":158,"ee":158,"s":1,"r":5,"st":true,"c":181,"m":"くるりんちゃんの方が全然意識高いやん\nやっぱりくるりんちゃんはまともだよな\n夢回をメタ的に言及してきたのはじめてじゃない？というか夢回なのに現実で起きたことにされたのもこの夢だよな\nその型はどうやって作ったんだ\nテンポ良くて話も普通に面白かったな\n漫才パート良かった\nパンダくんは小道具係として定期的に出てきてトラハムくんは出番あったのにガチでかぶるくんだけ何もなくて酷いw","f":["dream","watch"]},{"o":149,"v":"4","l":"159","k":"tv","ep":159,"ee":159,"s":1,"r":4,"st":false,"c":267,"m":"ポテトくん、シェイクちゃん初登場回\nキッチンカーは流石にあかんやろ、今までで1番ぶっ飛んでる技術力だ\nこれひまわりのタネで作ったってことにすればどの食べ物も出演させられるやん\nハムサイズのキッチンカーなのに立って届かないカウンター\nこいつ髪の毛すぎる\n作画もいいし動くシーンも凄い今回綺麗だな\nデフォルメされてるからいいけど野菜の箱にハムスターがたくさん入ってるの嫌すぎる\nポテトくんすげえ小せえな、かぶるくんくらい\nこの終わり方とこっからのサブタイトル見るに、しばらくここの話かな\n作画◎\nなんか、やたら顔がかわいいシーンが多かった気がする。内容はまあ","f":["sg"]},{"o":150,"v":"4","l":"160","k":"tv","ep":160,"ee":160,"s":1,"r":5,"st":false,"c":284,"m":"本放送のOPも変わった\n全然前回の家の続きじゃなかったわ\nかぶる久々に喋ったな、相変わらず誰でもいい喋りしかしない\n久々にパンダくん出てきたからももちゃんが迷子になるのかなって思ったら人間の新キャラ出てきた、園児だからハムちゃんずに郡として接することができる貴重な人間枠\nかぶるくんめっちゃ喋るやん\n作画◎、ハムちゃんず全員出てしかもちゃんとセリフも満遍なくあって良かった\n...でもこうやって全員出てる回ほど、パンダくんも一緒に移動してるはずなのに急に映らなかったりしてるのが気になって辛くなってくる。最後とかひどい、なんでお別れでみんな手振ってるのにパンダくんだけいないの？w","f":["sg","watch"]},{"o":151,"v":"5","l":"161","k":"tv","ep":161,"ee":161,"s":1,"r":5,"st":false,"c":204,"m":"カメハムくん初登場回\n今回作画アレやなw\n船酔いする奴がサーフィンできんの\n作画アレなのにタイショーくんだけちゃんと顔かわいい、タイショーくんってほんとに顔の打率(？)高いよな\nカメハムくん聞き取りやすい\n泳ぐのに目を瞑っても濡れた後の処理はどうなんだよ、濡れちゃいけない理由ってどっちかというとそっちだろ\nこいつ海辺に住んでやがる\nパンダくんのめちゃくちゃな制作久々に見た\nカメハムくん、いい奴だしいい声だしスペックすごい","f":["sb"]},{"o":152,"v":"5","l":"162","k":"tv","ep":162,"ee":162,"s":1,"r":5,"st":false,"c":198,"m":"「勝手に出かけたらマリアちゃんが心配する」←この思考になる時とならない時の条件は何？今更何をおっしゃるの？\nこの男の子出てきたのメカじろう回だっけ、初登場回でもほぼ描かれてなかった\n井戸の縄噛み切るの害獣すぎ\n建物一個沈んだんだけど\n作画◯\n後期になるともっと他キャラの出番減る(らしい)やん。でもハムこうしタイのトリオが結構好きだからこの回も良かったと感じたし、もしかしたら後期も耐えられるのかもしれない","f":["sg"]},{"o":153,"v":"5","l":"163","k":"tv","ep":163,"ee":163,"s":1,"r":3,"st":false,"c":90,"m":"ひまわりちゃん初登場回。\nめがねが急に冷笑というかマジレスしだした、基準がわからん\n感想があんまり出ない回。ひまわりちゃんが新キャラのくせにあんまり喋ってない気がする、落ち込んでただけ","f":[]},{"o":154,"v":"5","l":"164","k":"tv","ep":164,"ee":164,"s":1,"r":5,"st":true,"c":328,"m":"これどうなんだろう、人間たちが伊賀まで来てるのか普通に港南の近くにイガイガの里があるのか\n今回作画良いな、顔かわいい\nやっぱりニンハムくん好きだわ、顔も声もポンコツ具合も。今回も覚醒とかなく役に立たなかったしずっと変わらなくて面白い\n作画◎\nイガイガの里の話。明らかに軽めのおでかけなので、伊賀説はほぼ無しでいい。で、港南区から1番近くて手軽なのは小田原城になんかそういう忍者コーナーがあるらしい。すごい前に書いたニンハムくんの移動距離考察が300kmから40kmにスケールダウン、それでも凧でこの距離はおかしいが。\nただ、小田原城の展示にしては少ししっかりしすぎてるので、もう少し規模が大きくて近いのは山梨県忍野村にしのびの里ってのがあるらしい。これは100km。","f":["sg"]},{"o":155,"v":"5","l":"165","k":"tv","ep":165,"ee":165,"s":1,"r":5,"st":false,"c":187,"m":"トマトくんとナッスーくん初登場回\nいつもの机、小さくなるどころか今回六角形になってるw、円ですらない\nオープニングの謎フクロウ出てきた\nこのハムスターサイズの野菜はなんなん？ハムサイズの家電とかあるし今更か\nハムスターがカラスから野菜を守ってフクロウに助けてもらうっていう絵面が面白かった、鳥どもがハムスター食おうとしない\n作画◯、顔のかわいさというか動きのリッチさ？が目立つ回だった","f":["sg"]},{"o":156,"v":"5","l":"166","k":"tv","ep":166,"ee":166,"s":1,"r":4,"st":false,"c":195,"m":"パンダとトラハムくんだけいない😢\n今回作画アレやな\nというか顔がでかい、後期の嫌な体型(？)になってる\nまじで顔がでけえ\n作画酷い回でもタイショーだけかわいくみえるのなんなんだろう、こいつが1番安定してる\n作画崩れてる回って段々と時間経過につれて安定してくるんだよな、なんで？w\n作画のことにしか言及してない、まあ内容的には特に言うことが...久々にサブが出てきてチートの鳥ネットワークで解決したくらい","f":["sb","watch"]},{"o":157,"v":"5","l":"167","k":"tv","ep":167,"ee":167,"s":1,"r":5,"st":false,"c":175,"m":"この赤ん坊毛量がすげえ\nこの回の顔と体型かなり好きかも\n体型が鶏じゃねえ\n窓から脱走するのガチで洒落にならんやろ、危なすぎる\nいや屋根に乗ってる方がやべえだろ、なに和んでんねん\nなんか、鳥たちがかわいそう。こいつらだけまともに仕事するというか荒らさないだろうに\nというか止めてない瓦を屋根に置きっぱにするなよ、赤ん坊だからとかじゃなく大人も近づいたら危ない\n作画◎","f":["sg"]},{"o":158,"v":"5","l":"168","k":"tv","ep":168,"ee":168,"s":1,"r":5,"st":true,"c":286,"m":"排水パイプから落ちるシーン久々すぎる\nこいつら定期的にこうやって飼い主に迷惑かけて落ち込むけど結局変わらないんだよな、全く懲りない\nこの回作画やばいな、なんか体型云々とかじゃなくて単純に絵が下手(？)\n話面白い時に限って作画がゴミになるのほんまやめろ\nBパートになったら急に作画マシになった\nリボンちゃんヒロインすぎるしハム太郎もほんま主人公しててええわ\n結論が\"もっと強くなる\"なのおもろい\n話良かった時に限って作画が犠牲になるのほんとにやめて、もしかしてポイント制になってる？途中で4話の話も出てきたけどあの回もとんでもない作画崩壊起こしてたからリボンちゃんがそういうジンクスある？","f":["sb"]},{"o":159,"v":"5","l":"169","k":"tv","ep":169,"ee":169,"s":1,"r":5,"st":true,"c":182,"m":"このサブタイゲストハム3人出てくる？\nこいつまたサイレン鳴らしてる\nくるりんちゃん毎回妥当な怒りだよな\nくるりんちゃんのいつもの扱い、メカじろうのめちゃくちゃさ、あと個人的にサイレン鳴らすあのシーンが懐かしすぎてすごく面白かった\nさすがにたいほくんは出てこなかったけどたいほとウキハムまで出てきたら収集つかなくなるか、でもこんなぐちゃぐちゃなんだし出してもよくない？\n作画◯","f":["sg"]},{"o":160,"v":"5","l":"170","k":"tv","ep":170,"ee":170,"s":1,"r":5,"st":false,"c":272,"m":"これハムちゃんずも運動会やるのだ！パターンか普通に見守りに行くパターンかわからん\n人間よりもハムスターの方が何倍も察しがいい\nまいどのギャグ普通に面白いと思う\nリハとしてハムちゃんずで運動会やるのいいね、この回で一石二鳥(？)\n並走するだけか、よかった。思いっきり不正するのかと思ったw\nモモちゃん回って人間たちの過失というか気の利かなさがとんでもないことになりがちだけど今回はまあマシというか許容できるだった\n運動会に乱入する回ってロコちゃんでやった気がするけど見つからん、初期の方かな→46話でした、この回もちょろっとだけハムちゃんずでも運動会やってた","f":[]},{"o":161,"v":"5","l":"171","k":"tv","ep":171,"ee":171,"s":1,"r":5,"st":false,"c":199,"m":"カメハムくん再登場早すぎやろ\nパンダくんちょくちょく喋るなって思ったけどアレか、まとめて録るからか\nかぶる消えてて草\nカメハムもなかなかやばいな、泳げるしカニとヤドカリとカモメ呼べる。事件解決能力が高い\nイルカの色の話。子が白、両親が灰、周りの仲間が濃いめの紺？で、基本的に白色はシロイルカ、いわゆるベルーガしかならなくて、今回みたいなフォルムのイルカで白はアルビノしかない。ただ目の色は普通に黒だったけど","f":["watch"]},{"o":162,"v":"5","l":"172","k":"tv","ep":172,"ee":172,"s":1,"r":5,"st":true,"c":253,"m":"ちびくりちゃん初登場\nまいどのギャグ割と面白いと思う\n最近新キャラですぎだろ\nもう雨降っても1ミリも避けようとしない、水を浴びても特に何も思ってない\nレインコート着てるちび丸おもろいな\nいやちびくりとこうしの方が正しいだろ、雷は怖がれよ\nいやこれ危なすぎだろ氾濫の直前に川に近づいて土嚢積むの\n急がなきゃいけない作業してる時に子供が邪魔だからあっちで遊んでろみたいに扱われるのよくあるよな、何が言いたいかというと今回の話は面白かった、あとちび丸ちゃんが特に可愛かった\nちびくりもちび丸もレインコート着てる方が可愛いな\n作画◎","f":["sg"]},{"o":163,"v":"5","l":"173","k":"tv","ep":173,"ee":173,"s":1,"r":5,"st":true,"c":175,"m":"季節イベントかなりやってるのにハロウィンって今回が初めてか\n1,2話組+かぶるパンダって珍しいな\nハロウィンで学芸会で使ったお姫様の衣装ってやる気ないだろ\nこいつら認知能力どうなってんねん\n仮装とかじゃなく普通に飛んでるやん\nわちゃわちゃしてて面白かった\n作画はちょっと気になるような気にならないような、まあ半分以上素顔じゃないからそれで違和感あるだけな気もする","f":[]},{"o":164,"v":"5","l":"174","k":"tv","ep":174,"ee":174,"s":1,"r":5,"st":false,"c":210,"m":"自作した物語が勝手に広められてるのおもろいな\n今回なんか目でけえ\nパンダだけいねえ\n今回顔が安定しねえ、目の大きさが不安定すぎるw\nトラハムくんまた出演だけしてセリフない？w←セリフどころかガヤとしての声すらなくね？って思ってたらガチだった、エンドロールに載ってないw\n内容に触れておくとインディージョーンズでした\n何かよくわからないもの全部長老関連で片付ける傾向ない？\n地の文のラブラブハッピーエンドです、で締めるの斬新すぎる\n作画◎","f":["sg","watch"]},{"o":165,"v":"5","l":"175","k":"tv","ep":175,"ee":175,"s":1,"r":5,"st":false,"c":200,"m":"トンガリくんたまにとんでもないこと言うよな、モラル的に\nどんちゃんメイン回ってすごい久々？というか記憶に残ってるのが雪で犬レースやるやつしかない、これだと150話くらい前な気がする、流石に間にあるはず\nまいどもこういうこと言うよな\nまた人形の区別つかないのかよこいつら\nハム太郎以外は割と受け入れてる\nハム太郎が頭に乗ってるのはスルーなの？w\n今まででこれ1番スルーに無理がある、流石に距離近すぎて視認するやろw","f":[]},{"o":166,"v":"5","l":"176","k":"tv","ep":176,"ee":176,"s":1,"r":5,"st":false,"c":101,"m":"道のど真ん中歩いてんじゃねえ\n作画崩れてる回なのにパンダだけかわいいな\n手回し式のサイレンじゃん\nマフラーちゃんが無言で運んでくのうける\n女の子たちの手のひら返しがひどい\nナースちゃん回だと女の子ハムが割とひどい","f":["sb"]},{"o":167,"v":"5","l":"177","k":"tv","ep":177,"ee":177,"s":1,"r":4,"st":false,"c":182,"m":"今思ったけど地下ハウスのテレビって何を受信するんだろう、電源ついてるシーンないよな\nツリーハウスに来る頻度やばくね？サブタイ見る限りちびくりの回がまたもうすぐあるし\nあと半分あるけどもう見れた\nクラスの人たちというかいつメン...6人しか呼ばれてないのどうなんだ\nこんなに光りはせんやろ\n朝に日記のシーンなの珍しいな\n→「今日も楽しい1日になるといいね、ハム太郎」だった\n作画◎","f":["sg"]},{"o":168,"v":"5","l":"178","k":"tv","ep":178,"ee":178,"s":1,"r":4,"st":false,"c":273,"m":"今回作画ちょっと怪しいなw\n珍しく全員いる、ちゃんと全員\n崩れかけたり顔可愛かったりなんだこれ\nこの探偵服久々だ\n木馬のイントネーションってそうなの？骸みたいな発音してる\n流石に怪奇現象だろ\nよかった〜、ガチで脈絡もなく木馬作り出した訳わからない回になるところだった、流石にこれ思い出の品かなんかだよなって思って見ててそうなってくれた(？)\nどうしよう、久々に全員出てて嬉しいけど気持ち的には4.5点\n加点要素→全員出ててセリフもちゃんとある、探偵服がホームズ風の既存のじゃなくて新規のトレンチコートバージョンが見れて嬉しい\n減点要素→作画が怪しい、内容が少し薄い","f":["sb"]},{"o":169,"v":"5","l":"179","k":"tv","ep":179,"ee":179,"s":1,"r":4,"st":false,"c":335,"m":"サブって久々だっけ、ゲストハムの種類が増えすぎて出てきたように感じる\n雪降ってきても気にしないのもなかなか外舐め度(外を舐めてる度)が高い\n明確に連れてきてて直前まで話しかけれられてたのに抜け出したらバレるだろ\nほんま鳥便利すぎるな、そういえばツリーハウスの奴らもフクロウでやりたい放題してた\nなんか、サブタイ的にじゃじゃハムが気合いで来るのかと思ったけど中間地点で合流して終わるとは思わなかった\n正直にいうと、じゃじゃハムの苦手意識が明らかにまだ抜けてない、フラットに見れてない。じゃじゃハムが何回も走って転ぶシーンは「はよ展開進めよ...」って思ってしまった、他のキャラだと多分温かい目？で見れると思うのに。やっぱりあれかな、こうしじゃじゃハムを何回やるねんって気持ちが\n作画◯","f":["sg","jaja"]},{"o":170,"v":"5","l":"劇場版3","k":"movie","ep":null,"ee":null,"s":4,"r":3,"st":false,"c":377,"m":"劇場版、再生ボタンを押すまでに腰が重すぎる。見るか.........みたいになる→再生するまでに2時間かかりました\n劇場版ってなんか作画が安定してるんだよな、1作目からかなり年月経ってるのに映画はずっと同じ体型で同じ作画な気がする\n映画だとなんかテンポが独特だなって思ったらこれあれか、ミュージカルみたいに全員で喋るから\n実際寒冷地にいる齧歯類って思い浮かばないな→マーモットが寒さに強いらしい\n前作も今回も1ミリも脈絡なく唐突にミニモニ出てきた\nは？にじハム出てきたんだけど→まさかの調べ間違え、OVA3の発売日は160話と161話の間でした。OVA間空きすぎやろ、って思ってたらマジかよ。\n順番間違えてたことにびっくりして何も入ってこない\n内容はまあ、一生曲が流れてて、うん\n映画1作目はこんな感じで、2作目はまだ内容濃い...濃かった気がして多少マシかと思ったのに","f":[]},{"o":171,"v":"5","l":"OVA3","k":"ova","ep":null,"ee":null,"s":4,"r":5,"st":false,"c":726,"m":"はい、順番を間違えたのでやっと見れます、ずっと見たかった\n小学館からの発売日だと160話の後、一般向けDVDの発売日だと最初書いてあった192話の後。181話のサブタイににじハムって載ってて先にアニメ出るの？って思ったらこういうことだったんかよ\n初っ端人間出てきてワロタ、明らかに異世界とかファンタジーチックな場所には人間キャラいないのに\n今回顔デカ→直ったw、最初の何？\nにじハム、ゲームって「〜なのさ」って語尾だっけ、OVAになってからかな\nは？にじハム強すぎだろ、木を根から飛ばす竜巻起こせんのかよ\nというかこいつ虹彩赤やん、初めてのキャラ\nめっちゃヒトなんだよな女王、でも映画で出てきた妖精みたいなハムたちって人型形態になれるしこいつもハムなのか\nねてるくんが久々に歌ってる\nクレジットだとニジハム、あらすじとゲーム表記だとにじハム、どっちなんだこれ。でもクレジットでしかカタカナ見たことないから多分誤字かな\nいや〜、にじハムとハム太郎のやりとりかわいかった。こういうのでいいんだよ。別にわちゃわちゃド派手にしなくて、ちょっと豪華な1話みたいな内容でええんよ、これ見て分かったけど映画はやっぱりうるさすぎる、話進まないし\n夢オチみたいな終わり方になったけどにじハム自体が映画でさっき出てきたし何なら次のOVAでも出てくるから虹の国にいたハムちゃんずも女王の幻覚なのかな、次ににじハムが登場した時に他のハムちゃんずがどういう反応するかで答え合わせできる。まあ181話ちらっと見たら夢オチ回なのでOVA4まで答え合わせできない→これ書いてて思ったけど、映画はド派手に異世界とか魔法アリだけどOVAは本編寄りだからぼかしてんのかな\nにじハムくんが結構好きかもしれん、かわいい","f":[]},{"o":172,"v":"5","l":"180","k":"tv","ep":180,"ee":180,"s":1,"r":5,"st":true,"c":294,"m":"クリスマス4回目かな\nこういうパソコン型のおもちゃって今あるのかな\nびっくりするほどメモしてないけど、内容面白かったから逆にね(？)\n全員喋ってるし、内容良いし、作画がマジでびっくりするくらい崩れないしで文句なしの★\n全員は喋ってないな、相変わらずトラハムくんは声帯が奪われてマラカスの音しかしない\n作画◎\nテレビパソコンのおもちゃ調べてみたら、今はもうテレビに繋ぐ感じじゃなくてノーパソ型のおもちゃ単体で完結してる感じやな、流石に絶滅してる\nハム太郎のテレビパソコンも出てて、今回で登場してた色合いとデザインはコレと一緒だ\n販促してる？これ見た子供が「ほしい！」ってなってハム太郎のがありますよ！！って","f":["sg","watch"]},{"o":173,"v":"5","l":"181","k":"tv","ep":181,"ee":181,"s":1,"r":3,"st":false,"c":146,"m":"にじハムが本編に出るのはじめてか、ゲーム→OVA→映画→アニメ本編\n導入が雑なタイプの夢回だ\nちび丸ちゃん毛皮がキモすぎる\nちゃんと全員出てるし今回はトラハムくんもよく喋る\n全員喋ってて、作画もまあ良くて、にじハムもかわいい。内容はまあ\n普通ににじハム出てきてほしいんだけど世界観的に無理だよなぁ\n作画〇","f":["dream","sg","watch"]},{"o":174,"v":"5","l":"182","k":"tv","ep":182,"ee":182,"s":1,"r":4,"st":false,"c":94,"m":"干支の概念はこいつら知ってるんだ\nたいほくんは飼い主警察関連じゃないんだw\nウキハムはマジでどういう生き物なんだよ\n追加で3匹脱走してるのやべえだろ\nボスも脱走してますけど、この施設やべえよ\n作画◎","f":["sg"]},{"o":175,"v":"5","l":"183","k":"tv","ep":183,"ee":183,"s":1,"r":5,"st":false,"c":109,"m":"木村とロベルト以外の男子生徒久々に見た\nまいどのギャグ割と好き\n生々しい雪かきの事故すぎて嫌だな\nギャルガラスって何だよ\nこいつら器用すぎだろ、小さい子キャラでも単体でこんなん作れるのか\nBパートから急に作画がやばくなってきたw","f":["sb"]},{"o":176,"v":"5","l":"184","k":"tv","ep":184,"ee":184,"s":1,"r":5,"st":true,"c":182,"m":"目がデカすぎる\nあれ、こいつら入院してたんだっけ？\nおすすめのパパおもろいな\n人間で変なやつ出すな、何だこの顎\nというか前半のパート騒いでるだけで終わったw\nちゃんとトラハムくんがハム太郎より一回り小さく描かれてる気がする\n今の所ハムちゃんずがナースちゃんに関わると毎回何かしらやらかしてないか？\nトラハムくん一回もナースちゃんと会話できてなくてかわいそうw\n作画◯→◎(A→B)","f":["sg"]},{"o":177,"v":"5","l":"185","k":"tv","ep":185,"ee":185,"s":1,"r":4,"st":false,"c":79,"m":"こいつ節分初めてじゃねえだろ、なんで初めて聞いたみたいな振る舞いなの\n和装ハムちゃんず\n先生、やらかしすぎてこの家がどうとかの話じゃないよな、単体で問題起こすから","f":[]},{"o":178,"v":"5","l":"186","k":"tv","ep":186,"ee":186,"s":1,"r":5,"st":false,"c":163,"m":"ポニーテールちゃんって最初出てきた時飼い主の話されてなかったよな、されてたっけ\nこいつロコちゃん知ってるの？前回が前すぎて覚えてない\nこういう中性的なキャラに対する落胆って今は絶対できないな\n寒さに弱いのはそもそもお前らもそうなはずなんだが\n甲羅っていうほど当たってもオッケーか\n今回作画がかわいくないから編み物のハム太郎の方がかわいい","f":["sb"]},{"o":179,"v":"6","l":"187","k":"tv","ep":187,"ee":187,"s":1,"r":5,"st":false,"c":185,"m":"バレンタイン4回目か？1回くらいホワイトデーやれば？\nまいどのギャグ割と好き\nこれ長老素でやってんならなかなかヤバいな、ハムちゃんずより頭抜けて終わってる\n外国産のひまわりってなんだ\nおハムって髪飾りつけてたの全然記憶になかった\nタネはともかくひまわり本体が根こそぎ消えてるのはなんなんだ\nタネ直渡しが4年目にしてついに変わった\nひまわりのことを知らないので調べてみた、北米原産らしい","f":[]},{"o":180,"v":"6","l":"188","k":"tv","ep":188,"ee":188,"s":1,"r":5,"st":false,"c":155,"m":"かなりレアなマフラーちゃんメイン回\nマフラーちゃんもパーティに出るの？ハムスターってそんなに連れ歩くタイプのペットじゃないだろ\nこのハムスターが運動器具を使う絵面シュールギャグアニメになってる\nマフラーちゃんが瓦割りしてるw\n普通の靴でバレエの動きできるのすごい\nくるみちゃんが邪悪じゃないし特にやらかさないの初めてか？","f":[]},{"o":181,"v":"6","l":"189","k":"tv","ep":189,"ee":189,"s":1,"r":5,"st":true,"c":239,"m":"これトラハムくんがトラハムちゃんを看病する回なのは知ってるんだけど、それだけ聞くとマジで面白そうというか期待ができ過ぎて困ってる、最初から面白いと思ってハードル上げすぎるのよくない\nなんか色の塗り方変わった？薄い？セル画感がない\nこれひな祭り回なのか\nペットだけで診察行くの意味わからなすぎるな\n目がデカい\n今回すごいよく動くな\nこれ評判いいのも納得だわ、作画もそこそこ良くて内容も面白かった\nトラハムくんは反省しても全く同じシチュエーションが起きたときまた同じことやらかすんだろうなw\n作画◯","f":["sg"]},{"o":182,"v":"6","l":"190","k":"tv","ep":190,"ee":190,"s":1,"r":5,"st":false,"c":148,"m":"おしゃれちゃん初登場回\nカタコト外国人ハムが出てくると思わなかったわ\nタイショーくん女装にハマりすぎや\nこれ声ピカチュウか\nかぶかぶ...歌舞伎！はおもろい\nなんなんだよこれ、誰か止めてくれ\nシンサクさんがゲストハムとして出てきたらどうしよう\nハムちゃんずが暴れてただけでおしゃれちゃんの事何もわからなかったw","f":[]},{"o":183,"v":"6","l":"191","k":"tv","ep":191,"ee":191,"s":1,"r":4,"st":false,"c":157,"m":"ねてるくんがこんなに妨害されてんの初めてだw\nハム太郎に押し付けにきたのw\nすごい今更だけどちびくりの出演頻度やばすぎる\nトンガリくんすぐ人に放浪させようとするのほんまやばい\nロコちゃんパパのイニシャルYか、これ一回くらいは過去に名前出てそうだけど覚えてないや\n作画がなぁ、崩れてはないんだけど目が小さくて純粋にかわいくない","f":["sb"]},{"o":184,"v":"6","l":"192","k":"tv","ep":192,"ee":192,"s":1,"r":5,"st":true,"c":116,"m":"また何も話聞かねえこいつらw\nへけっって手で相槌打ちながら言うこともあるんだ\n泥が一瞬で落ちた\nハム太郎とのコント面白かったし、作画も良いし、くるりんちゃんが能動的にハムちゃんずと遊ぼうとするの良かった\n春奈家も引っ越すの！？\n作画◯と◎の間","f":["sg"]},{"o":185,"v":"6","l":"193","k":"tv","ep":193,"ee":193,"s":1,"r":5,"st":true,"c":540,"m":"ハムスターが転んだ\nこいつらタイショーくんに対する扱いひでぇ\nびっくりした、まだ1期なのにいきなりファンタジーになるのかと思ったらそういうアレかw\n目がデカい\nこれありえんくらい迷惑だろw\nめちゃくちゃ普通にねてるくんと会話してるw\nタイショーくん...😢\n地下ハウスも閉めちゃうんだ\nこいつがアレか、人間回がロコちゃんじゃなくてこいつメインばっかになって不評なやつ\n────────\n☆194話から第2期（はむはむぱらだいちゅ!）。評判がアレなので見るのが怖い。ここからハム太郎というコンテンツが衰退していく...？\nでも一期のラストは全然良かったし作画もあの顔バカでか体激細にまだなってないからどうなるんだろうかこれ\n1期の終わりの期待度vsありえないぐらいの不評　になってる\nでも2期からだいぶファンタジーになるっていう要素が不安しかない、全部夢回みたいなテンションで見ることになりそう、あんまり期待できない\nいやー、最悪2期は見なくてもいいかなとかちょっと思ってたんだけど区切りが悪すぎてな、タイショーくんが復帰するところは見ないと\nうだうだ言ってないで見るしかないのか...\nこんな感じでハードルがグチャグチャなので1期と2期の点数は比較できないかもしれない、それぞれの期内ならいいけど\n────────","f":[]},{"o":186,"v":"6","l":"194","k":"tv","ep":194,"ee":194,"s":2,"r":4,"st":false,"c":433,"m":"2期なのでOP,ED,アイキャッチの刷新\nラピスちゃん、ラズリーちゃん初登場回。この2匹髪の毛みたいであんまりデザインは好きじゃないけどどうなるか\nこの爺さんの新キャラ、ハムちゃんずでございまちゅのお爺さんみたい\nBGMもSEも一新されてる、新しいのしか来ない\n「(ラピスちゃんに対して)名前まで変わってますねぇ」←？、ああそうか、こいつら的には直接的すぎる名前の方が普通なのか\nいくら山奥だとしても動物園みたいなメンツを放し飼いはやばいだろ\n普通に集団で家に押しかけて来て勝手に中入るのやべえ\nあ〜、ファンタジーが始まってしまった\nこれどうなんだろう、導入だから最初だけ1話完結じゃないのか2期はそういうスタンスなのか\n次回予告はロコちゃんとじゃなくてリボンちゃんとハム太郎になったんだ\n導入回すぎて感想があんまりねえ、とりあえず4点にしておくか。ラピスちゃんの声汚ねえなって思ったけどラズリーちゃんは声かわいいな\nは〜、ここから100話これなのか。どうしよう、って気持ちで見てる(？)","f":[]},{"o":187,"v":"6","l":"195","k":"tv","ep":195,"ee":195,"s":2,"r":5,"st":false,"c":472,"m":"ねてるくんくっそ喋るやん、説明係になってるし\nラズリーちゃんかわいいな\nハムちゃんずが陽キャすぎるだけでラピスちゃんはまともなのかもしれない、いつの間にか棲みついてた知らない人とその知り合いが押しかけて来たら嫌だよな\nまともというかずっと正論だな、押しかけて好き勝手やられて可哀想ではある\nラズリーちゃんはまいどくんのギャグで笑うんだ、自認ラズリーちゃんになろうかな\n地下ハウスの代わりにここがしばらく拠点なのかな\n思ったより全然見れたな、夢回が嫌なのってハム太郎たちが見た目と声帯が引き継がれたパラレルな存在になりきってて、何を見せられてるんだ感が強いからなのかもしれない、まさに\"これいる？\"\nだからファンタジー感自体はそこまで食えなくはないかも。...そうだといいな\n➡︎「劇中劇が嫌い」で済む話をこの文字数\nラピスちゃんとラズリーちゃんはEDで動いてるのもかわいいしもうかなり許せるというかハムちゃんずとして認めていいかなって思ってる(ちょろすぎ)\n気になるのは作画、崩れてるのかこれが後期の体型というかデザインなのかがマジでわからんw、ただ不安定ではある","f":["sb"]},{"o":188,"v":"6","l":"196","k":"tv","ep":196,"ee":196,"s":2,"r":5,"st":false,"c":215,"m":"ラピスちゃん普通にかくれんぼとかするんだ\nハムだけでガチで家作った...\nトラハムくんだけいない\n現実に魔法の類を持ち込もうとするのなかなかやばいな\nちび丸ちゃんがこんなに直接的に遊んでないで手伝えって言われんの初めてじゃないか？おもろい\n改めて敷地の広さやばすぎだろ\n手に持ってるリンゴにハム太郎が張り付いてて気が付かないのやばすぎる\nなんかやっぱり2話区切りぐらいで進んでいきそう、リボンちゃん曇らせて終わって次のサブタイがリボンちゃんだし","f":["watch"]},{"o":189,"v":"6","l":"197","k":"tv","ep":197,"ee":197,"s":2,"r":5,"st":true,"c":248,"m":"うわ〜ん！でちゅわ〜！、悲鳴に語尾がつくの面白いよな\n今日顔かわいい気がする、別に2期がこの体型で行くなら全然平気やん、なんかでみたありえないくらい顔でかくて体細いあの体型はなんなんだろう\nリボンちゃんが醜態晒す回ってコレかw\nリボンちゃん顔芸が止まらない\n今気がついたけどラズリーちゃんってそこそこピンクだな\nラピスちゃんほっぺにキス魔だったの...\nやっぱラピスちゃんとラズリーちゃんだけ横顔が違うよな、ちゃんと動物の形してる(？)、ハム太郎基本的にただの楕円なのに\n作画◯、顔がかわいくて困惑してる(？)","f":["sg"]},{"o":190,"v":"6","l":"198","k":"tv","ep":198,"ee":198,"s":2,"r":4,"st":false,"c":139,"m":"サブタイコールの前になんか挟まるの初めてじゃないか？←絶対初めてではない\nラズリーちゃん改めてやばいな(？)、そんなこともできるの\nハム太郎からみてこのサイズ\nバクだから実は悪い夢食べてて〜みたいなのかと思ったら別にそういうわけじゃないんだ\n最近全然今日はとっても楽しかったねやらないな","f":[]},{"o":191,"v":"6","l":"199","k":"tv","ep":199,"ee":199,"s":2,"r":5,"st":false,"c":80,"m":"このカラスたち再登場するんだ\n193話ぶりのタイショーくんだ\nタイマンで普通にカラスに勝つのか、本当に強くなってる\n修理あるならパンダくん出してくれてもええやん\n作画◯","f":["sg"]},{"o":192,"v":"6","l":"200","k":"tv","ep":200,"ee":200,"s":2,"r":5,"st":false,"c":166,"m":"パンダでてきた\n小熊と触れ合いってどうなんだろう、流石に\n192話もそうだったけどマフラーちゃんのダメージリアクションがアニメのマイメロすぎる\nクマだけにくまった(困った)って前やらなかったっけ\n幼稚園の職員いなくない？小5三人に押し付けすぎだろ→1人だけいたわ\n「マジでどうしようなのだ」って言った？w\n一期と別にやってること変わらないなコレ","f":[]},{"o":193,"v":"6","l":"201","k":"tv","ep":201,"ee":201,"s":2,"r":5,"st":true,"c":247,"m":"というかすいーちゅぱらだいす自体の説明なさすぎない？この空間そもそもなんなんだよw\n珍しく全員いる\nほんとにこいつらの認知能力なんなんだよw、いきなりありえないくらい頭悪くなるんだよな、人形を認識できない時もあるし\n分けてないまいどと忘れ物勝手に食べるめがねならめがねの過失度というか碌でもない度高い\nタイショーくん結構好きだから良い回だった。別にヒーローじゃなくてもそのままのタイショーくんが好かれてるんだよ、みたいなよくあるアレだけどよかったわ\nまいどとめがねだけコイツらだけでいちゃついて終わったw","f":[]},{"o":194,"v":"6","l":"202","k":"tv","ep":202,"ee":202,"s":2,"r":4,"st":false,"c":342,"m":"OPの謎の三人組出てきた\nでもこいつらあれだ、ハムちゃんずでございまちゅの巻頭に書いてあったな\n今までで1番人間が視認しない展開に無理があるサイズのブツが出てきた、トン吉より見えるだろコレ\nラピスちゃんのラズリーちゃん対する二人称がマジでわからん、ちゃん付けなのか呼び捨てなのかどっちなんだ、不安定\n普通に遊んでもこんなに壊れないだろ、壊して遊んだよなコレ\nいや本当になんなんだコレ、こいつら普段破損の概念あるやん、理性とモラルはどこにいったんだ\n急に知能低下した、なんで一般的な単語の知識はあるのにアートだけ欠落してんだ\nこいつらこれからそういう役割なのか、ロケット団的な、バイキンマン的な。\nくまくんの足音なんだコレ、初めてのタイプすぎる\nマキちゃん毎話律儀に登場してるけど今の所全部薄すぎる\n作画◯","f":["sg"]},{"o":195,"v":"6","l":"203","k":"tv","ep":203,"ee":203,"s":2,"r":5,"st":false,"c":203,"m":"目がデカい\nこうしに一切非がなく怒られてるの珍しい\nラピスちゃんがこうしくん全然信用してないのは最初の印象が悪すぎたからかな\n近づいて後ろ蹴りは攻撃の意思ありすぎだろ\nツノ折れるのグロ\nその金型はナニ？\nちゃんと謝って偉い\nEDでハムリボが踊るようになった\nでもなんか作画も振り付けもなんともいえないクオリティな気がするw\nEDはほんと200%のジュモンとてをつなごうの時が1番踊りに気合い入ってた気がする、ぬるぬる動いてて","f":[]},{"o":196,"v":"6","l":"204","k":"tv","ep":204,"ee":204,"s":2,"r":4,"st":false,"c":138,"m":"タイショーくんいつまともに復帰するん\nくまくんタイショーくんより少しデカい？同じくらいか？\n普通にこいつら可哀想だな、制作物全部破壊されて\nなんか、壊されて落ち込んでる描写あるとすごいかわいそう、おとめ・ズーも少しだけ好きになった\nED、ハムリボの身長揃ってるのもなんか違和感あるのか","f":[]},{"o":197,"v":"6","l":"205","k":"tv","ep":205,"ee":205,"s":2,"r":5,"st":false,"c":273,"m":"こんなハムスターサイズのおもちゃってかなり精巧だよな\n飛びながらメイクと飛びながら切り絵は普通にすごいだろ\n絶妙に顔がかわいくなくて見た目がファンシーなだけの化け物って感じで怖い、生き物殺しそう(？)\n幼稚園の手伝いがこんなに一般化してることあるか\nハム太郎食われたのにそんなに危機感がない\nちゅゴンマジで顔がかわいくねえなw、上のチョコが髪の毛に見えるせいで\n1話完結じゃないんだ\nいつもこういう感じの何かが暴れる回、あんまり好きじゃないんだけど今回は尺をしっかり取っていつもの駆け足気味の展開になってないし、何より破壊と捕食っていうガチの害獣ムーブでいいね","f":["danger"]},{"o":198,"v":"6","l":"206","k":"tv","ep":206,"ee":206,"s":2,"r":5,"st":false,"c":311,"m":"2期になってからこうしが化け物になりすぎだろ\n絵本パートでわざわざパンダくん！？って思ったけどモモちゃんがいるからか\n翼生えちゃった、よくあるユニコーンとペガサスが混ざったアレになった\n散々勘付かなくてよりによってずっと同じだった声で勘付くのかよw\n流石にこいつかわいそうではないだろ\nモスラ\n理性のない化け物は結局ハム太郎だと出ないな、超速で「しょうがないね」になってしまったw\nちょっとかわいそうでちゅわ→自業自得でっせ　の全く同じくだりやるの近すぎて少しおもろい、前にやったの203話ですよw\nねてるが地下ハウスが戻ってきた〜、タイショーくんとねてるくんのペアほんと好き\n欲を言うなら再会のシーンはハムちゃんず全員で迎えてほしかったな","f":[]},{"o":199,"v":"6","l":"207","k":"tv","ep":207,"ee":207,"s":2,"r":5,"st":true,"c":213,"m":"ラズリーちゃんサイズがよくわからない、明らかに幼い扱いだし小さいはずなんだけど普段女の子ハムたちと変わらないんだよな、なのにこのシーンだとちびくりと同じ高さだし\n帰る時冷蔵庫からなんだ\nトンガリくんいつの間にこの空間に\nウソだろ、トンガリくんがまともな方法、まともな行動で場を納めた...だと...\nチューインガムの風船ってちょっと汚ねえなって思ってしまったw\n5話からなんと202話経過、ついに金平糖食べられてよかったねハム太郎\n作画◯","f":["sg"]},{"o":200,"v":"6","l":"208","k":"tv","ep":208,"ee":208,"s":2,"r":5,"st":true,"c":180,"m":"ハムちゃんずくるりんちゃん好きすぎだろ、ゲストハムの中で1番テンションおかしい\nくるりんちゃんはこの服でもタイショーくんってちゃんとわかるのか\nとってもアメリカなのだ\n女が増えてるって言い方\nでも確かに一気に2人加入したから男女のバランスよくなったか\n声低いハム太郎おもろい\nタイショーくん送り届けた後なんで離脱したんだって思ったらもしかして乗り物返しに行ってたのか\n作画◯","f":["sg"]},{"o":201,"v":"6","l":"209","k":"tv","ep":209,"ee":209,"s":2,"r":5,"st":true,"c":238,"m":"マジでラグビーだった\nラズリーちゃん身体能力すごいな\nプレゼントで謝るとかじゃなくて普通に掃除したら？\n仲直り見届けないで普通に帰るんだw\n魔法のタネ関連に図鑑なんてあるの？ハム界で魔法が体系化されてる？\n肩も足も外れるわこんなん\nちび丸ちゃんが成長した...ソロでこんな......\n喧嘩回は他のキャラでも何回かやったけど全然内容が被ってなくてよかった、ラピスちゃん最後まで引かないしw\n2人とも足速いしラズリーちゃんは冷蔵庫投げたりしてるし、この姉妹けっこうフィジカルが強いのかもしれない","f":[]},{"o":202,"v":"6","l":"210","k":"tv","ep":210,"ee":210,"s":2,"r":4,"st":false,"c":221,"m":"スマホのない時代に乗り換えとかできない\nついていかないの珍しいな、泊まりでも関係なくハムたちついて行くのに\n1週間も泊まるんならこっからのなんたらジャンシリーズは出先の話なのかな\nそんな紐自体が切れることある？\nハム太郎がケージからはみ出たことに気がつく展開珍しくない？\nハム太郎のトンガリくんスルースキルが高い\nいつものことだけど移動距離やばすぎだろこのハムスター\n叔母の家に到着しないで終わったからジャンシリーズがさっき言ったあれなのかがわからんなこれ","f":[]},{"o":203,"v":"6","l":"OVA4","k":"ova","ep":null,"ee":null,"s":4,"r":4,"st":false,"c":600,"m":"時系列的にはここらしい(なったーのブログ参照)、ので見る\nOVAもこれでラストか\nこうやってハムたちが露骨に文明というか文化を築いてる描写って劇場版ばっかだったけど\nというかハムちゃんずがにじハムに対して何も反応しないせいでOVA3の解釈が分からんな\n7:57あたり、パンダくんの目が作画ミスってる\nパンダとトラハムくんだけなんで離脱させる？なぁ？\n映画3作目の敵キャラ顔が可愛くなさすぎて嫌\n流石にこの船が現実世界に出てくんのやばいだろ\nそういえばこいつらもハムハムスポーツに出てたな\nこの炎も現実で延焼したらだいぶやばそうだな\nみんなハチマキ外してるw\nこの動物どもはなったーの言う通り面識ないのか、これで本編戻ったら面識ある状態なのかな\nこいつら全員ジャンガリアン柄で体格が小さいのもそういうことなのか\nこのにじハムのカットイン前作と全く同じじゃない？w\nほんとに最後だけラピラズがいるw\nなんか、お前らに焦点当たるの？みたいな内容だったw\nOVAは劇場版とアニメの中間くらいのやかましさとファンタジー具合、少し豪華なアニメ本編の1話って感じで好きだった......っていうのも2作目までの話。3でもう劇場版レベルのアレになってしまった。\nでも3作目はにじハムがかわいいから全然許せたし、内容も落ち着いてたから(？)良い。\n今回はなんか、もう名前忘れたけど親衛隊の奴らの見た目が可愛くないのにずっと写ってるからうーん。\n［加点要素］","f":["watch"]},{"o":204,"v":"7","l":"211","k":"tv","ep":211,"ee":211,"s":2,"r":5,"st":false,"c":564,"m":"例の7泊の場所で話が始まる予想は結局外れた\nこれでアニメ本編でもジャンガリアン共が初対面だったらOVA4は完全にパラレルだな→初対面でした\nこれこいつらが普通に現実世界から来れるんなら鍋はそこだけの固有の次元じゃなくて転移してるだけなんか\n流石に落雷は死ぬやろ\n流石にこの思考はおかしくない？猫とカラスはダメで蛇とワシはいいの？\nかぶるが活躍...？ぼくに任せて、だと...？\nこんなに体格差あるんならハムちゃんずみんなゴールデンな気がするな、ハムちゃんず内の体格差で見たらリボンちゃんはジャンガリアンでちび丸ちゃんがロボロフスキーかもねみたいなアレがあるけど、女の子たちよりジャンガリアン共の方が小さいし、ちび丸は幼体だし\nまいどのギャグ割と好き\nシマウマかカエルかわからんけどパンダくんみたいな声だなって思って見てたらクレジットに名前ない\nゼブラさんとカエルさんらしい、ジャンガリアン共は〇〇さん。で、wikiには既存声優じゃない名前書かれてるのに、明らかに喋ってるのにクレジットに乗ってなくて、なんやねん状態。多分wikiが間違えてる？二役以上演じてる声優の重複はクレジットに書かないルールあるけど流石に一役で書かないのはありえないはず。パンダがそもそも喋ってないので中身同じは消えて、ゼブラとカエルは他の既存の誰かが演じてる事になる。誰？","f":["danger","watch"]},{"o":205,"v":"7","l":"212","k":"tv","ep":212,"ee":212,"s":2,"r":4,"st":false,"c":303,"m":"前回のあらすじあるの初めてじゃない？\nハムちゃんずフルメンバー+ラピラズ+ライオンで人数がすごい\n前回と続きものなのに今回になってから作画良くなった気がする、なんで？\nまた新しいの出てきた、ジャンガリアンシリーズ多すぎだろ\nこのたぬきすげえニンハムの声する→同じ人でした\n最近人間パート少なすぎ&薄すぎで何も印象に残ってないw、毎回律儀に挿入されてはいるけど\n2期になってからbgm一新されたけどこれはそのままなんだ\nたからばこくんってなんやねん\nジャンガリアン共は〇〇さん表記だけどお互いは〇〇くん呼び\nサブタイ見る限り5話分もここの話だけど20×5でどのOVAと劇場版より長いことになる、最長エピソードがこれかよw\n作画◯","f":["sg"]},{"o":206,"v":"7","l":"213","k":"tv","ep":213,"ee":213,"s":2,"r":5,"st":false,"c":265,"m":"ライオンさんが手伝ってくれるのはなんなんだろう、優しいな\n何が大丈夫なのこれw\nすいーちゅぱらだいすみたいにゼリーですとか特に理由づけもなく普通に入るんだ...\n213話にしてついに普通に水に入るようになってしまった\nまた新しいの出てきた、なに？w\n画面分割して驚くの多すぎだろ4回目だぞ\nこの着ぐるみやば\nまた新しいの出てきた\nいやそんないい話風にしようとされても、なんなんだよこの絵面\nこの4匹セット、誇張じゃなくて\"ガチで\"コピペじゃないかこれ？w、完全に同じ線\n画面分割5回目きた\nだいぶ訳わからない回だったな、着ぐるみ着てるの面白かった\n作画◯","f":["sg"]},{"o":207,"v":"7","l":"214","k":"tv","ep":214,"ee":214,"s":2,"r":5,"st":false,"c":110,"m":"作画やばいな今回\n劇場版並みにしっかりハムの文明がある\n人間パートほんとに薄すぎておもろい\nハム太郎が数百代に渡る君主制を終わらせた\nまだあと一話あんのか、もう砂時計取り返して終わりでええやんw、絶対こっからのおとめずー蛇足だろ","f":["sb"]},{"o":208,"v":"7","l":"215","k":"tv","ep":215,"ee":215,"s":2,"r":5,"st":false,"c":192,"m":"作画ちょっと怪しいな\n今更だけどこのクソでかいカブトムシ何も説明ない化け物だな、犬くらいある\n両方にせライオンだろうが\n何を見せられてるんだ\nやっぱりタイショーくんよりくまくんの方がちょっとだけでかい\n作画うんちなのにラズリーちゃんだけかわいい\nこのカブトムシ声あんのかよ\nカエルとゼブラの声がマジでわかんねえ、なんか両方かぶるに聞こえてきたw\nラピスちゃんの魔法の規模やばいよな\n気持ち的には4.5点","f":["sb"]},{"o":209,"v":"7","l":"216","k":"tv","ep":216,"ee":216,"s":2,"r":5,"st":true,"c":152,"m":"作画やばいか？もう最初のフレームがあかんw\nゼリーで水深がほぼないのに釣竿で魚釣れるんだ\n2期になってからリボン虐がすごいw\n半分くらいすぎてやっと人間パート\n発動条件緩すぎやろ\nここ最近の人間パートの薄さクセになる、4コマ漫画に圧縮できるレベル\n入れ替わりネタはもっと擦ってもいいよ、ラズリーちゃんまた鏡作ってくれ","f":["sb"]},{"o":210,"v":"7","l":"217","k":"tv","ep":217,"ee":217,"s":2,"r":4,"st":false,"c":319,"m":"今日だいぶ顔かわいい気がする\nこの世界の人間って動物が勝手にほっつき歩いてる事に対して深刻にならない\n定期的に飼い主大事だね的な回くるけどすぐ記憶消えて勝手に出歩くやんこいつら\n1人のタイショーくんを迎えてくれるのは結局ねてるくんね、このくだりほんまに好き、何回もやっていいよ。ここの部分だけ★つけたいレベル\n本題の方はまあ、知らん犬が飼い主に会いにいく......さいですか、みたいな気持ちで見てた。会いにいく系がマジで苦手というか面白く感じない気がする、こうしじゃじゃハムしかり。最終的なゴールが明確すぎるからかな？→っていう考察は無駄、だって顔がいい既存キャラコンビでこういうのやったら普通に楽しく見れるだろうし、結局はルッキズム採点\n作画◯","f":["sg","jaja"]},{"o":211,"v":"7","l":"218","k":"tv","ep":218,"ee":218,"s":2,"r":5,"st":false,"c":402,"m":"マキちゃんだけなんか違くない？ちょっとしたヘアアレンジたちの中でその中華お団子\nこのハムサイズの化粧品はなに\nまいどのギャグわりとすき\nうそだろ、モモちゃん回なのかよこれ\nフードじゃないからラピスちゃんの髪の毛がすごいよく見える、がっつり生えてんなこれ、この見た目だと嫌だったかもしれない、ローブで助かった\nモモちゃん幼稚園児のくせに思慮深すぎる\nこの回もそうなんだけど、最初の5分くらいだけ目がやたらデカくてあとはもう治ることあるんだよな\nパンダが製作側に回らないの珍しい\nのっぽ顔みじか\nなんか今回平和すぎないか？凪だな\nは？制作物デカすぎだろw、人間の幼児にちょうどいいサイズのドレッサー\nモモちゃんってラピスちゃんいつ知ったんだ\nマジで無風な回だった、何もトラブル起きないし誰もやらかさないし、特にモモ父が珍しく奇行をしないし\nあと静止画がかなり多くて全然動きがないのも余計無風に感じるw\nまあパンダがよく写ってたからええか","f":[]},{"o":212,"v":"7","l":"219","k":"tv","ep":219,"ee":219,"s":2,"r":3,"st":false,"c":832,"m":"2期になって初めての夢回かな？\nこの発言ほんとにこれ夢共有してるんだな、ねてるくんの能力やばい\n製作陣時代劇の夢気に入りすぎだろ、これで5回目くらい？\n夢回が作画安定してるの腹立つな\nというか魔法が登場してもう無法なんだし現実でやればいいのに(？)\nなったーのブログに書いてあったやつってこれか、夢だからなんとも言えない情報のやつ\n余談：\"ばてれんの秘宝\"の話、ばてれん＝伴天連、キリスト教(カトリック)が日本に伝来した当時の宣教師・神父に対する呼称。キリスト教自体やその宗徒を指すこともある。司祭様(パードレ)が伝聞されて変化した\n一応この夢のラピスちゃんの内容を事実として解釈するなら、カトリックの地域で拾われた...という事に？最初のシーンは砂漠だったので、カトリック文化圏かつ、「金持ちの家から逃げ出したら、そこは砂漠だった」がリアルに成立するのは↓\n①アメリカ西海岸内陸部からメキシコ国境にかけての「ソノラ砂漠」や「モハベ砂漠」周辺\n✝️アメリカ南西部やメキシコは、16世紀以降にスペインの宣教師（まさにPadre＝ばてれん）たちがやってきて、砂漠の中に無数のカトリック伝道所（ミッション）を建てた歴史的背景がある。ばてれんの秘宝→元飼い主の富豪が所有していた、大航海時代のスペイン・カトリック教会由来の歴史的アンティーク\n🏠アリゾナ州のパラダイスバレーや、カリフォルニア州のパームスプリングスは、広大な砂漠のド真ん中に、大富豪の超高級リゾートや豪邸（ハシエンダ）が点在している\n②スペイン・アンダルシア州（タベルナス砂漠）\n✝️そもそも宣教師の母国。一族に伝わる本物の宗教的秘宝があってもおかしくない。\n🏠 ヨーロッパの伝統的貴族の領地、貴族の邸宅から抜け出したラピスちゃんがタベルナス砂漠を彷徨う。\n↑\nの以上の２つが主な候補。個人的にはアメリカンにしたい。ラズリーちゃんのリボンの赤地×白水玉はどことなくアメリカンだし、ラピスちゃんの青ローブと合わせれば星条旗カラー(こじつけ)","f":["dream","sg"]},{"o":213,"v":"7","l":"220","k":"tv","ep":220,"ee":220,"s":2,"r":5,"st":true,"c":214,"m":"作画ちょっと怪しいな\n人間パートの薄さの原因ってなんなんだろう、ロコちゃんの頃は人間関係が進んでる感あったけど\n新しいBGM今回だけで２曲目や\nこれ自分で食えるやろ\nこいつ名前ちびゆにだったのか\nほんま、面白い回に限って作画酷いジンクスをどうにかしてくれ、頼む\nこれオチがデカくなって終わりなのと次のサブタイが\"とっとこちっちゃな！応援団\"なので戻らずに終わって次に続くのか？ハム太郎の最後の振る舞い的に流石に平時に戻ってそうだけどわからん","f":["sb"]},{"o":214,"v":"7","l":"221","k":"tv","ep":221,"ee":221,"s":2,"r":4,"st":false,"c":229,"m":"マキちゃんの兄出てきた\nよく考えたら爺さん以外の身内誰も出てなかったな\n見えないんじゃないかしらって見えてもそれはそれでダメだろ\nこのハム型の場面転換久々だな\n作画微妙なのにおとめズーだけ微妙に顔かわいいな、どういう事なんだ→急にまともになってきた、やっぱ複数人で描いてる時だとブレがな\nこれで街中歩くのやばすぎる\n今日作画すごい動くな\nというか垂れ幕に応援対象の似顔絵じゃなくて自画像描くの\n2期入って人間に尺がまともにある回初めてな気がする、たまにはいい\nまあ4.5くらい","f":["sb"]},{"o":215,"v":"7","l":"222","k":"tv","ep":222,"ee":222,"s":2,"r":5,"st":true,"c":363,"m":"予告でちらっと見えたけどにじハム出てくるらしい\nというかたまには地下ハウスで話やれよ\nまたみんなにじハムを知らないのか\nOVA3→夢回(マンモス出てきたやつ)→今回、はちゃんと繋がってんだけどOVA4だけ時系列がどうやっても合わない\n空を飛ぶ木でひこうきって結構面白くないか？\n2期になってからこうしの自制が効かなすぎる\nアニメ本編でこの曲流れるとは思わなかった\nこの宙に浮くひまわり畑の大陸すごい前にマリアちゃんが描いてた謎絵やん\nにじハム出てくると毎回傘振って終わる\n夢じゃなくてちゃんとにじハム出てきたし、作画あたり引いたし、アレ流れるしでとても満足\nにじハム、見た目は要素渋滞してて初見はうーんってなったのが懐かしい。振る舞いと声がかわいいから良い、見た目も好きになったし。ニンハムもすきだしポンコツなゲストハム結構好きかもしれない\n作画◯","f":["sg"]},{"o":216,"v":"7","l":"223","k":"tv","ep":223,"ee":223,"s":2,"r":5,"st":false,"c":205,"m":"クッキーに写真にＴシャツ作れちゃうんだ...\nおとめちゃん、和服と黒髪姫カットならかわいいな\n今回よく動くな、それでいて作画ちょっと良いし\n現実でこの規模で暴れてんのやべえ\n作画◯\n結局作画良ければ大体許せるわ、それくらい見てる時のモチベーションに関わる\n今回でちょっとおとめズーに対する苦手意識軽減されたかも、延々とあの敵役ムーブを擦り続けて同じような展開をやられるのがしんどいのかもしれん、今回は全然立ち回り違かったし","f":["sg"]},{"o":217,"v":"7","l":"224","k":"tv","ep":224,"ee":224,"s":2,"r":5,"st":false,"c":171,"m":"この曲久々\nこいつらのクソみたいな語尾面白いから好き\n今回の作画、顔のバランスはあんまり好きじゃないけど安定してるな、好みじゃないけど上手い\nライオンは飼うハードルが違いすぎない？いやキリンとかも十分おかしいか\n去年も思ったけどUFOのお化けって何\n最初の騒いでるラピスちゃんとかジャンガリアンとか、いろいろかわいい回でした、満足度高い\nおとめズーいる？","f":["sg"]},{"o":218,"v":"7","l":"225","k":"tv","ep":225,"ee":225,"s":2,"r":5,"st":false,"c":241,"m":"それ体内に取り込んで平気なの\n最近の人間パートが薄く感じる理由わかったかもしれん、完全に主人公交代しないでずっとロコちゃんも出てるからかも。1期で例えるならカナちゃんが出る回をずっとやってるみたいな感覚、マキちゃんとロコちゃん両方出てるせいで単体の掘り下げ的な回が来ない\nまいどは自分が増えてることに対して何もリアクションないの\nぼっさんかわいい\n人間側で「ずっと一緒にいると見分けられる」ってやったし、こういうのって絆の力(？)で本物を見分ける云々やるもんだと思ったのに別にやらないんだw","f":[]},{"o":219,"v":"7","l":"226","k":"tv","ep":226,"ee":226,"s":2,"r":5,"st":false,"c":130,"m":"ハムスターのお見合いってなんや...\nまいどのギャグわりとすき\nもう200話くらい前だけどお前ら先生のお見合い見ただろ、なんで忘れてんねん\nこいつらのやることって結構アグレッシブでだいぶ害獣なんだよな\nナースちゃん出るたびにハム中1番常識人で真面目でまともだな、と思う","f":[]},{"o":220,"v":"7","l":"227","k":"tv","ep":227,"ee":227,"s":2,"r":5,"st":true,"c":194,"m":"いろんな種類の魔法をタネとしてパッケージングできるのすごいよな\nこれ人間からはどうやって聞こえるだ\n最初の犬ロベルトみたいな声だなって思ってたら本人出てるしほんとにそうなんじゃねえか？\nどんちゃんも普通に喋るんだ、どんちゃんの声はなんだかんだ出ないかと思ったのに\n犬小屋にキノコ生えまくるってやばいやろ\nどんちゃん回？ハム太郎回？で良かった、絶対前にも書いたけどハム太郎に焦点当たる回は面白い\n作画◯","f":["sg"]},{"o":221,"v":"7","l":"228","k":"tv","ep":228,"ee":228,"s":2,"r":5,"st":true,"c":150,"m":"久々に地下ハウスだ、うれしい\nロコちゃんかなりの頻度で外でお絵描きしてる回あるけど下手なの\n目瞑るとおんねこにみえて最悪\n戻るんならまた呼び出せない？w\n作画いいし地下ハウスだしタイショーくん回だしでとても良かった\nこれ2話使ってじっくりやればいいのに、遭遇から消えるまでがちょっとスピード感ありすぎてw\n作画◯","f":["sg"]},{"o":222,"v":"7","l":"229","k":"tv","ep":229,"ee":229,"s":2,"r":5,"st":true,"c":198,"m":"くるりんちゃんはハムちゃんずに何しに来たの\n雪像じゃなくて氷像なのすごいな\nいや難易度の差よくわからないな、実際どっちが大変なんだろう\nこの馬鹿でかい氷塊はどこから\nハムの建築力がインフレしてきてる...と思ったけど最初からおかしいか\n顔面に飛び蹴り\n作画というか演出と動きがすごいリッチだし話のテンポもいいし、どうした？普通におもろい\nこの回でおとめちゃん割と好きになったかも←前もこんなようなこと書いて結局","f":["sg"]},{"o":223,"v":"7","l":"230","k":"tv","ep":230,"ee":230,"s":2,"r":5,"st":true,"c":162,"m":"ラピスちゃんが魔法使ってるの初めて見た\nこいつらにとってミニチュアサイズだと1cmくらいしかない\n2期になってからこうしの酷使が\n今回に限ってはこうしに1ミリも非がないからかわいそう\nハム太郎ふつうにフラミンゴ操ってるけどなに？\nこんな運命ねじ曲げるアイテム気軽に生成できるのラズリーちゃんやばすぎんだろ、回進むたびにやべえなって思う","f":[]},{"o":224,"v":"7","l":"231","k":"tv","ep":231,"ee":231,"s":2,"r":4,"st":false,"c":170,"m":"もともと丸めて同じカバンの中に入れてたのになんではみ出る？w\nかぶるトラハムいるのにパンダくんだけいねえ\nいやトラハムちゃんもいない！珍しいな\nハムヨンジュン...\nトンガリくんが出てくると大体無意識で何か役に立つのに今回すぐ離脱した\nやっぱり役には立つんだ\n黄色いの結局何だったんだろうな、家の後ろに映るデパートの飾りを絵に描く感性だったら面白いけど","f":["watch"]},{"o":225,"v":"7","l":"劇場版4","k":"movie","ep":null,"ee":null,"s":4,"r":4,"st":false,"c":374,"m":"OVAと映画の在庫もこれで完全に尽きる。終わりが近いてる感。\n映画って40分だっけ？もう少し長くなかった？って思ったらこれだけ40であと50だ\n2期になってから映画って一個しかないんだな\nこうしがねてるくん背負ってる\n絵柄がなんか映画のいつものやつと2期特有の体型の中間って感じだ\n↑これ大嘘すぎる、映画は映画で絵柄独立して安定してたと思ってたけど1作目はやっぱり昔の顔のバランスだわꪝ\nこいつ規模やばすぎて強さランキングいい線行きそう\n急に悲しい過去始まったw\nハム太郎にこんな露骨ないじめ描写出てくるんだw\nもう20分くらい男の子ハムしか出てねえ\nなんか前作より全然うるさくなくて普通に見れたわ\n2期なのに別にラピラズはたいして出ないんだ、ちょっと残念\n映画で順番付けるとしたら2>4>1>3か？3がまじでやばい、海賊たちが可愛くなさすぎて苦痛だしなによりうるさすぎる","f":[]},{"o":226,"v":"7","l":"232","k":"tv","ep":232,"ee":232,"s":2,"r":5,"st":false,"c":260,"m":"この声なんのキャラだっけ\nエンジェルちゃんすげえ久々だな\n2期で魔法解禁したからゲーム出身の奴らが出てもおかしくないのええな\nもしかしてデビハムも出てくる？あれ？エンジェルちゃん初登場回も出てきてたっけ？昔すぎて覚えてない\n悪くなってるこうしハマってていい\n相変わらず保育園の手伝いというより主体でやらされてる\nハム太郎がついにハムちゃんず引き連れて堂々とロコちゃんの目の前に...\nデビハムくん本当に感性が悪だからこれからどうなるのか気になる、映画の悪役たちと違ってまだ良心を見せたり対話するシーンが一回もない、ずっとイタズラしてる","f":[]},{"o":227,"v":"7","l":"233","k":"tv","ep":233,"ee":233,"s":2,"r":3,"st":false,"c":147,"m":"1番適当なパターンの夢回導入だ\nめがねが悪役\nトラハムくんいっぱい動いてかわいい\n夢回に限って作画いいのほんま腹立つ\nいやほんまに作画いいの勿体ねえ\nよく考えたらレギュラーハムちゃんずが敵役に回るって夢回のメリットか\nいやまじで今回顔かわいいな、目デカすぎずバランスよく。◯にしてたけど◎でいいレベル\n作画◎","f":["dream","sg"]},{"o":228,"v":"7","l":"234","k":"tv","ep":234,"ee":234,"s":2,"r":5,"st":true,"c":238,"m":"もうタイトルで内容わかるわ、雪だるま作って魔法で喋れるようになったでも溶けちゃうね、だろ\nラズリーちゃんはてちてちが「ちょこちょこ」、ラピスちゃん全然聞き取れないけど「とことこ」かな\nこいつ局所的な天候操作の魔法もできるのかよ\nまいどのギャグ普通に面白いと思う\nテンポいいな\n自分の体高の十数倍はある雪だるま、人間換算だと20m級\nえ、ガチで介錯するのかw\n今までにないパターンですごいよかった、またスイーツ製の化物系の話か〜って思ってみてたらこのオチ。最初の予想が良い意味で1ミリも掠らず","f":[]},{"o":229,"v":"7","l":"235","k":"tv","ep":235,"ee":235,"s":2,"r":5,"st":true,"c":167,"m":"そういえばこいつ声ピカチュウだったな\n作画うんちな回だ→後半になったら良くなった\nこのシーンちっちゃすぎだろw、ちび丸サイズになってる\nパンダやたら喋るな、良い\nおしゃれちゃん回タイショーくんが暴走しまくる\nなんかすごい１期みたいな内容で良かった、魔法要素なかったからかな\n普通にアレだわ、２期で出てきたメンツ(姉妹以外)と場所が一切出てないから","f":["sb","watch"]},{"o":230,"v":"7","l":"236","k":"tv","ep":236,"ee":236,"s":2,"r":5,"st":false,"c":239,"m":"作画微妙だな\nラピスちゃんやっぱり心配性気味で可愛い\n映画でもオニハム出てきたしマジでこれまたやるん？\n鬼いちゃんってこと？\nまたこうしが被害に遭うのか\nかぶるが弱気なシーン久々に見た、というかかふるに没個性じゃない振る舞いが与えられてんのがすごい久々に見た\nこの(ハムから見て)豆サイズのひまわりのタネはなに\nパンダだけいない\n急に惚気るのぽトラ\nびっくりした、こうしとカナちゃんの日記シーンで終わるのかと思った\n内容はほんとになんやねんこれwって感じだけどかぶるが久々にちゃんと出番があって驚き","f":["sb","watch"]},{"o":231,"v":"7","l":"237","k":"tv","ep":237,"ee":237,"s":2,"r":4,"st":false,"c":238,"m":"にじハム好きなんだけどにじハムに付随するレインボーガールズの見た目が嫌いすぎて困る、髪の毛ハムやめてくれ\nやっぱこいつらも初対面なんだ、OVA4がパラレルなのがまた確定した\nこの世界の人間の物を落とす確率ヤバすぎる\nラズリーちゃんかわよ\nこいつ傘で吹雪も起こせるのかよ、OVAでも竜巻起こしてたし強さランキングかなりいい線いくと思う\nにじハムかわ\n虹ノルマ\n加点要素→作画、にじハムが出る\n減点要素→内容がないよう、レインボーガールズ、にじハムがずっと変装してて姿が後半数分しか見れない\n作画◯","f":["sg"]},{"o":232,"v":"7","l":"238","k":"tv","ep":238,"ee":238,"s":2,"r":5,"st":true,"c":243,"m":"ロコちゃんもバレンタイン何回目やねん、いい加減慣れろ...って思ったけど時空の進み的には2年目か\nラッピースw\nまいどのギャグがウケてる\nくるみちゃんほんとに渡米回から丸くなったな\nラズリーちゃんの発明外に持ち出すのマジでやばいだろこれ、効能が終わってるし外の環境で育つし。やってることが外にやばいものが漏れちゃって世界に危機が起こる研究所みたいなもん\nラピスちゃんのいろんな表情とラッピースが見れて満足\nラッピースは現実だとどうなんだろうな、ギリやってくれそう感とやってくれなさそう感が半々\n作画◯","f":["sg"]},{"o":233,"v":"7","l":"239","k":"tv","ep":239,"ee":239,"s":2,"r":5,"st":false,"c":124,"m":"こうしが久々にしっかりやからした\n下水道の背景描き込みすぎだろw\nこれロコちゃん側のオチ押し戸と引き戸間違えてるアレだろ\nトンガリくんキチゲ発散しないで\nブログに書いてあったやつってこれか、思ってた何倍もキレ気味だった、そんなに過去知られるの嫌なのか\n作画◯","f":["sg"]},{"o":234,"v":"7","l":"240","k":"tv","ep":240,"ee":240,"s":2,"r":4,"st":false,"c":244,"m":"みみよりくん、きのこちゃん初登場回\nここにきて急に新キャラ、耳がたいほくゆみたいに縦に長い\n横顔が丸じゃなくて窪んでるのラピラズだけなのかな、２期からの新キャラでも窪んでないの意味わからん\nまいどいるのにめがねいねえw\nきのこちゃん声小さすぎない？w\nみみよりくん尻尾なが\nみみよりくんADHDすぎる\nポテトくんとシェイクちゃんの回もそうなんだけど、初登場回でこういうの繰り広げられると、どうでもいいやつの恋物語見せられても...って感想になる\n怒ってるラズリーちゃん珍しくてかわいいからそこだけまあ良い","f":[]},{"o":235,"v":"7","l":"241","k":"tv","ep":241,"ee":241,"s":2,"r":4,"st":false,"c":120,"m":"やっぱりメカじろうを通すとハムたちの言語から日本語に翻訳されて発声されてるのか\nメカじろうちっちゃくね？こんな小さかったっけ\nこの世界地面に穴あきすぎやて\nこいつら久々に見た\nメカじろう顔がマジで変わったな、2期のかわいくない時の作画の顔になってる","f":[]},{"o":236,"v":"7","l":"242","k":"tv","ep":242,"ee":242,"s":2,"r":4,"st":false,"c":234,"m":"そういえば動物要素被りやな\nアヒルのがーるず？なんて居たっけ？ガチで覚えてない\n初期のエピソード回想に流されると体型も顔も違いすぎて面白い\nあのナースちゃん回でウリ坊と暴れてたの回収されるんだ\nほんとに規模がおかしいよなこの場所\nこういう拗ねて変な行動起こしたキャラが気持ちを吐露するシーン毎回納得いかないんだよな、その感情に支配されるような奴がきちんと言語化できるとは思えない\nまたトラハムくん走り去って終わったw\nこうしがビンタするシーンは面白かった、お前がやるんだ、って\n作画◯","f":["sg"]},{"o":237,"v":"7","l":"243","k":"tv","ep":243,"ee":243,"s":2,"r":4,"st":false,"c":189,"m":"ひまわり姫、くろハムくん初登場回\nまた新キャラ出てきた\nハムハムトレインの登場ってこんな後だったんだな、もう5/6くらい終わってる\n列車系多すぎるな、パンダくんの機関車とハム太郎3のアレと今回のコレ\nこいつ顔リボンちゃんすぎんだろ\nこっちのキャラソンのオフボーカル流れるんだw\n格闘が強いハム\n身体に穴開くのグロくね\nくろハムかわいいな\nエンディングはまだ変わらないのか、すいぱら終わってからかな","f":[]},{"o":238,"v":"7","l":"244","k":"tv","ep":244,"ee":244,"s":2,"r":5,"st":false,"c":192,"m":"こうしお前前回散々...\n特に姿見せもせず攻撃してきてておもろい\n節目っぽい回なのにかぶるだけいないw\nアニメのエンジェルちゃんびっくりするくらいちゃんと仕事する\nファンタジーなハムは地上に基本的に出れないのか、これ余計ラズリーちゃんのやってることのヤバさが...\nなんで着替えた？w\n地下ハウスだったりすいぱらだったり章の切り替わりで遊び場所消えるノルマでもある？\nデビハムくん最後まで悪だったな","f":["watch"]},{"o":239,"v":"8","l":"245","k":"tv","ep":245,"ee":245,"s":3,"r":5,"st":false,"c":283,"m":"op,ed,アイキャッチ一新。\nハムちゃんず歌唱のとっとこうたに戻ってきたし、終わるんやな...って感じだ\nこのバージョンは「ハムちゃんずとっとこうた2005」って名前らしい。明らかに過去のオープニングの演出オマージュが入っていて良い\n描写されてないわけじゃなくてほんとにジュエリーハウスばっかで地下ハウスに来てくれないのか、かわいそう\n今までで1番ねてるくんが能動的に何かした回な気がする\nED見て思い出したけどすいぱらが消えた今ハムハムトレインどうやって再登場するんだろう\n限りなく★に近い5点、って感じ。異世界回連打の後に1期みたいな規模小さいまとまった話だったから沁みる","f":[]},{"o":240,"v":"8","l":"246","k":"tv","ep":246,"ee":246,"s":3,"r":5,"st":true,"c":142,"m":"ハムこうしタイショーめがねラピラズトラハムくん...なんだこのメンツw\n久々にハム型くりぬき場面転換\n歌って解決した、どういうこと？w\n話のテンポいいな、ハムちゃんずが加入と離脱を繰り返すの新鮮だし\nテンポいいしロコちゃんに追従する流れすごい久々で面白かった\n作画◯...？なんか◯にあと一歩感","f":["sg"]},{"o":241,"v":"8","l":"247","k":"tv","ep":247,"ee":247,"s":3,"r":5,"st":false,"c":224,"m":"長老と花見の組み合わせ3回目くらいじゃないか？\nかぶるとパンダ存在してはいるけどセリフがねえw、トラハムくんは映ってすらないが\n2週間寝続けられる長老ええな\n2人にセリフあって良かった\n久々にマジで作画が好みだ、スクショ止まらん\n姉妹と長老って面識あったっけ\nすっごい久々のさすパンだ\n船のデカさかなりおかしくない？w、今回数十分くらいしか経過してない感じなのに、しかも1人で作ってるし\n久々に作画がかなり好みな回きてうれしい、全然見るモチベーションが変わる\n作画◎","f":["sg","watch"]},{"o":242,"v":"8","l":"248","k":"tv","ep":248,"ee":248,"s":3,"r":5,"st":true,"c":104,"m":"久々の雨樋から落ちるシーン\nこのシーンだけマジの初期だから体型が\nギャグ1000回達成\nこれまいめが回か\n盆栽のプレゼントって凡才ってこと？w\n引っ越し自体はしたんだ、じゃあこれまいどの店と隣ではなくなったのか？\n作画◎","f":["sg"]},{"o":243,"v":"8","l":"249","k":"tv","ep":249,"ee":249,"s":3,"r":5,"st":false,"c":91,"m":"ハム太郎の感性が本当にわからない、ロコちゃん関連だけ急に恋愛の概念わかる\nこの幼稚園児は多分初出だよな？\nこれ幼稚園じゃなくて保育園だからいつものモモちゃんのとことは別か！\n★に近い5かな","f":[]},{"o":244,"v":"8","l":"250","k":"tv","ep":250,"ee":250,"s":3,"r":5,"st":false,"c":124,"m":"作画怪しい回だ\nまいど家はガチでこれシンママなん\n今回は母の日だけど前回も母親の話だったのは母の日が近いから？\nハム太郎の空中の機動力どうなってんねん\n貯金崩してプレゼント買うのサダ吉偉すぎやろ\nハム太郎こうしまいどの珍しい組み合わせで多重へけっはレアすぎる","f":["sb"]},{"o":245,"v":"8","l":"251","k":"tv","ep":251,"ee":251,"s":3,"r":5,"st":false,"c":234,"m":"ハム太郎がついに他人に脱走バレた\nとんでもない盲目しかいない中でマキちゃん兄だけ視認できるなんて\nなんか最近使われてなかった懐かしいBGMが結構流れる\nこれアイキャッチネタバレだろw、サブさん出てくる？←出てこなかった、じゃあレギュラーたちを差し置いてなぜ？w\nこんなに色味違うのに何も勘付かないのほんまに目が...\nのっぽが出てきたからケージのロックの外し方分かったとかじゃなく力技なのかよ\nこのアニメいっつもカメが人面でかわいくない\n異常盲目界に新たな一手を指した回だった(？)","f":[]},{"o":246,"v":"8","l":"252","k":"tv","ep":252,"ee":252,"s":3,"r":4,"st":false,"c":233,"m":"ジェラードちゃん初登場回\nジェラードちゃんは飼われてるのか、ガチで単身でキッチンカーでバーガー作ってたポテトくんはほんとになんなんだろう\n色合いやべえな\n今日顔かわいいな\nおしゃれちゃんの次はジェラードちゃん、こいつ全然一途じゃないな\n2期だからこいつの言動がガチなのかただのキチガイなのかわからない\n船酔いの設定忘れてるのか自分で漕ぐボートは平気なタイプのハムなのか\n新キャラ初登場回は大体4点な気がする、初回５点出せたのは覚えてるのはニンハムメカじろうにじハムくらいか？\n作画◎","f":["sg"]},{"o":247,"v":"8","l":"253","k":"tv","ep":253,"ee":253,"s":3,"r":5,"st":false,"c":257,"m":"サーファーくん初登場回\nかわいいけどまた前回と顔が違うな\nポテトくんってマリアちゃんの別荘回だったのか、久々すぎて覚えてない\n前も書いたけどそんなんなんでもありやん、ひまわりの種で作った(任意の料理名)として\nサーファーくん色合いと模様が猿みたい\n語尾のせいで口調がにじハムと被ってないか？「〜さ」と「〜サー」だから繋げ方が全く同じになるw\nというかサーファーくんもガチの車だな、ハムたちの技術力の中で1番おかしい\nサーフィンというかスノボや\nハムちゃんずのツボがほんとにわからん、それでいいならまいどのギャグでも笑えるだろ\n作画◯","f":["sg"]},{"o":248,"v":"8","l":"254","k":"tv","ep":254,"ee":254,"s":3,"r":5,"st":false,"c":129,"m":"久々にハム太郎のガチ叱られ\nキャラもカメラもすごい動くな今回\nありえないくらい久々にコックさん出てきた、これでやっと2回目なのに声なし\nなんだこの演出\nピヨちゃんずすごい久々だ\nこれバラじゃなくない？椿だろ、普通に作画ミスな気がする\nハムサイズの首飾り作れるのかなり器用","f":[]},{"o":249,"v":"8","l":"255","k":"tv","ep":255,"ee":255,"s":3,"r":5,"st":true,"c":125,"m":"作画やばい回だ\nちびくりクソガキすぎる\nなんか作画まともになってきたな\nサブさんまともだからかわいそうだな\n工場に忍び込んで窃盗w\n話面白かったな、サブとちびくりがこんなに絡むことになるなんて\nまじで話面白い時に限って作画ゴミクズなのほんまに死ねよ、逆もムカつく","f":["sb"]},{"o":250,"v":"8","l":"256","k":"tv","ep":256,"ee":256,"s":3,"r":5,"st":false,"c":82,"m":"ブチギレラピスちゃんおもろい\nこんなにゴミまみれになることある？w\nイベント終わった後の路上みたい\n結構前の遠足もそうだけど1クラス単位で動いてるけど学年単位じゃないの？","f":[]},{"o":251,"v":"8","l":"257","k":"tv","ep":257,"ee":257,"s":3,"r":3,"st":false,"c":111,"m":"夢回なん？サブタイ的にこっから3話連続かと思ったのに\nほらまた夢回に限って作画まとも\nなんか色薄くね？\nライトセーバー出てきた\n幼稚園パラレルやばい、すごくいい\nオチは普通に面白かったw\n夢回ですらトラハムくん出てこなくなってる\n作画◯","f":["dream","sg","watch"]},{"o":252,"v":"8","l":"258","k":"tv","ep":258,"ee":258,"s":3,"r":5,"st":false,"c":194,"m":"前回は連続しなかったけど流石に今回と次は話続くやつだろ\nパンダとトラハムくんだけいない\n長老人間サイズの建築物所有してるんか\nパンダくん車5台作ってる\nハムちゃんず全員ちゃんと出てきて良かった😢\nヤケクソなくらいゲストハムが出てくる\nウソだろ、一度失敗したとはいえニンハムの忍法が役に立った...？\nエンディングがハムハム音頭になった\nやっぱりこのエンディングはちゃんとハムリボで身長差あるんだよな\n作画◯","f":["sg","watch"]},{"o":253,"v":"8","l":"259","k":"tv","ep":259,"ee":259,"s":3,"r":5,"st":false,"c":151,"m":"よくみたらハムサイズのガードレールがあるこの道はなんなんや...\n車より速いぬけないくん\nジャンガリアンずずっといる割に空気だな\nスパートとかサブタイについてる割にだいぶグダグダでテンポ悪い\nなんか、ゲストハムこんなにいたんだなってなった。というか映画OVA含めてもこの2話で史上最多の登場人物な気がする\n作画◯","f":["sg"]},{"o":254,"v":"8","l":"260","k":"tv","ep":260,"ee":260,"s":3,"r":5,"st":false,"c":150,"m":"下手くそな作画監督、足がマジででかいな、わかりやすい\nハム太郎が飛ぼうとしてた回もパンダいたな\nハムたちにおける名前ってだいぶ自由すぎて野良は改名しまくりなんだろうな\n新しい場所始まるから今回と次回で導入回かと思ったのに普通に終わった、ハムハーの木いかねえのかよ\nパンダくんがめちゃくちゃ喋ったのでおまけ５点","f":["sb","watch"]},{"o":255,"v":"8","l":"261","k":"tv","ep":261,"ee":261,"s":3,"r":3,"st":false,"c":136,"m":"オーキニーちゃん初登場回\n新しい場所だからちゃんと全員いる\nハムハーの木どうでも良すぎてどうしようw、この場所も新キャラもw\nこの作画監督かわいくないのにそらハムの顔だけかわいい\nパンダかわ\n結局1.5倍速で見た\nダメだ、もう見るテンションが最初から低い\n夢回じゃないのに３点は相当やで","f":["sb"]},{"o":256,"v":"8","l":"262","k":"tv","ep":262,"ee":262,"s":3,"r":4,"st":false,"c":115,"m":"ミステリーちゃん、マジカルくん初登場回\n作画かわいい回だ、でもこの監督色がなんか薄くない？\n正直見た目がヤバすぎてこいつら見た目しか知らない時すごい印象悪かったけどけど面白味があるからええわ\nオーキニーが1番やばい、無\n1.5で見た\n作画◯","f":["sg"]},{"o":257,"v":"8","l":"263","k":"tv","ep":263,"ee":263,"s":3,"r":4,"st":false,"c":37,"m":"1.5で見始めて途中から2\n感想書いてなかった、オーキニーに掃除させられる話","f":[]},{"o":258,"v":"8","l":"264","k":"tv","ep":264,"ee":264,"s":3,"r":4,"st":false,"c":77,"m":"ちびくり出てくるたびにすごいシンプルでびっくりする(栗だけに)、何も付けてない\nちびっ子組がかわいかったからまあええわ\n2倍速解禁したからテンポ良くて見やすい","f":[]},{"o":259,"v":"8","l":"265","k":"tv","ep":265,"ee":265,"s":3,"r":4,"st":false,"c":123,"m":"作画酷い回だ\nひまわりちゃん初登場回もマジで記憶ないくらい無だった気がする\nバケツに対してありえない量の水\nマジカルくん有能やん\nなんか、元から内容自体はこんな程度だったなって。モチベーションが限りなくなくてしかも作画も微妙だと内容に向き合って苦しくなる","f":["sb"]},{"o":260,"v":"8","l":"266","k":"tv","ep":266,"ee":266,"s":3,"r":4,"st":false,"c":82,"m":"海にいつものスタイルでくるのなんやねんこの親父\nじゃじゃハムとこうしがいちゃつくたびにあの感想コピペが出てくる\nサーファーくん自体はそこそこ好きだから良かったわ、なお4","f":["jaja"]},{"o":261,"v":"8","l":"267","k":"tv","ep":267,"ee":267,"s":3,"r":4,"st":false,"c":7,"m":"スポ根アニメ回","f":[]},{"o":262,"v":"8","l":"268","k":"tv","ep":268,"ee":268,"s":3,"r":4,"st":false,"c":20,"m":"アイスくんとキャンディーちゃんの初登場回","f":[]},{"o":263,"v":"8","l":"269","k":"tv","ep":269,"ee":269,"s":3,"r":5,"st":false,"c":25,"m":"もうこれ最終回でいいと思う\nマジカルくん割と好きだな","f":[]},{"o":264,"v":"8","l":"270","k":"tv","ep":270,"ee":270,"s":3,"r":4,"st":false,"c":32,"m":"もぐるくん初登場回、みんながグラサンかけてたシーンしか覚えてない","f":[]},{"o":265,"v":"8","l":"271","k":"tv","ep":271,"ee":271,"s":3,"r":3,"st":false,"c":15,"m":"夢回、珍しく現代だしのっぽ悪役","f":["dream"]},{"o":266,"v":"8","l":"272","k":"tv","ep":272,"ee":272,"s":3,"r":4,"st":false,"c":3,"m":"運動会","f":[]},{"o":267,"v":"8","l":"273","k":"tv","ep":273,"ee":273,"s":3,"r":5,"st":false,"c":34,"m":"のぽトラ回、サブタイで出てくると思ってたけどおとめずー出てこなかった","f":[]},{"o":268,"v":"8","l":"274","k":"tv","ep":274,"ee":274,"s":3,"r":4,"st":false,"c":54,"m":"なんでくん初登場\nこいつ関西弁なんかよ\nこいつのこんなゴミみたいななぞなぞが許されるならまいども許されるべきだろ","f":[]},{"o":269,"v":"8","l":"275","k":"tv","ep":275,"ee":275,"s":3,"r":4,"st":false,"c":36,"m":"くるりんちゃんとハムハーの木メンツの顔合わせ回\nオーキニーわりと慣れてきた","f":[]},{"o":270,"v":"8","l":"276","k":"tv","ep":276,"ee":276,"s":3,"r":5,"st":false,"c":69,"m":"初登場からそうだけどミステリーちゃんは一応ちゃんと当たってるんだよな、能力持ちハム扱いでいい気がする\nミステリーとマジカル割と好きだな\n作画◯","f":["sg"]},{"o":271,"v":"8","l":"277","k":"tv","ep":277,"ee":277,"s":3,"r":5,"st":true,"c":67,"m":"ラピスちゃんとトラハムくん好きだからすごく良かった、作画も良いし当たり回\nトラハムくんが何もやらかさずに有能なことだけして終わった\n作画◎","f":["sg"]},{"o":272,"v":"8","l":"278","k":"tv","ep":278,"ee":278,"s":3,"r":5,"st":false,"c":93,"m":"トンガリとなんでが会った回\nハムハーの木のメンツにも慣れてきて見れるようになってきた、20話かかった\n作画いいしやっぱりそらハムの顔ってかわいいよな\nすごいなんか、教育番組みたいな締め方(？)","f":["sg"]},{"o":273,"v":"9","l":"279","k":"tv","ep":279,"ee":279,"s":3,"r":5,"st":true,"c":91,"m":"ミステリーとマジカルがマジでかなりお気に入りになってる\nミステリーちゃんやばい、弟の捜索に1ミリも参加する気ない\nというかポンコツなゲストキャラ好きすぎだろ、ニンハム、にじハム、マジカル","f":[]},{"o":274,"v":"9","l":"280","k":"tv","ep":280,"ee":280,"s":3,"r":null,"st":false,"c":125,"m":"作画がゴミな作画監督回だ！\n足がマジででかいんだよなこの作画監督\nトラハムくんがウリ坊に乗ってからずっとウリ坊と出てくる呪いにかかってる、そもそも出番減りすぎだし\nジェラードちゃんの回つまらなすぎておもろいわ、出てくる回全部ゴミすぎw\n点数つける気にもならん","f":["sb"]},{"o":275,"v":"9","l":"281","k":"tv","ep":281,"ee":281,"s":3,"r":null,"st":false,"c":106,"m":"ペンハムくん、あざらしちゃん初登場回\nペンハムもあざらしも声カッスカスなんだけどw\n珍しくパンダいる\nつまらない回くるたびに「ハム太郎なんてこんなもんだろ」って気持ちと「いやちゃんと面白い回はあった！」って気持ちがある","f":[]},{"o":276,"v":"9","l":"282","k":"tv","ep":282,"ee":282,"s":3,"r":4,"st":false,"c":50,"m":"新聞作った回あっただろ、記者の記憶なんで消えてんねん\nハリネズミならギリギリこいつらと意思疎通できそう","f":[]},{"o":277,"v":"9","l":"283","k":"tv","ep":283,"ee":283,"s":3,"r":5,"st":false,"c":38,"m":"ハムハーの木になって初めてのクリスマス回、というかほぼサーファーくん回だった","f":[]},{"o":278,"v":"9","l":"284","k":"tv","ep":284,"ee":284,"s":3,"r":3,"st":false,"c":38,"m":"ハムハムトレインが登場してからすぐにすいぱらが消えたせいでろくに登場してない","f":[]},{"o":279,"v":"9","l":"285","k":"tv","ep":285,"ee":285,"s":3,"r":4,"st":false,"c":44,"m":"離れたくないみたいだししばらく預からせてくれないかなは意味わからんだろ、こうし離脱して草","f":[]},{"o":280,"v":"9","l":"286","k":"tv","ep":286,"ee":286,"s":3,"r":5,"st":false,"c":43,"m":"まいどとめがねは自分が頑張るんじゃなくて妨害だからマフラーちゃんに相手にされないんやで","f":[]},{"o":281,"v":"9","l":"287","k":"tv","ep":287,"ee":287,"s":3,"r":5,"st":false,"c":25,"m":"287話にして今更カラス悪者じゃないって話やるのw","f":[]},{"o":282,"v":"9","l":"288","k":"tv","ep":288,"ee":288,"s":3,"r":4,"st":false,"c":41,"m":"内容はまあ、オーキニーがメインだからうん\nでもやっぱ作画いいだけで全然マシだわ\n作画◎","f":["sg"]},{"o":283,"v":"9","l":"289","k":"tv","ep":289,"ee":289,"s":3,"r":4,"st":false,"c":38,"m":"バレンタイン回n回目\n全然ちゃんと見てなかったからロコちゃんが渡せたのかしらん","f":[]},{"o":284,"v":"9","l":"290","k":"tv","ep":290,"ee":290,"s":3,"r":5,"st":false,"c":45,"m":"ピヨちゃんずは成体の鶏も圧倒するんか\n作画ハズレ回だけどそらハムは割と好きだから5点でええか","f":["sb"]},{"o":285,"v":"9","l":"291","k":"tv","ep":291,"ee":291,"s":3,"r":4,"st":false,"c":37,"m":"メカじろうともぐるが会う回\nもぐるくん初登場が本当にありえないくらい遅すぎて","f":[]},{"o":286,"v":"9","l":"292","k":"tv","ep":292,"ee":292,"s":3,"r":5,"st":false,"c":78,"m":"ニンハムお前ちゃんと手裏剣当たるようになったんか\nニンハムおでこ広くなってない？w\n長老にそっくりな奴らがほんとに別個体なことが今回で分かった\nニンハムかわいいな","f":[]},{"o":287,"v":"9","l":"293","k":"tv","ep":293,"ee":293,"s":3,"r":5,"st":false,"c":190,"m":"卒業式やるんだ、5年から始まってちゃんと作中が進んでる\nトンガリくんがちゃんとハム太郎呼びした\n来週卒業式でいま木村くん転校イベントやるの？w、渋滞しすぎだろw\n害獣すぎて流石に嫌だなこいつらw\nウソだろ、トンガリくんのポエムが真っ当に役に立っただと...？やたら発光して演出盛られてておもろいw\nこれ新曲じゃない？あと4話で？\nなんか、終わらせにきてる感がすごい回だった、実際そうなんだけど","f":[]},{"o":288,"v":"9","l":"294","k":"tv","ep":294,"ee":294,"s":3,"r":5,"st":false,"c":89,"m":"まいど家はシンママ状態だけどガチで元の夫の話に1ミリもならんでこの話やるの怖すぎる、触れなさすぎて不自然\nそもそも元の関係性がわけわからんよなこれ\n最終話2個前でやる話じゃねえだろw","f":[]},{"o":289,"v":"9","l":"295","k":"tv","ep":295,"ee":295,"s":3,"r":5,"st":false,"c":95,"m":"サブタイがなんか終わりって感じする\nなんか作画が馴染みない感じの顔してる、あんまり担当してない人なのかな\nこれ後ろで見てなくてボール拾っただけで察してたら流石におかしいよな\nトラハムくんだけいない","f":["watch"]},{"o":290,"v":"9","l":"296","k":"tv","ep":296,"ee":296,"s":3,"r":4,"st":false,"c":61,"m":"めっちゃ今更だけど終盤のこの体型ほんとどうなんだ、顔デカすぎだろ\nまあうん、最終回がこうしとじゃじゃハムかよって正直思うよね","f":["jaja"]}],"series":[{"name":"1期前半(1-80)","short":"1期前半","range":"1〜80話"},{"name":"1期後半(81-193)","short":"1期後半","range":"81〜193話"},{"name":"2期すいぱら編(194-244)","short":"すいぱら編","range":"194〜244話"},{"name":"2期ハムハーの木編(245-296)","short":"ハムハーの木編","range":"245〜296話"},{"name":"劇場版・OVA","short":"劇場版・OVA","range":"8本"}],"dist":{"★":91,"5":114,"4":66,"3":15,"2":2,"1":1},"base":{"mean":4.633,"star":0.315},"n_rated":289,"by_series":[{"series":"1期前半(1-80)","n":67,"mean_raw":4.567,"star_rate":0.478,"le3_rate":0.104,"dist":{"★":32,"5":17,"4":11,"3":4,"2":2,"1":1},"chars_per_entry":97},{"series":"1期後半(81-193)","n":113,"mean_raw":4.77,"star_rate":0.336,"le3_rate":0.027,"dist":{"★":38,"5":52,"4":20,"3":3,"2":0,"1":0},"chars_per_entry":228},{"series":"2期すいぱら編(194-244)","n":51,"mean_raw":4.647,"star_rate":0.294,"le3_rate":0.039,"dist":{"★":15,"5":20,"4":14,"3":2,"2":0,"1":0},"chars_per_entry":242},{"series":"2期ハムハーの木編(245-296)","n":52,"mean_raw":4.48,"star_rate":0.1,"le3_rate":0.08,"dist":{"★":5,"5":23,"4":18,"3":4,"2":0,"1":0},"chars_per_entry":94},{"series":"劇場版・OVA","n":8,"mean_raw":4.125,"star_rate":0.125,"le3_rate":0.25,"dist":{"★":1,"5":2,"4":3,"3":2,"2":0,"1":0},"chars_per_entry":596}],"tests":[{"feature":"夢回・劇中劇","claim":"-1","n":13,"mean_with":3.077,"mean_without":4.707,"diff":-1.63,"p":0.0,"star_with":0.077,"star_without":0.326,"star_diff":-0.249,"star_p":0.0696},{"feature":"作画が良い","claim":"+0.5","n":73,"mean_with":4.712,"mean_without":4.606,"diff":0.106,"p":0.2522,"star_with":0.397,"star_without":0.287,"star_diff":0.11,"star_p":0.0841},{"feature":"「かわいい」と書いた","claim":"+1","n":63,"mean_with":4.603,"mean_without":4.642,"diff":-0.038,"p":0.7401,"star_with":0.302,"star_without":0.319,"star_diff":-0.017,"star_p":0.8806},{"feature":"「かわいくない」と書いた","claim":"±0〜-1","n":12,"mean_with":4.167,"mean_without":4.653,"diff":-0.487,"p":0.0193,"star_with":0.083,"star_without":0.325,"star_diff":-0.242,"star_p":0.1116},{"feature":"目新しさ(初めて/珍しい/新鮮)","claim":"+1〜2","n":57,"mean_with":4.649,"mean_without":4.629,"diff":0.02,"p":0.9076,"star_with":0.246,"star_without":0.332,"star_diff":-0.086,"star_p":0.2733},{"feature":"ハムちゃんず全員","claim":"甘くなりがち","n":15,"mean_with":4.533,"mean_without":4.639,"diff":-0.105,"p":0.6826,"star_with":0.2,"star_without":0.321,"star_diff":-0.121,"star_p":0.404},{"feature":"死にかける回","claim":"（申告なし）","n":15,"mean_with":4.933,"mean_without":4.617,"diff":0.317,"p":0.0647,"star_with":0.533,"star_without":0.303,"star_diff":0.23,"star_p":0.0862},{"feature":"じゃじゃハム","claim":"（申告なし）","n":9,"mean_with":3.889,"mean_without":4.657,"diff":-0.768,"p":0.004,"star_with":0.111,"star_without":0.321,"star_diff":-0.21,"star_p":0.2817}],"ols":{"r2":0.362,"n":289,"coef":[{"term":"切片(基礎点)","beta":4.708,"se":0.044,"claim":"3"},{"term":"夢回・劇中劇","beta":-1.679,"se":0.15,"claim":"-1"},{"term":"作画が良い","beta":0.105,"se":0.073,"claim":"+0.5"},{"term":"「かわいい」と書いた","beta":0.052,"se":0.076,"claim":"+1"},{"term":"「かわいくない」と書いた","beta":-0.506,"se":0.158,"claim":"±0〜-1"},{"term":"目新しさ(初めて/珍しい/新鮮)","beta":0.008,"se":0.079,"claim":"+1〜2"},{"term":"ハムちゃんず全員","beta":-0.073,"se":0.14,"claim":"甘くなりがち"},{"term":"死にかける回","beta":0.219,"se":0.14,"claim":"（申告なし）"},{"term":"じゃじゃハム","beta":-0.815,"se":0.18,"claim":"（申告なし）"}]},"sakuga":{"good":{"n":69,"mean":4.696,"star":0.406,"le4":0.246},"bad":{"n":23,"mean":4.696,"star":0.261,"le4":0.261},"none":{"n":81,"mean":4.593,"star":0.148,"le4":0.37},"p_star_good_vs_bad":0.3177,"p_mean_good_vs_bad":1.0,"dream_late_n":8,"dream_late_good":4,"nondream_late_good_rate":0.389,"dream_late_bad":0,"nondream_late_bad_rate":0.144},"late_star":0.266,"contrast":{"after_low3":{"n":80,"mean_next":4.644,"star_next":0.237},"after_star3":{"n":17,"mean_next":4.824,"star_next":0.588},"overall_star":0.315},"acf":{"acf1":0.085,"p_two_sided":0.1504},"chars":[{"name":"ハム太郎","group":"ハムちゃんず","mentions":77,"episodes":60,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.248,"2期すいぱら編(194-244)":0.294,"2期ハムハーの木編(245-296)":0.135},"mean_with":4.8,"star_with":0.383,"mean_without":4.59,"first_seen":"16"},{"name":"リボンちゃん","group":"ハムちゃんず","mentions":25,"episodes":19,"share_by_series":{"1期前半(1-80)":0.075,"1期後半(81-193)":0.062,"2期すいぱら編(194-244)":0.137,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.684,"star_with":0.368,"mean_without":4.63,"first_seen":"22"},{"name":"タイショーくん","group":"ハムちゃんず","mentions":56,"episodes":42,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.212,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.81,"star_with":0.452,"mean_without":4.603,"first_seen":"16"},{"name":"こうしくん","group":"ハムちゃんず","mentions":36,"episodes":30,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.08,"2期すいぱら編(194-244)":0.196,"2期ハムハーの木編(245-296)":0.077},"mean_with":4.6,"star_with":0.333,"mean_without":4.637,"first_seen":"43"},{"name":"トンガリくん","group":"ハムちゃんず","mentions":28,"episodes":22,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.088,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.864,"star_with":0.455,"mean_without":4.614,"first_seen":"1〜14"},{"name":"まいどくん","group":"ハムちゃんず","mentions":51,"episodes":47,"share_by_series":{"1期前半(1-80)":0.134,"1期後半(81-193)":0.204,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.115},"mean_with":4.787,"star_with":0.383,"mean_without":4.603,"first_seen":"19"},{"name":"めがねくん","group":"ハムちゃんず","mentions":15,"episodes":13,"share_by_series":{"1期前半(1-80)":0.075,"1期後半(81-193)":0.027,"2期すいぱら編(194-244)":0.059,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.462,"star_with":0.385,"mean_without":4.641,"first_seen":"22"},{"name":"のっぽくん","group":"ハムちゃんず","mentions":30,"episodes":23,"share_by_series":{"1期前半(1-80)":0.149,"1期後半(81-193)":0.088,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.565,"star_with":0.348,"mean_without":4.639,"first_seen":"1〜14"},{"name":"パンダくん","group":"ハムちゃんず","mentions":73,"episodes":46,"share_by_series":{"1期前半(1-80)":0.134,"1期後半(81-193)":0.195,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.096},"mean_with":4.717,"star_with":0.283,"mean_without":4.617,"first_seen":"1〜14"},{"name":"ちび丸ちゃん","group":"ハムちゃんず","mentions":18,"episodes":14,"share_by_series":{"1期前半(1-80)":0.06,"1期後半(81-193)":0.053,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.714,"star_with":0.357,"mean_without":4.629,"first_seen":"17"},{"name":"マフラーちゃん","group":"ハムちゃんず","mentions":17,"episodes":10,"share_by_series":{"1期前半(1-80)":0.045,"1期後半(81-193)":0.044,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.8,"star_with":0.3,"mean_without":4.627,"first_seen":"1〜14"},{"name":"ねてるくん","group":"ハムちゃんず","mentions":23,"episodes":20,"share_by_series":{"1期前半(1-80)":0.045,"1期後半(81-193)":0.071,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.45,"star_with":0.3,"mean_without":4.647,"first_seen":"1〜14"},{"name":"かぶるくん","group":"ハムちゃんず","mentions":34,"episodes":25,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.097,"2期すいぱら編(194-244)":0.098,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.92,"star_with":0.56,"mean_without":4.606,"first_seen":"1〜14"},{"name":"トラハムくん","group":"ハムちゃんず","mentions":51,"episodes":36,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.168,"2期すいぱら編(194-244)":0.059,"2期ハムハーの木編(245-296)":0.135},"mean_with":4.667,"star_with":0.472,"mean_without":4.628,"first_seen":"1〜14"},{"name":"トラハムちゃん","group":"ハムちゃんず","mentions":12,"episodes":9,"share_by_series":{"1期前半(1-80)":0.03,"1期後半(81-193)":0.053,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.778,"star_with":0.556,"mean_without":4.629,"first_seen":"1〜14"},{"name":"長老ハム","group":"準レギュラー","mentions":17,"episodes":12,"share_by_series":{"1期前半(1-80)":0.015,"1期後半(81-193)":0.062,"2期すいぱら編(194-244)":0.0,"2期ハムハーの木編(245-296)":0.058},"mean_with":4.833,"star_with":0.167,"mean_without":4.625,"first_seen":"1〜14"},{"name":"じゃじゃハムちゃん","group":"準レギュラー","mentions":14,"episodes":9,"share_by_series":{"1期前半(1-80)":0.045,"1期後半(81-193)":0.027,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.038},"mean_with":3.889,"star_with":0.111,"mean_without":4.657,"first_seen":"37"},{"name":"くるりんちゃん","group":"準レギュラー","mentions":21,"episodes":12,"share_by_series":{"1期前半(1-80)":0.015,"1期後半(81-193)":0.071,"2期すいぱら編(194-244)":0.039,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.75,"star_with":0.5,"mean_without":4.628,"first_seen":"54"},{"name":"ぬけないくん","group":"準レギュラー","mentions":15,"episodes":9,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.071,"2期すいぱら編(194-244)":0.0,"2期ハムハーの木編(245-296)":0.019},"mean_with":5,"star_with":0.667,"mean_without":4.621,"first_seen":"81"},{"name":"サブさん","group":"準レギュラー","mentions":15,"episodes":12,"share_by_series":{"1期前半(1-80)":0.015,"1期後半(81-193)":0.071,"2期すいぱら編(194-244)":0.0,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.833,"star_with":0.417,"mean_without":4.625,"first_seen":"24"},{"name":"ラピスちゃん","group":"2期以降","mentions":29,"episodes":22,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.0,"2期すいぱら編(194-244)":0.333,"2期ハムハーの木編(245-296)":0.058},"mean_with":4.636,"star_with":0.318,"mean_without":4.633,"first_seen":"194"},{"name":"ラズリーちゃん","group":"2期以降","mentions":27,"episodes":20,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.0,"2期すいぱら編(194-244)":0.333,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.5,"star_with":0.4,"mean_without":4.643,"first_seen":"194"},{"name":"ニンハム","group":"2期以降","mentions":22,"episodes":10,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.035,"2期すいぱら編(194-244)":0.039,"2期ハムハーの木編(245-296)":0.077},"mean_with":4.8,"star_with":0.6,"mean_without":4.627,"first_seen":"88"},{"name":"ロコちゃん","group":"人間","mentions":43,"episodes":38,"share_by_series":{"1期前半(1-80)":0.134,"1期後半(81-193)":0.159,"2期すいぱら編(194-244)":0.137,"2期ハムハーの木編(245-296)":0.058},"mean_with":4.789,"star_with":0.316,"mean_without":4.61,"first_seen":"24"},{"name":"ロベルト","group":"人間","mentions":13,"episodes":9,"share_by_series":{"1期前半(1-80)":0.015,"1期後半(81-193)":0.062,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.0},"mean_with":5,"star_with":0.222,"mean_without":4.621,"first_seen":"77"}],"heat":[{"name":"ハム太郎","group":"ハムちゃんず","mentions":77,"episodes":60,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.248,"2期すいぱら編(194-244)":0.294,"2期ハムハーの木編(245-296)":0.135},"mean_with":4.8,"star_with":0.383,"mean_without":4.59,"first_seen":"16"},{"name":"リボンちゃん","group":"ハムちゃんず","mentions":25,"episodes":19,"share_by_series":{"1期前半(1-80)":0.075,"1期後半(81-193)":0.062,"2期すいぱら編(194-244)":0.137,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.684,"star_with":0.368,"mean_without":4.63,"first_seen":"22"},{"name":"タイショーくん","group":"ハムちゃんず","mentions":56,"episodes":42,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.212,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.81,"star_with":0.452,"mean_without":4.603,"first_seen":"16"},{"name":"こうしくん","group":"ハムちゃんず","mentions":36,"episodes":30,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.08,"2期すいぱら編(194-244)":0.196,"2期ハムハーの木編(245-296)":0.077},"mean_with":4.6,"star_with":0.333,"mean_without":4.637,"first_seen":"43"},{"name":"トンガリくん","group":"ハムちゃんず","mentions":28,"episodes":22,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.088,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.864,"star_with":0.455,"mean_without":4.614,"first_seen":"1〜14"},{"name":"まいどくん","group":"ハムちゃんず","mentions":51,"episodes":47,"share_by_series":{"1期前半(1-80)":0.134,"1期後半(81-193)":0.204,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.115},"mean_with":4.787,"star_with":0.383,"mean_without":4.603,"first_seen":"19"},{"name":"めがねくん","group":"ハムちゃんず","mentions":15,"episodes":13,"share_by_series":{"1期前半(1-80)":0.075,"1期後半(81-193)":0.027,"2期すいぱら編(194-244)":0.059,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.462,"star_with":0.385,"mean_without":4.641,"first_seen":"22"},{"name":"のっぽくん","group":"ハムちゃんず","mentions":30,"episodes":23,"share_by_series":{"1期前半(1-80)":0.149,"1期後半(81-193)":0.088,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.038},"mean_with":4.565,"star_with":0.348,"mean_without":4.639,"first_seen":"1〜14"},{"name":"パンダくん","group":"ハムちゃんず","mentions":73,"episodes":46,"share_by_series":{"1期前半(1-80)":0.134,"1期後半(81-193)":0.195,"2期すいぱら編(194-244)":0.176,"2期ハムハーの木編(245-296)":0.096},"mean_with":4.717,"star_with":0.283,"mean_without":4.617,"first_seen":"1〜14"},{"name":"ちび丸ちゃん","group":"ハムちゃんず","mentions":18,"episodes":14,"share_by_series":{"1期前半(1-80)":0.06,"1期後半(81-193)":0.053,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.714,"star_with":0.357,"mean_without":4.629,"first_seen":"17"},{"name":"マフラーちゃん","group":"ハムちゃんず","mentions":17,"episodes":10,"share_by_series":{"1期前半(1-80)":0.045,"1期後半(81-193)":0.044,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.8,"star_with":0.3,"mean_without":4.627,"first_seen":"1〜14"},{"name":"ねてるくん","group":"ハムちゃんず","mentions":23,"episodes":20,"share_by_series":{"1期前半(1-80)":0.045,"1期後半(81-193)":0.071,"2期すいぱら編(194-244)":0.078,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.45,"star_with":0.3,"mean_without":4.647,"first_seen":"1〜14"},{"name":"かぶるくん","group":"ハムちゃんず","mentions":34,"episodes":25,"share_by_series":{"1期前半(1-80)":0.104,"1期後半(81-193)":0.097,"2期すいぱら編(194-244)":0.098,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.92,"star_with":0.56,"mean_without":4.606,"first_seen":"1〜14"},{"name":"トラハムくん","group":"ハムちゃんず","mentions":51,"episodes":36,"share_by_series":{"1期前半(1-80)":0.09,"1期後半(81-193)":0.168,"2期すいぱら編(194-244)":0.059,"2期ハムハーの木編(245-296)":0.135},"mean_with":4.667,"star_with":0.472,"mean_without":4.628,"first_seen":"1〜14"},{"name":"トラハムちゃん","group":"ハムちゃんず","mentions":12,"episodes":9,"share_by_series":{"1期前半(1-80)":0.03,"1期後半(81-193)":0.053,"2期すいぱら編(194-244)":0.02,"2期ハムハーの木編(245-296)":0.0},"mean_with":4.778,"star_with":0.556,"mean_without":4.629,"first_seen":"1〜14"},{"name":"ラピスちゃん","group":"2期以降","mentions":29,"episodes":22,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.0,"2期すいぱら編(194-244)":0.333,"2期ハムハーの木編(245-296)":0.058},"mean_with":4.636,"star_with":0.318,"mean_without":4.633,"first_seen":"194"},{"name":"ラズリーちゃん","group":"2期以降","mentions":27,"episodes":20,"share_by_series":{"1期前半(1-80)":0.0,"1期後半(81-193)":0.0,"2期すいぱら編(194-244)":0.333,"2期ハムハーの木編(245-296)":0.019},"mean_with":4.5,"star_with":0.4,"mean_without":4.643,"first_seen":"194"}],"style":[{"style":"笑い(w/草)","1期前半(1-80)":2.56,"1期後半(81-193)":2.11,"2期すいぱら編(194-244)":3.07,"2期ハムハーの木編(245-296)":4.55},{"style":"関西弁(やん/やろ/やな/ほんま/ええ/あかん/なんや)","1期前半(1-80)":2.41,"1期後半(81-193)":2.26,"2期すいぱら編(194-244)":1.97,"2期ハムハーの木編(245-296)":2.37},{"style":"ツッコミ(だろ/かよ/なんだよ/やめろ)","1期前半(1-80)":3.46,"1期後半(81-193)":3.35,"2期すいぱら編(194-244)":4.17,"2期ハムハーの木編(245-296)":4.55},{"style":"「流石に」","1期前半(1-80)":0.6,"1期後半(81-193)":0.72,"2期すいぱら編(194-244)":0.47,"2期ハムハーの木編(245-296)":0.59},{"style":"「かわいい」","1期前半(1-80)":1.66,"1期後半(81-193)":1.28,"2期すいぱら編(194-244)":1.26,"2期ハムハーの木編(245-296)":1.19},{"style":"「マジ/ガチ」","1期前半(1-80)":0.75,"1期後半(81-193)":0.72,"2期すいぱら編(194-244)":1.26,"2期ハムハーの木編(245-296)":3.56},{"style":"「？」","1期前半(1-80)":6.92,"1期後半(81-193)":6.17,"2期すいぱら編(194-244)":4.96,"2期ハムハーの木編(245-296)":5.15},{"style":"「...」","1期前半(1-80)":1.81,"1期後半(81-193)":1.35,"2期すいぱら編(194-244)":1.81,"2期ハムハーの木編(245-296)":1.39}],"streaks":{"star":[7,"25"],"five_or_star":[13,"劇場版2"],"four_or_less":[8,"268"]},"longest":[{"label":"OVA2","chars":1044,"rating":4,"star":false},{"label":"219","chars":832,"rating":3,"star":false},{"label":"88","chars":792,"rating":5,"star":true},{"label":"OVA3","chars":726,"rating":5,"star":false},{"label":"劇場版2","chars":707,"rating":5,"star":false}],"shortest":[{"label":"272","chars":3,"memo":"運動会"},{"label":"267","chars":7,"memo":"スポ根アニメ回"},{"label":"26","chars":11,"memo":"夢の中の話。これいる？"}],"words_star":[{"w":"面白い","z":2.97,"star_eps":37,"le4_eps":7},{"w":"ギャグ","z":1.99,"star_eps":12,"le4_eps":1},{"w":"かぶる","z":1.96,"star_eps":14,"le4_eps":2},{"w":"落ちる","z":1.58,"star_eps":6,"le4_eps":0},{"w":"ぬける","z":1.58,"star_eps":6,"le4_eps":0},{"w":"演出","z":1.52,"star_eps":8,"le4_eps":1},{"w":"飛ぶ","z":1.38,"star_eps":7,"le4_eps":1},{"w":"ショー","z":1.34,"star_eps":19,"le4_eps":8}],"words_low":[{"w":"映画","z":-1.85,"star_eps":0,"le4_eps":7},{"w":"感想","z":-1.83,"star_eps":1,"le4_eps":9},{"w":"劇場","z":-1.72,"star_eps":0,"le4_eps":6},{"w":"オーキニー","z":-1.57,"star_eps":0,"le4_eps":5},{"w":"気持ち","z":-1.57,"star_eps":0,"le4_eps":5},{"w":"導入","z":-1.57,"star_eps":0,"le4_eps":5},{"w":"ラピラズ","z":-1.4,"star_eps":0,"le4_eps":4},{"w":"覚える","z":-1.4,"star_eps":0,"le4_eps":4}],"le3":{"total":18,"dream":10},"watch":{"パンダくん":20,"トラハムくん":20,"かぶるくん":8},"quotes":[{"l":"26","t":"夢の中の話。これいる？","r":1,"st":false},{"l":"78","t":"夢回はまあ着衣ハムがかわいいのでギリ許せなくも...？←ウソや！ワイは自分にウソつけへん！","r":2,"st":false},{"l":"23","t":"やっぱり死にかける回は面白い。","r":5,"st":true},{"l":"100","t":"パンダくんの出番多いけど別に忖度はしません、普通に4です。","r":4,"st":false},{"l":"260","t":"パンダくんがめちゃくちゃ喋ったのでおまけ５点","r":5,"st":false},{"l":"168","t":"話面白い時に限って作画がゴミになるのほんまやめろ","r":5,"st":true},{"l":"233","t":"夢回に限って作画いいのほんま腹立つ","r":3,"st":false},{"l":"178","t":"どうしよう、久々に全員出てて嬉しいけど気持ち的には4.5点","r":4,"st":false},{"l":"180","t":"相変わらずトラハムくんは声帯が奪われてマラカスの音しかしない","r":5,"st":true},{"l":"劇場版3","t":"劇場版、再生ボタンを押すまでに腰が重すぎる。見るか.........みたいになる→再生するまでに2時間かかりました","r":3,"st":false},{"l":"195","t":"➡︎「劇中劇が嫌い」で済む話をこの文字数","r":5,"st":false},{"l":"261","t":"夢回じゃないのに３点は相当やで","r":3,"st":false}],"total_chars":68003,"n_meta":47,"chars_by_rating":{"★":180,"5":193,"4":185,"3":201}};
+
+// ---------- helpers ----------
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+function h(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k === "html") e.innerHTML = v; else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of kids.flat()) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+function s(tag, attrs = {}, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) if (v != null) e.setAttribute(k, v);
+  if (text != null) e.textContent = text;
+  return e;
+}
+const pct = (x) => `${Math.round(x * 100)}%`;
+const f2 = (x) => x.toFixed(2);
+const sign = (x, d = 2) => (x > 0 ? "＋" : x < 0 ? "−" : "±") + Math.abs(x).toFixed(d);
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const rk = (e) => (e.r == null ? "na" : e.st ? "s" : String(e.r));
+const RKEYS = ["s", "5", "4", "3", "2", "1"];
+const RNAME = { s: "5★", 5: "5", 4: "4", 3: "3", 2: "2", 1: "1", na: "空欄" };
+const DKEY = { s: "★", 5: "5", 4: "4", 3: "3", 2: "2", 1: "1" };
+const epName = (e) => (e.k === "tv" ? (e.ep === e.ee ? `${e.ep}話` : `${e.ep}〜${e.ee}話`) : e.l);
+const rated = D.entries.filter((e) => e.r != null);
+const avg = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+const isNarrow = () => window.matchMedia("(max-width: 640px)").matches;
+
+// tooltip
+const tip = $("#tip");
+function showTip(html, x, y) {
+  tip.innerHTML = html; tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y + 14;
+  if (left + r.width > window.innerWidth - 8) left = x - r.width - 14;
+  if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+  tip.style.left = Math.max(8, left) + "px"; tip.style.top = Math.max(8, top) + "px";
+}
+function hideTip() { tip.hidden = true; }
+function bindTip(el, fn) {
+  el.addEventListener("pointerenter", (ev) => showTip(fn(), ev.clientX, ev.clientY));
+  el.addEventListener("pointermove", (ev) => { if (!tip.hidden) showTip(fn(), ev.clientX, ev.clientY); });
+  el.addEventListener("pointerleave", hideTip);
+  el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); showTip(fn(), r.right, r.top); });
+  el.addEventListener("blur", hideTip);
+}
+const renderers = [];
+function onResize(fn) { renderers.push(fn); fn(); }
+let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => renderers.forEach((f) => f()), 120); });
+
+// ---------- 表紙 ----------
+(function cover() {
+  const nStar = D.dist["★"], nLe3 = D.dist["3"] + D.dist["2"] + D.dist["1"];
+  $("#lede").textContent = `1話から296話、劇場版4本、OVA4本。初見で書き続けた5段階＋★の採点メモ（約${(D.total_chars / 10000).toFixed(1)}万字）を、パースして数えて検定にかけました。数字はすべてメモ本文から機械的に出したものです。`;
+  const tiles = [
+    ["採点した回", `${D.n_rated}`, "件", `全${D.entries.length}件中。280・281話は空欄`],
+    ["平均", f2(D.base.mean), "点", "★は5点として計算"],
+    ["★（特に良い）", `${nStar}`, "回", `全体の${pct(D.base.star)}`],
+    ["3点以下", `${nLe3}`, "回", `うち${D.le3.dream}回が夢回`],
+  ];
+  $("#tiles").append(...tiles.map(([k, v, u, sub]) => h("div", { class: "tile" }, h("div", { class: "k" }, k), h("div", { class: "v" }, v, h("small", {}, u)), h("div", { class: "s" }, sub))));
+  segbar($("#distbar"), RKEYS.map((k) => [k, D.dist[DKEY[k]]]), "count");
+  $("#distbar").setAttribute("aria-label", "評価の分布：" + RKEYS.map((k) => `${RNAME[k]}が${D.dist[DKEY[k]]}回`).join("、"));
+  legend($("#distlegend"), true);
+})();
+
+function legend(host, withNames) {
+  const names = { s: "★（特に良い）", 5: "5", 4: "4（刺さるものがない）", 3: "3", 2: "2", 1: "1" };
+  host.replaceChildren(...RKEYS.map((k) => h("span", {}, h("span", { class: `sw c-${k}` }), withNames ? names[k] : RNAME[k])));
+}
+
+function segbar(host, parts, mode) {
+  const total = parts.reduce((a, [, v]) => a + v, 0);
+  host.replaceChildren();
+  for (const [k, v] of parts) {
+    if (!v) continue;
+    const share = v / total;
+    const label = mode === "count" ? String(v) : pct(share);
+    const seg = h("div", { class: `seg c-${k}`, style: `flex:${v} 1 0`, tabindex: "0", "aria-label": `${RNAME[k]}：${v}回（${pct(share)}）` }, h("span", {}, label));
+    bindTip(seg, () => `<b>評価 ${RNAME[k]}</b><br>${v}回（${pct(share)}）`);
+    host.append(seg);
+  }
+  requestAnimationFrame(() => fitSegLabels(host));
+}
+function fitSegLabels(host) {
+  host.querySelectorAll(".seg").forEach((seg) => {
+    const sp = seg.querySelector("span"); sp.hidden = false;
+    if (sp.offsetWidth + 10 > seg.clientWidth) sp.hidden = true;
+  });
+}
+window.addEventListener("resize", () => document.querySelectorAll(".segbar").forEach(fitSegLabels));
+
+// ---------- ひとことで言うと ----------
+(function digest() {
+  const T = Object.fromEntries(D.tests.map((t) => [t.feature, t]));
+  const C = Object.fromEntries(D.ols.coef.map((c) => [c.term, c]));
+  const hb = D.by_series[3], ka = D.by_series[0];
+  const maji = D.style.find((r) => r.style.startsWith("「マジ"));
+  const items = [
+    `<b>夢回の減点は、自己申告の−1点より重い実測${sign(C["夢回・劇中劇"].beta, 1)}点。</b>3点以下の${D.le3.total}回のうち${D.le3.dream}回が夢回でした。`,
+    `<b>「全員出てると甘くなりがち」は外れ。</b>全員そろった回の平均は${f2(T["ハムちゃんず全員"].mean_with)}点で、それ以外（${f2(T["ハムちゃんず全員"].mean_without)}点）よりわずかに低い。嬉しいけれどテンプレ展開になりやすく、4点止まりになっています。`,
+    `<b>申告にない減点要素は、じゃじゃハム（${sign(C["じゃじゃハム"].beta, 1)}点）。</b>加点側は「死にかける回」で、★率${pct(T["死にかける回"].star_with)}（全体${pct(D.base.star)}）。23話の「やっぱり死にかける回は面白い」はデータでも裏付けられます。`,
+    `<b>「面白い時に限って作画がゴミ」は外れ。</b>122話以降の★率は、作画を褒めた回${pct(D.sakuga.good.star)}、けなした回${pct(D.sakuga.bad.star)}、作画に触れなかった回${pct(D.sakuga.none.star)}。作画を語っている時点で、のめり込んでいます。`,
+    `<b>ハムハーの木編で、★率は${pct(hb.star_rate)}に落ちました（1期前半は${pct(ka.star_rate)}）。</b>メモは1話${hb.chars_per_entry}字まで縮み、「マジ・ガチ」は1期前半の${(maji[D.series[3].name] / maji[D.series[0].name]).toFixed(1)}倍に増えています。`,
+  ];
+  $("#digest").append(...items.map((t) => h("li", { html: `<span>${t}</span>` })));
+})();
+
+// ---------- マス目 ----------
+const cells = []; // {el, e}
+let selected = null;
+(function grid() {
+  const g = $("#grid");
+  const epMap = new Map();
+  D.entries.forEach((e) => { if (e.k === "tv") for (let n = e.ep; n <= e.ee; n++) epMap.set(n, e); });
+  for (let row = 0; row < 15; row++) {
+    const lo = row * 20 + 1, hi = Math.min(lo + 19, 296);
+    g.append(h("div", { class: "rowlab" }, `${lo}–${hi}`));
+    for (let n = lo; n < lo + 20; n++) {
+      if (n > 296) { g.append(h("div", { class: "cell empty", "aria-hidden": "true" })); continue; }
+      const e = epMap.get(n);
+      const b = h("button", { class: `cell c-${rk(e)}` + ([81, 194, 245].includes(n) ? " sstart" : ""), "aria-label": `${n}話、評価${RNAME[rk(e)]}` });
+      b.addEventListener("click", () => select(e));
+      bindTip(b, () => `<b>${n}話</b>　評価 ${RNAME[rk(e)]}<br>${esc(e.m.slice(0, 70))}${e.m.length > 70 ? "…" : ""}`);
+      cells.push({ el: b, e });
+      g.append(b);
+    }
+  }
+  const sp = $("#specials");
+  D.entries.filter((e) => e.k !== "tv").forEach((e) => {
+    const b = h("button", { class: `sp c-${rk(e)}`, "aria-label": `${e.l}、評価${RNAME[rk(e)]}` }, e.l);
+    b.addEventListener("click", () => select(e));
+    bindTip(b, () => `<b>${e.l}</b>　評価 ${RNAME[rk(e)]}<br>${esc(e.m.slice(0, 70))}…`);
+    cells.push({ el: b, e });
+    sp.append(b);
+  });
+  const lg = $("#gridlegend");
+  legend(lg, false);
+  lg.append(h("span", {}, h("span", { class: "sw c-na" }), "空欄"), h("span", {}, h("span", { class: "sw ring" }), "左の太線＝81・194・245話（シリーズの始まり）"));
+
+  const FILTERS = [
+    ["all", "すべて", null],
+    ["star", "★だけ", (e) => e.st],
+    ["dream", "夢回・劇中劇", (e) => e.f.includes("dream")],
+    ["danger", "死にかける回", (e) => e.f.includes("danger")],
+    ["sg", "作画◎◯", (e) => e.f.includes("sg")],
+    ["sb", "作画ダメ", (e) => e.f.includes("sb")],
+    ["jaja", "じゃじゃハム", (e) => e.f.includes("jaja")],
+    ["watch", "出番監視", (e) => e.f.includes("watch")],
+  ];
+  const chips = $("#chips");
+  const chipEls = FILTERS.map(([id, label, fn]) => {
+    const c = h("button", { class: "chip", "aria-pressed": id === "all" ? "true" : "false" }, label);
+    c.addEventListener("click", () => { $("#q").value = ""; chipEls.forEach((x) => x.setAttribute("aria-pressed", "false")); c.setAttribute("aria-pressed", "true"); applyFilter(fn, label); });
+    chips.append(c);
+    return c;
+  });
+  $("#q").addEventListener("input", (ev) => {
+    const q = ev.target.value.trim();
+    chipEls.forEach((x, i) => x.setAttribute("aria-pressed", String(!q && i === 0)));
+    if (!q) return applyFilter(null, "すべて");
+    const ql = q.toLowerCase();
+    applyFilter((e) => e.m.toLowerCase().includes(ql), `「${q}」を含む回`);
+  });
+  applyFilter(null, "すべて");
+  select(D.entries.find((e) => e.l === "78"), false);
+})();
+
+function applyFilter(fn, label) {
+  const filtering = !!fn;
+  $("#grid").classList.toggle("filtering", filtering);
+  $("#specials").classList.toggle("filtering", filtering);
+  const seen = new Set(), hits = [];
+  for (const c of cells) {
+    const hit = filtering && fn(c.e);
+    c.el.classList.toggle("hit", hit);
+    if (hit && !seen.has(c.e.o)) { seen.add(c.e.o); hits.push(c.e); }
+  }
+  const pool = filtering ? hits : D.entries;
+  const r = pool.filter((e) => e.r != null);
+  const line = $("#hitline");
+  if (!r.length) { line.innerHTML = `${esc(label)}：<b>0件</b>`; return; }
+  const mean = avg(r.map((e) => e.r)), star = avg(r.map((e) => (e.st ? 1 : 0)));
+  line.innerHTML = `${esc(label)}：<b>${pool.length}件</b>　平均 <b>${f2(mean)}</b>点　★率 <b>${pct(star)}</b>` +
+    (filtering ? `<span class="note">（全体は平均${f2(D.base.mean)}・★率${pct(D.base.star)}）</span>` : "");
+}
+
+function select(e, focus = true) {
+  selected = e;
+  cells.forEach((c) => c.el.classList.toggle("sel", c.e === e));
+  const TAG = { dream: "夢回・劇中劇", danger: "死にかける回", sg: "作画◎◯", sb: "作画ダメ", jaja: "じゃじゃハム", watch: "出番監視" };
+  const ser = D.series[e.s];
+  const k = rk(e);
+  const box = $("#detail");
+  const prev = h("button", { class: "btn" }, "← 前の回"), next = h("button", { class: "btn" }, "次の回 →");
+  prev.addEventListener("click", () => step(-1)); next.addEventListener("click", () => step(1));
+  box.replaceChildren(
+    h("div", { class: "detail-head" },
+      h("span", { class: "ttl" }, epName(e)),
+      h("span", { class: `rchip c-${k}` }, `［${e.r ?? " "}］${e.st ? "★" : ""}`),
+    ),
+    h("div", { class: "note" }, `${ser.short}（${ser.range}）・メモ・${e.v}・${e.c}字`),
+    e.f.length ? h("div", { class: "tags" }, e.f.map((f) => h("span", { class: "tag" }, TAG[f]))) : null,
+    h("pre", { class: "memo" }, e.m || "（メモなし）"),
+    h("div", { class: "nav" }, prev, next),
+  );
+}
+function step(d) {
+  const i = Math.max(0, Math.min(D.entries.length - 1, selected.o + d));
+  select(D.entries[i]);
+}
+
+// ---------- 推移 ----------
+function rolling(arr, w, f) {
+  return arr.map((_, i) => { const a = arr.slice(Math.max(0, i - w), i + w + 1); return f(a); });
+}
+const bands = [0, 1, 2, 3].map((si) => {
+  const os = D.entries.filter((e) => e.s === si).map((e) => e.o);
+  return { si, a: Math.min(...os), b: Math.max(...os) };
+});
+const BAND_SHORT = ["1期前半", "1期後半", "すいぱら", "ハムハー"];
+function lineChart(host, pts, opt) {
+  const W = host.clientWidth, H = opt.h || 160;
+  const m = { t: opt.bandLabels ? 24 : 10, r: 14, b: 24, l: 40 };
+  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const xMax = D.entries.length - 1;
+  const X = (o) => m.l + (o / xMax) * pw, Y = (v) => m.t + ph - (v / opt.yMax) * ph;
+  const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.aria });
+  bands.forEach((b, i) => {
+    if (i % 2 === 1) svg.append(s("rect", { x: X(b.a - 0.5), y: m.t, width: X(b.b + 0.5) - X(b.a - 0.5), height: ph, style: "fill:var(--rule)" }));
+    if (opt.bandLabels) svg.append(s("text", { x: X(b.a) + 4, y: m.t - 8, class: "axis-text" }, BAND_SHORT[i]));
+  });
+  opt.yTicks.forEach((t) => {
+    svg.append(s("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), style: "stroke:var(--rule-2); stroke-width:1" + (t === 0 ? "" : "; opacity:.6") }));
+    svg.append(s("text", { x: m.l - 6, y: Y(t) + 3.5, "text-anchor": "end", class: "axis-text" }, opt.fmt(t)));
+  });
+  const xt = [1, 81, 194, 245, 296].map((n) => D.entries.find((e) => e.k === "tv" && e.ep <= n && n <= e.ee));
+  const narrow = W < 520;
+  xt.forEach((e, i) => svg.append(s("text", { x: X(e.o), y: H - 6, "text-anchor": i === 0 ? "start" : i === 4 ? "end" : "middle", class: "axis-text" }, i === 0 ? "1話" : narrow ? String([1, 81, 194, 245, 296][i]) : `${[1, 81, 194, 245, 296][i]}話`)));
+  const d = pts.map((p, i) => `${i ? "L" : "M"}${X(p.o).toFixed(1)},${Y(p.v).toFixed(1)}`).join("");
+  svg.append(s("path", { d: `${d}L${X(pts.at(-1).o)},${Y(0)}L${X(pts[0].o)},${Y(0)}Z`, style: `fill:${opt.color}; opacity:.1` }));
+  svg.append(s("path", { d, style: `fill:none; stroke:${opt.color}; stroke-width:2; stroke-linejoin:round; stroke-linecap:round` }));
+  (opt.annots || []).forEach(({ o, text, anchor }, i) => {
+    const p = pts.reduce((a, b) => (Math.abs(b.o - o) < Math.abs(a.o - o) ? b : a));
+    const ty = m.t + 11 + i * 15;
+    svg.append(s("line", { x1: X(o), x2: X(o), y1: ty - 9, y2: Y(p.v) - 6, style: "stroke:var(--ink-3); stroke-width:1" }));
+    svg.append(s("text", { x: X(o) + (anchor === "end" ? -4 : 4), y: ty, "text-anchor": anchor || "start", class: "lbl-sub" }, text));
+  });
+  // 端点ラベル
+  const last = pts.at(-1);
+  svg.append(s("circle", { cx: X(last.o), cy: Y(last.v), r: 4, style: `fill:${opt.color}; stroke:var(--sheet); stroke-width:2` }));
+  // hover
+  const guide = s("line", { y1: m.t, y2: m.t + ph, style: "stroke:var(--ink-3); stroke-width:1", visibility: "hidden" });
+  const dot = s("circle", { r: 4.5, style: `fill:${opt.color}; stroke:var(--sheet); stroke-width:2`, visibility: "hidden" });
+  const hit = s("rect", { x: m.l, y: m.t, width: pw, height: ph, style: "fill:transparent; cursor:crosshair" });
+  svg.append(guide, dot, hit);
+  const move = (ev) => {
+    const r = svg.getBoundingClientRect();
+    const o = ((ev.clientX - r.left - m.l) / pw) * xMax;
+    const p = pts.reduce((a, b) => (Math.abs(b.o - o) < Math.abs(a.o - o) ? b : a));
+    guide.setAttribute("x1", X(p.o)); guide.setAttribute("x2", X(p.o)); guide.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", X(p.o)); dot.setAttribute("cy", Y(p.v)); dot.setAttribute("visibility", "visible");
+    showTip(`<b>${epName(D.entries[p.o])}付近</b><br>${opt.name} ${opt.fmt(p.v)}`, ev.clientX, ev.clientY);
+  };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { guide.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); hideTip(); });
+  host.replaceChildren(svg);
+}
+(function trends() {
+  const starPts = (() => {
+    const r = rated, vals = r.map((e) => (e.st ? 1 : 0));
+    const roll = rolling(vals, 7, avg);
+    return r.map((e, i) => ({ o: e.o, v: roll[i] }));
+  })();
+  const charPts = (() => {
+    const roll = rolling(D.entries.map((e) => e.c), 7, avg);
+    return D.entries.map((e, i) => ({ o: e.o, v: roll[i] }));
+  })();
+  const o98 = D.entries.find((e) => e.l === "98").o, o267 = D.entries.find((e) => e.l === "267").o;
+  onResize(() => lineChart($("#ch-star"), starPts, { yMax: 0.8, yTicks: [0, 0.2, 0.4, 0.6, 0.8], fmt: (v) => pct(v), color: "var(--rs)", bandLabels: true, name: "★率", aria: "★率の推移。1期前半が最も高く、ハムハーの木編で最も低い" }));
+  onResize(() => lineChart($("#ch-chars"), charPts, {
+    yMax: 400, yTicks: [0, 100, 200, 300, 400], fmt: (v) => `${Math.round(v)}字`, color: "var(--r2)", name: "メモ", aria: "メモの文字数の推移",
+    annots: [{ o: o98, text: isNarrow() ? "98話〜控えめに" : "98話「書くのは控えた」" }, { o: o267, text: isNarrow() ? "267話〜まとめ書き" : "267話〜「飽きてて草」", anchor: "end" }],
+  }));
+})();
+
+// ---------- シリーズ別 ----------
+(function comp() {
+  legend($("#complegend"), true);
+  const host = $("#comp");
+  D.by_series.forEach((b, i) => {
+    const ser = D.series[i];
+    const bar = h("div", { class: "segbar", role: "img", "aria-label": `${ser.short}の評価内訳` });
+    host.append(h("div", { class: "comp-row" },
+      h("div", { class: "nm" }, ser.short, h("small", {}, `${ser.range}・${b.n}件`)),
+      bar,
+      h("div", { class: "sm", html: `<span>★率 <b>${pct(b.star_rate)}</b></span> <span>平均 <b>${f2(b.mean_raw)}</b></span> <span>1件 <b>${b.chars_per_entry}</b>字</span>` }),
+    ));
+    segbar(bar, RKEYS.map((k) => [k, b.dist[DKEY[k]]]), "pct");
+  });
+  const t = $("#comptbl");
+  t.append(h("tr", {}, h("th", {}, "シリーズ"), ...RKEYS.map((k) => h("th", {}, RNAME[k])), h("th", {}, "平均"), h("th", {}, "★率"), h("th", {}, "3点以下"), h("th", {}, "字/件")));
+  D.by_series.forEach((b, i) => t.append(h("tr", {}, h("td", {}, D.series[i].short), ...RKEYS.map((k) => h("td", {}, b.dist[DKEY[k]])), h("td", {}, f2(b.mean_raw)), h("td", {}, pct(b.star_rate)), h("td", {}, pct(b.le3_rate)), h("td", {}, b.chars_per_entry))));
+})();
+
+// ---------- 答え合わせ ----------
+const CLAIM = {
+  "夢回・劇中劇": { r: [-1, -1], txt: "申告 −1", v: ["hit", "当たり。実際はもっと重い"] },
+  "作画が良い": { r: [0.5, 0.5], txt: "申告 ＋0.5", v: ["meh", "平均にはほぼ出ない。★率は少し上がる"] },
+  "「かわいい」と書いた": { r: [1, 1], txt: "申告 ＋1（かわいいキャラがメイン）", v: ["meh", "測れず。「かわいい」が口癖すぎる"] },
+  "「かわいくない」と書いた": { r: [-1, 0], txt: "申告 ±0〜−1", v: ["hit", "当たり"] },
+  "目新しさ(初めて/珍しい/新鮮)": { r: [1, 2], txt: "申告 ＋1〜2", v: ["meh", "検出できず"] },
+  "ハムちゃんず全員": { r: null, txt: "申告「甘くなりがち」（数値なし）", v: ["miss", "外れ。点は上がらない"] },
+  "死にかける回": { r: null, txt: "申告なし", v: ["hidden", "隠れ加点"] },
+  "じゃじゃハム": { r: null, txt: "申告なし", v: ["hidden", "隠れ減点"] },
+};
+const VICON = { hit: "✓", miss: "✕", meh: "?", hidden: "!" };
+const XD = [-2.2, 2.2];
+(function answer() {
+  const icpt = D.ols.coef[0];
+  $("#ols-title").textContent = `実測の採点式（重回帰・R²=${D.ols.r2.toFixed(2)}）`;
+  const dl = $("#ols-dl");
+  dl.append(h("dt", { class: "base" }, "基礎点"), h("dd", { class: "base" }, icpt.beta.toFixed(2)));
+  [...D.ols.coef.slice(1)].sort((a, b) => Math.abs(b.beta) - Math.abs(a.beta)).forEach((c) => dl.append(h("dt", {}, c.term), h("dd", {}, sign(c.beta))));
+
+  const rows = D.ols.coef.slice(1);
+  const host = $("#coef");
+  const strips = [];
+  rows.forEach((c) => {
+    const cl = CLAIM[c.term];
+    const strip = h("div", { class: "chart" });
+    host.append(h("div", { class: "coef-row" },
+      h("div", { class: "nm" }, c.term, h("small", {}, cl.txt)),
+      strip,
+      h("div", {}, h("span", { class: `verdict v-${cl.v[0]}` }, h("i", { "aria-hidden": "true" }, VICON[cl.v[0]]), cl.v[1])),
+    ));
+    strips.push([strip, c, cl]);
+  });
+  const draw = () => {
+    strips.forEach(([host, c, cl]) => {
+      const W = host.clientWidth, H = 38, pad = 14;
+      const X = (v) => pad + ((v - XD[0]) / (XD[1] - XD[0])) * (W - 2 * pad);
+      const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `${c.term}：実測${sign(c.beta)}点、95%区間${sign(c.beta - 1.96 * c.se)}〜${sign(c.beta + 1.96 * c.se)}。${cl.txt}` });
+      [-2, -1, 1, 2].forEach((t) => svg.append(s("line", { x1: X(t), x2: X(t), y1: 2, y2: H - 2, style: "stroke:var(--rule); stroke-width:1" })));
+      svg.append(s("line", { x1: X(0), x2: X(0), y1: 0, y2: H, style: "stroke:var(--ink-3); stroke-width:1" }));
+      const cy = H / 2 + 3;
+      if (cl.r) {
+        if (cl.r[0] === cl.r[1]) {
+          const x = X(cl.r[0]);
+          svg.append(s("path", { d: `M${x},${cy - 7}L${x + 7},${cy}L${x},${cy + 7}L${x - 7},${cy}Z`, style: "fill:var(--sun); stroke:var(--ink); stroke-width:1.5" }));
+        } else {
+          svg.append(s("rect", { x: X(cl.r[0]), y: cy - 6, width: X(cl.r[1]) - X(cl.r[0]), height: 12, rx: 4, style: "fill:var(--sun); stroke:var(--ink); stroke-width:1.5; opacity:.85" }));
+        }
+      }
+      const lo = Math.max(XD[0], c.beta - 1.96 * c.se), hi = Math.min(XD[1], c.beta + 1.96 * c.se);
+      svg.append(s("line", { x1: X(lo), x2: X(hi), y1: cy, y2: cy, style: "stroke:var(--ink); stroke-width:2; stroke-linecap:round" }));
+      const dot = s("circle", { cx: X(c.beta), cy, r: 5, style: "fill:var(--ink); stroke:var(--sheet); stroke-width:2", tabindex: "0" });
+      svg.append(dot);
+      // 申告マーカーがあるときは、その反対側（左）にラベルを置いて重ならないようにする
+      const leftEdge = cl.r ? Math.min(X(lo), X(cl.r[0]) - (cl.r[0] === cl.r[1] ? 8 : 0)) : null;
+      const LW = 36; // ラベル幅の見積もり
+      const pos = !cl.r ? { x: X(hi) + 7, y: cy + 4, "text-anchor": "start" }
+        : leftEdge - 6 - LW >= 0 ? { x: leftEdge - 6, y: cy + 4, "text-anchor": "end" }
+        : { x: X(c.beta), y: cy - 9, "text-anchor": "middle" };
+      svg.append(s("text", { ...pos, class: "lbl-text" }, sign(c.beta)));
+      bindTip(dot, () => `<b>${c.term}</b><br>実測 ${sign(c.beta)}点（95%区間 ${sign(c.beta - 1.96 * c.se)}〜${sign(c.beta + 1.96 * c.se)}）<br>${cl.txt}`);
+      host.replaceChildren(svg);
+    });
+    const ax = $("#coef-axis"), W = ax.clientWidth, pad = 14;
+    const X = (v) => pad + ((v - XD[0]) / (XD[1] - XD[0])) * (W - 2 * pad);
+    const svg = s("svg", { width: W, height: 30, viewBox: `0 0 ${W} 30` });
+    [-2, -1, 0, 1, 2].forEach((t) => svg.append(s("text", { x: X(t), y: 12, "text-anchor": "middle", class: "axis-text" }, t === 0 ? "0" : sign(t, 0))));
+    svg.append(s("text", { x: W / 2, y: 27, "text-anchor": "middle", class: "axis-text" }, "評価への影響（点）"));
+    ax.replaceChildren(svg);
+  };
+  onResize(draw);
+
+  const t = $("#testtbl");
+  t.append(h("tr", {}, ...["要素", "該当", "平均（あり）", "平均（なし）", "差", "p", "★率（あり）", "★率（なし）", "p"].map((x) => h("th", {}, x))));
+  const p = (v) => (v < 0.001 ? "<0.001" : v.toFixed(3));
+  D.tests.forEach((r) => t.append(h("tr", {}, h("td", {}, r.feature), h("td", {}, `${r.n}回`), h("td", {}, f2(r.mean_with)), h("td", {}, f2(r.mean_without)), h("td", {}, sign(r.diff)), h("td", {}, p(r.p)), h("td", {}, pct(r.star_with)), h("td", {}, pct(r.star_without)), h("td", {}, p(r.star_p)))));
+  const five = (D.dist["★"] + D.dist["5"]) / D.n_rated;
+  $("#ceiling").textContent = `注意：採点の${pct(five)}が5点（★含む）なので、加点要素は平均点に出にくい天井効果があります。「作画が良い」の＋0.5が平均で＋0.1しか出ないのはこのためで、★率では${pct(D.tests[1].star_with)}対${pct(D.tests[1].star_without)}と差が見えます（p=${D.tests[1].star_p.toFixed(2)}）。「かわいい」は全体の約2割の回に出てくるため、「かわいいキャラがメイン」かどうかはこの方法では区別できません。`;
+})();
+
+// ---------- 横棒（単一系列） ----------
+function hbars(host, rows, opt) {
+  const W = host.clientWidth, rowH = 34, labW = Math.min(isNarrow() ? 120 : 180, W * 0.42), H = rows.length * rowH + 6;
+  const X = (v) => labW + (v / opt.max) * (W - labW - 52);
+  const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.aria });
+  rows.forEach((r, i) => {
+    const y = i * rowH + 4;
+    svg.append(s("text", { x: 0, y: y + 13, class: "lbl-text" }, r.label));
+    svg.append(s("text", { x: 0, y: y + 27, class: "lbl-sub" }, r.sub));
+    const w = Math.max(2, X(r.v) - labW), bh = 16, by = y + 6;
+    const path = `M${labW},${by}h${w - 4}a4,4 0 0 1 4,4v${bh - 8}a4,4 0 0 1 -4,4h${-(w - 4)}Z`;
+    const bar = s("path", { d: path, style: `fill:${r.color || "var(--rs)"}`, tabindex: "0" });
+    svg.append(bar);
+    svg.append(s("text", { x: X(r.v) + 6, y: by + 12, class: "lbl-text" }, opt.fmt(r.v)));
+    bindTip(bar, () => `<b>${r.label}</b><br>${opt.fmt(r.v)}（${r.sub}）`);
+  });
+  host.replaceChildren(svg);
+}
+function verdict(host, kind, text) {
+  host.replaceChildren(h("span", { class: `verdict v-${kind}` }, h("i", { "aria-hidden": "true" }, VICON[kind]), text));
+}
+(function jinx() {
+  const S = D.sakuga;
+  onResize(() => hbars($("#ch-sakuga"), [
+    { label: "作画を褒めた回", sub: `${S.good.n}回`, v: S.good.star },
+    { label: "作画をけなした回", sub: `${S.bad.n}回`, v: S.bad.star },
+    { label: "作画に触れなかった回", sub: `${S.none.n}回`, v: S.none.star },
+  ], { max: 0.7, fmt: pct, aria: "122話以降の★率：作画を褒めた回、けなした回、触れなかった回" }));
+  verdict($("#v-sakuga"), "miss", "外れ。作画が悪い回のほうが★は少ない");
+  const dGood = S.dream_late_good / S.dream_late_n;
+  onResize(() => hbars($("#ch-dreamsak"), [
+    { label: "夢回", sub: `${S.dream_late_n}回中${S.dream_late_good}回`, v: dGood, color: "var(--r2)" },
+    { label: "夢回以外", sub: "122話以降", v: S.nondream_late_good_rate, color: "var(--r2)" },
+  ], { max: 0.7, fmt: pct, aria: "作画◎◯と書かれた割合：夢回と夢回以外" }));
+  verdict($("#v-dreamsak"), "hit", `ちょっと当たり。夢回で作画ダメと書かれた回は0（他は${pct(S.nondream_late_bad_rate)}）。ただし8回だけの話`);
+  const C = D.contrast;
+  onResize(() => hbars($("#ch-contrast"), [
+    { label: "直前3回が全部★", sub: `${C.after_star3.n}回`, v: C.after_star3.star_next },
+    { label: "全体", sub: `${D.n_rated}回`, v: C.overall_star, color: "var(--r4)" },
+    { label: "直前3回の平均が4.5以下", sub: `${C.after_low3.n}回`, v: C.after_low3.star_next },
+  ], { max: 0.7, fmt: pct, aria: "次の回が★になった割合" }));
+  verdict($("#v-contrast"), "miss", `落差より「波」。★は続けて出やすく、低調な流れのあとは出にくい（ただし評価の自己相関は+${D.acf.acf1.toFixed(2)}、p=${D.acf.p_two_sided.toFixed(2)}と弱め）`);
+})();
+
+// ---------- キャラ ----------
+(function chars() {
+  const rows = [...D.chars].sort((a, b) => b.star_with - a.star_with);
+  const base = D.base.star;
+  const draw = () => {
+    const host = $("#ch-chars-star"), W = host.clientWidth, rowH = 26, labW = isNarrow() ? 118 : 170, H = rows.length * rowH + 30;
+    const max = 0.7, X = (v) => labW + (v / max) * (W - labW - 44);
+    const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "キャラ別、言及された回の★率" });
+    [0, 0.2, 0.4, 0.6].forEach((t) => {
+      svg.append(s("line", { x1: X(t), x2: X(t), y1: 0, y2: H - 22, style: "stroke:var(--rule); stroke-width:1" }));
+      svg.append(s("text", { x: X(t), y: H - 6, "text-anchor": "middle", class: "axis-text" }, pct(t)));
+    });
+    svg.append(s("line", { x1: X(base), x2: X(base), y1: 0, y2: H - 22, style: "stroke:var(--ink-3); stroke-width:1.5" }));
+    svg.append(s("text", { x: X(base) + 4, y: H - 24, class: "axis-text" }, `全体 ${pct(base)}`));
+    rows.forEach((c, i) => {
+      const cy = i * rowH + 13;
+      svg.append(s("text", { x: 0, y: cy + 4, class: "lbl-sub" }, `${c.name}（${c.episodes}回）`));
+      svg.append(s("line", { x1: X(base), x2: X(c.star_with), y1: cy, y2: cy, style: "stroke:var(--rule-2); stroke-width:2" }));
+      const up = c.star_with >= base;
+      const dot = s("circle", { cx: X(c.star_with), cy, r: 5, style: `fill:${up ? "var(--rs)" : "var(--r2)"}; stroke:var(--sheet); stroke-width:2`, tabindex: "0" });
+      svg.append(dot);
+      const lx = up ? X(c.star_with) + 9 : X(c.star_with) - 9;
+      svg.append(s("text", { x: lx, y: cy + 4, "text-anchor": up ? "start" : "end", class: "lbl-text" }, pct(c.star_with)));
+      bindTip(dot, () => `<b>${c.name}</b><br>言及${c.episodes}回・平均${f2(c.mean_with)}点・★率${pct(c.star_with)}<br>初出：${c.first_seen}`);
+    });
+    host.replaceChildren(svg);
+  };
+  onResize(draw);
+
+  const t = $("#heat");
+  const ser = D.series.slice(0, 4);
+  t.append(h("tr", {}, h("th", {}, ""), ...ser.map((x) => h("th", { style: "text-align:center" }, x.short))));
+  const max = Math.max(...D.heat.flatMap((c) => ser.map((x) => c.share_by_series[x.name])));
+  D.heat.forEach((c) => {
+    t.append(h("tr", {}, h("td", {}, c.name), ...ser.map((x) => {
+      const v = c.share_by_series[x.name], m = Math.round((v / max) * 100);
+      const td = h("td", { class: "h", style: `background:color-mix(in oklab, var(--seq1) ${m}%, var(--seq0)); color:${m > 55 ? "var(--on-seq)" : "var(--ink)"}` }, `${Math.round(v * 100)}%`);
+      return td;
+    })));
+  });
+
+  const W = D.watch;
+  $("#watch").append(...Object.entries(W).map(([k, v]) => h("div", { class: "tile" }, h("div", { class: "k" }, k), h("div", { class: "v" }, String(v), h("small", {}, "回")))));
+})();
+
+// ---------- 文体 ----------
+(function style() {
+  const t = $("#style"), ser = D.series.slice(0, 4);
+  t.append(h("tr", {}, h("th", {}, "1000字あたり"), ...ser.map((x) => h("th", {}, x.short))));
+  const NAMES = { "笑い(w/草)": "笑い（w・草）", "関西弁(やん/やろ/やな/ほんま/ええ/あかん/なんや)": "関西弁（やん・やろ・ほんま…）", "ツッコミ(だろ/かよ/なんだよ/やめろ)": "ツッコミ（だろ・かよ・やめろ…）" };
+  D.style.forEach((r) => {
+    const vals = ser.map((x) => r[x.name]), mx = Math.max(...vals);
+    t.append(h("tr", { class: r.style.startsWith("「マジ") ? "hl" : null }, h("td", {}, NAMES[r.style] || r.style.replace(/「(.+)」/, "「$1」")),
+      ...vals.map((v) => h("td", {}, v.toFixed(2), h("span", { class: "bar", style: `width:${Math.round((v / mx) * 34)}px` })))));
+  });
+})();
+
+// ---------- 名言と記録 ----------
+(function quotes() {
+  const host = $("#quotes");
+  D.quotes.forEach((q) => {
+    const e = D.entries.find((x) => x.l === q.l);
+    const k = rk(e);
+    const btn = h("button", { class: "src" }, epName(e) + "のメモを開く");
+    btn.addEventListener("click", () => { select(e); document.getElementById("grid-sec").scrollIntoView({ behavior: "smooth", block: "start" }); });
+    host.append(h("figure", { class: "quote", style: "margin:0" }, h("q", {}, q.t), h("figcaption", { class: "src" }, h("span", { class: `rchip c-${k}` }, `［${e.r}］${e.st ? "★" : ""}`), btn)));
+  });
+
+  // streaks computed here so labels stay exact
+  function streak(pred) {
+    let best = [0, 0, 0], cur = 0, start = 0;
+    rated.forEach((e, i) => { if (pred(e)) { if (!cur) start = i; cur++; if (cur > best[0]) best = [cur, start, i]; } else cur = 0; });
+    return { n: best[0], a: epName(rated[best[1]]), b: epName(rated[best[2]]) };
+  }
+  const sS = streak((e) => e.st), s5 = streak((e) => e.r === 5), s4 = streak((e) => e.r <= 4);
+  const L = D.longest, SH = D.shortest, cb = D.chars_by_rating;
+  const longestTv = L.find((x) => /^\d+$/.test(x.label));
+  const recs = [
+    ["いちばん短いメモ", `${SH[0].label}話「${SH[0].memo}」（${SH[0].chars}字）。次点は${SH[1].label}話「${SH[1].memo}」`],
+    ["いちばん長いメモ", `${L[0].label}（${L[0].chars.toLocaleString()}字）。TV回では${longestTv.label}話（${longestTv.chars}字・${longestTv.rating}点）で、大半が「ばてれん」の語源と砂漠の考察です`],
+    ["★の最長連続", `${sS.n}回（${sS.a}〜${sS.b}）`],
+    ["5点以上の最長連続", `${s5.n}回（${s5.a}〜${s5.b}）`],
+    ["4点以下の最長連続", `${s4.n}回（${s4.a}〜${s4.b}）。ハムハーの木編の入口です`],
+    ["評価が空欄", "280話・281話。280話のメモは「作画がゴミな作画監督回だ！」から始まります"],
+    ["メモの長さと評価", `相関はほぼ0。★の回は平均${cb["★"]}字、5点は${cb["5"]}字、4点は${cb["4"]}字、3点は${cb["3"]}字で、面白くても長く書くわけではありません`],
+  ];
+  $("#records").append(...recs.map(([k, v]) => h("li", {}, h("span", {}, k), h("span", {}, v))));
+  $("#w-star").append(...D.words_star.map((w) => h("span", { class: "word", title: `★の回${w.star_eps}・4点以下${w.le4_eps}` }, w.w)));
+  $("#w-low").append(...D.words_low.map((w) => h("span", { class: "word", title: `★の回${w.star_eps}・4点以下${w.le4_eps}` }, w.w)));
+})();
+</script>

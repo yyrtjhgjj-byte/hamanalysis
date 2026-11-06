@@ -1,0 +1,1042 @@
+<title>ハム太郎296話 採点白書</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 一冊の大学ノート。罫線と赤い余白線の表紙のあと、メモ原文の見出し書式「・〇〇［評価］」で分析ページを一列に綴じる */
+:root {
+  --paper: #f6f7f9;
+  --sheet: #ffffff;
+  --ink: #1f2430;
+  --ink-2: #4a5160;
+  --ink-3: #697080;
+  --rule: #e6eaf1;
+  --rule-2: #cfd6e2;
+  --margin: #e59a9a;
+  --sun: #f2b31a;
+  --sun-ink: #7d5200;
+  --sun-wash: #fdf1cc;
+  /* 評価スケール：4＝中立。1〜3は青、5と★はオレンジ（両腕とも単色・明度単調で検証済み） */
+  --r1: #184f95; --r2: #3482e0; --r3: #7eaeea; --r4: #c9c5bb; --r5: #ef9658; --rs: #c94a12; --rna: #e3e7ee;
+  --on1: #ffffff; --on2: #ffffff; --on3: #14181f; --on4: #14181f; --on5: #14181f; --ons: #ffffff;
+  --seq0: #eef6f2; --seq1: #0d5039; --on-seq: #ffffff;
+  --good: #0b8a0b; --bad: #c33232; --meh: #697080;
+  --f-display: "Dela Gothic One", "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
+  --f-hand: "Klee One", "Zen Kaku Gothic New", "Hiragino Mincho ProN", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #15171c; --sheet: #1d2027; --ink: #eceef2; --ink-2: #b6bcc8; --ink-3: #8f96a5;
+    --rule: #272b34; --rule-2: #3a404c; --margin: #8a4646; --sun: #e9a913; --sun-ink: #f5c654; --sun-wash: #3a2f12;
+    --r1: #94bff3; --r2: #3f8be6; --r3: #1f5fae; --r4: #4a4b50; --r5: #a5501f; --rs: #f39255; --rna: #2a2e37;
+    --on1: #14181f; --on2: #ffffff; --on3: #ffffff; --on4: #ffffff; --on5: #ffffff; --ons: #14181f;
+    --seq0: #1f2a27; --seq1: #7fd6b2; --on-seq: #0d1512;
+    --good: #45c445; --bad: #ef6b6b; --meh: #8f96a5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #15171c; --sheet: #1d2027; --ink: #eceef2; --ink-2: #b6bcc8; --ink-3: #8f96a5;
+  --rule: #272b34; --rule-2: #3a404c; --margin: #8a4646; --sun: #e9a913; --sun-ink: #f5c654; --sun-wash: #3a2f12;
+  --r1: #94bff3; --r2: #3f8be6; --r3: #1f5fae; --r4: #4a4b50; --r5: #a5501f; --rs: #f39255; --rna: #2a2e37;
+  --on1: #14181f; --on2: #ffffff; --on3: #ffffff; --on4: #ffffff; --on5: #ffffff; --ons: #14181f;
+  --seq0: #1f2a27; --seq1: #7fd6b2; --on-seq: #0d1512;
+  --good: #45c445; --bad: #ef6b6b; --meh: #8f96a5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; max-width: 65ch; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- 表紙 ---------- */
+.cover {
+  background:
+    linear-gradient(to right, transparent calc(2.6rem - 1px), var(--margin) calc(2.6rem - 1px), var(--margin) 2.6rem, transparent 2.6rem),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem),
+    var(--sheet);
+  border-bottom: 1px solid var(--rule-2);
+}
+.cover .wrap { padding-block: 2.5rem 2.25rem; }
+.cover-inner { padding-left: 2.2rem; display: grid; gap: 1.25rem; }
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ink-3); font-weight: 700; }
+h1 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+h1 .mark { background: linear-gradient(transparent 62%, var(--sun-wash) 62%); padding: 0 0.1em; }
+.lede { font-size: 1.02rem; color: var(--ink-2); }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
+.tile { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 6px; padding: 0.7rem 0.85rem; min-width: 0; }
+.tile .k { font-size: 0.78rem; color: var(--ink-3); font-weight: 500; }
+.tile .v { font-size: 1.9rem; font-weight: 700; line-height: 1.15; }
+.tile .v small { font-size: 0.9rem; font-weight: 500; color: var(--ink-2); margin-left: 0.15em; }
+.tile .s { font-size: 0.78rem; color: var(--ink-2); }
+
+/* ---------- 共通セクション ---------- */
+section { padding-block: 2.6rem 0.5rem; }
+section > .wrap { display: grid; gap: 1.1rem; }
+h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 3.4vw, 1.75rem);
+  line-height: 1.35;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.15em;
+}
+h2 .dot { color: var(--ink-3); }
+h2 .br { font-family: var(--f-body); font-weight: 700; font-size: 0.72em; color: var(--ink-2); }
+h3 { font-size: 1rem; font-weight: 700; }
+.note { font-size: 0.82rem; color: var(--ink-3); }
+.sheet { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 8px; padding: 1rem; min-width: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.chart-title { font-size: 0.92rem; font-weight: 700; }
+.chart-sub { font-size: 0.8rem; color: var(--ink-3); }
+details { font-size: 0.86rem; }
+details summary { cursor: pointer; color: var(--ink-2); font-weight: 500; }
+.tbl-wrap { overflow-x: auto; margin-top: 0.5rem; }
+table { border-collapse: collapse; font-size: 0.82rem; font-variant-numeric: tabular-nums; min-width: 100%; }
+th, td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--ink-3); font-weight: 500; }
+
+/* ひとことで言うと */
+.digest { display: grid; gap: 0.6rem; counter-reset: d; padding: 0; margin: 0; list-style: none; }
+.digest li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.5rem; align-items: start; }
+.digest li::before {
+  counter-increment: d; content: counter(d);
+  font-family: var(--f-display); font-size: 1.05rem; color: var(--sun-ink);
+  background: var(--sun-wash); border-radius: 50%; width: 1.8rem; height: 1.8rem;
+  display: grid; place-items: center; line-height: 1;
+}
+.digest b { font-weight: 700; }
+
+/* 評価スケールの色 */
+.c-s { background: var(--rs); color: var(--ons); }
+.c-5 { background: var(--r5); color: var(--on5); }
+.c-4 { background: var(--r4); color: var(--on4); }
+.c-3 { background: var(--r3); color: var(--on3); }
+.c-2 { background: var(--r2); color: var(--on2); }
+.c-1 { background: var(--r1); color: var(--on1); }
+.c-na { background: var(--rna); color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.8rem; color: var(--ink-2); align-items: center; }
+.legend .sw { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 3px; vertical-align: -0.1em; margin-right: 0.3rem; }
+.legend .sw.ring { background: var(--sheet); box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+/* 分布バー */
+.segbar { display: flex; gap: 2px; height: 28px; width: 100%; }
+.seg { height: 100%; border-radius: 4px; font-size: 0.74rem; font-weight: 700; display: flex; align-items: center; padding-left: 6px; white-space: nowrap; overflow: visible; min-width: 0; font-variant-numeric: tabular-nums; }
+.seg span[hidden] { display: none; }
+
+/* ---------- マス目 ---------- */
+.explorer { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.controls { display: grid; gap: 0.6rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip {
+  font: inherit; font-size: 0.8rem; font-weight: 500;
+  border: 1px solid var(--rule-2); background: var(--sheet); color: var(--ink-2);
+  border-radius: 999px; padding: 0.2rem 0.75rem; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.search { display: flex; gap: 0.5rem; align-items: center; }
+.search input {
+  font: inherit; font-size: 0.9rem; width: 100%; min-width: 0;
+  border: 1px solid var(--rule-2); border-radius: 6px; padding: 0.4rem 0.65rem;
+  background: var(--sheet); color: var(--ink);
+}
+.hitline { font-size: 0.84rem; color: var(--ink-2); min-height: 1.5em; }
+.hitline b { color: var(--ink); }
+.grid {
+  display: grid;
+  grid-template-columns: 3.1rem repeat(20, minmax(0, 1fr));
+  gap: 2px;
+  align-items: center;
+}
+.rowlab { font-size: 0.66rem; color: var(--ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 4px; text-align: right; }
+.cell {
+  aspect-ratio: 1; width: 100%; max-width: 100%; border: 0; padding: 0; border-radius: 3px; cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.cell.empty { background: transparent; cursor: default; }
+.cell.sstart { box-shadow: inset 3px 0 0 var(--ink); }
+.cell.sel { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+.grid.filtering .cell:not(.hit):not(.empty), .specials.filtering .sp:not(.hit) { opacity: 0.16; }
+.specials { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 0.5rem; align-items: center; }
+.specials .lab { font-size: 0.72rem; color: var(--ink-3); margin-right: 0.25rem; }
+.sp { font: inherit; font-size: 0.72rem; font-weight: 700; border: 0; border-radius: 4px; padding: 0.15rem 0.45rem; cursor: pointer; transition: opacity 0.15s; }
+.sp.sel { outline: 2px solid var(--ink); outline-offset: 1px; }
+.detail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: grid; gap: 0.6rem; }
+.detail-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.detail-head .ttl { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.2; }
+.rchip { font-weight: 700; font-size: 0.86rem; padding: 0.05rem 0.5rem; border-radius: 4px; font-variant-numeric: tabular-nums; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.tag { font-size: 0.72rem; border: 1px solid var(--rule-2); color: var(--ink-2); border-radius: 4px; padding: 0 0.4rem; }
+.memo {
+  font-family: var(--f-hand); font-weight: 600; font-size: 0.98rem; line-height: 2rem;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem);
+  max-height: 26rem; overflow-y: auto; padding-right: 0.25rem; margin: 0;
+}
+.nav { display: flex; gap: 0.5rem; }
+.btn { font: inherit; font-size: 0.82rem; border: 1px solid var(--rule-2); background: var(--sheet); color: var(--ink); border-radius: 6px; padding: 0.25rem 0.7rem; cursor: pointer; }
+
+/* ---------- 汎用チャート ---------- */
+.chart { width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.axis-text { font-size: 10.5px; fill: var(--ink-3); font-family: var(--f-body); font-variant-numeric: tabular-nums; }
+.lbl-text { font-size: 11px; fill: var(--ink); font-family: var(--f-body); font-weight: 700; font-variant-numeric: tabular-nums; }
+.lbl-sub { font-size: 10.5px; fill: var(--ink-2); font-family: var(--f-body); }
+
+/* シリーズ内訳 */
+.comp { display: grid; gap: 0.85rem; }
+.comp-row { display: grid; grid-template-columns: 8.2rem minmax(0, 1fr) 11rem; gap: 0.75rem; align-items: center; }
+.comp-row .nm { font-weight: 700; font-size: 0.9rem; line-height: 1.3; }
+.comp-row .nm small { display: block; font-weight: 400; color: var(--ink-3); font-size: 0.74rem; }
+.comp-row .sm { font-size: 0.78rem; color: var(--ink-2); line-height: 1.45; font-variant-numeric: tabular-nums; }
+.comp-row .sm b { color: var(--ink); }
+
+/* 答え合わせ */
+.formulas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.formula h3 { margin-bottom: 0.4rem; }
+.formula dl { display: grid; grid-template-columns: 1fr auto; gap: 0.1rem 1rem; margin: 0; font-size: 0.9rem; }
+.formula dt { color: var(--ink-2); }
+.formula dd { margin: 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.formula.hand dl { font-family: var(--f-hand); font-weight: 600; font-size: 0.98rem; }
+.formula .base { border-bottom: 1px solid var(--rule-2); padding-bottom: 0.15rem; margin-bottom: 0.15rem; }
+.coef { display: grid; gap: 0.2rem; }
+.coef-row { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 9.5rem; gap: 0.75rem; align-items: center; min-height: 40px; border-bottom: 1px solid var(--rule); }
+.coef-row:last-child { border-bottom: 0; }
+.coef-row .nm { font-size: 0.86rem; font-weight: 700; line-height: 1.3; }
+.coef-row .nm small { display: block; font-weight: 400; color: var(--ink-3); font-size: 0.74rem; }
+.coef-axis { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 9.5rem; gap: 0.75rem; }
+.verdict { font-size: 0.76rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; line-height: 1.3; }
+.verdict i { font-style: normal; display: inline-grid; place-items: center; width: 1.15rem; height: 1.15rem; border-radius: 50%; font-size: 0.7rem; flex: none; color: var(--sheet); }
+.v-hit i { background: var(--good); }
+.v-miss i { background: var(--bad); }
+.v-meh i { background: var(--meh); }
+.v-hidden i { background: var(--sun); color: #2a1d00; }
+.v-hit { color: var(--ink); } .v-miss { color: var(--ink); } .v-meh { color: var(--ink-2); } .v-hidden { color: var(--ink); }
+
+/* キャラ */
+.heat td.h { text-align: center; font-weight: 700; min-width: 3.4rem; border-bottom: 2px solid var(--sheet); }
+.heat td:first-child { font-weight: 500; }
+.watch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.watch .tile .v { font-size: 1.6rem; }
+
+/* 文体 */
+.style td .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--ink-3); vertical-align: middle; margin-left: 0.4rem; }
+.style tr.hl td { background: var(--sun-wash); }
+
+/* 名言 */
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.quote { background: var(--sheet); border: 1px solid var(--rule-2); border-radius: 8px; padding: 0.8rem 0.9rem; display: grid; gap: 0.5rem; align-content: space-between; min-width: 0; }
+.quote q { font-family: var(--f-hand); font-weight: 600; font-size: 1rem; line-height: 1.7; quotes: "「" "」"; overflow-wrap: anywhere; }
+.quote .src { font-size: 0.76rem; color: var(--ink-3); display: flex; gap: 0.4rem; align-items: center; }
+.quote button.src { font: inherit; font-size: 0.76rem; border: 0; background: none; padding: 0; cursor: pointer; color: var(--ink-3); text-decoration: underline; text-underline-offset: 2px; }
+.records { display: grid; gap: 0.4rem; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; }
+.records li { display: grid; grid-template-columns: 11rem 1fr; gap: 0.75rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.35rem; }
+.records li span:first-child { color: var(--ink-3); font-size: 0.82rem; }
+.words { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.word { font-size: 0.82rem; border-radius: 4px; padding: 0.05rem 0.5rem; border: 1px solid var(--rule-2); }
+.method { font-size: 0.86rem; color: var(--ink-2); display: grid; gap: 0.5rem; }
+.method ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.25rem; }
+footer { padding-block: 2.5rem 3rem; }
+
+/* tooltip */
+#tip {
+  position: fixed; z-index: 50; pointer-events: none; max-width: min(320px, 80vw);
+  background: var(--ink); color: var(--sheet); font-size: 0.78rem; line-height: 1.5;
+  padding: 0.45rem 0.6rem; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+#tip b { font-weight: 700; }
+
+@media (max-width: 860px) {
+  .explorer { grid-template-columns: minmax(0, 1fr); }
+  .detail { position: static; }
+  .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  body { font-size: 14.5px; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .two, .formulas { grid-template-columns: minmax(0, 1fr); }
+  .cover-inner { padding-left: 1.6rem; }
+  .cover { background:
+    linear-gradient(to right, transparent calc(1.15rem - 1px), var(--margin) calc(1.15rem - 1px), var(--margin) 1.15rem, transparent 1.15rem),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(2rem - 1px), var(--rule) calc(2rem - 1px), var(--rule) 2rem),
+    var(--sheet); }
+  .comp-row { grid-template-columns: minmax(0, 1fr); gap: 0.35rem; }
+  .comp-row .sm { display: flex; flex-wrap: wrap; gap: 0 0.8rem; }
+  .coef-row, .coef-axis { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; padding-block: 0.4rem; }
+  .coef-axis .pad { display: none; }
+  .quotes, .watch { grid-template-columns: minmax(0, 1fr); }
+  .records li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .grid { grid-template-columns: 2.4rem repeat(20, minmax(0, 1fr)); gap: 1.5px; }
+  .rowlab { font-size: 0.58rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="cover-inner">
+      <div class="eyebrow">感想メモ・全9冊を集計</div>
+      <h1>ハム太郎<span class="mark">296話</span><br>採点白書</h1>
+      <p class="lede" id="lede"></p>
+      <div class="tiles" id="tiles"></div>
+      <div style="display:grid; gap:0.45rem">
+        <div class="segbar" id="distbar" role="img"></div>
+        <div class="legend" id="distlegend"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>ひとことで言うと<span class="br">［5］</span></h2>
+    <ol class="digest" id="digest"></ol>
+  </div>
+</section>
+
+<section id="grid-sec">
+  <div class="wrap">
+    <h2><span class="dot">・</span>296マスの採点表<span class="br">［全話］</span></h2>
+    <p>1マスが1話です。マスを押すと、その回のメモ全文が右側（スマホでは下）に出ます。絞り込みボタンかメモ検索で、該当する回だけを光らせて平均点と★率をその場で出せます。</p>
+    <div class="explorer">
+      <div class="sheet controls">
+        <div class="chips" id="chips" role="group" aria-label="絞り込み"></div>
+        <div class="search">
+          <input id="q" type="search" placeholder="メモを検索（例：パンダ、作画、草）" aria-label="メモを検索">
+        </div>
+        <div class="hitline" id="hitline" aria-live="polite"></div>
+        <div class="grid" id="grid"></div>
+        <div class="specials" id="specials"><span class="lab">劇場版・OVA</span></div>
+        <div class="legend" id="gridlegend"></div>
+      </div>
+      <div class="sheet detail" id="detail" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>熱量の推移<span class="br">［★率とメモの長さ］</span></h2>
+    <p>視聴順に前後15回の移動平均をとりました。★率は1期前半の「最初の方は思い出して書いてる」区間がいちばん高く、ハムハーの木編で底をつきます。メモの長さは1期後半〜すいぱら編で1話あたり230〜240字まで膨らみ、最後は90字台に縮みます。</p>
+    <div class="sheet" style="display:grid; gap:1.2rem">
+      <div>
+        <div class="chart-title">★率（前後15回の移動平均）</div>
+        <div class="chart" id="ch-star"></div>
+      </div>
+      <div>
+        <div class="chart-title">メモの文字数（前後15回の移動平均）</div>
+        <div class="chart" id="ch-chars"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>シリーズ別<span class="br">［内訳］</span></h2>
+    <div class="sheet" style="display:grid; gap:0.9rem">
+      <div class="legend" id="complegend"></div>
+      <div class="comp" id="comp"></div>
+      <details>
+        <summary>表で見る</summary>
+        <div class="tbl-wrap"><table id="comptbl"></table></div>
+      </details>
+    </div>
+    <p class="note">平均は★を5点として計算しています。劇場版は4本中2本が3点で、本人も「劇場版基本的に全部アレ」と書いています。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>答え合わせ<span class="br">［自己申告 vs 実測］</span></h2>
+    <p>メモ・6の201話のあとに「今まで付けてた点数の基本の算出方法が分かった」という書き込みがあります。メモ・1の冒頭には「ハムちゃんず全員が出てると評価が甘くなりがち」とも書かれています。この自己申告を、全289件の採点に重回帰をかけて答え合わせしました。</p>
+    <div class="formulas">
+      <div class="sheet formula hand">
+        <h3>自己申告の採点式（メモ・6より）</h3>
+        <dl>
+          <dt class="base">基礎点</dt><dd class="base">3</dd>
+          <dt>かわいいキャラがメイン</dt><dd>＋1</dd>
+          <dt>かわいくないキャラがメイン</dt><dd>±0〜−1</dd>
+          <dt>目新しい展開</dt><dd>＋1〜2</dd>
+          <dt>夢回、劇中劇</dt><dd>−1</dd>
+          <dt>作画が良い</dt><dd>＋0.5</dd>
+        </dl>
+      </div>
+      <div class="sheet formula">
+        <h3 id="ols-title">実測の採点式（重回帰）</h3>
+        <dl id="ols-dl"></dl>
+      </div>
+    </div>
+    <div class="sheet" style="display:grid; gap:0.6rem">
+      <div class="legend">
+        <span><span class="sw" style="background:var(--sun); box-shadow: inset 0 0 0 1.5px var(--ink)"></span>自己申告の値・幅</span>
+        <span><span class="sw" style="background:var(--ink); border-radius:50%"></span>実測（線は95%区間）</span>
+      </div>
+      <div class="coef" id="coef"></div>
+      <div class="coef-axis"><div class="pad"></div><div class="chart" id="coef-axis"></div><div class="pad"></div></div>
+      <details>
+        <summary>表で見る（単純な平均差と並べ替え検定）</summary>
+        <div class="tbl-wrap"><table id="testtbl"></table></div>
+      </details>
+    </div>
+    <p class="note" id="ceiling"></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>ジンクス検証<span class="br">［作画と落差］</span></h2>
+    <div class="two">
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">「面白い時に限って作画がゴミ」</div>
+          <div class="chart-sub">168話・220話・255話で繰り返し出てくる嘆き。122話以降の★率で比べました。</div>
+        </div>
+        <div class="chart" id="ch-sakuga"></div>
+        <div id="v-sakuga"></div>
+      </div>
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">「夢回に限って作画がいい」</div>
+          <div class="chart-sub">219話・233話・257話の嘆き。122話以降で、作画◎◯と書かれた割合を比べました。</div>
+        </div>
+        <div class="chart" id="ch-dreamsak"></div>
+        <div id="v-dreamsak"></div>
+      </div>
+      <div class="sheet" style="display:grid; gap:0.6rem; grid-column: 1 / -1">
+        <div>
+          <div class="chart-title">「つまらない回が続いた後の面白い回は面白く感じる」</div>
+          <div class="chart-sub">メモ・3の「落差について」より。直前3回の評価ごとに、次の回が★になった割合を比べました。</div>
+        </div>
+        <div class="chart" id="ch-contrast"></div>
+        <div id="v-contrast"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>キャラ<span class="br">［★率と出番］</span></h2>
+    <div class="sheet" style="display:grid; gap:0.6rem">
+      <div>
+        <div class="chart-title">メモに名前が出た回の★率</div>
+        <div class="chart-sub">9回以上言及されたキャラ。縦線は全体の★率です。</div>
+      </div>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--rs); border-radius:50%"></span>全体より★が多い</span>
+        <span><span class="sw" style="background:var(--r2); border-radius:50%"></span>全体より★が少ない</span>
+      </div>
+      <div class="chart" id="ch-chars-star"></div>
+    </div>
+    <div class="two">
+      <div class="sheet" style="display:grid; gap:0.6rem">
+        <div>
+          <div class="chart-title">シリーズごとの言及率</div>
+          <div class="chart-sub">各シリーズで、メモに名前が出た回の割合。1期前半はメモ自体が短いぶん低めに出ます。</div>
+        </div>
+        <div class="tbl-wrap" style="margin:0"><table class="heat" id="heat"></table></div>
+      </div>
+      <div style="display:grid; gap:0.75rem; align-content:start">
+        <div class="sheet" style="display:grid; gap:0.6rem">
+          <div>
+            <div class="chart-title">出番監視ログ</div>
+            <div class="chart-sub">125話で本人が「いつも出ない組(トラハム、パンダ、かぶる)」と命名。「いない」「喋らない」「出番が多い」とチェックした回の数です。</div>
+          </div>
+          <div class="watch" id="watch"></div>
+        </div>
+        <p class="note">じゃじゃハムちゃんに触れた9回は平均3.89点で、キャラ別の最下位です。179話には「正直にいうと、じゃじゃハムの苦手意識が明らかにまだ抜けてない、フラットに見れてない」と自己分析があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>文体<span class="br">［疲れの指標］</span></h2>
+    <p>1000字あたりの出現回数です。ハムハーの木編で「マジ・ガチ」が1期前半の約4.7倍に増え、笑い（w・草）とツッコミも増えます。逆に「？」は減っていきます。疑問を持つより先にツッコむようになった、と読めます。</p>
+    <div class="sheet"><div class="tbl-wrap" style="margin:0"><table class="style" id="style"></table></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="dot">・</span>名言と記録<span class="br">［抜粋］</span></h2>
+    <div class="quotes" id="quotes"></div>
+    <div class="two">
+      <div class="sheet"><h3 style="margin-bottom:0.5rem">記録</h3><ul class="records" id="records"></ul></div>
+      <div class="sheet" style="display:grid; gap:0.75rem; align-content:start">
+        <h3>★の回と4点以下の回で差が出た言葉</h3>
+        <div><div class="chart-sub" style="margin-bottom:0.3rem">★の回に多い</div><div class="words" id="w-star"></div></div>
+        <div><div class="chart-sub" style="margin-bottom:0.3rem">4点以下の回に多い</div><div class="words" id="w-low"></div></div>
+        <p class="note">janomeで形態素解析し、1話に1回でも出たかで数え、事前分布つき対数オッズ比で並べました。4点以下の側に「映画」「劇場」「導入」「正直」「見た目」が並びます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap method">
+    <h2 style="margin-bottom:0.25rem"><span class="dot">・</span>方法<span class="br">［と注意］</span></h2>
+    <ul>
+      <li>docs/1.txt〜9.txt から「・話数［評価］★」の見出しを抜き出し、次の見出しまでをメモ本文としました。見出しでない「・」行（雑談・メタ考察）は本文から外しています。1〜14話は1件にまとまっているので14マスとも同じ評価です。EX.txt（2周目）は集計に入れていません。</li>
+      <li>夢回・死にかける回・作画の良し悪しは、正規表現で候補を出したあと該当行を1件ずつ読んで手で確定しました（「夢回じゃないのに3点」や「マラカス振ってないと死ぬの？」を除くため）。キャラ言及・「かわいい」などは正規表現のままです。</li>
+      <li>差の検定は並べ替え検定（20,000回）。回帰は素点（1〜5、★は5）に対する最小二乗法です。</li>
+      <li>採点の71%が5点（★含む）なので天井効果が強く、加点要素は平均点に出にくくなります。★率もあわせて見てください。</li>
+      <li>集計コードと中間データはリポジトリの analysis/ にあります（parse.py → analyze.py → deep.py → build_page.py）。</li>
+    </ul>
+  </div>
+</footer>
+<div id="tip" hidden></div>
+
+<script>
+const D = /*__DATA__*/null;
+
+// ---------- helpers ----------
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+function h(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k === "html") e.innerHTML = v; else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of kids.flat()) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+function s(tag, attrs = {}, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) if (v != null) e.setAttribute(k, v);
+  if (text != null) e.textContent = text;
+  return e;
+}
+const pct = (x) => `${Math.round(x * 100)}%`;
+const f2 = (x) => x.toFixed(2);
+const sign = (x, d = 2) => (x > 0 ? "＋" : x < 0 ? "−" : "±") + Math.abs(x).toFixed(d);
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const rk = (e) => (e.r == null ? "na" : e.st ? "s" : String(e.r));
+const RKEYS = ["s", "5", "4", "3", "2", "1"];
+const RNAME = { s: "5★", 5: "5", 4: "4", 3: "3", 2: "2", 1: "1", na: "空欄" };
+const DKEY = { s: "★", 5: "5", 4: "4", 3: "3", 2: "2", 1: "1" };
+const epName = (e) => (e.k === "tv" ? (e.ep === e.ee ? `${e.ep}話` : `${e.ep}〜${e.ee}話`) : e.l);
+const rated = D.entries.filter((e) => e.r != null);
+const avg = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+const isNarrow = () => window.matchMedia("(max-width: 640px)").matches;
+
+// tooltip
+const tip = $("#tip");
+function showTip(html, x, y) {
+  tip.innerHTML = html; tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y + 14;
+  if (left + r.width > window.innerWidth - 8) left = x - r.width - 14;
+  if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+  tip.style.left = Math.max(8, left) + "px"; tip.style.top = Math.max(8, top) + "px";
+}
+function hideTip() { tip.hidden = true; }
+function bindTip(el, fn) {
+  el.addEventListener("pointerenter", (ev) => showTip(fn(), ev.clientX, ev.clientY));
+  el.addEventListener("pointermove", (ev) => { if (!tip.hidden) showTip(fn(), ev.clientX, ev.clientY); });
+  el.addEventListener("pointerleave", hideTip);
+  el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); showTip(fn(), r.right, r.top); });
+  el.addEventListener("blur", hideTip);
+}
+const renderers = [];
+function onResize(fn) { renderers.push(fn); fn(); }
+let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => renderers.forEach((f) => f()), 120); });
+
+// ---------- 表紙 ----------
+(function cover() {
+  const nStar = D.dist["★"], nLe3 = D.dist["3"] + D.dist["2"] + D.dist["1"];
+  $("#lede").textContent = `1話から296話、劇場版4本、OVA4本。初見で書き続けた5段階＋★の採点メモ（約${(D.total_chars / 10000).toFixed(1)}万字）を、パースして数えて検定にかけました。数字はすべてメモ本文から機械的に出したものです。`;
+  const tiles = [
+    ["採点した回", `${D.n_rated}`, "件", `全${D.entries.length}件中。280・281話は空欄`],
+    ["平均", f2(D.base.mean), "点", "★は5点として計算"],
+    ["★（特に良い）", `${nStar}`, "回", `全体の${pct(D.base.star)}`],
+    ["3点以下", `${nLe3}`, "回", `うち${D.le3.dream}回が夢回`],
+  ];
+  $("#tiles").append(...tiles.map(([k, v, u, sub]) => h("div", { class: "tile" }, h("div", { class: "k" }, k), h("div", { class: "v" }, v, h("small", {}, u)), h("div", { class: "s" }, sub))));
+  segbar($("#distbar"), RKEYS.map((k) => [k, D.dist[DKEY[k]]]), "count");
+  $("#distbar").setAttribute("aria-label", "評価の分布：" + RKEYS.map((k) => `${RNAME[k]}が${D.dist[DKEY[k]]}回`).join("、"));
+  legend($("#distlegend"), true);
+})();
+
+function legend(host, withNames) {
+  const names = { s: "★（特に良い）", 5: "5", 4: "4（刺さるものがない）", 3: "3", 2: "2", 1: "1" };
+  host.replaceChildren(...RKEYS.map((k) => h("span", {}, h("span", { class: `sw c-${k}` }), withNames ? names[k] : RNAME[k])));
+}
+
+function segbar(host, parts, mode) {
+  const total = parts.reduce((a, [, v]) => a + v, 0);
+  host.replaceChildren();
+  for (const [k, v] of parts) {
+    if (!v) continue;
+    const share = v / total;
+    const label = mode === "count" ? String(v) : pct(share);
+    const seg = h("div", { class: `seg c-${k}`, style: `flex:${v} 1 0`, tabindex: "0", "aria-label": `${RNAME[k]}：${v}回（${pct(share)}）` }, h("span", {}, label));
+    bindTip(seg, () => `<b>評価 ${RNAME[k]}</b><br>${v}回（${pct(share)}）`);
+    host.append(seg);
+  }
+  requestAnimationFrame(() => fitSegLabels(host));
+}
+function fitSegLabels(host) {
+  host.querySelectorAll(".seg").forEach((seg) => {
+    const sp = seg.querySelector("span"); sp.hidden = false;
+    if (sp.offsetWidth + 10 > seg.clientWidth) sp.hidden = true;
+  });
+}
+window.addEventListener("resize", () => document.querySelectorAll(".segbar").forEach(fitSegLabels));
+
+// ---------- ひとことで言うと ----------
+(function digest() {
+  const T = Object.fromEntries(D.tests.map((t) => [t.feature, t]));
+  const C = Object.fromEntries(D.ols.coef.map((c) => [c.term, c]));
+  const hb = D.by_series[3], ka = D.by_series[0];
+  const maji = D.style.find((r) => r.style.startsWith("「マジ"));
+  const items = [
+    `<b>夢回の減点は、自己申告の−1点より重い実測${sign(C["夢回・劇中劇"].beta, 1)}点。</b>3点以下の${D.le3.total}回のうち${D.le3.dream}回が夢回でした。`,
+    `<b>「全員出てると甘くなりがち」は外れ。</b>全員そろった回の平均は${f2(T["ハムちゃんず全員"].mean_with)}点で、それ以外（${f2(T["ハムちゃんず全員"].mean_without)}点）よりわずかに低い。嬉しいけれどテンプレ展開になりやすく、4点止まりになっています。`,
+    `<b>申告にない減点要素は、じゃじゃハム（${sign(C["じゃじゃハム"].beta, 1)}点）。</b>加点側は「死にかける回」で、★率${pct(T["死にかける回"].star_with)}（全体${pct(D.base.star)}）。23話の「やっぱり死にかける回は面白い」はデータでも裏付けられます。`,
+    `<b>「面白い時に限って作画がゴミ」は外れ。</b>122話以降の★率は、作画を褒めた回${pct(D.sakuga.good.star)}、けなした回${pct(D.sakuga.bad.star)}、作画に触れなかった回${pct(D.sakuga.none.star)}。作画を語っている時点で、のめり込んでいます。`,
+    `<b>ハムハーの木編で、★率は${pct(hb.star_rate)}に落ちました（1期前半は${pct(ka.star_rate)}）。</b>メモは1話${hb.chars_per_entry}字まで縮み、「マジ・ガチ」は1期前半の${(maji[D.series[3].name] / maji[D.series[0].name]).toFixed(1)}倍に増えています。`,
+  ];
+  $("#digest").append(...items.map((t) => h("li", { html: `<span>${t}</span>` })));
+})();
+
+// ---------- マス目 ----------
+const cells = []; // {el, e}
+let selected = null;
+(function grid() {
+  const g = $("#grid");
+  const epMap = new Map();
+  D.entries.forEach((e) => { if (e.k === "tv") for (let n = e.ep; n <= e.ee; n++) epMap.set(n, e); });
+  for (let row = 0; row < 15; row++) {
+    const lo = row * 20 + 1, hi = Math.min(lo + 19, 296);
+    g.append(h("div", { class: "rowlab" }, `${lo}–${hi}`));
+    for (let n = lo; n < lo + 20; n++) {
+      if (n > 296) { g.append(h("div", { class: "cell empty", "aria-hidden": "true" })); continue; }
+      const e = epMap.get(n);
+      const b = h("button", { class: `cell c-${rk(e)}` + ([81, 194, 245].includes(n) ? " sstart" : ""), "aria-label": `${n}話、評価${RNAME[rk(e)]}` });
+      b.addEventListener("click", () => select(e));
+      bindTip(b, () => `<b>${n}話</b>　評価 ${RNAME[rk(e)]}<br>${esc(e.m.slice(0, 70))}${e.m.length > 70 ? "…" : ""}`);
+      cells.push({ el: b, e });
+      g.append(b);
+    }
+  }
+  const sp = $("#specials");
+  D.entries.filter((e) => e.k !== "tv").forEach((e) => {
+    const b = h("button", { class: `sp c-${rk(e)}`, "aria-label": `${e.l}、評価${RNAME[rk(e)]}` }, e.l);
+    b.addEventListener("click", () => select(e));
+    bindTip(b, () => `<b>${e.l}</b>　評価 ${RNAME[rk(e)]}<br>${esc(e.m.slice(0, 70))}…`);
+    cells.push({ el: b, e });
+    sp.append(b);
+  });
+  const lg = $("#gridlegend");
+  legend(lg, false);
+  lg.append(h("span", {}, h("span", { class: "sw c-na" }), "空欄"), h("span", {}, h("span", { class: "sw ring" }), "左の太線＝81・194・245話（シリーズの始まり）"));
+
+  const FILTERS = [
+    ["all", "すべて", null],
+    ["star", "★だけ", (e) => e.st],
+    ["dream", "夢回・劇中劇", (e) => e.f.includes("dream")],
+    ["danger", "死にかける回", (e) => e.f.includes("danger")],
+    ["sg", "作画◎◯", (e) => e.f.includes("sg")],
+    ["sb", "作画ダメ", (e) => e.f.includes("sb")],
+    ["jaja", "じゃじゃハム", (e) => e.f.includes("jaja")],
+    ["watch", "出番監視", (e) => e.f.includes("watch")],
+  ];
+  const chips = $("#chips");
+  const chipEls = FILTERS.map(([id, label, fn]) => {
+    const c = h("button", { class: "chip", "aria-pressed": id === "all" ? "true" : "false" }, label);
+    c.addEventListener("click", () => { $("#q").value = ""; chipEls.forEach((x) => x.setAttribute("aria-pressed", "false")); c.setAttribute("aria-pressed", "true"); applyFilter(fn, label); });
+    chips.append(c);
+    return c;
+  });
+  $("#q").addEventListener("input", (ev) => {
+    const q = ev.target.value.trim();
+    chipEls.forEach((x, i) => x.setAttribute("aria-pressed", String(!q && i === 0)));
+    if (!q) return applyFilter(null, "すべて");
+    const ql = q.toLowerCase();
+    applyFilter((e) => e.m.toLowerCase().includes(ql), `「${q}」を含む回`);
+  });
+  applyFilter(null, "すべて");
+  select(D.entries.find((e) => e.l === "78"), false);
+})();
+
+function applyFilter(fn, label) {
+  const filtering = !!fn;
+  $("#grid").classList.toggle("filtering", filtering);
+  $("#specials").classList.toggle("filtering", filtering);
+  const seen = new Set(), hits = [];
+  for (const c of cells) {
+    const hit = filtering && fn(c.e);
+    c.el.classList.toggle("hit", hit);
+    if (hit && !seen.has(c.e.o)) { seen.add(c.e.o); hits.push(c.e); }
+  }
+  const pool = filtering ? hits : D.entries;
+  const r = pool.filter((e) => e.r != null);
+  const line = $("#hitline");
+  if (!r.length) { line.innerHTML = `${esc(label)}：<b>0件</b>`; return; }
+  const mean = avg(r.map((e) => e.r)), star = avg(r.map((e) => (e.st ? 1 : 0)));
+  line.innerHTML = `${esc(label)}：<b>${pool.length}件</b>　平均 <b>${f2(mean)}</b>点　★率 <b>${pct(star)}</b>` +
+    (filtering ? `<span class="note">（全体は平均${f2(D.base.mean)}・★率${pct(D.base.star)}）</span>` : "");
+}
+
+function select(e, focus = true) {
+  selected = e;
+  cells.forEach((c) => c.el.classList.toggle("sel", c.e === e));
+  const TAG = { dream: "夢回・劇中劇", danger: "死にかける回", sg: "作画◎◯", sb: "作画ダメ", jaja: "じゃじゃハム", watch: "出番監視" };
+  const ser = D.series[e.s];
+  const k = rk(e);
+  const box = $("#detail");
+  const prev = h("button", { class: "btn" }, "← 前の回"), next = h("button", { class: "btn" }, "次の回 →");
+  prev.addEventListener("click", () => step(-1)); next.addEventListener("click", () => step(1));
+  box.replaceChildren(
+    h("div", { class: "detail-head" },
+      h("span", { class: "ttl" }, epName(e)),
+      h("span", { class: `rchip c-${k}` }, `［${e.r ?? " "}］${e.st ? "★" : ""}`),
+    ),
+    h("div", { class: "note" }, `${ser.short}（${ser.range}）・メモ・${e.v}・${e.c}字`),
+    e.f.length ? h("div", { class: "tags" }, e.f.map((f) => h("span", { class: "tag" }, TAG[f]))) : null,
+    h("pre", { class: "memo" }, e.m || "（メモなし）"),
+    h("div", { class: "nav" }, prev, next),
+  );
+}
+function step(d) {
+  const i = Math.max(0, Math.min(D.entries.length - 1, selected.o + d));
+  select(D.entries[i]);
+}
+
+// ---------- 推移 ----------
+function rolling(arr, w, f) {
+  return arr.map((_, i) => { const a = arr.slice(Math.max(0, i - w), i + w + 1); return f(a); });
+}
+const bands = [0, 1, 2, 3].map((si) => {
+  const os = D.entries.filter((e) => e.s === si).map((e) => e.o);
+  return { si, a: Math.min(...os), b: Math.max(...os) };
+});
+const BAND_SHORT = ["1期前半", "1期後半", "すいぱら", "ハムハー"];
+function lineChart(host, pts, opt) {
+  const W = host.clientWidth, H = opt.h || 160;
+  const m = { t: opt.bandLabels ? 24 : 10, r: 14, b: 24, l: 40 };
+  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const xMax = D.entries.length - 1;
+  const X = (o) => m.l + (o / xMax) * pw, Y = (v) => m.t + ph - (v / opt.yMax) * ph;
+  const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.aria });
+  bands.forEach((b, i) => {
+    if (i % 2 === 1) svg.append(s("rect", { x: X(b.a - 0.5), y: m.t, width: X(b.b + 0.5) - X(b.a - 0.5), height: ph, style: "fill:var(--rule)" }));
+    if (opt.bandLabels) svg.append(s("text", { x: X(b.a) + 4, y: m.t - 8, class: "axis-text" }, BAND_SHORT[i]));
+  });
+  opt.yTicks.forEach((t) => {
+    svg.append(s("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), style: "stroke:var(--rule-2); stroke-width:1" + (t === 0 ? "" : "; opacity:.6") }));
+    svg.append(s("text", { x: m.l - 6, y: Y(t) + 3.5, "text-anchor": "end", class: "axis-text" }, opt.fmt(t)));
+  });
+  const xt = [1, 81, 194, 245, 296].map((n) => D.entries.find((e) => e.k === "tv" && e.ep <= n && n <= e.ee));
+  const narrow = W < 520;
+  xt.forEach((e, i) => svg.append(s("text", { x: X(e.o), y: H - 6, "text-anchor": i === 0 ? "start" : i === 4 ? "end" : "middle", class: "axis-text" }, i === 0 ? "1話" : narrow ? String([1, 81, 194, 245, 296][i]) : `${[1, 81, 194, 245, 296][i]}話`)));
+  const d = pts.map((p, i) => `${i ? "L" : "M"}${X(p.o).toFixed(1)},${Y(p.v).toFixed(1)}`).join("");
+  svg.append(s("path", { d: `${d}L${X(pts.at(-1).o)},${Y(0)}L${X(pts[0].o)},${Y(0)}Z`, style: `fill:${opt.color}; opacity:.1` }));
+  svg.append(s("path", { d, style: `fill:none; stroke:${opt.color}; stroke-width:2; stroke-linejoin:round; stroke-linecap:round` }));
+  (opt.annots || []).forEach(({ o, text, anchor }, i) => {
+    const p = pts.reduce((a, b) => (Math.abs(b.o - o) < Math.abs(a.o - o) ? b : a));
+    const ty = m.t + 11 + i * 15;
+    svg.append(s("line", { x1: X(o), x2: X(o), y1: ty - 9, y2: Y(p.v) - 6, style: "stroke:var(--ink-3); stroke-width:1" }));
+    svg.append(s("text", { x: X(o) + (anchor === "end" ? -4 : 4), y: ty, "text-anchor": anchor || "start", class: "lbl-sub" }, text));
+  });
+  // 端点ラベル
+  const last = pts.at(-1);
+  svg.append(s("circle", { cx: X(last.o), cy: Y(last.v), r: 4, style: `fill:${opt.color}; stroke:var(--sheet); stroke-width:2` }));
+  // hover
+  const guide = s("line", { y1: m.t, y2: m.t + ph, style: "stroke:var(--ink-3); stroke-width:1", visibility: "hidden" });
+  const dot = s("circle", { r: 4.5, style: `fill:${opt.color}; stroke:var(--sheet); stroke-width:2`, visibility: "hidden" });
+  const hit = s("rect", { x: m.l, y: m.t, width: pw, height: ph, style: "fill:transparent; cursor:crosshair" });
+  svg.append(guide, dot, hit);
+  const move = (ev) => {
+    const r = svg.getBoundingClientRect();
+    const o = ((ev.clientX - r.left - m.l) / pw) * xMax;
+    const p = pts.reduce((a, b) => (Math.abs(b.o - o) < Math.abs(a.o - o) ? b : a));
+    guide.setAttribute("x1", X(p.o)); guide.setAttribute("x2", X(p.o)); guide.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", X(p.o)); dot.setAttribute("cy", Y(p.v)); dot.setAttribute("visibility", "visible");
+    showTip(`<b>${epName(D.entries[p.o])}付近</b><br>${opt.name} ${opt.fmt(p.v)}`, ev.clientX, ev.clientY);
+  };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { guide.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); hideTip(); });
+  host.replaceChildren(svg);
+}
+(function trends() {
+  const starPts = (() => {
+    const r = rated, vals = r.map((e) => (e.st ? 1 : 0));
+    const roll = rolling(vals, 7, avg);
+    return r.map((e, i) => ({ o: e.o, v: roll[i] }));
+  })();
+  const charPts = (() => {
+    const roll = rolling(D.entries.map((e) => e.c), 7, avg);
+    return D.entries.map((e, i) => ({ o: e.o, v: roll[i] }));
+  })();
+  const o98 = D.entries.find((e) => e.l === "98").o, o267 = D.entries.find((e) => e.l === "267").o;
+  onResize(() => lineChart($("#ch-star"), starPts, { yMax: 0.8, yTicks: [0, 0.2, 0.4, 0.6, 0.8], fmt: (v) => pct(v), color: "var(--rs)", bandLabels: true, name: "★率", aria: "★率の推移。1期前半が最も高く、ハムハーの木編で最も低い" }));
+  onResize(() => lineChart($("#ch-chars"), charPts, {
+    yMax: 400, yTicks: [0, 100, 200, 300, 400], fmt: (v) => `${Math.round(v)}字`, color: "var(--r2)", name: "メモ", aria: "メモの文字数の推移",
+    annots: [{ o: o98, text: isNarrow() ? "98話〜控えめに" : "98話「書くのは控えた」" }, { o: o267, text: isNarrow() ? "267話〜まとめ書き" : "267話〜「飽きてて草」", anchor: "end" }],
+  }));
+})();
+
+// ---------- シリーズ別 ----------
+(function comp() {
+  legend($("#complegend"), true);
+  const host = $("#comp");
+  D.by_series.forEach((b, i) => {
+    const ser = D.series[i];
+    const bar = h("div", { class: "segbar", role: "img", "aria-label": `${ser.short}の評価内訳` });
+    host.append(h("div", { class: "comp-row" },
+      h("div", { class: "nm" }, ser.short, h("small", {}, `${ser.range}・${b.n}件`)),
+      bar,
+      h("div", { class: "sm", html: `<span>★率 <b>${pct(b.star_rate)}</b></span> <span>平均 <b>${f2(b.mean_raw)}</b></span> <span>1件 <b>${b.chars_per_entry}</b>字</span>` }),
+    ));
+    segbar(bar, RKEYS.map((k) => [k, b.dist[DKEY[k]]]), "pct");
+  });
+  const t = $("#comptbl");
+  t.append(h("tr", {}, h("th", {}, "シリーズ"), ...RKEYS.map((k) => h("th", {}, RNAME[k])), h("th", {}, "平均"), h("th", {}, "★率"), h("th", {}, "3点以下"), h("th", {}, "字/件")));
+  D.by_series.forEach((b, i) => t.append(h("tr", {}, h("td", {}, D.series[i].short), ...RKEYS.map((k) => h("td", {}, b.dist[DKEY[k]])), h("td", {}, f2(b.mean_raw)), h("td", {}, pct(b.star_rate)), h("td", {}, pct(b.le3_rate)), h("td", {}, b.chars_per_entry))));
+})();
+
+// ---------- 答え合わせ ----------
+const CLAIM = {
+  "夢回・劇中劇": { r: [-1, -1], txt: "申告 −1", v: ["hit", "当たり。実際はもっと重い"] },
+  "作画が良い": { r: [0.5, 0.5], txt: "申告 ＋0.5", v: ["meh", "平均にはほぼ出ない。★率は少し上がる"] },
+  "「かわいい」と書いた": { r: [1, 1], txt: "申告 ＋1（かわいいキャラがメイン）", v: ["meh", "測れず。「かわいい」が口癖すぎる"] },
+  "「かわいくない」と書いた": { r: [-1, 0], txt: "申告 ±0〜−1", v: ["hit", "当たり"] },
+  "目新しさ(初めて/珍しい/新鮮)": { r: [1, 2], txt: "申告 ＋1〜2", v: ["meh", "検出できず"] },
+  "ハムちゃんず全員": { r: null, txt: "申告「甘くなりがち」（数値なし）", v: ["miss", "外れ。点は上がらない"] },
+  "死にかける回": { r: null, txt: "申告なし", v: ["hidden", "隠れ加点"] },
+  "じゃじゃハム": { r: null, txt: "申告なし", v: ["hidden", "隠れ減点"] },
+};
+const VICON = { hit: "✓", miss: "✕", meh: "?", hidden: "!" };
+const XD = [-2.2, 2.2];
+(function answer() {
+  const icpt = D.ols.coef[0];
+  $("#ols-title").textContent = `実測の採点式（重回帰・R²=${D.ols.r2.toFixed(2)}）`;
+  const dl = $("#ols-dl");
+  dl.append(h("dt", { class: "base" }, "基礎点"), h("dd", { class: "base" }, icpt.beta.toFixed(2)));
+  [...D.ols.coef.slice(1)].sort((a, b) => Math.abs(b.beta) - Math.abs(a.beta)).forEach((c) => dl.append(h("dt", {}, c.term), h("dd", {}, sign(c.beta))));
+
+  const rows = D.ols.coef.slice(1);
+  const host = $("#coef");
+  const strips = [];
+  rows.forEach((c) => {
+    const cl = CLAIM[c.term];
+    const strip = h("div", { class: "chart" });
+    host.append(h("div", { class: "coef-row" },
+      h("div", { class: "nm" }, c.term, h("small", {}, cl.txt)),
+      strip,
+      h("div", {}, h("span", { class: `verdict v-${cl.v[0]}` }, h("i", { "aria-hidden": "true" }, VICON[cl.v[0]]), cl.v[1])),
+    ));
+    strips.push([strip, c, cl]);
+  });
+  const draw = () => {
+    strips.forEach(([host, c, cl]) => {
+      const W = host.clientWidth, H = 38, pad = 14;
+      const X = (v) => pad + ((v - XD[0]) / (XD[1] - XD[0])) * (W - 2 * pad);
+      const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `${c.term}：実測${sign(c.beta)}点、95%区間${sign(c.beta - 1.96 * c.se)}〜${sign(c.beta + 1.96 * c.se)}。${cl.txt}` });
+      [-2, -1, 1, 2].forEach((t) => svg.append(s("line", { x1: X(t), x2: X(t), y1: 2, y2: H - 2, style: "stroke:var(--rule); stroke-width:1" })));
+      svg.append(s("line", { x1: X(0), x2: X(0), y1: 0, y2: H, style: "stroke:var(--ink-3); stroke-width:1" }));
+      const cy = H / 2 + 3;
+      if (cl.r) {
+        if (cl.r[0] === cl.r[1]) {
+          const x = X(cl.r[0]);
+          svg.append(s("path", { d: `M${x},${cy - 7}L${x + 7},${cy}L${x},${cy + 7}L${x - 7},${cy}Z`, style: "fill:var(--sun); stroke:var(--ink); stroke-width:1.5" }));
+        } else {
+          svg.append(s("rect", { x: X(cl.r[0]), y: cy - 6, width: X(cl.r[1]) - X(cl.r[0]), height: 12, rx: 4, style: "fill:var(--sun); stroke:var(--ink); stroke-width:1.5; opacity:.85" }));
+        }
+      }
+      const lo = Math.max(XD[0], c.beta - 1.96 * c.se), hi = Math.min(XD[1], c.beta + 1.96 * c.se);
+      svg.append(s("line", { x1: X(lo), x2: X(hi), y1: cy, y2: cy, style: "stroke:var(--ink); stroke-width:2; stroke-linecap:round" }));
+      const dot = s("circle", { cx: X(c.beta), cy, r: 5, style: "fill:var(--ink); stroke:var(--sheet); stroke-width:2", tabindex: "0" });
+      svg.append(dot);
+      // 申告マーカーがあるときは、その反対側（左）にラベルを置いて重ならないようにする
+      const leftEdge = cl.r ? Math.min(X(lo), X(cl.r[0]) - (cl.r[0] === cl.r[1] ? 8 : 0)) : null;
+      const LW = 36; // ラベル幅の見積もり
+      const pos = !cl.r ? { x: X(hi) + 7, y: cy + 4, "text-anchor": "start" }
+        : leftEdge - 6 - LW >= 0 ? { x: leftEdge - 6, y: cy + 4, "text-anchor": "end" }
+        : { x: X(c.beta), y: cy - 9, "text-anchor": "middle" };
+      svg.append(s("text", { ...pos, class: "lbl-text" }, sign(c.beta)));
+      bindTip(dot, () => `<b>${c.term}</b><br>実測 ${sign(c.beta)}点（95%区間 ${sign(c.beta - 1.96 * c.se)}〜${sign(c.beta + 1.96 * c.se)}）<br>${cl.txt}`);
+      host.replaceChildren(svg);
+    });
+    const ax = $("#coef-axis"), W = ax.clientWidth, pad = 14;
+    const X = (v) => pad + ((v - XD[0]) / (XD[1] - XD[0])) * (W - 2 * pad);
+    const svg = s("svg", { width: W, height: 30, viewBox: `0 0 ${W} 30` });
+    [-2, -1, 0, 1, 2].forEach((t) => svg.append(s("text", { x: X(t), y: 12, "text-anchor": "middle", class: "axis-text" }, t === 0 ? "0" : sign(t, 0))));
+    svg.append(s("text", { x: W / 2, y: 27, "text-anchor": "middle", class: "axis-text" }, "評価への影響（点）"));
+    ax.replaceChildren(svg);
+  };
+  onResize(draw);
+
+  const t = $("#testtbl");
+  t.append(h("tr", {}, ...["要素", "該当", "平均（あり）", "平均（なし）", "差", "p", "★率（あり）", "★率（なし）", "p"].map((x) => h("th", {}, x))));
+  const p = (v) => (v < 0.001 ? "<0.001" : v.toFixed(3));
+  D.tests.forEach((r) => t.append(h("tr", {}, h("td", {}, r.feature), h("td", {}, `${r.n}回`), h("td", {}, f2(r.mean_with)), h("td", {}, f2(r.mean_without)), h("td", {}, sign(r.diff)), h("td", {}, p(r.p)), h("td", {}, pct(r.star_with)), h("td", {}, pct(r.star_without)), h("td", {}, p(r.star_p)))));
+  const five = (D.dist["★"] + D.dist["5"]) / D.n_rated;
+  $("#ceiling").textContent = `注意：採点の${pct(five)}が5点（★含む）なので、加点要素は平均点に出にくい天井効果があります。「作画が良い」の＋0.5が平均で＋0.1しか出ないのはこのためで、★率では${pct(D.tests[1].star_with)}対${pct(D.tests[1].star_without)}と差が見えます（p=${D.tests[1].star_p.toFixed(2)}）。「かわいい」は全体の約2割の回に出てくるため、「かわいいキャラがメイン」かどうかはこの方法では区別できません。`;
+})();
+
+// ---------- 横棒（単一系列） ----------
+function hbars(host, rows, opt) {
+  const W = host.clientWidth, rowH = 34, labW = Math.min(isNarrow() ? 120 : 180, W * 0.42), H = rows.length * rowH + 6;
+  const X = (v) => labW + (v / opt.max) * (W - labW - 52);
+  const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.aria });
+  rows.forEach((r, i) => {
+    const y = i * rowH + 4;
+    svg.append(s("text", { x: 0, y: y + 13, class: "lbl-text" }, r.label));
+    svg.append(s("text", { x: 0, y: y + 27, class: "lbl-sub" }, r.sub));
+    const w = Math.max(2, X(r.v) - labW), bh = 16, by = y + 6;
+    const path = `M${labW},${by}h${w - 4}a4,4 0 0 1 4,4v${bh - 8}a4,4 0 0 1 -4,4h${-(w - 4)}Z`;
+    const bar = s("path", { d: path, style: `fill:${r.color || "var(--rs)"}`, tabindex: "0" });
+    svg.append(bar);
+    svg.append(s("text", { x: X(r.v) + 6, y: by + 12, class: "lbl-text" }, opt.fmt(r.v)));
+    bindTip(bar, () => `<b>${r.label}</b><br>${opt.fmt(r.v)}（${r.sub}）`);
+  });
+  host.replaceChildren(svg);
+}
+function verdict(host, kind, text) {
+  host.replaceChildren(h("span", { class: `verdict v-${kind}` }, h("i", { "aria-hidden": "true" }, VICON[kind]), text));
+}
+(function jinx() {
+  const S = D.sakuga;
+  onResize(() => hbars($("#ch-sakuga"), [
+    { label: "作画を褒めた回", sub: `${S.good.n}回`, v: S.good.star },
+    { label: "作画をけなした回", sub: `${S.bad.n}回`, v: S.bad.star },
+    { label: "作画に触れなかった回", sub: `${S.none.n}回`, v: S.none.star },
+  ], { max: 0.7, fmt: pct, aria: "122話以降の★率：作画を褒めた回、けなした回、触れなかった回" }));
+  verdict($("#v-sakuga"), "miss", "外れ。作画が悪い回のほうが★は少ない");
+  const dGood = S.dream_late_good / S.dream_late_n;
+  onResize(() => hbars($("#ch-dreamsak"), [
+    { label: "夢回", sub: `${S.dream_late_n}回中${S.dream_late_good}回`, v: dGood, color: "var(--r2)" },
+    { label: "夢回以外", sub: "122話以降", v: S.nondream_late_good_rate, color: "var(--r2)" },
+  ], { max: 0.7, fmt: pct, aria: "作画◎◯と書かれた割合：夢回と夢回以外" }));
+  verdict($("#v-dreamsak"), "hit", `ちょっと当たり。夢回で作画ダメと書かれた回は0（他は${pct(S.nondream_late_bad_rate)}）。ただし8回だけの話`);
+  const C = D.contrast;
+  onResize(() => hbars($("#ch-contrast"), [
+    { label: "直前3回が全部★", sub: `${C.after_star3.n}回`, v: C.after_star3.star_next },
+    { label: "全体", sub: `${D.n_rated}回`, v: C.overall_star, color: "var(--r4)" },
+    { label: "直前3回の平均が4.5以下", sub: `${C.after_low3.n}回`, v: C.after_low3.star_next },
+  ], { max: 0.7, fmt: pct, aria: "次の回が★になった割合" }));
+  verdict($("#v-contrast"), "miss", `落差より「波」。★は続けて出やすく、低調な流れのあとは出にくい（ただし評価の自己相関は+${D.acf.acf1.toFixed(2)}、p=${D.acf.p_two_sided.toFixed(2)}と弱め）`);
+})();
+
+// ---------- キャラ ----------
+(function chars() {
+  const rows = [...D.chars].sort((a, b) => b.star_with - a.star_with);
+  const base = D.base.star;
+  const draw = () => {
+    const host = $("#ch-chars-star"), W = host.clientWidth, rowH = 26, labW = isNarrow() ? 118 : 170, H = rows.length * rowH + 30;
+    const max = 0.7, X = (v) => labW + (v / max) * (W - labW - 44);
+    const svg = s("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "キャラ別、言及された回の★率" });
+    [0, 0.2, 0.4, 0.6].forEach((t) => {
+      svg.append(s("line", { x1: X(t), x2: X(t), y1: 0, y2: H - 22, style: "stroke:var(--rule); stroke-width:1" }));
+      svg.append(s("text", { x: X(t), y: H - 6, "text-anchor": "middle", class: "axis-text" }, pct(t)));
+    });
+    svg.append(s("line", { x1: X(base), x2: X(base), y1: 0, y2: H - 22, style: "stroke:var(--ink-3); stroke-width:1.5" }));
+    svg.append(s("text", { x: X(base) + 4, y: H - 24, class: "axis-text" }, `全体 ${pct(base)}`));
+    rows.forEach((c, i) => {
+      const cy = i * rowH + 13;
+      svg.append(s("text", { x: 0, y: cy + 4, class: "lbl-sub" }, `${c.name}（${c.episodes}回）`));
+      svg.append(s("line", { x1: X(base), x2: X(c.star_with), y1: cy, y2: cy, style: "stroke:var(--rule-2); stroke-width:2" }));
+      const up = c.star_with >= base;
+      const dot = s("circle", { cx: X(c.star_with), cy, r: 5, style: `fill:${up ? "var(--rs)" : "var(--r2)"}; stroke:var(--sheet); stroke-width:2`, tabindex: "0" });
+      svg.append(dot);
+      const lx = up ? X(c.star_with) + 9 : X(c.star_with) - 9;
+      svg.append(s("text", { x: lx, y: cy + 4, "text-anchor": up ? "start" : "end", class: "lbl-text" }, pct(c.star_with)));
+      bindTip(dot, () => `<b>${c.name}</b><br>言及${c.episodes}回・平均${f2(c.mean_with)}点・★率${pct(c.star_with)}<br>初出：${c.first_seen}`);
+    });
+    host.replaceChildren(svg);
+  };
+  onResize(draw);
+
+  const t = $("#heat");
+  const ser = D.series.slice(0, 4);
+  t.append(h("tr", {}, h("th", {}, ""), ...ser.map((x) => h("th", { style: "text-align:center" }, x.short))));
+  const max = Math.max(...D.heat.flatMap((c) => ser.map((x) => c.share_by_series[x.name])));
+  D.heat.forEach((c) => {
+    t.append(h("tr", {}, h("td", {}, c.name), ...ser.map((x) => {
+      const v = c.share_by_series[x.name], m = Math.round((v / max) * 100);
+      const td = h("td", { class: "h", style: `background:color-mix(in oklab, var(--seq1) ${m}%, var(--seq0)); color:${m > 55 ? "var(--on-seq)" : "var(--ink)"}` }, `${Math.round(v * 100)}%`);
+      return td;
+    })));
+  });
+
+  const W = D.watch;
+  $("#watch").append(...Object.entries(W).map(([k, v]) => h("div", { class: "tile" }, h("div", { class: "k" }, k), h("div", { class: "v" }, String(v), h("small", {}, "回")))));
+})();
+
+// ---------- 文体 ----------
+(function style() {
+  const t = $("#style"), ser = D.series.slice(0, 4);
+  t.append(h("tr", {}, h("th", {}, "1000字あたり"), ...ser.map((x) => h("th", {}, x.short))));
+  const NAMES = { "笑い(w/草)": "笑い（w・草）", "関西弁(やん/やろ/やな/ほんま/ええ/あかん/なんや)": "関西弁（やん・やろ・ほんま…）", "ツッコミ(だろ/かよ/なんだよ/やめろ)": "ツッコミ（だろ・かよ・やめろ…）" };
+  D.style.forEach((r) => {
+    const vals = ser.map((x) => r[x.name]), mx = Math.max(...vals);
+    t.append(h("tr", { class: r.style.startsWith("「マジ") ? "hl" : null }, h("td", {}, NAMES[r.style] || r.style.replace(/「(.+)」/, "「$1」")),
+      ...vals.map((v) => h("td", {}, v.toFixed(2), h("span", { class: "bar", style: `width:${Math.round((v / mx) * 34)}px` })))));
+  });
+})();
+
+// ---------- 名言と記録 ----------
+(function quotes() {
+  const host = $("#quotes");
+  D.quotes.forEach((q) => {
+    const e = D.entries.find((x) => x.l === q.l);
+    const k = rk(e);
+    const btn = h("button", { class: "src" }, epName(e) + "のメモを開く");
+    btn.addEventListener("click", () => { select(e); document.getElementById("grid-sec").scrollIntoView({ behavior: "smooth", block: "start" }); });
+    host.append(h("figure", { class: "quote", style: "margin:0" }, h("q", {}, q.t), h("figcaption", { class: "src" }, h("span", { class: `rchip c-${k}` }, `［${e.r}］${e.st ? "★" : ""}`), btn)));
+  });
+
+  // streaks computed here so labels stay exact
+  function streak(pred) {
+    let best = [0, 0, 0], cur = 0, start = 0;
+    rated.forEach((e, i) => { if (pred(e)) { if (!cur) start = i; cur++; if (cur > best[0]) best = [cur, start, i]; } else cur = 0; });
+    return { n: best[0], a: epName(rated[best[1]]), b: epName(rated[best[2]]) };
+  }
+  const sS = streak((e) => e.st), s5 = streak((e) => e.r === 5), s4 = streak((e) => e.r <= 4);
+  const L = D.longest, SH = D.shortest, cb = D.chars_by_rating;
+  const longestTv = L.find((x) => /^\d+$/.test(x.label));
+  const recs = [
+    ["いちばん短いメモ", `${SH[0].label}話「${SH[0].memo}」（${SH[0].chars}字）。次点は${SH[1].label}話「${SH[1].memo}」`],
+    ["いちばん長いメモ", `${L[0].label}（${L[0].chars.toLocaleString()}字）。TV回では${longestTv.label}話（${longestTv.chars}字・${longestTv.rating}点）で、大半が「ばてれん」の語源と砂漠の考察です`],
+    ["★の最長連続", `${sS.n}回（${sS.a}〜${sS.b}）`],
+    ["5点以上の最長連続", `${s5.n}回（${s5.a}〜${s5.b}）`],
+    ["4点以下の最長連続", `${s4.n}回（${s4.a}〜${s4.b}）。ハムハーの木編の入口です`],
+    ["評価が空欄", "280話・281話。280話のメモは「作画がゴミな作画監督回だ！」から始まります"],
+    ["メモの長さと評価", `相関はほぼ0。★の回は平均${cb["★"]}字、5点は${cb["5"]}字、4点は${cb["4"]}字、3点は${cb["3"]}字で、面白くても長く書くわけではありません`],
+  ];
+  $("#records").append(...recs.map(([k, v]) => h("li", {}, h("span", {}, k), h("span", {}, v))));
+  $("#w-star").append(...D.words_star.map((w) => h("span", { class: "word", title: `★の回${w.star_eps}・4点以下${w.le4_eps}` }, w.w)));
+  $("#w-low").append(...D.words_low.map((w) => h("span", { class: "word", title: `★の回${w.star_eps}・4点以下${w.le4_eps}` }, w.w)));
+})();
+</script>

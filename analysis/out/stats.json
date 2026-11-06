@@ -1,0 +1,4845 @@
+{
+ "dist": {
+  "★": 91,
+  "5": 114,
+  "4": 66,
+  "3": 15,
+  "2": 2,
+  "1": 1
+ },
+ "n_entries": 291,
+ "n_rated": 289,
+ "by_series": [
+  {
+   "series": "1期前半(1-80)",
+   "n": 67,
+   "mean_raw": 4.567,
+   "star_rate": 0.478,
+   "le3_rate": 0.104,
+   "dist": {
+    "★": 32,
+    "5": 17,
+    "4": 11,
+    "3": 4,
+    "2": 2,
+    "1": 1
+   },
+   "chars_per_entry": 97
+  },
+  {
+   "series": "1期後半(81-193)",
+   "n": 113,
+   "mean_raw": 4.77,
+   "star_rate": 0.336,
+   "le3_rate": 0.027,
+   "dist": {
+    "★": 38,
+    "5": 52,
+    "4": 20,
+    "3": 3,
+    "2": 0,
+    "1": 0
+   },
+   "chars_per_entry": 228
+  },
+  {
+   "series": "2期すいぱら編(194-244)",
+   "n": 51,
+   "mean_raw": 4.647,
+   "star_rate": 0.294,
+   "le3_rate": 0.039,
+   "dist": {
+    "★": 15,
+    "5": 20,
+    "4": 14,
+    "3": 2,
+    "2": 0,
+    "1": 0
+   },
+   "chars_per_entry": 242
+  },
+  {
+   "series": "2期ハムハーの木編(245-296)",
+   "n": 52,
+   "mean_raw": 4.48,
+   "star_rate": 0.1,
+   "le3_rate": 0.08,
+   "dist": {
+    "★": 5,
+    "5": 23,
+    "4": 18,
+    "3": 4,
+    "2": 0,
+    "1": 0
+   },
+   "chars_per_entry": 94
+  },
+  {
+   "series": "劇場版・OVA",
+   "n": 8,
+   "mean_raw": 4.125,
+   "star_rate": 0.125,
+   "le3_rate": 0.25,
+   "dist": {
+    "★": 1,
+    "5": 2,
+    "4": 3,
+    "3": 2,
+    "2": 0,
+    "1": 0
+   },
+   "chars_per_entry": 596
+  }
+ ],
+ "timeline": [
+  {
+   "order": 0,
+   "label": "1〜14",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 121,
+   "laugh": 0
+  },
+  {
+   "order": 1,
+   "label": "15",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 32,
+   "laugh": 0
+  },
+  {
+   "order": 2,
+   "label": "16",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 27,
+   "laugh": 0
+  },
+  {
+   "order": 3,
+   "label": "17",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 99,
+   "laugh": 0
+  },
+  {
+   "order": 4,
+   "label": "18",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 16,
+   "laugh": 0
+  },
+  {
+   "order": 5,
+   "label": "19",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 66,
+   "laugh": 0
+  },
+  {
+   "order": 6,
+   "label": "20",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 45,
+   "laugh": 0
+  },
+  {
+   "order": 7,
+   "label": "21",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 29,
+   "laugh": 0
+  },
+  {
+   "order": 8,
+   "label": "22",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 74,
+   "laugh": 0
+  },
+  {
+   "order": 9,
+   "label": "23",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 46,
+   "laugh": 0
+  },
+  {
+   "order": 10,
+   "label": "24",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 58,
+   "laugh": 0
+  },
+  {
+   "order": 11,
+   "label": "25",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 55,
+   "laugh": 0
+  },
+  {
+   "order": 12,
+   "label": "26",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 1,
+   "star": false,
+   "score": 1.0,
+   "chars": 11,
+   "laugh": 0
+  },
+  {
+   "order": 13,
+   "label": "27",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 28,
+   "laugh": 2
+  },
+  {
+   "order": 14,
+   "label": "28",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 40,
+   "laugh": 0
+  },
+  {
+   "order": 15,
+   "label": "29",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 26,
+   "laugh": 0
+  },
+  {
+   "order": 16,
+   "label": "30",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 66,
+   "laugh": 0
+  },
+  {
+   "order": 17,
+   "label": "31",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 34,
+   "laugh": 0
+  },
+  {
+   "order": 18,
+   "label": "32",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 53,
+   "laugh": 0
+  },
+  {
+   "order": 19,
+   "label": "33",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 38,
+   "laugh": 0
+  },
+  {
+   "order": 20,
+   "label": "34",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 17,
+   "laugh": 0
+  },
+  {
+   "order": 21,
+   "label": "35",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 32,
+   "laugh": 0
+  },
+  {
+   "order": 22,
+   "label": "36",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 35,
+   "laugh": 0
+  },
+  {
+   "order": 23,
+   "label": "37",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 31,
+   "laugh": 0
+  },
+  {
+   "order": 24,
+   "label": "38",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 20,
+   "laugh": 0
+  },
+  {
+   "order": 25,
+   "label": "39",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 65,
+   "laugh": 0
+  },
+  {
+   "order": 26,
+   "label": "40",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 16,
+   "laugh": 1
+  },
+  {
+   "order": 27,
+   "label": "41",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 52,
+   "laugh": 0
+  },
+  {
+   "order": 28,
+   "label": "42",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 2,
+   "star": false,
+   "score": 2.0,
+   "chars": 67,
+   "laugh": 0
+  },
+  {
+   "order": 29,
+   "label": "43",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 55,
+   "laugh": 0
+  },
+  {
+   "order": 30,
+   "label": "44",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 123,
+   "laugh": 0
+  },
+  {
+   "order": 31,
+   "label": "45",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 47,
+   "laugh": 1
+  },
+  {
+   "order": 32,
+   "label": "46",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 64,
+   "laugh": 0
+  },
+  {
+   "order": 33,
+   "label": "47",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 74,
+   "laugh": 0
+  },
+  {
+   "order": 34,
+   "label": "48",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 157,
+   "laugh": 0
+  },
+  {
+   "order": 35,
+   "label": "49",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 159,
+   "laugh": 0
+  },
+  {
+   "order": 36,
+   "label": "50",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 109,
+   "laugh": 0
+  },
+  {
+   "order": 37,
+   "label": "51",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 148,
+   "laugh": 2
+  },
+  {
+   "order": 38,
+   "label": "52",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 124,
+   "laugh": 1
+  },
+  {
+   "order": 39,
+   "label": "53",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 98,
+   "laugh": 0
+  },
+  {
+   "order": 40,
+   "label": "54",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 143,
+   "laugh": 2
+  },
+  {
+   "order": 41,
+   "label": "55",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 77,
+   "laugh": 0
+  },
+  {
+   "order": 42,
+   "label": "56",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 48,
+   "laugh": 0
+  },
+  {
+   "order": 43,
+   "label": "57",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 104,
+   "laugh": 0
+  },
+  {
+   "order": 44,
+   "label": "OVA1",
+   "kind": "ova",
+   "series": "劇場版・OVA",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 337,
+   "laugh": 0
+  },
+  {
+   "order": 45,
+   "label": "58",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 96,
+   "laugh": 1
+  },
+  {
+   "order": 46,
+   "label": "59",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 83,
+   "laugh": 1
+  },
+  {
+   "order": 47,
+   "label": "60",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 42,
+   "laugh": 0
+  },
+  {
+   "order": 48,
+   "label": "61",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 69,
+   "laugh": 0
+  },
+  {
+   "order": 49,
+   "label": "62",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 97,
+   "laugh": 0
+  },
+  {
+   "order": 50,
+   "label": "63",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 72,
+   "laugh": 1
+  },
+  {
+   "order": 51,
+   "label": "64",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 58,
+   "laugh": 1
+  },
+  {
+   "order": 52,
+   "label": "65",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 119,
+   "laugh": 0
+  },
+  {
+   "order": 53,
+   "label": "66",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 79,
+   "laugh": 0
+  },
+  {
+   "order": 54,
+   "label": "67",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 99,
+   "laugh": 0
+  },
+  {
+   "order": 55,
+   "label": "68",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 55,
+   "laugh": 0
+  },
+  {
+   "order": 56,
+   "label": "69",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 98,
+   "laugh": 0
+  },
+  {
+   "order": 57,
+   "label": "70",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 127,
+   "laugh": 0
+  },
+  {
+   "order": 58,
+   "label": "71",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 149,
+   "laugh": 0
+  },
+  {
+   "order": 59,
+   "label": "72",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 262,
+   "laugh": 0
+  },
+  {
+   "order": 60,
+   "label": "73",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 205,
+   "laugh": 1
+  },
+  {
+   "order": 61,
+   "label": "74",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 192,
+   "laugh": 0
+  },
+  {
+   "order": 62,
+   "label": "75",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 95,
+   "laugh": 2
+  },
+  {
+   "order": 63,
+   "label": "76",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 118,
+   "laugh": 1
+  },
+  {
+   "order": 64,
+   "label": "劇場版1",
+   "kind": "movie",
+   "series": "劇場版・OVA",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 604,
+   "laugh": 1
+  },
+  {
+   "order": 65,
+   "label": "77",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 367,
+   "laugh": 0
+  },
+  {
+   "order": 66,
+   "label": "78",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 2,
+   "star": false,
+   "score": 2.0,
+   "chars": 352,
+   "laugh": 0
+  },
+  {
+   "order": 67,
+   "label": "79",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 628,
+   "laugh": 0
+  },
+  {
+   "order": 68,
+   "label": "80",
+   "kind": "tv",
+   "series": "1期前半(1-80)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 226,
+   "laugh": 0
+  },
+  {
+   "order": 69,
+   "label": "81",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 206,
+   "laugh": 0
+  },
+  {
+   "order": 70,
+   "label": "82",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 235,
+   "laugh": 1
+  },
+  {
+   "order": 71,
+   "label": "83",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 275,
+   "laugh": 0
+  },
+  {
+   "order": 72,
+   "label": "84",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 284,
+   "laugh": 0
+  },
+  {
+   "order": 73,
+   "label": "85",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 163,
+   "laugh": 0
+  },
+  {
+   "order": 74,
+   "label": "86",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 260,
+   "laugh": 1
+  },
+  {
+   "order": 75,
+   "label": "87",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 236,
+   "laugh": 1
+  },
+  {
+   "order": 76,
+   "label": "88",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 792,
+   "laugh": 2
+  },
+  {
+   "order": 77,
+   "label": "89",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 100,
+   "laugh": 0
+  },
+  {
+   "order": 78,
+   "label": "90",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 159,
+   "laugh": 1
+  },
+  {
+   "order": 79,
+   "label": "91",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 174,
+   "laugh": 1
+  },
+  {
+   "order": 80,
+   "label": "92",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 311,
+   "laugh": 0
+  },
+  {
+   "order": 81,
+   "label": "93",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 515,
+   "laugh": 3
+  },
+  {
+   "order": 82,
+   "label": "94",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 159,
+   "laugh": 0
+  },
+  {
+   "order": 83,
+   "label": "95",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 352,
+   "laugh": 0
+  },
+  {
+   "order": 84,
+   "label": "96",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 186,
+   "laugh": 0
+  },
+  {
+   "order": 85,
+   "label": "97",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 617,
+   "laugh": 0
+  },
+  {
+   "order": 86,
+   "label": "98",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 48,
+   "laugh": 0
+  },
+  {
+   "order": 87,
+   "label": "99",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 213,
+   "laugh": 0
+  },
+  {
+   "order": 88,
+   "label": "100",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 216,
+   "laugh": 0
+  },
+  {
+   "order": 89,
+   "label": "101",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 194,
+   "laugh": 1
+  },
+  {
+   "order": 90,
+   "label": "102",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 308,
+   "laugh": 1
+  },
+  {
+   "order": 91,
+   "label": "103",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 194,
+   "laugh": 0
+  },
+  {
+   "order": 92,
+   "label": "104",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 198,
+   "laugh": 0
+  },
+  {
+   "order": 93,
+   "label": "105",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 268,
+   "laugh": 0
+  },
+  {
+   "order": 94,
+   "label": "106",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 266,
+   "laugh": 0
+  },
+  {
+   "order": 95,
+   "label": "107",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 223,
+   "laugh": 0
+  },
+  {
+   "order": 96,
+   "label": "108",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 156,
+   "laugh": 0
+  },
+  {
+   "order": 97,
+   "label": "109",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 291,
+   "laugh": 1
+  },
+  {
+   "order": 98,
+   "label": "110",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 337,
+   "laugh": 2
+  },
+  {
+   "order": 99,
+   "label": "111",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 286,
+   "laugh": 1
+  },
+  {
+   "order": 100,
+   "label": "112",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 222,
+   "laugh": 0
+  },
+  {
+   "order": 101,
+   "label": "113",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 175,
+   "laugh": 0
+  },
+  {
+   "order": 102,
+   "label": "114",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 211,
+   "laugh": 0
+  },
+  {
+   "order": 103,
+   "label": "115",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 299,
+   "laugh": 0
+  },
+  {
+   "order": 104,
+   "label": "116",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 225,
+   "laugh": 0
+  },
+  {
+   "order": 105,
+   "label": "117",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 305,
+   "laugh": 1
+  },
+  {
+   "order": 106,
+   "label": "118",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 126,
+   "laugh": 1
+  },
+  {
+   "order": 107,
+   "label": "119",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 93,
+   "laugh": 0
+  },
+  {
+   "order": 108,
+   "label": "120",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 318,
+   "laugh": 0
+  },
+  {
+   "order": 109,
+   "label": "121",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 197,
+   "laugh": 0
+  },
+  {
+   "order": 110,
+   "label": "122",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 171,
+   "laugh": 1
+  },
+  {
+   "order": 111,
+   "label": "123",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 226,
+   "laugh": 0
+  },
+  {
+   "order": 112,
+   "label": "124",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 173,
+   "laugh": 0
+  },
+  {
+   "order": 113,
+   "label": "125",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 357,
+   "laugh": 0
+  },
+  {
+   "order": 114,
+   "label": "126",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 286,
+   "laugh": 0
+  },
+  {
+   "order": 115,
+   "label": "127",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 363,
+   "laugh": 0
+  },
+  {
+   "order": 116,
+   "label": "128",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 151,
+   "laugh": 1
+  },
+  {
+   "order": 117,
+   "label": "劇場版2",
+   "kind": "movie",
+   "series": "劇場版・OVA",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 707,
+   "laugh": 0
+  },
+  {
+   "order": 118,
+   "label": "129",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 212,
+   "laugh": 0
+  },
+  {
+   "order": 119,
+   "label": "130",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 277,
+   "laugh": 0
+  },
+  {
+   "order": 120,
+   "label": "131",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 205,
+   "laugh": 1
+  },
+  {
+   "order": 121,
+   "label": "132",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 356,
+   "laugh": 0
+  },
+  {
+   "order": 122,
+   "label": "133",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 412,
+   "laugh": 1
+  },
+  {
+   "order": 123,
+   "label": "134",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 218,
+   "laugh": 1
+  },
+  {
+   "order": 124,
+   "label": "135",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 344,
+   "laugh": 0
+  },
+  {
+   "order": 125,
+   "label": "136",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 171,
+   "laugh": 1
+  },
+  {
+   "order": 126,
+   "label": "137",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 160,
+   "laugh": 2
+  },
+  {
+   "order": 127,
+   "label": "138",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 163,
+   "laugh": 0
+  },
+  {
+   "order": 128,
+   "label": "OVA2",
+   "kind": "ova",
+   "series": "劇場版・OVA",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 1044,
+   "laugh": 1
+  },
+  {
+   "order": 129,
+   "label": "139",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 174,
+   "laugh": 0
+  },
+  {
+   "order": 130,
+   "label": "140",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 244,
+   "laugh": 0
+  },
+  {
+   "order": 131,
+   "label": "141",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 198,
+   "laugh": 0
+  },
+  {
+   "order": 132,
+   "label": "142",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 210,
+   "laugh": 0
+  },
+  {
+   "order": 133,
+   "label": "143",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 161,
+   "laugh": 0
+  },
+  {
+   "order": 134,
+   "label": "144",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 216,
+   "laugh": 0
+  },
+  {
+   "order": 135,
+   "label": "145",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 153,
+   "laugh": 0
+  },
+  {
+   "order": 136,
+   "label": "146",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 205,
+   "laugh": 1
+  },
+  {
+   "order": 137,
+   "label": "147",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 135,
+   "laugh": 0
+  },
+  {
+   "order": 138,
+   "label": "148",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 87,
+   "laugh": 0
+  },
+  {
+   "order": 139,
+   "label": "149",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 116,
+   "laugh": 0
+  },
+  {
+   "order": 140,
+   "label": "150",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 377,
+   "laugh": 1
+  },
+  {
+   "order": 141,
+   "label": "151",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 318,
+   "laugh": 0
+  },
+  {
+   "order": 142,
+   "label": "152",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 156,
+   "laugh": 0
+  },
+  {
+   "order": 143,
+   "label": "153",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 213,
+   "laugh": 0
+  },
+  {
+   "order": 144,
+   "label": "154",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 156,
+   "laugh": 0
+  },
+  {
+   "order": 145,
+   "label": "155",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 84,
+   "laugh": 0
+  },
+  {
+   "order": 146,
+   "label": "156",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 312,
+   "laugh": 2
+  },
+  {
+   "order": 147,
+   "label": "157",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 243,
+   "laugh": 0
+  },
+  {
+   "order": 148,
+   "label": "158",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 181,
+   "laugh": 1
+  },
+  {
+   "order": 149,
+   "label": "159",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 267,
+   "laugh": 0
+  },
+  {
+   "order": 150,
+   "label": "160",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 284,
+   "laugh": 1
+  },
+  {
+   "order": 151,
+   "label": "161",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 204,
+   "laugh": 1
+  },
+  {
+   "order": 152,
+   "label": "162",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 198,
+   "laugh": 0
+  },
+  {
+   "order": 153,
+   "label": "163",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 90,
+   "laugh": 0
+  },
+  {
+   "order": 154,
+   "label": "164",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 328,
+   "laugh": 0
+  },
+  {
+   "order": 155,
+   "label": "165",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 187,
+   "laugh": 1
+  },
+  {
+   "order": 156,
+   "label": "166",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 195,
+   "laugh": 1
+  },
+  {
+   "order": 157,
+   "label": "167",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 175,
+   "laugh": 0
+  },
+  {
+   "order": 158,
+   "label": "168",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 286,
+   "laugh": 0
+  },
+  {
+   "order": 159,
+   "label": "169",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 182,
+   "laugh": 0
+  },
+  {
+   "order": 160,
+   "label": "170",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 272,
+   "laugh": 1
+  },
+  {
+   "order": 161,
+   "label": "171",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 199,
+   "laugh": 1
+  },
+  {
+   "order": 162,
+   "label": "172",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 253,
+   "laugh": 0
+  },
+  {
+   "order": 163,
+   "label": "173",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 175,
+   "laugh": 0
+  },
+  {
+   "order": 164,
+   "label": "174",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 210,
+   "laugh": 3
+  },
+  {
+   "order": 165,
+   "label": "175",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 200,
+   "laugh": 2
+  },
+  {
+   "order": 166,
+   "label": "176",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 101,
+   "laugh": 0
+  },
+  {
+   "order": 167,
+   "label": "177",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 182,
+   "laugh": 0
+  },
+  {
+   "order": 168,
+   "label": "178",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 273,
+   "laugh": 1
+  },
+  {
+   "order": 169,
+   "label": "179",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 335,
+   "laugh": 0
+  },
+  {
+   "order": 170,
+   "label": "劇場版3",
+   "kind": "movie",
+   "series": "劇場版・OVA",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 377,
+   "laugh": 0
+  },
+  {
+   "order": 171,
+   "label": "OVA3",
+   "kind": "ova",
+   "series": "劇場版・OVA",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 726,
+   "laugh": 1
+  },
+  {
+   "order": 172,
+   "label": "180",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 294,
+   "laugh": 0
+  },
+  {
+   "order": 173,
+   "label": "181",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 146,
+   "laugh": 0
+  },
+  {
+   "order": 174,
+   "label": "182",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 94,
+   "laugh": 1
+  },
+  {
+   "order": 175,
+   "label": "183",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 109,
+   "laugh": 1
+  },
+  {
+   "order": 176,
+   "label": "184",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 182,
+   "laugh": 2
+  },
+  {
+   "order": 177,
+   "label": "185",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 79,
+   "laugh": 0
+  },
+  {
+   "order": 178,
+   "label": "186",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 163,
+   "laugh": 0
+  },
+  {
+   "order": 179,
+   "label": "187",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 185,
+   "laugh": 0
+  },
+  {
+   "order": 180,
+   "label": "188",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 155,
+   "laugh": 1
+  },
+  {
+   "order": 181,
+   "label": "189",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 239,
+   "laugh": 1
+  },
+  {
+   "order": 182,
+   "label": "190",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 148,
+   "laugh": 1
+  },
+  {
+   "order": 183,
+   "label": "191",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 157,
+   "laugh": 2
+  },
+  {
+   "order": 184,
+   "label": "192",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 116,
+   "laugh": 1
+  },
+  {
+   "order": 185,
+   "label": "193",
+   "kind": "tv",
+   "series": "1期後半(81-193)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 540,
+   "laugh": 3
+  },
+  {
+   "order": 186,
+   "label": "194",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 433,
+   "laugh": 0
+  },
+  {
+   "order": 187,
+   "label": "195",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 472,
+   "laugh": 1
+  },
+  {
+   "order": 188,
+   "label": "196",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 215,
+   "laugh": 0
+  },
+  {
+   "order": 189,
+   "label": "197",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 248,
+   "laugh": 1
+  },
+  {
+   "order": 190,
+   "label": "198",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 139,
+   "laugh": 0
+  },
+  {
+   "order": 191,
+   "label": "199",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 80,
+   "laugh": 0
+  },
+  {
+   "order": 192,
+   "label": "200",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 166,
+   "laugh": 1
+  },
+  {
+   "order": 193,
+   "label": "201",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 247,
+   "laugh": 3
+  },
+  {
+   "order": 194,
+   "label": "202",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 342,
+   "laugh": 0
+  },
+  {
+   "order": 195,
+   "label": "203",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 203,
+   "laugh": 1
+  },
+  {
+   "order": 196,
+   "label": "204",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 138,
+   "laugh": 0
+  },
+  {
+   "order": 197,
+   "label": "205",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 273,
+   "laugh": 1
+  },
+  {
+   "order": 198,
+   "label": "206",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 311,
+   "laugh": 3
+  },
+  {
+   "order": 199,
+   "label": "207",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 213,
+   "laugh": 1
+  },
+  {
+   "order": 200,
+   "label": "208",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 180,
+   "laugh": 0
+  },
+  {
+   "order": 201,
+   "label": "209",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 238,
+   "laugh": 2
+  },
+  {
+   "order": 202,
+   "label": "210",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 221,
+   "laugh": 0
+  },
+  {
+   "order": 203,
+   "label": "OVA4",
+   "kind": "ova",
+   "series": "劇場版・OVA",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 600,
+   "laugh": 4
+  },
+  {
+   "order": 204,
+   "label": "211",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 564,
+   "laugh": 0
+  },
+  {
+   "order": 205,
+   "label": "212",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 303,
+   "laugh": 2
+  },
+  {
+   "order": 206,
+   "label": "213",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 265,
+   "laugh": 3
+  },
+  {
+   "order": 207,
+   "label": "214",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 110,
+   "laugh": 1
+  },
+  {
+   "order": 208,
+   "label": "215",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 192,
+   "laugh": 1
+  },
+  {
+   "order": 209,
+   "label": "216",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 152,
+   "laugh": 2
+  },
+  {
+   "order": 210,
+   "label": "217",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 319,
+   "laugh": 0
+  },
+  {
+   "order": 211,
+   "label": "218",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 402,
+   "laugh": 2
+  },
+  {
+   "order": 212,
+   "label": "219",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 832,
+   "laugh": 0
+  },
+  {
+   "order": 213,
+   "label": "220",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 214,
+   "laugh": 0
+  },
+  {
+   "order": 214,
+   "label": "221",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 229,
+   "laugh": 0
+  },
+  {
+   "order": 215,
+   "label": "222",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 363,
+   "laugh": 0
+  },
+  {
+   "order": 216,
+   "label": "223",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 205,
+   "laugh": 0
+  },
+  {
+   "order": 217,
+   "label": "224",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 171,
+   "laugh": 0
+  },
+  {
+   "order": 218,
+   "label": "225",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 241,
+   "laugh": 1
+  },
+  {
+   "order": 219,
+   "label": "226",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 130,
+   "laugh": 0
+  },
+  {
+   "order": 220,
+   "label": "227",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 194,
+   "laugh": 0
+  },
+  {
+   "order": 221,
+   "label": "228",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 150,
+   "laugh": 2
+  },
+  {
+   "order": 222,
+   "label": "229",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 198,
+   "laugh": 0
+  },
+  {
+   "order": 223,
+   "label": "230",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 162,
+   "laugh": 0
+  },
+  {
+   "order": 224,
+   "label": "231",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 170,
+   "laugh": 1
+  },
+  {
+   "order": 225,
+   "label": "劇場版4",
+   "kind": "movie",
+   "series": "劇場版・OVA",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 374,
+   "laugh": 2
+  },
+  {
+   "order": 226,
+   "label": "232",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 260,
+   "laugh": 0
+  },
+  {
+   "order": 227,
+   "label": "233",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 147,
+   "laugh": 0
+  },
+  {
+   "order": 228,
+   "label": "234",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 238,
+   "laugh": 1
+  },
+  {
+   "order": 229,
+   "label": "235",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 167,
+   "laugh": 1
+  },
+  {
+   "order": 230,
+   "label": "236",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 239,
+   "laugh": 1
+  },
+  {
+   "order": 231,
+   "label": "237",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 238,
+   "laugh": 0
+  },
+  {
+   "order": 232,
+   "label": "238",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 243,
+   "laugh": 1
+  },
+  {
+   "order": 233,
+   "label": "239",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 124,
+   "laugh": 1
+  },
+  {
+   "order": 234,
+   "label": "240",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 244,
+   "laugh": 2
+  },
+  {
+   "order": 235,
+   "label": "241",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 120,
+   "laugh": 0
+  },
+  {
+   "order": 236,
+   "label": "242",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 234,
+   "laugh": 1
+  },
+  {
+   "order": 237,
+   "label": "243",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 189,
+   "laugh": 1
+  },
+  {
+   "order": 238,
+   "label": "244",
+   "kind": "tv",
+   "series": "2期すいぱら編(194-244)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 192,
+   "laugh": 2
+  },
+  {
+   "order": 239,
+   "label": "245",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 283,
+   "laugh": 0
+  },
+  {
+   "order": 240,
+   "label": "246",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 142,
+   "laugh": 2
+  },
+  {
+   "order": 241,
+   "label": "247",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 224,
+   "laugh": 2
+  },
+  {
+   "order": 242,
+   "label": "248",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 104,
+   "laugh": 1
+  },
+  {
+   "order": 243,
+   "label": "249",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 91,
+   "laugh": 0
+  },
+  {
+   "order": 244,
+   "label": "250",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 124,
+   "laugh": 0
+  },
+  {
+   "order": 245,
+   "label": "251",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 234,
+   "laugh": 2
+  },
+  {
+   "order": 246,
+   "label": "252",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 233,
+   "laugh": 0
+  },
+  {
+   "order": 247,
+   "label": "253",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 257,
+   "laugh": 1
+  },
+  {
+   "order": 248,
+   "label": "254",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 129,
+   "laugh": 0
+  },
+  {
+   "order": 249,
+   "label": "255",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 125,
+   "laugh": 1
+  },
+  {
+   "order": 250,
+   "label": "256",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 82,
+   "laugh": 1
+  },
+  {
+   "order": 251,
+   "label": "257",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 111,
+   "laugh": 1
+  },
+  {
+   "order": 252,
+   "label": "258",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 194,
+   "laugh": 0
+  },
+  {
+   "order": 253,
+   "label": "259",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 151,
+   "laugh": 0
+  },
+  {
+   "order": 254,
+   "label": "260",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 150,
+   "laugh": 0
+  },
+  {
+   "order": 255,
+   "label": "261",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 136,
+   "laugh": 2
+  },
+  {
+   "order": 256,
+   "label": "262",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 115,
+   "laugh": 0
+  },
+  {
+   "order": 257,
+   "label": "263",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 37,
+   "laugh": 0
+  },
+  {
+   "order": 258,
+   "label": "264",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 77,
+   "laugh": 0
+  },
+  {
+   "order": 259,
+   "label": "265",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 123,
+   "laugh": 0
+  },
+  {
+   "order": 260,
+   "label": "266",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 82,
+   "laugh": 0
+  },
+  {
+   "order": 261,
+   "label": "267",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 7,
+   "laugh": 0
+  },
+  {
+   "order": 262,
+   "label": "268",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 20,
+   "laugh": 0
+  },
+  {
+   "order": 263,
+   "label": "269",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 25,
+   "laugh": 0
+  },
+  {
+   "order": 264,
+   "label": "270",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 32,
+   "laugh": 0
+  },
+  {
+   "order": 265,
+   "label": "271",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 15,
+   "laugh": 0
+  },
+  {
+   "order": 266,
+   "label": "272",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 3,
+   "laugh": 0
+  },
+  {
+   "order": 267,
+   "label": "273",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 34,
+   "laugh": 0
+  },
+  {
+   "order": 268,
+   "label": "274",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 54,
+   "laugh": 0
+  },
+  {
+   "order": 269,
+   "label": "275",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 36,
+   "laugh": 0
+  },
+  {
+   "order": 270,
+   "label": "276",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 69,
+   "laugh": 0
+  },
+  {
+   "order": 271,
+   "label": "277",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 67,
+   "laugh": 0
+  },
+  {
+   "order": 272,
+   "label": "278",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 93,
+   "laugh": 0
+  },
+  {
+   "order": 273,
+   "label": "279",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": true,
+   "score": 5.5,
+   "chars": 91,
+   "laugh": 0
+  },
+  {
+   "order": 274,
+   "label": "280",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": null,
+   "star": false,
+   "score": null,
+   "chars": 125,
+   "laugh": 1
+  },
+  {
+   "order": 275,
+   "label": "281",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": null,
+   "star": false,
+   "score": null,
+   "chars": 106,
+   "laugh": 1
+  },
+  {
+   "order": 276,
+   "label": "282",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 50,
+   "laugh": 0
+  },
+  {
+   "order": 277,
+   "label": "283",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 38,
+   "laugh": 0
+  },
+  {
+   "order": 278,
+   "label": "284",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 3,
+   "star": false,
+   "score": 3.0,
+   "chars": 38,
+   "laugh": 0
+  },
+  {
+   "order": 279,
+   "label": "285",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 44,
+   "laugh": 1
+  },
+  {
+   "order": 280,
+   "label": "286",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 43,
+   "laugh": 0
+  },
+  {
+   "order": 281,
+   "label": "287",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 25,
+   "laugh": 1
+  },
+  {
+   "order": 282,
+   "label": "288",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 41,
+   "laugh": 0
+  },
+  {
+   "order": 283,
+   "label": "289",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 38,
+   "laugh": 0
+  },
+  {
+   "order": 284,
+   "label": "290",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 45,
+   "laugh": 0
+  },
+  {
+   "order": 285,
+   "label": "291",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 37,
+   "laugh": 0
+  },
+  {
+   "order": 286,
+   "label": "292",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 78,
+   "laugh": 1
+  },
+  {
+   "order": 287,
+   "label": "293",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 190,
+   "laugh": 4
+  },
+  {
+   "order": 288,
+   "label": "294",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 89,
+   "laugh": 1
+  },
+  {
+   "order": 289,
+   "label": "295",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 5,
+   "star": false,
+   "score": 5.0,
+   "chars": 95,
+   "laugh": 0
+  },
+  {
+   "order": 290,
+   "label": "296",
+   "kind": "tv",
+   "series": "2期ハムハーの木編(245-296)",
+   "rating": 4,
+   "star": false,
+   "score": 4.0,
+   "chars": 61,
+   "laugh": 0
+  }
+ ],
+ "chars": [
+  {
+   "name": "ハム太郎",
+   "group": "ハムちゃんず",
+   "mentions": 77,
+   "episodes": 60,
+   "share_by_series": {
+    "1期前半(1-80)": 0.104,
+    "1期後半(81-193)": 0.248,
+    "2期すいぱら編(194-244)": 0.294,
+    "2期ハムハーの木編(245-296)": 0.135
+   },
+   "mean_with": 4.8,
+   "star_with": 0.383,
+   "mean_without": 4.59,
+   "first_seen": "16"
+  },
+  {
+   "name": "リボンちゃん",
+   "group": "ハムちゃんず",
+   "mentions": 25,
+   "episodes": 19,
+   "share_by_series": {
+    "1期前半(1-80)": 0.075,
+    "1期後半(81-193)": 0.062,
+    "2期すいぱら編(194-244)": 0.137,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.684,
+   "star_with": 0.368,
+   "mean_without": 4.63,
+   "first_seen": "22"
+  },
+  {
+   "name": "タイショーくん",
+   "group": "ハムちゃんず",
+   "mentions": 56,
+   "episodes": 42,
+   "share_by_series": {
+    "1期前半(1-80)": 0.104,
+    "1期後半(81-193)": 0.212,
+    "2期すいぱら編(194-244)": 0.176,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.81,
+   "star_with": 0.452,
+   "mean_without": 4.603,
+   "first_seen": "16"
+  },
+  {
+   "name": "こうしくん",
+   "group": "ハムちゃんず",
+   "mentions": 36,
+   "episodes": 30,
+   "share_by_series": {
+    "1期前半(1-80)": 0.09,
+    "1期後半(81-193)": 0.08,
+    "2期すいぱら編(194-244)": 0.196,
+    "2期ハムハーの木編(245-296)": 0.077
+   },
+   "mean_with": 4.6,
+   "star_with": 0.333,
+   "mean_without": 4.637,
+   "first_seen": "43"
+  },
+  {
+   "name": "トンガリくん",
+   "group": "ハムちゃんず",
+   "mentions": 28,
+   "episodes": 22,
+   "share_by_series": {
+    "1期前半(1-80)": 0.09,
+    "1期後半(81-193)": 0.088,
+    "2期すいぱら編(194-244)": 0.078,
+    "2期ハムハーの木編(245-296)": 0.038
+   },
+   "mean_with": 4.864,
+   "star_with": 0.455,
+   "mean_without": 4.614,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "まいどくん",
+   "group": "ハムちゃんず",
+   "mentions": 51,
+   "episodes": 47,
+   "share_by_series": {
+    "1期前半(1-80)": 0.134,
+    "1期後半(81-193)": 0.204,
+    "2期すいぱら編(194-244)": 0.176,
+    "2期ハムハーの木編(245-296)": 0.115
+   },
+   "mean_with": 4.787,
+   "star_with": 0.383,
+   "mean_without": 4.603,
+   "first_seen": "19"
+  },
+  {
+   "name": "めがねくん",
+   "group": "ハムちゃんず",
+   "mentions": 15,
+   "episodes": 13,
+   "share_by_series": {
+    "1期前半(1-80)": 0.075,
+    "1期後半(81-193)": 0.027,
+    "2期すいぱら編(194-244)": 0.059,
+    "2期ハムハーの木編(245-296)": 0.038
+   },
+   "mean_with": 4.462,
+   "star_with": 0.385,
+   "mean_without": 4.641,
+   "first_seen": "22"
+  },
+  {
+   "name": "のっぽくん",
+   "group": "ハムちゃんず",
+   "mentions": 30,
+   "episodes": 23,
+   "share_by_series": {
+    "1期前半(1-80)": 0.149,
+    "1期後半(81-193)": 0.088,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.038
+   },
+   "mean_with": 4.565,
+   "star_with": 0.348,
+   "mean_without": 4.639,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "パンダくん",
+   "group": "ハムちゃんず",
+   "mentions": 73,
+   "episodes": 46,
+   "share_by_series": {
+    "1期前半(1-80)": 0.134,
+    "1期後半(81-193)": 0.195,
+    "2期すいぱら編(194-244)": 0.176,
+    "2期ハムハーの木編(245-296)": 0.096
+   },
+   "mean_with": 4.717,
+   "star_with": 0.283,
+   "mean_without": 4.617,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "ちび丸ちゃん",
+   "group": "ハムちゃんず",
+   "mentions": 18,
+   "episodes": 14,
+   "share_by_series": {
+    "1期前半(1-80)": 0.06,
+    "1期後半(81-193)": 0.053,
+    "2期すいぱら編(194-244)": 0.078,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.714,
+   "star_with": 0.357,
+   "mean_without": 4.629,
+   "first_seen": "17"
+  },
+  {
+   "name": "マフラーちゃん",
+   "group": "ハムちゃんず",
+   "mentions": 17,
+   "episodes": 10,
+   "share_by_series": {
+    "1期前半(1-80)": 0.045,
+    "1期後半(81-193)": 0.044,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.8,
+   "star_with": 0.3,
+   "mean_without": 4.627,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "ねてるくん",
+   "group": "ハムちゃんず",
+   "mentions": 23,
+   "episodes": 20,
+   "share_by_series": {
+    "1期前半(1-80)": 0.045,
+    "1期後半(81-193)": 0.071,
+    "2期すいぱら編(194-244)": 0.078,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.45,
+   "star_with": 0.3,
+   "mean_without": 4.647,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "かぶるくん",
+   "group": "ハムちゃんず",
+   "mentions": 34,
+   "episodes": 25,
+   "share_by_series": {
+    "1期前半(1-80)": 0.104,
+    "1期後半(81-193)": 0.097,
+    "2期すいぱら編(194-244)": 0.098,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.92,
+   "star_with": 0.56,
+   "mean_without": 4.606,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "トラハムくん",
+   "group": "ハムちゃんず",
+   "mentions": 51,
+   "episodes": 36,
+   "share_by_series": {
+    "1期前半(1-80)": 0.09,
+    "1期後半(81-193)": 0.168,
+    "2期すいぱら編(194-244)": 0.059,
+    "2期ハムハーの木編(245-296)": 0.135
+   },
+   "mean_with": 4.667,
+   "star_with": 0.472,
+   "mean_without": 4.628,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "トラハムちゃん",
+   "group": "ハムちゃんず",
+   "mentions": 12,
+   "episodes": 9,
+   "share_by_series": {
+    "1期前半(1-80)": 0.03,
+    "1期後半(81-193)": 0.053,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.778,
+   "star_with": 0.556,
+   "mean_without": 4.629,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "長老ハム",
+   "group": "準レギュラー",
+   "mentions": 17,
+   "episodes": 12,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.062,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.058
+   },
+   "mean_with": 4.833,
+   "star_with": 0.167,
+   "mean_without": 4.625,
+   "first_seen": "1〜14"
+  },
+  {
+   "name": "じゃじゃハムちゃん",
+   "group": "準レギュラー",
+   "mentions": 14,
+   "episodes": 9,
+   "share_by_series": {
+    "1期前半(1-80)": 0.045,
+    "1期後半(81-193)": 0.027,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.038
+   },
+   "mean_with": 3.889,
+   "star_with": 0.111,
+   "mean_without": 4.657,
+   "first_seen": "37"
+  },
+  {
+   "name": "くるりんちゃん",
+   "group": "準レギュラー",
+   "mentions": 21,
+   "episodes": 12,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.071,
+    "2期すいぱら編(194-244)": 0.039,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.75,
+   "star_with": 0.5,
+   "mean_without": 4.628,
+   "first_seen": "54"
+  },
+  {
+   "name": "おしゃれちゃん",
+   "group": "準レギュラー",
+   "mentions": 4,
+   "episodes": 3,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.009,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.667,
+   "star_with": 0.333,
+   "mean_without": 4.633,
+   "first_seen": "190"
+  },
+  {
+   "name": "ナースちゃん",
+   "group": "準レギュラー",
+   "mentions": 10,
+   "episodes": 7,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.044,
+    "2期すいぱら編(194-244)": 0.039,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.857,
+   "star_with": 0.429,
+   "mean_without": 4.628,
+   "first_seen": "126"
+  },
+  {
+   "name": "ぬけないくん",
+   "group": "準レギュラー",
+   "mentions": 15,
+   "episodes": 9,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.071,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 5,
+   "star_with": 0.667,
+   "mean_without": 4.621,
+   "first_seen": "81"
+  },
+  {
+   "name": "トン吉",
+   "group": "準レギュラー",
+   "mentions": 7,
+   "episodes": 6,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.035,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.833,
+   "star_with": 0.333,
+   "mean_without": 4.629,
+   "first_seen": "24"
+  },
+  {
+   "name": "サブさん",
+   "group": "準レギュラー",
+   "mentions": 15,
+   "episodes": 12,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.071,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.038
+   },
+   "mean_with": 4.833,
+   "star_with": 0.417,
+   "mean_without": 4.625,
+   "first_seen": "24"
+  },
+  {
+   "name": "デビハムくん",
+   "group": "2期以降",
+   "mentions": 5,
+   "episodes": 3,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.009,
+    "2期すいぱら編(194-244)": 0.039,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 4.667,
+   "star_with": 0.0,
+   "mean_without": 4.633,
+   "first_seen": "130"
+  },
+  {
+   "name": "ラピスちゃん",
+   "group": "2期以降",
+   "mentions": 29,
+   "episodes": 22,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.333,
+    "2期ハムハーの木編(245-296)": 0.058
+   },
+   "mean_with": 4.636,
+   "star_with": 0.318,
+   "mean_without": 4.633,
+   "first_seen": "194"
+  },
+  {
+   "name": "ラズリーちゃん",
+   "group": "2期以降",
+   "mentions": 27,
+   "episodes": 20,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.333,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.5,
+   "star_with": 0.4,
+   "mean_without": 4.643,
+   "first_seen": "194"
+  },
+  {
+   "name": "おとめ・ズー",
+   "group": "2期以降",
+   "mentions": 8,
+   "episodes": 7,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.118,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.714,
+   "star_with": 0.143,
+   "mean_without": 4.631,
+   "first_seen": "204"
+  },
+  {
+   "name": "ニンハム",
+   "group": "2期以降",
+   "mentions": 22,
+   "episodes": 10,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.035,
+    "2期すいぱら編(194-244)": 0.039,
+    "2期ハムハーの木編(245-296)": 0.077
+   },
+   "mean_with": 4.8,
+   "star_with": 0.6,
+   "mean_without": 4.627,
+   "first_seen": "88"
+  },
+  {
+   "name": "マジカル",
+   "group": "2期以降",
+   "mentions": 6,
+   "episodes": 5,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.096
+   },
+   "mean_with": 4.6,
+   "star_with": 0.2,
+   "mean_without": 4.634,
+   "first_seen": "262"
+  },
+  {
+   "name": "ミステリー",
+   "group": "2期以降",
+   "mentions": 5,
+   "episodes": 3,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.058
+   },
+   "mean_with": 4.667,
+   "star_with": 0.333,
+   "mean_without": 4.633,
+   "first_seen": "262"
+  },
+  {
+   "name": "そらハム",
+   "group": "2期以降",
+   "mentions": 3,
+   "episodes": 3,
+   "share_by_series": {
+    "1期前半(1-80)": 0.0,
+    "1期後半(81-193)": 0.0,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.058
+   },
+   "mean_with": 4.333,
+   "star_with": 0.0,
+   "mean_without": 4.636,
+   "first_seen": "261"
+  },
+  {
+   "name": "ロコちゃん",
+   "group": "人間",
+   "mentions": 43,
+   "episodes": 38,
+   "share_by_series": {
+    "1期前半(1-80)": 0.134,
+    "1期後半(81-193)": 0.159,
+    "2期すいぱら編(194-244)": 0.137,
+    "2期ハムハーの木編(245-296)": 0.058
+   },
+   "mean_with": 4.789,
+   "star_with": 0.316,
+   "mean_without": 4.61,
+   "first_seen": "24"
+  },
+  {
+   "name": "木村くん",
+   "group": "人間",
+   "mentions": 6,
+   "episodes": 6,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.035,
+    "2期すいぱら編(194-244)": 0.0,
+    "2期ハムハーの木編(245-296)": 0.019
+   },
+   "mean_with": 4.667,
+   "star_with": 0.0,
+   "mean_without": 4.633,
+   "first_seen": "79"
+  },
+  {
+   "name": "ロベルト",
+   "group": "人間",
+   "mentions": 13,
+   "episodes": 9,
+   "share_by_series": {
+    "1期前半(1-80)": 0.015,
+    "1期後半(81-193)": 0.062,
+    "2期すいぱら編(194-244)": 0.02,
+    "2期ハムハーの木編(245-296)": 0.0
+   },
+   "mean_with": 5,
+   "star_with": 0.222,
+   "mean_without": 4.621,
+   "first_seen": "77"
+  }
+ ],
+ "base": {
+  "mean": 4.633,
+  "star": 0.315
+ },
+ "after": {
+  "★": {
+   "n": 91,
+   "mean_next": 4.626,
+   "star_next": 0.374
+  },
+  "4": {
+   "n": 65,
+   "mean_next": 4.615,
+   "star_next": 0.169
+  },
+  "5": {
+   "n": 114,
+   "mean_next": 4.675,
+   "star_next": 0.342
+  },
+  "≤3": {
+   "n": 18,
+   "mean_next": 4.444,
+   "star_next": 0.333
+  }
+ },
+ "autocorr_lag1": 0.085,
+ "streaks": {
+  "star": [
+   7,
+   "25"
+  ],
+  "five_or_star": [
+   13,
+   "劇場版2"
+  ],
+  "four_or_less": [
+   8,
+   "268"
+  ]
+ },
+ "style": [
+  {
+   "style": "笑い(w/草)",
+   "1期前半(1-80)": 2.56,
+   "1期後半(81-193)": 2.11,
+   "2期すいぱら編(194-244)": 3.07,
+   "2期ハムハーの木編(245-296)": 4.55
+  },
+  {
+   "style": "関西弁(やん/やろ/やな/ほんま/ええ/あかん/なんや)",
+   "1期前半(1-80)": 2.41,
+   "1期後半(81-193)": 2.26,
+   "2期すいぱら編(194-244)": 1.97,
+   "2期ハムハーの木編(245-296)": 2.37
+  },
+  {
+   "style": "ツッコミ(だろ/かよ/なんだよ/やめろ)",
+   "1期前半(1-80)": 3.46,
+   "1期後半(81-193)": 3.35,
+   "2期すいぱら編(194-244)": 4.17,
+   "2期ハムハーの木編(245-296)": 4.55
+  },
+  {
+   "style": "「流石に」",
+   "1期前半(1-80)": 0.6,
+   "1期後半(81-193)": 0.72,
+   "2期すいぱら編(194-244)": 0.47,
+   "2期ハムハーの木編(245-296)": 0.59
+  },
+  {
+   "style": "「かわいい」",
+   "1期前半(1-80)": 1.66,
+   "1期後半(81-193)": 1.28,
+   "2期すいぱら編(194-244)": 1.26,
+   "2期ハムハーの木編(245-296)": 1.19
+  },
+  {
+   "style": "「マジ/ガチ」",
+   "1期前半(1-80)": 0.75,
+   "1期後半(81-193)": 0.72,
+   "2期すいぱら編(194-244)": 1.26,
+   "2期ハムハーの木編(245-296)": 3.56
+  },
+  {
+   "style": "「？」",
+   "1期前半(1-80)": 6.92,
+   "1期後半(81-193)": 6.17,
+   "2期すいぱら編(194-244)": 4.96,
+   "2期ハムハーの木編(245-296)": 5.15
+  },
+  {
+   "style": "「...」",
+   "1期前半(1-80)": 1.81,
+   "1期後半(81-193)": 1.35,
+   "2期すいぱら編(194-244)": 1.81,
+   "2期ハムハーの木編(245-296)": 1.39
+  }
+ ],
+ "longest": [
+  {
+   "label": "OVA2",
+   "chars": 1044,
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "219",
+   "chars": 832,
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "88",
+   "chars": 792,
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "OVA3",
+   "chars": 726,
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "劇場版2",
+   "chars": 707,
+   "rating": 5,
+   "star": false
+  }
+ ],
+ "shortest": [
+  {
+   "label": "272",
+   "chars": 3,
+   "memo": "運動会"
+  },
+  {
+   "label": "267",
+   "chars": 7,
+   "memo": "スポ根アニメ回"
+  },
+  {
+   "label": "26",
+   "chars": 11,
+   "memo": "夢の中の話。これいる？"
+  },
+  {
+   "label": "271",
+   "chars": 15,
+   "memo": "夢回、珍しく現代だしのっぽ悪役"
+  },
+  {
+   "label": "18",
+   "chars": 16,
+   "memo": "眼帯してるニワトリってなんやねん"
+  }
+ ],
+ "laughiest": [
+  {
+   "label": "OVA4",
+   "laugh": 4,
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "293",
+   "laugh": 4,
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "93",
+   "laugh": 3,
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "174",
+   "laugh": 3,
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "193",
+   "laugh": 3,
+   "rating": 5,
+   "star": true
+  }
+ ],
+ "low": [
+  {
+   "label": "26",
+   "rating": 1,
+   "memo": "夢の中の話。これいる？"
+  },
+  {
+   "label": "37",
+   "rating": 3,
+   "memo": "じゃじゃハムちゃん初登場。\n新キャラ登場回だけどなんか内容が薄い"
+  },
+  {
+   "label": "42",
+   "rating": 2,
+   "memo": "じゃじゃハムちゃん髪型が可愛くなさすぎ。また2話しかないけどこいつが出てくる回中身無さすぎやろ、最終回がこいつなの今から嫌になってきた"
+  },
+  {
+   "label": "43",
+   "rating": 3,
+   "memo": "久々にこうしくんを燃やしたくなる回。先生は結局動物を持ち寄らせて何をしたかったのかが気になる。ただの見せ合い？"
+  },
+  {
+   "label": "52",
+   "rating": 3,
+   "memo": "次回予告でああ夢回かぁって思ってたのに夢に入る前に初っ端から地下ハウスで刀振り回してて草。夢オチ回だから26話並に見る意味は無いんだけど着衣ハムたちがかわいいのと冒頭の唐突な組太刀が面白いから少し許せる。ロコちゃん寝てただけだし日記に書く事ねえだろ"
+  },
+  {
+   "label": "76",
+   "rating": 3,
+   "memo": "夢なのか絶妙にわからない次回予告\n夢回だと寝落ちする流れがいっつも同じだなw\n鬼監督というか真っ当な指導だな\nこれって2人の夢ってことはそれぞれの役割とか振る舞いってこいつらの偏見というか解釈なんだよな\n映画撮る回の後に劇場版観ることになるやん"
+  },
+  {
+   "label": "劇場版1",
+   "rating": 3,
+   "memo": "OVAは日常で劇場版は異世界なんかな？\n一年中咲いてたら種取れなくない？\n絵本デカすぎやろ\n流石に映画だと作画が良いな\nテンポいいな\nこれ拗ねて帰ろうとしないやつやろ\nなんかこの妖精エビちゅみたいな声だな\nミニモニでてきた\nあーこれほんとにエビちゅだ\nこのDJ、ハムスポにも居たな\n映画もOVAも、普段の2倍くらいの尺だけど半分くらい歌ってるから内容の濃さが結局いつもと同じだw\nねてるくんが背負われてるの初めて\n普通に泳ぎ出してる\nハム語のサービスうれしい\nなんでこいつら首都知ってるの\n全然ハムスターじゃないドラゴンが出てきたんだけど\nBGMもいつものやつがちょっとずつアレンジされてるかんじなのか\nエビちゅはタネが消えた理由を説明しろ\nドラゴンのやつはともかくエビちゅはハムスター形態にすらない謎の生き物\n昭和にすらなさそうなやべー遊具\n失踪ってこれで3回目か？\n内容は、劇場版だなぁ、って感じだった。ノリと勢いで駆け抜けるかんじ。大人が見るとちょっとキツイな...元々子供向けアニメだけど...。作画のクオリティはさすがにアニメとは比べ物にならない\n感想書いてて思ったけど、OVAのキャラソン連打も人によっては歌いっぱいだなぁ、ってなるだけだよな。キャラソンってしっかりめのファンじゃないとわからないだろ、普通の人なら急に出てきた劇中歌にしか思えない\nというかOVAの曲はいいのに劇場版はタイアップしかなくてそこが嫌、ハムちゃんずの声が聞きたいの"
+  },
+  {
+   "label": "78",
+   "rating": 2,
+   "memo": "これ夢回だろ、次回予告でわかる\nって思ってたら現実で探偵ごっこしてた\nパンダくんに微妙に見せ場？あって嬉しい、かわいい。ルパンダだって、かわいいねぇ。ほんとにかわいい。でも今回女の子ハムがメインだからこの後あんまり出ないのかな...？\n夢回の導入も寝落ちまでをどうにか工夫しようとしてるんやな\n↑そんなことないかも、すぐ気絶する\n夢回見るたびに思うけど2期は一生このノリだとしんどいな\n夢回はまあ着衣ハムがかわいいのでギリ許せなくも...？←ウソや！ワイは自分にウソつけへん！\n衛兵姿ののっぽくんいいな、似合う\n落石は殺しにきてるやん\n甲冑着たまいどくん結構好き\nねてるくんの夢を共有する特殊能力すごいな\nパンダくんの出番作っといて本題の夢のパート入ると一切出てこないの何？ケンカ売ってる？\n76話で夢回やったのに近すぎだろボケ"
+  },
+  {
+   "label": "104",
+   "rating": 3,
+   "memo": "はい、絵本で寝落ちね\n導入雑すぎて笑うわ\nくるりんちゃん、初登場してから夢回に二回も出てきてるけど現実でいい加減再登場してくれ。初回もハムちゃんずのペースに飲まれててくるりんちゃんが主導する内容じゃなかったし\nまいどのギャグ割と好き\n配役のせいでマフラーちゃんがやられ役で散々な目に遭うのおもろい\n夢回は流し見にすごくいいかもしれない、スマホいじりながらたまに画面を見てかわいいハムを視認したり声を聞いたり"
+  },
+  {
+   "label": "163",
+   "rating": 3,
+   "memo": "ひまわりちゃん初登場回。\nめがねが急に冷笑というかマジレスしだした、基準がわからん\n感想があんまり出ない回。ひまわりちゃんが新キャラのくせにあんまり喋ってない気がする、落ち込んでただけ"
+  },
+  {
+   "label": "劇場版3",
+   "rating": 3,
+   "memo": "劇場版、再生ボタンを押すまでに腰が重すぎる。見るか.........みたいになる→再生するまでに2時間かかりました\n劇場版ってなんか作画が安定してるんだよな、1作目からかなり年月経ってるのに映画はずっと同じ体型で同じ作画な気がする\n映画だとなんかテンポが独特だなって思ったらこれあれか、ミュージカルみたいに全員で喋るから\n実際寒冷地にいる齧歯類って思い浮かばないな→マーモットが寒さに強いらしい\n前作も今回も1ミリも脈絡なく唐突にミニモニ出てきた\nは？にじハム出てきたんだけど→まさかの調べ間違え、OVA3の発売日は160話と161話の間でした。OVA間空きすぎやろ、って思ってたらマジかよ。\n順番間違えてたことにびっくりして何も入ってこない\n内容はまあ、一生曲が流れてて、うん\n映画1作目はこんな感じで、2作目はまだ内容濃い...濃かった気がして多少マシかと思ったのに"
+  },
+  {
+   "label": "181",
+   "rating": 3,
+   "memo": "にじハムが本編に出るのはじめてか、ゲーム→OVA→映画→アニメ本編\n導入が雑なタイプの夢回だ\nちび丸ちゃん毛皮がキモすぎる\nちゃんと全員出てるし今回はトラハムくんもよく喋る\n全員喋ってて、作画もまあ良くて、にじハムもかわいい。内容はまあ\n普通ににじハム出てきてほしいんだけど世界観的に無理だよなぁ\n作画〇"
+  },
+  {
+   "label": "219",
+   "rating": 3,
+   "memo": "2期になって初めての夢回かな？\nこの発言ほんとにこれ夢共有してるんだな、ねてるくんの能力やばい\n製作陣時代劇の夢気に入りすぎだろ、これで5回目くらい？\n夢回が作画安定してるの腹立つな\nというか魔法が登場してもう無法なんだし現実でやればいいのに(？)\nなったーのブログに書いてあったやつってこれか、夢だからなんとも言えない情報のやつ\n余談：\"ばてれんの秘宝\"の話、ばてれん＝伴天連、キリスト教(カトリック)が日本に伝来した当時の宣教師・神父に対する呼称。キリスト教自体やその宗徒を指すこともある。司祭様(パードレ)が伝聞されて変化した\n一応この夢のラピスちゃんの内容を事実として解釈するなら、カトリックの地域で拾われた...という事に？最初のシーンは砂漠だったので、カトリック文化圏かつ、「金持ちの家から逃げ出したら、そこは砂漠だった」がリアルに成立するのは↓\n①アメリカ西海岸内陸部からメキシコ国境にかけての「ソノラ砂漠」や「モハベ砂漠」周辺\n✝️アメリカ南西部やメキシコは、16世紀以降にスペインの宣教師（まさにPadre＝ばてれん）たちがやってきて、砂漠の中に無数のカトリック伝道所（ミッション）を建てた歴史的背景がある。ばてれんの秘宝→元飼い主の富豪が所有していた、大航海時代のスペイン・カトリック教会由来の歴史的アンティーク\n🏠アリゾナ州のパラダイスバレーや、カリフォルニア州のパームスプリングスは、広大な砂漠のド真ん中に、大富豪の超高級リゾートや豪邸（ハシエンダ）が点在している\n②スペイン・アンダルシア州（タベルナス砂漠）\n✝️そもそも宣教師の母国。一族に伝わる本物の宗教的秘宝があってもおかしくない。\n🏠 ヨーロッパの伝統的貴族の領地、貴族の邸宅から抜け出したラピスちゃんがタベルナス砂漠を彷徨う。\n↑\nの以上の２つが主な候補。個人的にはアメリカンにしたい。ラズリーちゃんのリボンの赤地×白水玉はどことなくアメリカンだし、ラピスちゃんの青ローブと合わせれば星条旗カラー(こじつけ)"
+  },
+  {
+   "label": "233",
+   "rating": 3,
+   "memo": "1番適当なパターンの夢回導入だ\nめがねが悪役\nトラハムくんいっぱい動いてかわいい\n夢回に限って作画いいのほんま腹立つ\nいやほんまに作画いいの勿体ねえ\nよく考えたらレギュラーハムちゃんずが敵役に回るって夢回のメリットか\nいやまじで今回顔かわいいな、目デカすぎずバランスよく。◯にしてたけど◎でいいレベル\n作画◎"
+  },
+  {
+   "label": "257",
+   "rating": 3,
+   "memo": "夢回なん？サブタイ的にこっから3話連続かと思ったのに\nほらまた夢回に限って作画まとも\nなんか色薄くね？\nライトセーバー出てきた\n幼稚園パラレルやばい、すごくいい\nオチは普通に面白かったw\n夢回ですらトラハムくん出てこなくなってる\n作画◯"
+  },
+  {
+   "label": "261",
+   "rating": 3,
+   "memo": "オーキニーちゃん初登場回\n新しい場所だからちゃんと全員いる\nハムハーの木どうでも良すぎてどうしようw、この場所も新キャラもw\nこの作画監督かわいくないのにそらハムの顔だけかわいい\nパンダかわ\n結局1.5倍速で見た\nダメだ、もう見るテンションが最初から低い\n夢回じゃないのに３点は相当やで"
+  },
+  {
+   "label": "271",
+   "rating": 3,
+   "memo": "夢回、珍しく現代だしのっぽ悪役"
+  },
+  {
+   "label": "284",
+   "rating": 3,
+   "memo": "ハムハムトレインが登場してからすぐにすいぱらが消えたせいでろくに登場してない"
+  }
+ ],
+ "corr_chars_score": -0.001,
+ "chars_by_rating": {
+  "★": 180,
+  "5": 193,
+  "4": 185,
+  "3": 201
+ },
+ "tests": [
+  {
+   "feature": "夢回・劇中劇",
+   "claim": "-1",
+   "n": 13,
+   "mean_with": 3.077,
+   "mean_without": 4.707,
+   "diff": -1.63,
+   "p": 0.0,
+   "star_with": 0.077,
+   "star_without": 0.326,
+   "star_diff": -0.249,
+   "star_p": 0.0696
+  },
+  {
+   "feature": "作画が良い",
+   "claim": "+0.5",
+   "n": 73,
+   "mean_with": 4.712,
+   "mean_without": 4.606,
+   "diff": 0.106,
+   "p": 0.2522,
+   "star_with": 0.397,
+   "star_without": 0.287,
+   "star_diff": 0.11,
+   "star_p": 0.0841
+  },
+  {
+   "feature": "「かわいい」と書いた",
+   "claim": "+1",
+   "n": 63,
+   "mean_with": 4.603,
+   "mean_without": 4.642,
+   "diff": -0.038,
+   "p": 0.7401,
+   "star_with": 0.302,
+   "star_without": 0.319,
+   "star_diff": -0.017,
+   "star_p": 0.8806
+  },
+  {
+   "feature": "「かわいくない」と書いた",
+   "claim": "±0〜-1",
+   "n": 12,
+   "mean_with": 4.167,
+   "mean_without": 4.653,
+   "diff": -0.487,
+   "p": 0.0193,
+   "star_with": 0.083,
+   "star_without": 0.325,
+   "star_diff": -0.242,
+   "star_p": 0.1116
+  },
+  {
+   "feature": "目新しさ(初めて/珍しい/新鮮)",
+   "claim": "+1〜2",
+   "n": 57,
+   "mean_with": 4.649,
+   "mean_without": 4.629,
+   "diff": 0.02,
+   "p": 0.9076,
+   "star_with": 0.246,
+   "star_without": 0.332,
+   "star_diff": -0.086,
+   "star_p": 0.2733
+  },
+  {
+   "feature": "ハムちゃんず全員",
+   "claim": "甘くなりがち",
+   "n": 15,
+   "mean_with": 4.533,
+   "mean_without": 4.639,
+   "diff": -0.105,
+   "p": 0.6826,
+   "star_with": 0.2,
+   "star_without": 0.321,
+   "star_diff": -0.121,
+   "star_p": 0.404
+  },
+  {
+   "feature": "死にかける回",
+   "claim": "（申告なし）",
+   "n": 15,
+   "mean_with": 4.933,
+   "mean_without": 4.617,
+   "diff": 0.317,
+   "p": 0.0647,
+   "star_with": 0.533,
+   "star_without": 0.303,
+   "star_diff": 0.23,
+   "star_p": 0.0862
+  },
+  {
+   "feature": "じゃじゃハム",
+   "claim": "（申告なし）",
+   "n": 9,
+   "mean_with": 3.889,
+   "mean_without": 4.657,
+   "diff": -0.768,
+   "p": 0.004,
+   "star_with": 0.111,
+   "star_without": 0.321,
+   "star_diff": -0.21,
+   "star_p": 0.2817
+  }
+ ],
+ "ols": {
+  "r2": 0.362,
+  "n": 289,
+  "coef": [
+   {
+    "term": "切片(基礎点)",
+    "beta": 4.708,
+    "se": 0.044,
+    "claim": "3"
+   },
+   {
+    "term": "夢回・劇中劇",
+    "beta": -1.679,
+    "se": 0.15,
+    "claim": "-1"
+   },
+   {
+    "term": "作画が良い",
+    "beta": 0.105,
+    "se": 0.073,
+    "claim": "+0.5"
+   },
+   {
+    "term": "「かわいい」と書いた",
+    "beta": 0.052,
+    "se": 0.076,
+    "claim": "+1"
+   },
+   {
+    "term": "「かわいくない」と書いた",
+    "beta": -0.506,
+    "se": 0.158,
+    "claim": "±0〜-1"
+   },
+   {
+    "term": "目新しさ(初めて/珍しい/新鮮)",
+    "beta": 0.008,
+    "se": 0.079,
+    "claim": "+1〜2"
+   },
+   {
+    "term": "ハムちゃんず全員",
+    "beta": -0.073,
+    "se": 0.14,
+    "claim": "甘くなりがち"
+   },
+   {
+    "term": "死にかける回",
+    "beta": 0.219,
+    "se": 0.14,
+    "claim": "（申告なし）"
+   },
+   {
+    "term": "じゃじゃハム",
+    "beta": -0.815,
+    "se": 0.18,
+    "claim": "（申告なし）"
+   }
+  ]
+ },
+ "acf_test": {
+  "acf1": 0.085,
+  "p_two_sided": 0.1504
+ },
+ "contrast": {
+  "after_low3": {
+   "n": 80,
+   "mean_next": 4.644,
+   "star_next": 0.237
+  },
+  "after_star3": {
+   "n": 17,
+   "mean_next": 4.824,
+   "star_next": 0.588
+  },
+  "overall_star": 0.315
+ },
+ "bins20": [
+  {
+   "range": "1-20",
+   "n": 7,
+   "mean": 4.714,
+   "star": 0.571,
+   "chars": 58
+  },
+  {
+   "range": "21-40",
+   "n": 20,
+   "mean": 4.65,
+   "star": 0.7,
+   "chars": 39
+  },
+  {
+   "range": "41-60",
+   "n": 20,
+   "mean": 4.45,
+   "star": 0.45,
+   "chars": 94
+  },
+  {
+   "range": "61-80",
+   "n": 20,
+   "mean": 4.55,
+   "star": 0.25,
+   "chars": 173
+  },
+  {
+   "range": "81-100",
+   "n": 20,
+   "mean": 4.85,
+   "star": 0.25,
+   "chars": 275
+  },
+  {
+   "range": "101-120",
+   "n": 20,
+   "mean": 4.7,
+   "star": 0.3,
+   "chars": 235
+  },
+  {
+   "range": "121-140",
+   "n": 20,
+   "mean": 4.85,
+   "star": 0.55,
+   "chars": 243
+  },
+  {
+   "range": "141-160",
+   "n": 20,
+   "mean": 4.85,
+   "star": 0.3,
+   "chars": 204
+  },
+  {
+   "range": "161-180",
+   "n": 20,
+   "mean": 4.7,
+   "star": 0.3,
+   "chars": 217
+  },
+  {
+   "range": "181-200",
+   "n": 20,
+   "mean": 4.65,
+   "star": 0.25,
+   "chars": 203
+  },
+  {
+   "range": "201-220",
+   "n": 20,
+   "mean": 4.65,
+   "star": 0.3,
+   "chars": 286
+  },
+  {
+   "range": "221-240",
+   "n": 20,
+   "mean": 4.7,
+   "star": 0.4,
+   "chars": 206
+  },
+  {
+   "range": "241-260",
+   "n": 20,
+   "mean": 4.7,
+   "star": 0.15,
+   "chars": 168
+  },
+  {
+   "range": "261-280",
+   "n": 19,
+   "mean": 4.211,
+   "star": 0.105,
+   "chars": 59
+  },
+  {
+   "range": "281-296",
+   "n": 15,
+   "mean": 4.467,
+   "star": 0,
+   "chars": 61
+  }
+ ],
+ "words_star": [
+  {
+   "w": "面白い",
+   "z": 2.97,
+   "star_eps": 37,
+   "le4_eps": 7
+  },
+  {
+   "w": "ギャグ",
+   "z": 1.99,
+   "star_eps": 12,
+   "le4_eps": 1
+  },
+  {
+   "w": "かぶる",
+   "z": 1.96,
+   "star_eps": 14,
+   "le4_eps": 2
+  },
+  {
+   "w": "落ちる",
+   "z": 1.58,
+   "star_eps": 6,
+   "le4_eps": 0
+  },
+  {
+   "w": "ぬける",
+   "z": 1.58,
+   "star_eps": 6,
+   "le4_eps": 0
+  },
+  {
+   "w": "演出",
+   "z": 1.52,
+   "star_eps": 8,
+   "le4_eps": 1
+  },
+  {
+   "w": "飛ぶ",
+   "z": 1.38,
+   "star_eps": 7,
+   "le4_eps": 1
+  },
+  {
+   "w": "ショー",
+   "z": 1.34,
+   "star_eps": 19,
+   "le4_eps": 8
+  },
+  {
+   "w": "扱い",
+   "z": 1.29,
+   "star_eps": 4,
+   "le4_eps": 0
+  },
+  {
+   "w": "時期",
+   "z": 1.29,
+   "star_eps": 4,
+   "le4_eps": 0
+  },
+  {
+   "w": "危機",
+   "z": 1.29,
+   "star_eps": 4,
+   "le4_eps": 0
+  },
+  {
+   "w": "起きる",
+   "z": 1.29,
+   "star_eps": 4,
+   "le4_eps": 0
+  },
+  {
+   "w": "ニンハム",
+   "z": 1.23,
+   "star_eps": 6,
+   "le4_eps": 1
+  },
+  {
+   "w": "しれる",
+   "z": 1.23,
+   "star_eps": 6,
+   "le4_eps": 1
+  },
+  {
+   "w": "太郎",
+   "z": 1.19,
+   "star_eps": 25,
+   "le4_eps": 13
+  },
+  {
+   "w": "良い",
+   "z": 1.14,
+   "star_eps": 23,
+   "le4_eps": 12
+  },
+  {
+   "w": "人間",
+   "z": 1.12,
+   "star_eps": 17,
+   "le4_eps": 8
+  },
+  {
+   "w": "高い",
+   "z": 1.08,
+   "star_eps": 7,
+   "le4_eps": 2
+  },
+  {
+   "w": "できる",
+   "z": 1.07,
+   "star_eps": 12,
+   "le4_eps": 5
+  },
+  {
+   "w": "引く",
+   "z": 1.06,
+   "star_eps": 5,
+   "le4_eps": 1
+  }
+ ],
+ "words_low": [
+  {
+   "w": "映画",
+   "z": -1.85,
+   "star_eps": 0,
+   "le4_eps": 7
+  },
+  {
+   "w": "感想",
+   "z": -1.83,
+   "star_eps": 1,
+   "le4_eps": 9
+  },
+  {
+   "w": "劇場",
+   "z": -1.72,
+   "star_eps": 0,
+   "le4_eps": 6
+  },
+  {
+   "w": "オーキニー",
+   "z": -1.57,
+   "star_eps": 0,
+   "le4_eps": 5
+  },
+  {
+   "w": "気持ち",
+   "z": -1.57,
+   "star_eps": 0,
+   "le4_eps": 5
+  },
+  {
+   "w": "導入",
+   "z": -1.57,
+   "star_eps": 0,
+   "le4_eps": 5
+  },
+  {
+   "w": "ラピラズ",
+   "z": -1.4,
+   "star_eps": 0,
+   "le4_eps": 4
+  },
+  {
+   "w": "覚える",
+   "z": -1.4,
+   "star_eps": 0,
+   "le4_eps": 4
+  },
+  {
+   "w": "正直",
+   "z": -1.4,
+   "star_eps": 0,
+   "le4_eps": 4
+  },
+  {
+   "w": "しく",
+   "z": -1.4,
+   "star_eps": 0,
+   "le4_eps": 4
+  },
+  {
+   "w": "見れる",
+   "z": -1.38,
+   "star_eps": 1,
+   "le4_eps": 6
+  },
+  {
+   "w": "見た目",
+   "z": -1.38,
+   "star_eps": 1,
+   "le4_eps": 6
+  },
+  {
+   "w": "流れる",
+   "z": -1.2,
+   "star_eps": 1,
+   "le4_eps": 5
+  },
+  {
+   "w": "ひまわり",
+   "z": -1.2,
+   "star_eps": 1,
+   "le4_eps": 5
+  },
+  {
+   "w": "今日",
+   "z": -1.2,
+   "star_eps": 1,
+   "le4_eps": 5
+  },
+  {
+   "w": "流す",
+   "z": -1.2,
+   "star_eps": 1,
+   "le4_eps": 5
+  },
+  {
+   "w": "次回",
+   "z": -1.2,
+   "star_eps": 1,
+   "le4_eps": 5
+  },
+  {
+   "w": "世界",
+   "z": -1.16,
+   "star_eps": 3,
+   "le4_eps": 8
+  },
+  {
+   "w": "予告",
+   "z": -1.08,
+   "star_eps": 2,
+   "le4_eps": 6
+  },
+  {
+   "w": "アニメ",
+   "z": -1.08,
+   "star_eps": 2,
+   "le4_eps": 6
+  }
+ ],
+ "group_sizes": {
+  "star": 91,
+  "le4": 84
+ },
+ "sakuga": {
+  "good": {
+   "n": 69,
+   "mean": 4.696,
+   "star": 0.406,
+   "le4": 0.246
+  },
+  "bad": {
+   "n": 23,
+   "mean": 4.696,
+   "star": 0.261,
+   "le4": 0.261
+  },
+  "none": {
+   "n": 81,
+   "mean": 4.593,
+   "star": 0.148,
+   "le4": 0.37
+  },
+  "p_star_good_vs_bad": 0.3177,
+  "p_mean_good_vs_bad": 1.0,
+  "dream_late_n": 8,
+  "dream_late_good": 4,
+  "nondream_late_good_rate": 0.389,
+  "dream_late_bad": 0,
+  "nondream_late_bad_rate": 0.144
+ },
+ "dream_eps": [
+  {
+   "label": "26",
+   "rating": 1,
+   "star": false
+  },
+  {
+   "label": "52",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "76",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "78",
+   "rating": 2,
+   "star": false
+  },
+  {
+   "label": "104",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "130",
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "155",
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "158",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "181",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "219",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "233",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "257",
+   "rating": 3,
+   "star": false
+  },
+  {
+   "label": "271",
+   "rating": 3,
+   "star": false
+  }
+ ],
+ "danger_eps": [
+  {
+   "label": "23",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "44",
+   "rating": 4,
+   "star": false
+  },
+  {
+   "label": "48",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "73",
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "75",
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "86",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "103",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "115",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "120",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "126",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "127",
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "132",
+   "rating": 5,
+   "star": true
+  },
+  {
+   "label": "133",
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "205",
+   "rating": 5,
+   "star": false
+  },
+  {
+   "label": "211",
+   "rating": 5,
+   "star": false
+  }
+ ],
+ "le3_breakdown": {
+  "total": 18,
+  "dream": 10
+ }
+}
